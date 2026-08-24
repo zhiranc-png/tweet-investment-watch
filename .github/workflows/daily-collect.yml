@@ -1,0 +1,58 @@
+name: 推特投资舆情每日采集
+
+on:
+  schedule:
+    # 每天 UTC 04:00 = 北京时间 12:00（中午）
+    - cron: '0 4 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  collect-and-upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run data collection
+        env:
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          CT0: ${{ secrets.CT0 }}
+        run: |
+          python main.py run \
+            --auth-token "$AUTH_TOKEN" \
+            --ct0 "$CT0" \
+            --output "report_$(date +%Y%m%d).md" \
+            --limit 150 \
+            --with-comments
+
+      - name: Upload brief JSON as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: brief-data
+          path: data/brief_*.json
+          retention-days: 30
+
+      - name: Upload report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report
+          path: report_*.md
+          retention-days: 30
+
+      - name: Upload tweets raw data
+        uses: actions/upload-artifact@v4
+        with:
+          name: tweets-raw
+          path: data/tweets_*.json
+          retention-days: 7
