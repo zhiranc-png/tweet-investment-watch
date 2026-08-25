@@ -29,7 +29,6 @@ DEFAULT_INFLUENCERS = {
     "WSJ": "华尔街日报",
     "FT": "金融时报",
     "CNBC": "CNBC",
-    "business": "彭博商业",
     "MarketWatch": "MarketWatch",
     "SeekingAlpha": "Seeking Alpha",
     "TheStalwart": "The Stalwart",
@@ -61,9 +60,10 @@ DEFAULT_INFLUENCERS = {
     # 数据 / 研究机构
     "BLS_gov": "美国劳工统计局",
     "BEA_News": "美国经济分析局",
-    "USCensusBureau": "美国人口普查局",
     "SoberLook": "Sober Look",
     "biancoresearch": "Bianco Research",
+    "charliebilello": "Charlie Bilello",
+    "LizAnnSonders": "Liz Ann Sonders",
 }
 
 # 投资关键词（用于过滤）
@@ -76,8 +76,18 @@ INVESTMENT_KEYWORDS = [
     "ai", "nvidia", "tesla", "apple", "microsoft", "google", "amazon",
     "meta", "芯片", "半导体", "新能源", "美股", "港股", "A股",
     "加息", "降息", "通胀", "衰退", "财报", "估值", "牛市", "熊市",
-    "$", "stock", "share", "equity", "fund", "etf", "index",
+    "stock", "share", "equity", "fund", "etf", "index",
+    "tariff", "trade", "economy", "economic", "rate cut", "rate hike",
+    "quantitative", "fed rate", "central bank", "monetary policy",
 ]
+
+
+def parse_twitter_date(date_str):
+    """解析 X 的日期格式：'Tue Aug 25 12:34:56 +0000 2026'"""
+    try:
+        return datetime.strptime(date_str, "%a %b %d %H:%M:%S %z %Y")
+    except:
+        return None
 
 
 class XCollector:
@@ -153,28 +163,31 @@ class XCollector:
         url = f"https://x.com/i/api/graphql/{qid}/UserByScreenName"
         vars_ = {"screen_name": screen_name, "withSafetyModeUserFields": True}
         
-        resp = self.session.get(
-            url,
-            params={"variables": json.dumps(vars_), "features": json.dumps(self.features)},
-            timeout=15
-        )
-        
-        if resp.status_code != 200:
-            # 用备用 queryId
-            url = f"https://x.com/i/api/graphql/G3KGOASz96M-Qu0nwmGXNg/UserByScreenName"
+        try:
             resp = self.session.get(
                 url,
                 params={"variables": json.dumps(vars_), "features": json.dumps(self.features)},
                 timeout=15
             )
-        
-        data = resp.json()
-        if "errors" in data:
-            raise Exception(f"获取用户 {screen_name} 失败: {data['errors'][0].get('message', '')}")
-        
-        user_id = data["data"]["user"]["result"]["rest_id"]
-        self._user_cache[screen_name] = user_id
-        return user_id
+            
+            if resp.status_code != 200:
+                # 用备用 queryId
+                url = f"https://x.com/i/api/graphql/G3KGOASz96M-Qu0nwmGXNg/UserByScreenName"
+                resp = self.session.get(
+                    url,
+                    params={"variables": json.dumps(vars_), "features": json.dumps(self.features)},
+                    timeout=15
+                )
+            
+            data = resp.json()
+            if "errors" in data:
+                raise Exception(data["errors"][0].get("message", ""))
+            
+            user_id = data["data"]["user"]["result"]["rest_id"]
+            self._user_cache[screen_name] = user_id
+            return user_id
+        except Exception as e:
+            raise Exception(f"获取用户 {screen_name} 失败: {e}")
     
     def get_user_tweets(self, screen_name, count=20):
         """获取指定用户的最新推文"""
@@ -204,7 +217,7 @@ class XCollector:
         )
         
         if resp.status_code != 200:
-            raise Exception(f"UserTweets HTTP {resp.status_code}: {resp.text[:200]}")
+            raise Exception(f"UserTweets HTTP {resp.status_code}")
         
         data = resp.json()
         if "errors" in data:
@@ -232,7 +245,6 @@ class XCollector:
                 
                 user_legacy = result.get("core", {}).get("user_results", {}).get("result", {}).get("legacy", {})
                 
-                # 计算热度分（用转推 + 回复 + 浏览量加权）
                 likes = legacy.get("favorite_count", 0)
                 retweets = legacy.get("retweet_count", 0)
                 replies = legacy.get("reply_count", 0)
@@ -244,14 +256,16 @@ class XCollector:
                     except (ValueError, TypeError):
                         views = 0
                 
-                score = retweets * 2 + replies * 3 + views // 1000
+                # 热度分：转推*3 + 回复*5 + 浏览量//1000 + 点赞//10
+                score = retweets * 3 + replies * 5 + views // 1000 + likes // 10
                 
                 is_retweet = "retweeted_status_result" in legacy
+                created_at = legacy.get("created_at", "")
                 
                 tweets.append({
                     "id": legacy.get("id_str", ""),
                     "text": legacy.get("full_text", ""),
-                    "created_at": legacy.get("created_at", ""),
+                    "created_at": created_at,
                     "likes": likes,
                     "retweets": retweets,
                     "replies": replies,
@@ -266,13 +280,17 @@ class XCollector:
         
         return tweets
     
-    def collect(self, influencers=None, per_user_count=20, filter_investment=True):
+    def collect(self, influencers=None, per_user_count=20, filter_investment=True, hours=48):
         """
         采集多个大V的推文
+        hours: 只保留最近 N 小时的推文
         返回: list of tweet dicts, 按热度排序
         """
         if influencers is None:
             influencers = DEFAULT_INFLUENCERS
+        
+        now = datetime.now(timezone.utc)
+        cutoff = now - timedelta(hours=hours)
         
         all_tweets = []
         success = 0
@@ -288,9 +306,18 @@ class XCollector:
                     t["source_detail"] = f"@{screen_name}"
                 all_tweets.extend(tweets)
                 success += 1
-                time.sleep(0.5)  # 限速
+                time.sleep(0.3)  # 限速
             except Exception as e:
                 failed.append((screen_name, str(e)))
+        
+        # 时间过滤
+        if hours > 0:
+            time_filtered = []
+            for t in all_tweets:
+                dt = parse_twitter_date(t["created_at"])
+                if dt and dt >= cutoff:
+                    time_filtered.append(t)
+            all_tweets = time_filtered
         
         # 过滤投资相关
         if filter_investment:
@@ -309,6 +336,7 @@ class XCollector:
             "total": len(all_tweets),
             "success_users": success,
             "failed_users": failed,
+            "time_window_hours": hours,
         }
     
     def health_check(self):
@@ -317,7 +345,8 @@ class XCollector:
             result = self.collect(
                 influencers={"elonmusk": "马斯克"},
                 per_user_count=5,
-                filter_investment=False
+                filter_investment=False,
+                hours=0,  # 不过滤时间
             )
             return {
                 "platform": "x_api",
@@ -345,7 +374,8 @@ if __name__ == "__main__":
             "jimcramer": "克莱默",
         },
         per_user_count=10,
-        filter_investment=False
+        filter_investment=False,
+        hours=0,
     )
     print(f"采集到 {result['total']} 条推文")
     print(f"成功用户: {result['success_users']}")
