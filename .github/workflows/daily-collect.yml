@@ -1,4 +1,4 @@
-name: 推特投资舆情每日采集
+name: X 投资舆情每日采集
 
 on:
   schedule:
@@ -6,15 +6,19 @@ on:
     - cron: '0 4 * * *'
   workflow_dispatch:
     inputs:
-      limit:
-        description: '采集数量上限'
+      per_user:
+        description: '每人采集条数'
         required: false
-        default: '120'
+        default: '20'
+      hours:
+        description: '时间窗口（小时）'
+        required: false
+        default: '48'
 
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout code
@@ -30,39 +34,34 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml
 
-      - name: Run collection
+      - name: Run full pipeline
         env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           CT0: ${{ secrets.CT0 }}
         run: |
-          mkdir -p data
-          python main.py collect --output data/tweets.json --limit 120
-
-      - name: Generate brief
-        run: |
-          python main.py brief --input data/tweets.json --output data/brief.json
-
-      - name: Generate basic report
-        run: |
-          python main.py report --brief data/brief.json --output report.md
+          mkdir -p data report
+          python main.py run \
+            --output report/daily_report.md \
+            --per-user ${{ github.event.inputs.per_user || 20 }} \
+            --hours ${{ github.event.inputs.hours || 48 }}
 
       - name: Upload tweets data
         uses: actions/upload-artifact@v4
         with:
           name: tweet-data
-          path: data/tweets.json
+          path: data/tweets_*.json
           retention-days: 30
 
       - name: Upload brief data
         uses: actions/upload-artifact@v4
         with:
           name: brief-data
-          path: data/brief.json
+          path: data/brief_*.json
           retention-days: 30
 
       - name: Upload report
         uses: actions/upload-artifact@v4
         with:
           name: daily-report
-          path: report.md
+          path: report/daily_report.md
           retention-days: 30
