@@ -28,7 +28,7 @@ from pathlib import Path
 # 确保 src 在路径中
 sys.path.insert(0, str(Path(__file__).parent))
 
-from src.collectors.x_api_collector import XAPICollector, Tweet
+from src.collectors.x_playwright_collector import XPlaywrightCollector, Tweet
 from src.analysis.signal_aggregator import generate_brief
 from src.output.report_generator import generate_markdown_report, save_report, save_brief_json
 from src.config.kol_list import get_all_kol_handles
@@ -54,10 +54,10 @@ def cmd_collect(args: argparse.Namespace) -> None:
     print(f"   KOL 账号: {len(kol_handles)} 个")
     print(f"   关键词: {len(keyword_queries)} 个")
 
-    collector = XAPICollector(
+    collector = XPlaywrightCollector(
         auth_token=auth_token,
         ct0=ct0,
-        proxy=proxy if proxy else None,
+        headless=True,
     )
     collector.set_kol_handles(kol_handles)
 
