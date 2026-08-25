@@ -85,11 +85,11 @@ def cmd_collect(args: argparse.Namespace) -> None:
 
         # 健康检查
         health = collector.health_check()
-        if not health["authenticated"]:
-            print(f"⚠️  API 认证可能有问题: {health.get('error', '未知错误')}")
+        if not health.get("api_works", False):
+            print(f"⚠️  API 测试未返回数据: {health.get('error', '未知')}")
             print("   继续尝试采集...")
         else:
-            print(f"✅ API 认证通过（用户: @{health.get('username', 'unknown')}）")
+            print(f"✅ API 正常（测试返回 {health.get('test_results', 0)} 条）")
 
         try:
             tweets = collector.collect_daily(
