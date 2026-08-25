@@ -1,14 +1,16 @@
 """
 X (Twitter) API 采集器 — 基于 GraphQL API + Cookie 认证
-纯 HTTP 请求，无需浏览器，速度快、稳定性高、不易被检测
+纯 HTTP 请求，无需浏览器
 
-使用方式:
-    collector = XApiCollector(auth_token="xxx", ct0="xxx")
-    tweets = collector.collect_daily(kol_handles, keywords, limit=120)
+优化策略：
+- KOL 用 UserTweets API（更高效，限流更松）
+- 关键词精选 15 个核心词
+- 请求间隔 2-3 秒，避免触发限流
 """
 
 from __future__ import annotations
 
+import json
 import logging
 import re
 import time
@@ -30,13 +32,14 @@ BEARER_TOKEN = (
     "%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
 )
 
-# ── GraphQL API 端点 ──────────────────────────────────────────────────────
 API_BASE = "https://x.com/i/api/graphql"
 
-# SearchTimeline endpoint（搜索）
-SEARCH_ENDPOINT = "G3A8KQeaYl7E5g0S0W5X5A"  # 可能需要更新，用通用方式
+# ── 已知稳定的 GraphQL queryId ────────────────────────────────────────────
+# 这些是 X 网页端使用的 queryId，可能随版本更新
+USER_TWEETS_QUERY_ID = "V1ze59qZpB55q2n7-8pX0w"  # UserTweets
+SEARCH_TIMELINE_QUERY_ID = "7c31s4h0q57s8fr76n2a0g"  # SearchTimeline
 
-# ── 垃圾内容过滤（复用 x_twitter.py 的规则）────────────────────────────────
+# ── 垃圾内容过滤 ──────────────────────────────────────────────────────────
 MIN_CONTENT_LEN = 40
 
 SPAM_PATTERNS: list[str] = [
@@ -104,22 +107,48 @@ def _is_spam(text: str, seen_fps: dict[str, int]) -> bool:
     return False
 
 
+# ── GraphQL features（X API 要求的标准参数） ──────────────────────────────
+DEFAULT_FEATURES = {
+    "responsive_web_graphql_exclude_directive_enabled": True,
+    "verified_phone_label_enabled": False,
+    "creator_subscriptions_tweet_preview_api_enabled": True,
+    "responsive_web_graphql_timeline_navigation_enabled": True,
+    "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
+    "c9s_tweet_anatomy_moderator_badge_enabled": True,
+    "tweetypie_unmention_optimization_enabled": True,
+    "responsive_web_edit_tweet_api_enabled": True,
+    "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
+    "view_counts_everywhere_api_enabled": True,
+    "longform_notetweets_consumption_enabled": True,
+    "responsive_web_twitter_article_tweet_consumption_enabled": False,
+    "tweet_awards_web_tipping_enabled": False,
+    "freedom_of_speech_not_reach_fetch_enabled": True,
+    "standardized_nudges_misinfo": True,
+    "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": True,
+    "rweb_video_timestamps_enabled": True,
+    "longform_notetweets_rich_text_read_enabled": True,
+    "longform_notetweets_inline_media_enabled": True,
+    "responsive_web_media_download_video_enabled": False,
+    "responsive_web_enhance_cards_enabled": False,
+}
+
+
 class XApiCollector:
     """
     X/Twitter API 采集器 — GraphQL API + Cookie 认证
-    纯 HTTP 请求，无需浏览器
     """
 
-    def __init__(self, auth_token: str, ct0: str) -> None:
+    def __init__(self, auth_token: str, ct0: str, request_delay: float = 2.5) -> None:
         self.auth_token = auth_token
         self.ct0 = ct0
+        self.request_delay = request_delay  # 请求间隔（秒）
         self.session = requests.Session()
         self._seen_fingerprints: dict[str, int] = {}
         self._kol_handles: set[str] = set()
+        self._user_id_cache: dict[str, str] = {}  # handle -> user_id 缓存
         self._setup_session()
 
     def _setup_session(self) -> None:
-        """配置请求会话"""
         self.session.headers.update({
             "Authorization": f"Bearer {BEARER_TOKEN}",
             "x-csrf-token": self.ct0,
@@ -130,12 +159,12 @@ class XApiCollector:
                 "Chrome/120.0.0.0 Safari/537.36"
             ),
             "Accept": "*/*",
-            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
             "Origin": "https://x.com",
             "Referer": "https://x.com/",
             "x-twitter-active-user": "yes",
             "x-twitter-auth-type": "OAuth2Session",
-            "x-twitter-client-language": "zh-cn",
+            "x-twitter-client-language": "en",
         })
         self.session.cookies.set("auth_token", self.auth_token, domain=".x.com")
         self.session.cookies.set("ct0", self.ct0, domain=".x.com")
@@ -143,151 +172,150 @@ class XApiCollector:
     def set_kol_handles(self, handles: list[str]) -> None:
         self._kol_handles = {h.lower() for h in handles}
 
-    def health_check(self) -> dict[str, Any]:
-        """检查认证是否有效"""
-        status: dict[str, Any] = {
-            "platform": "x_api",
-            "auth_token_set": bool(self.auth_token),
-            "ct0_set": bool(self.ct0),
-            "authenticated": False,
+    def _graphql_get(
+        self,
+        query_id: str,
+        endpoint_name: str,
+        variables: dict[str, Any],
+        features: dict[str, Any] | None = None,
+    ) -> dict[str, Any] | None:
+        """统一的 GraphQL GET 请求封装"""
+        if features is None:
+            features = DEFAULT_FEATURES
+
+        url = f"{API_BASE}/{query_id}/{endpoint_name}"
+        params = {
+            "variables": json.dumps(variables),
+            "features": json.dumps(features),
         }
+
         try:
-            # 尝试获取当前用户信息来验证
-            url = f"{API_BASE}/n5LLy1cXpU8qM2XfZ0e2fA/Viewer"
-            params = {"variables": '{"withCommunitiesMemberships":true}', "features": '{"responsive_web_graphql_exclude_directive_enabled":true}'}
-            resp = self.session.get(url, params=params, timeout=15)
-            if resp.status_code == 200:
-                data = resp.json()
-                viewer = data.get("data", {}).get("viewer", {})
-                if viewer:
-                    status["authenticated"] = True
-                    status["username"] = viewer.get("screen_name", "")
+            resp = self.session.get(url, params=params, timeout=20)
+
+            if resp.status_code == 429:
+                logger.warning("Rate limited (429) on %s, waiting 10s...", endpoint_name)
+                time.sleep(10)
+                # 重试一次
+                resp = self.session.get(url, params=params, timeout=20)
+
+            if resp.status_code != 200:
+                logger.warning(
+                    "API %s returned %d: %s",
+                    endpoint_name, resp.status_code, resp.text[:200],
+                )
+                return None
+
+            return resp.json()
+
         except Exception as e:
-            status["error"] = str(e)
-        return status
+            logger.warning("API %s failed: %s", endpoint_name, e)
+            return None
+        finally:
+            time.sleep(self.request_delay)  # 限速
+
+    def _get_user_id(self, screen_name: str) -> str | None:
+        """通过用户名获取 user_id（使用 UserByScreenName API）"""
+        if screen_name in self._user_id_cache:
+            return self._user_id_cache[screen_name]
+
+        # 使用 UserByScreenName endpoint
+        query_id = "GazOglc51Yt9qYd7gMf8XQ"  # UserByScreenName
+        variables = {
+            "screen_name": screen_name,
+            "withSafetyModeUserFields": True,
+        }
+        features = {
+            "hidden_profile_subscriptions_enabled": True,
+            "rweb_tipjar_consumption_enabled": True,
+            "responsive_web_graphql_exclude_directive_enabled": True,
+            "verified_phone_label_enabled": False,
+            "subscriptions_verification_info_is_identity_verified_enabled": True,
+            "subscriptions_verification_info_verified_since_enabled": True,
+            "highlights_tweets_tab_ui_enabled": True,
+            "responsive_web_twitter_article_notes_tab_enabled": False,
+            "creator_subscriptions_tweet_preview_api_enabled": True,
+            "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
+            "responsive_web_graphql_timeline_navigation_enabled": True,
+        }
+
+        data = self._graphql_get(query_id, "UserByScreenName", variables, features)
+        if not data:
+            return None
+
+        try:
+            user = data.get("data", {}).get("user", {}).get("result", {})
+            user_id = user.get("rest_id")
+            if user_id:
+                self._user_id_cache[screen_name] = user_id
+                return user_id
+        except Exception:
+            pass
+
+        return None
+
+    def _get_user_tweets(self, user_id: str, limit: int = 5) -> list[dict[str, Any]]:
+        """获取用户推文（UserTweets API）"""
+        variables = {
+            "userId": user_id,
+            "count": min(limit + 10, 40),  # 多要一些，过滤后可能不够
+            "includePromotedContent": False,
+            "withQuickPromoteEligibilityTweetFields": False,
+            "withVoice": False,
+            "withV2Timeline": True,
+        }
+
+        data = self._graphql_get(
+            USER_TWEETS_QUERY_ID, "UserTweets", variables
+        )
+        if not data:
+            return []
+
+        # 解析 timeline
+        try:
+            timeline = (
+                data.get("data", {})
+                .get("user", {})
+                .get("result", {})
+                .get("timeline_v2", {})
+                .get("timeline", {})
+            )
+            instructions = timeline.get("instructions", [])
+
+            tweets = []
+            for inst in instructions:
+                if inst.get("type") == "TimelineAddEntries":
+                    for entry in inst.get("entries", []):
+                        tweet = self._extract_tweet_from_entry(entry)
+                        if tweet:
+                            tweets.append(tweet)
+                            if len(tweets) >= limit:
+                                break
+
+            return tweets[:limit]
+        except Exception as e:
+            logger.debug("Failed to parse user tweets: %s", e)
+            return []
 
     def _search_tweets(
         self,
         query: str,
-        limit: int = 20,
+        limit: int = 10,
         search_type: str = "Top",
     ) -> list[dict[str, Any]]:
-        """
-        搜索推文（使用 SearchTimeline GraphQL API）
+        """搜索推文（SearchTimeline API）"""
+        variables = {
+            "rawQuery": query,
+            "count": min(limit + 5, 20),
+            "querySource": "typed_query",
+            "product": search_type,
+        }
 
-        Args:
-            query: 搜索关键词
-            limit: 返回数量
-            search_type: "Top" 或 "Latest"
-        """
-        all_tweets: list[dict[str, Any]] = []
-        cursor = None
-        max_pages = 3  # 最多翻3页
-        page_size = min(limit, 20)
+        data = self._graphql_get(
+            SEARCH_TIMELINE_QUERY_ID, "SearchTimeline", variables
+        )
+        if not data:
+            return []
 
-        for page in range(max_pages):
-            if len(all_tweets) >= limit:
-                break
-
-            # 构造 variables
-            variables = {
-                "rawQuery": query,
-                "count": page_size,
-                "querySource": "typed_query",
-                "product": "Top" if search_type == "Top" else "Latest",
-            }
-            if cursor:
-                variables["cursor"] = cursor
-
-            # 构造 features（X API 需要一大堆 features 参数）
-            features = {
-                "responsive_web_graphql_exclude_directive_enabled": True,
-                "verified_phone_label_enabled": False,
-                "creator_subscriptions_tweet_preview_api_enabled": True,
-                "responsive_web_graphql_timeline_navigation_enabled": True,
-                "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
-                "c9s_tweet_anatomy_moderator_badge_enabled": True,
-                "tweetypie_unmention_optimization_enabled": True,
-                "responsive_web_edit_tweet_api_enabled": True,
-                "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
-                "view_counts_everywhere_api_enabled": True,
-                "longform_notetweets_consumption_enabled": True,
-                "responsive_web_twitter_article_tweet_consumption_enabled": False,
-                "tweet_awards_web_tipping_enabled": False,
-                "freedom_of_speech_not_reach_fetch_enabled": True,
-                "standardized_nudges_misinfo": True,
-                "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": True,
-                "rweb_video_timestamps_enabled": True,
-                "longform_notetweets_rich_text_read_enabled": True,
-                "longform_notetweets_inline_media_enabled": True,
-                "responsive_web_media_download_video_enabled": False,
-                "responsive_web_enhance_cards_enabled": False,
-            }
-
-            field_toggles = {
-                "withArticleRichContentState": True,
-                "withAuxiliaryUserLabels": False,
-                "withConversationQueryHighlights": False,
-                "withDownvotePerspective": False,
-                "withGraphqlTimelineNavigation": True,
-                "withMutedUsersFiltering": True,
-                "withReactionsMetadata": False,
-                "withReactionsPerspective": False,
-                "withSessions": True,
-                "withVoiceInfo": False,
-            }
-
-            try:
-                # 使用通用的搜索 endpoint（通过 queryId 访问）
-                # 不同时间 X 会更新 queryId，这里用一个已知稳定的
-                query_id = "7c31s4h0q57s8fr76n2a0g"  # SearchTimeline queryId
-                url = f"{API_BASE}/{query_id}/SearchTimeline"
-
-                params = {
-                    "variables": __import__("json").dumps(variables),
-                    "features": __import__("json").dumps(features),
-                    "fieldToggles": __import__("json").dumps(field_toggles),
-                }
-
-                resp = self.session.get(url, params=params, timeout=20)
-
-                if resp.status_code != 200:
-                    logger.warning(
-                        "Search API returned %d for query %r: %s",
-                        resp.status_code, query, resp.text[:200],
-                    )
-                    break
-
-                data = resp.json()
-                entries = self._parse_timeline_entries(data)
-
-                if not entries:
-                    break
-
-                new_tweets = 0
-                for entry in entries:
-                    tweet_data = self._extract_tweet_from_entry(entry)
-                    if tweet_data:
-                        all_tweets.append(tweet_data)
-                        new_tweets += 1
-                        if len(all_tweets) >= limit:
-                            break
-
-                # 找下一页 cursor
-                cursor = self._find_cursor(data)
-                if not cursor or new_tweets == 0:
-                    break
-
-                time.sleep(0.5)  # 限速
-
-            except Exception as e:
-                logger.warning("Search failed for %r: %s", query, e)
-                break
-
-        return all_tweets[:limit]
-
-    def _parse_timeline_entries(self, data: dict[str, Any]) -> list[dict[str, Any]]:
-        """从 GraphQL 响应中提取 timeline entries"""
         try:
             timeline = (
                 data.get("data", {})
@@ -297,59 +325,45 @@ class XApiCollector:
             )
             instructions = timeline.get("instructions", [])
 
-            entries = []
+            tweets = []
             for inst in instructions:
                 if inst.get("type") == "TimelineAddEntries":
-                    entries.extend(inst.get("entries", []))
-                elif inst.get("type") == "TimelineAddToModule":
-                    # 追加到已有模块
-                    module_entries = inst.get("moduleItems", [])
-                    entries.extend(module_entries)
-            return entries
-        except Exception as e:
-            logger.debug("Failed to parse timeline entries: %s", e)
-            return []
+                    for entry in inst.get("entries", []):
+                        tweet = self._extract_tweet_from_entry(entry)
+                        if tweet:
+                            tweets.append(tweet)
+                            if len(tweets) >= limit:
+                                break
 
-    def _find_cursor(self, data: dict[str, Any]) -> str | None:
-        """从响应中提取下一页 cursor"""
-        try:
-            entries = self._parse_timeline_entries(data)
-            for entry in entries:
-                entry_id = entry.get("entryId", "")
-                if "cursor-bottom" in entry_id or entry.get("content", {}).get("cursorType") == "Bottom":
-                    return entry.get("content", {}).get("value")
-                # 也可能在 content 的 entries 里
-                items = entry.get("content", {}).get("items", [])
-                for item in items:
-                    if item.get("entryId", "").endswith("cursor-bottom"):
-                        return item.get("content", {}).get("value")
-            return None
-        except Exception:
-            return None
+            return tweets[:limit]
+        except Exception as e:
+            logger.debug("Failed to parse search results: %s", e)
+            return []
 
     def _extract_tweet_from_entry(self, entry: dict[str, Any]) -> dict[str, Any] | None:
         """从 timeline entry 中提取推文数据"""
         try:
-            # entry 可能是 tweet 类型，也可能是其他（cursor、promoted 等）
             entry_id = entry.get("entryId", "")
 
-            # 跳过非推文条目
-            if not entry_id.startswith("tweet-") and "tweet-" not in entry_id:
-                # 可能在 moduleItems 里
-                item_content = entry.get("item", {}).get("itemContent", {})
-                if not item_content:
-                    item_content = entry.get("content", {})
-                tweet_results = item_content.get("tweet_results", {})
-            else:
-                content = entry.get("content", {})
-                item_content = content.get("itemContent", {})
-                if not item_content:
-                    # 可能是 module 类型
-                    items = content.get("items", [])
-                    if items:
-                        item_content = items[0].get("item", {}).get("itemContent", {})
-                tweet_results = item_content.get("tweet_results", {})
+            # 跳过 cursor、promoted 等非推文条目
+            if entry_id.startswith("cursor-") or entry_id.startswith("who-to-follow"):
+                return None
 
+            # 获取 itemContent
+            content = entry.get("content", {})
+            if content.get("entryType") == "TimelineTimelineModule":
+                # module 类型，取第一个 item
+                items = content.get("items", [])
+                if not items:
+                    return None
+                item_content = items[0].get("item", {}).get("itemContent", {})
+            else:
+                item_content = content.get("itemContent", {})
+
+            if not item_content:
+                return None
+
+            tweet_results = item_content.get("tweet_results", {})
             if not tweet_results:
                 return None
 
@@ -357,13 +371,13 @@ class XApiCollector:
             if not result:
                 return None
 
-            # 可能是 tweet 类型，也可能是 retweet 等
-            if result.get("__typename") == "Tweet":
+            typename = result.get("__typename", "")
+            if typename == "Tweet":
                 return self._parse_tweet_result(result)
-            elif result.get("__typename") == "TweetWithVisibilityResults":
+            elif typename == "TweetWithVisibilityResults":
                 return self._parse_tweet_result(result.get("tweet", {}))
-            elif result.get("__typename") == "TweetTombstone":
-                return None  # 被删除/隐藏的推文
+            elif typename == "TweetTombstone":
+                return None
 
             return None
         except Exception as e:
@@ -376,17 +390,19 @@ class XApiCollector:
             if not tweet:
                 return None
 
-            # 处理转推（取原推文）
             legacy = tweet.get("legacy", {})
             if not legacy:
                 return None
 
             # 如果是转推，取原推文
-            retweeted = legacy.get("retweeted_status_result", {}).get("result", {})
-            if retweeted:
-                return self._parse_tweet_result(retweeted)
+            retweeted_result = legacy.get("retweeted_status_result", {}).get("result", {})
+            if retweeted_result:
+                return self._parse_tweet_result(retweeted_result)
 
-            user_legacy = tweet.get("core", {}).get("user_results", {}).get("result", {}).get("legacy", {})
+            # 获取用户信息
+            core = tweet.get("core", {})
+            user_result = core.get("user_results", {}).get("result", {})
+            user_legacy = user_result.get("legacy", {})
             screen_name = user_legacy.get("screen_name", "")
             tweet_id = tweet.get("rest_id", "")
 
@@ -401,7 +417,6 @@ class XApiCollector:
             retweet_count = legacy.get("retweet_count", 0)
             reply_count = legacy.get("reply_count", 0)
 
-            # 构造 URL
             url = f"https://x.com/{screen_name}/status/{tweet_id}"
 
             return {
@@ -448,11 +463,29 @@ class XApiCollector:
         tweet.is_kol = tweet.author.lower() in self._kol_handles
         return tweet
 
+    def health_check(self) -> dict[str, Any]:
+        """检查认证是否有效（通过获取用户信息）"""
+        status: dict[str, Any] = {
+            "platform": "x_api",
+            "auth_token_set": bool(self.auth_token),
+            "ct0_set": bool(self.ct0),
+            "authenticated": False,
+        }
+        try:
+            # 用一个已知的用户来测试
+            user_id = self._get_user_id("elonmusk")
+            if user_id:
+                status["authenticated"] = True
+                status["test_user_id"] = user_id
+        except Exception as e:
+            status["error"] = str(e)
+        return status
+
     def collect_daily(
         self,
         kol_handles: list[str],
         keyword_queries: list[str],
-        limit: int = 120,
+        limit: int = 100,
         fetch_comments: bool = False,
         comments_per_tweet: int = 10,
         min_likes_for_comments: int = 100,
@@ -460,51 +493,66 @@ class XApiCollector:
         """
         每日采集主入口
 
-        Args:
-            kol_handles: KOL 账号列表（不含 @）
-            keyword_queries: 关键词搜索查询
-            limit: 总推文数量上限
-            fetch_comments: 是否抓取评论（暂不支持，API 方式较慢）
-            comments_per_tweet: 每条推文最多抓多少评论
-            min_likes_for_comments: 点赞数达到多少才抓评论
+        策略：
+        - KOL 用 UserTweets API（更高效）
+        - 关键词精选核心词，用 Search API
+        - 控制总请求量，避免限流
         """
         all_tweets: list[Tweet] = []
         seen_ids: set[str] = set()
 
-        # Phase 1: KOL 定向抓取（每个 KOL 抓最近的推文）
-        logger.info("Collecting from %d KOL accounts...", len(kol_handles))
-        per_kol = 3  # 每个 KOL 拉 3 条
+        # Phase 1: KOL 推文（用 UserTweets API）
+        logger.info("Collecting from %d KOL accounts (UserTweets API)...", len(kol_handles))
+        per_kol = 4  # 每个 KOL 拉 4 条
 
+        successful_kols = 0
         for handle in kol_handles:
             try:
-                query = f"from:{handle}"
-                raw_tweets = self._search_tweets(query, limit=per_kol, search_type="Latest")
+                user_id = self._get_user_id(handle)
+                if not user_id:
+                    logger.debug("Failed to get user_id for %s", handle)
+                    continue
+
+                raw_tweets = self._get_user_tweets(user_id, limit=per_kol)
+                new_count = 0
                 for raw in raw_tweets:
-                    if raw["tweet_id"] not in seen_ids and not _is_spam(raw["content"], self._seen_fingerprints):
+                    if raw["tweet_id"] not in seen_ids:
                         t = self._raw_to_tweet(raw)
-                        if t:
+                        if t and not _is_spam(t.content, self._seen_fingerprints):
                             t.is_kol = True
                             seen_ids.add(t.tweet_id)
                             all_tweets.append(t)
-                time.sleep(0.3)
+                            new_count += 1
+
+                if new_count > 0:
+                    successful_kols += 1
+
             except Exception as e:
                 logger.warning("Failed to collect KOL %s: %s", handle, e)
 
-        # Phase 2: 关键词搜索
-        logger.info("Collecting from %d keyword queries...", len(keyword_queries))
+        logger.info("KOL 采集完成: %d/%d 个账号有新推文", successful_kols, len(kol_handles))
+
+        # Phase 2: 关键词搜索（精选核心词，避免限流）
         remaining = limit - len(all_tweets)
-        if remaining > 0:
-            per_keyword = max(remaining // len(keyword_queries) + 2, 5)
-            for q in keyword_queries:
+        if remaining > 0 and keyword_queries:
+            # 精选关键词，最多 15 个
+            selected_keywords = keyword_queries[:15]
+            per_keyword = max(remaining // len(selected_keywords) + 2, 5)
+
+            logger.info(
+                "Collecting from %d keyword queries (Top results, %d each)...",
+                len(selected_keywords), per_keyword,
+            )
+
+            for q in selected_keywords:
                 try:
                     raw_tweets = self._search_tweets(q, limit=per_keyword, search_type="Top")
                     for raw in raw_tweets:
-                        if raw["tweet_id"] not in seen_ids and not _is_spam(raw["content"], self._seen_fingerprints):
+                        if raw["tweet_id"] not in seen_ids:
                             t = self._raw_to_tweet(raw)
-                            if t:
+                            if t and not _is_spam(t.content, self._seen_fingerprints):
                                 seen_ids.add(t.tweet_id)
                                 all_tweets.append(t)
-                    time.sleep(0.3)
                 except Exception as e:
                     logger.warning("Failed to search %r: %s", q, e)
 
@@ -513,4 +561,12 @@ class XApiCollector:
 
         # 按质量分排序
         all_tweets.sort(key=lambda t: t.quality_score, reverse=True)
-        return all_tweets[:limit]
+        result = all_tweets[:limit]
+
+        logger.info(
+            "采集完成: 共 %d 条推文 (KOL: %d, 搜索: %d)",
+            len(result),
+            sum(1 for t in result if t.is_kol),
+            sum(1 for t in result if not t.is_kol),
+        )
+        return result
