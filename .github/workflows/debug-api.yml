@@ -13,4 +13,4 @@ jobs:
       - env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           CT0: ${{ secrets.CT0 }}
-        run: python test_endpoints.py
+        run: python test_usertweets.py
