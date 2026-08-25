@@ -1,18 +1,18 @@
 """
-推特投资舆情监控系统 — 主入口
+X 投资舆情监控系统 — 主入口（基于 UserTweets GraphQL API）
 
 使用方式:
-    # 1. 采集数据（需要 Firefox + 已登录 X）
-    python main.py collect --output data/today.json
-
-    # 2. 生成简报（数据聚合 + 统计）
-    python main.py brief --input data/today.json --output data/brief.json
-
-    # 3. 生成完整报告（需要 Agent 做 LLM 分析）
-    python main.py report --brief data/brief.json --output report.md
-
-完整流程:
+    # 完整流程：采集 + 简报 + 报告
     python main.py run --output report.md
+
+    # 仅采集
+    python main.py collect --output data/tweets.json
+
+    # 生成简报
+    python main.py brief --input data/tweets.json --output data/brief.json
+
+    # 生成报告
+    python main.py report --brief data/brief.json --output report.md
 """
 
 from __future__ import annotations
@@ -23,132 +23,98 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-# 确保 src 在路径中
 sys.path.insert(0, str(Path(__file__).parent))
 
-from src.collectors.x_api import XApiCollector
+from src.collectors.x_api import XCollector, DEFAULT_INFLUENCERS
 from src.analysis.signal_aggregator import generate_brief
 from src.output.report_generator import generate_markdown_report, save_report, save_brief_json
-from src.config.kol_list import get_all_kol_handles
-from src.config.keywords import get_all_queries, get_kol_search_queries
-
-import os
+from src.collectors.models import Tweet
 
 
-def _collect_with_playwright(args, kol_handles, kol_queries, keyword_queries):
-    """使用 Playwright 浏览器模式采集（备用方案）"""
-    from src.collectors.x_twitter import XTwitterCollector
-    collector = XTwitterCollector(
-        headless=not args.visible,
-        firefox_profile=args.profile,
+def _dict_to_tweet(t: dict) -> Tweet:
+    """将 XCollector 返回的 dict 转换为 Tweet 对象"""
+    return Tweet(
+        tweet_id=t.get("tweet_id", ""),
+        author=t.get("influencer_name", t.get("user_name", "")),
+        content=t.get("text", ""),
+        likes=t.get("likes", 0),
+        reposts=t.get("retweets", 0),
+        replies=t.get("replies", 0),
+        created_at=t.get("created_at", ""),
+        url=t.get("url", ""),
+        tags=[],
+        assets=[],
+        themes=[],
+        quality_score=t.get("score", 0),
+        is_kol=True,  # 大V账号默认都是 KOL
+        comments=[],
     )
-    collector.set_kol_handles(kol_handles)
-
-    # 健康检查
-    health = collector.health_check()
-    if not health["cookies_valid"]:
-        print(f"❌ Cookie 无效: {health.get('error', '未知错误')}")
-        print("   请确保 Firefox 已登录 X/Twitter")
-        sys.exit(1)
-    print("✅ Cookie 验证通过")
-
-    tweets = collector.collect_daily(
-        kol_queries=kol_queries,
-        keyword_queries=keyword_queries,
-        limit=args.limit,
-        fetch_comments=args.with_comments,
-        comments_per_tweet=args.comments_per_tweet,
-        min_likes_for_comments=args.min_likes,
-    )
-    return tweets
 
 
-def cmd_collect(args: argparse.Namespace) -> None:
+def cmd_collect(args: argparse.Namespace) -> list[Tweet]:
     """采集推文数据"""
     print("🚀 开始采集 X/Twitter 数据...")
 
-    kol_handles = get_all_kol_handles()
-    kol_queries = get_kol_search_queries()
-    keyword_queries = get_all_queries()
+    auth_token = args.auth_token or __import__("os").environ.get("AUTH_TOKEN", "")
+    ct0 = args.ct0 or __import__("os").environ.get("CT0", "")
 
-    print(f"   KOL 账号: {len(kol_handles)} 个")
-    print(f"   关键词: {len(keyword_queries)} 个")
+    if not auth_token or not ct0:
+        print("❌ 缺少 AUTH_TOKEN 或 CT0 环境变量")
+        sys.exit(1)
 
-    # 选择采集模式：优先用 API 模式（需要 AUTH_TOKEN 和 CT0 环境变量）
-    auth_token = os.environ.get("AUTH_TOKEN", "")
-    ct0 = os.environ.get("CT0", "")
+    collector = XCollector(auth_token=auth_token, ct0=ct0)
 
-    if auth_token and ct0:
-        print("📡 使用 GraphQL API 模式采集")
-        collector = XApiCollector(auth_token=auth_token, ct0=ct0)
-        collector.set_kol_handles(kol_handles)
-
-        # 健康检查
-        health = collector.health_check()
-        if not health.get("api_works", False):
-            print(f"⚠️  API 测试未返回数据: {health.get('error', '未知')}")
-            print("   继续尝试采集...")
-        else:
-            print(f"✅ API 正常（测试返回 {health.get('test_results', 0)} 条）")
-
-        try:
-            tweets = collector.collect_daily(
-                kol_handles=kol_handles,
-                keyword_queries=keyword_queries,
-                limit=args.limit,
-                fetch_comments=False,
-            )
-        except Exception as e:
-            print(f"❌ API 采集失败: {e}")
-            print("   尝试降级到 Playwright 模式...")
-            tweets = _collect_with_playwright(args, kol_handles, kol_queries, keyword_queries)
+    # 健康检查
+    print("🔍 健康检查...")
+    health = collector.health_check()
+    if not health.get("api_works", False):
+        print(f"⚠️  API 测试未返回数据: {health.get('error', '未知')}")
+        print("   继续尝试采集...")
     else:
-        print("🌐 使用 Playwright 浏览器模式采集")
-        tweets = _collect_with_playwright(args, kol_handles, kol_queries, keyword_queries)
+        print(f"✅ API 正常（测试返回 {health.get('test_results', 0)} 条）")
 
-    print(f"✅ 采集完成，共 {len(tweets)} 条推文")
+    print(f"📡 大V数量: {len(DEFAULT_INFLUENCERS)} 位")
+    print(f"   每人采集: {args.per_user} 条")
+    print(f"   时间窗口: 最近 {args.hours} 小时")
+    print(f"   投资过滤: {'开启' if not args.no_filter else '关闭'}")
+    print()
+
+    result = collector.collect(
+        influencers=DEFAULT_INFLUENCERS,
+        per_user_count=args.per_user,
+        filter_investment=not args.no_filter,
+        hours=args.hours,
+    )
+
+    print(f"\n✅ 采集完成:")
+    print(f"   总推文数: {result['total']} 条（投资相关）")
+    print(f"   成功用户: {result['success_users']} / {len(DEFAULT_INFLUENCERS)}")
+
+    if result["failed_users"]:
+        print(f"   失败用户: {len(result['failed_users'])} 个")
+        for name, err in result["failed_users"][:5]:
+            print(f"     - @{name}: {err[:60]}")
+
+    # 转换为 Tweet 对象列表
+    tweets = [_dict_to_tweet(t) for t in result["tweets"]]
 
     # 保存为 JSON
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     tweets_data = []
-    for t in tweets:
-        tweets_data.append({
-            "tweet_id": t.tweet_id,
-            "author": t.author,
-            "content": t.content,
-            "likes": t.likes,
-            "reposts": t.reposts,
-            "replies": t.replies,
-            "created_at": t.created_at,
-            "url": t.url,
-            "tags": t.tags,
-            "assets": [list(a) for a in t.assets],
-            "themes": t.themes,
-            "quality_score": t.quality_score,
-            "is_kol": t.is_kol,
-            "comments": [
-                {
-                    "tweet_id": c.tweet_id,
-                    "author": c.author,
-                    "content": c.content,
-                    "likes": c.likes,
-                    "url": c.url,
-                }
-                for c in t.comments
-            ],
-        })
+    for t in result["tweets"]:
+        tweets_data.append(t)
 
     output_path.write_text(json.dumps(tweets_data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"📁 数据已保存到: {output_path}")
+    print(f"\n📁 数据已保存到: {output_path}")
+
+    return tweets
 
 
-def cmd_brief(args: argparse.Namespace) -> None:
+def cmd_brief(args: argparse.Namespace) -> dict:
     """生成数据简报（聚合统计）"""
     print("📊 生成数据简报...")
-
-    from src.collectors.models import Tweet
 
     # 读取推文数据
     input_path = Path(args.input)
@@ -158,37 +124,41 @@ def cmd_brief(args: argparse.Namespace) -> None:
 
     tweets_data = json.loads(input_path.read_text(encoding="utf-8"))
 
-    # 重建 Tweet 对象
+    # 如果是 XCollector 格式（list of dict），转换为 Tweet 对象
     tweets = []
     for td in tweets_data:
-        t = Tweet(
-            tweet_id=td["tweet_id"],
-            author=td["author"],
-            content=td["content"],
-            likes=td["likes"],
-            reposts=td["reposts"],
-            replies=td["replies"],
-            created_at=td["created_at"],
-            url=td["url"],
-            tags=td.get("tags", []),
-            assets=[tuple(a) for a in td.get("assets", [])],
-            themes=td.get("themes", []),
-            quality_score=td.get("quality_score", 0),
-            is_kol=td.get("is_kol", False),
-        )
-        # 评论
-        for cd in td.get("comments", []):
-            t.comments.append(Tweet(
-                tweet_id=cd["tweet_id"],
-                author=cd["author"],
-                content=cd["content"],
-                likes=cd["likes"],
-                reposts=0,
-                replies=0,
-                created_at="",
-                url=cd["url"],
-            ))
-        tweets.append(t)
+        if "text" in td and "user_screen" in td:
+            # XCollector 格式
+            tweets.append(_dict_to_tweet(td))
+        elif "content" in td and "tweet_id" in td:
+            # Tweet dataclass 格式
+            t = Tweet(
+                tweet_id=td["tweet_id"],
+                author=td["author"],
+                content=td["content"],
+                likes=td["likes"],
+                reposts=td["reposts"],
+                replies=td["replies"],
+                created_at=td["created_at"],
+                url=td["url"],
+                tags=td.get("tags", []),
+                assets=[tuple(a) for a in td.get("assets", [])],
+                themes=td.get("themes", []),
+                quality_score=td.get("quality_score", 0),
+                is_kol=td.get("is_kol", False),
+            )
+            for cd in td.get("comments", []):
+                t.comments.append(Tweet(
+                    tweet_id=cd["tweet_id"],
+                    author=cd["author"],
+                    content=cd["content"],
+                    likes=cd["likes"],
+                    reposts=0,
+                    replies=0,
+                    created_at="",
+                    url=cd["url"],
+                ))
+            tweets.append(t)
 
     print(f"   读取 {len(tweets)} 条推文")
 
@@ -203,9 +173,11 @@ def cmd_brief(args: argparse.Namespace) -> None:
     print(f"   涉及标的: {stats.get('unique_assets', 0)} 个")
     print(f"   热门主题: {stats.get('unique_themes', 0)} 个")
 
+    return brief
 
-def cmd_report(args: argparse.Namespace) -> None:
-    """生成 Markdown 报告（投资信号需另外传入）"""
+
+def cmd_report(args: argparse.Namespace) -> str:
+    """生成 Markdown 报告"""
     print("📝 生成报告...")
 
     brief_path = Path(args.brief)
@@ -229,11 +201,13 @@ def cmd_report(args: argparse.Namespace) -> None:
     output_path = Path(args.output)
     save_report(md, output_path)
     print(f"✅ 报告已保存到: {output_path}")
+    print(f"   报告字数: {len(md)} 字")
+
+    return md
 
 
 def cmd_run(args: argparse.Namespace) -> None:
     """完整流程：采集 → 简报 → 报告"""
-    # 这里只做采集和简报，投资信号分析需要 Agent 完成
     print("🔄 运行完整流程...")
 
     data_dir = Path("data")
@@ -247,12 +221,11 @@ def cmd_run(args: argparse.Namespace) -> None:
     print("\n[1/3] 采集数据...")
     collect_args = argparse.Namespace(
         output=str(tweets_file),
-        visible=args.visible,
-        profile=args.profile,
-        limit=args.limit,
-        with_comments=args.with_comments,
-        comments_per_tweet=10,
-        min_likes=100,
+        auth_token=args.auth_token,
+        ct0=args.ct0,
+        per_user=args.per_user,
+        hours=args.hours,
+        no_filter=args.no_filter,
     )
     cmd_collect(collect_args)
 
@@ -273,23 +246,22 @@ def cmd_run(args: argparse.Namespace) -> None:
     )
     cmd_report(report_args)
 
-    print(f"\n🎉 完成！简报数据在 {brief_file}")
-    print("   下一步：将 brief JSON 传给 Agent 进行投资信号分析")
+    print(f"\n🎉 完成！报告在 {args.output}")
+    print(f"   简报数据在 {brief_file}")
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="推特投资舆情监控系统")
+    parser = argparse.ArgumentParser(description="X 投资舆情监控系统（基于 UserTweets API）")
     subparsers = parser.add_subparsers(dest="command", help="子命令")
 
     # collect
     p_collect = subparsers.add_parser("collect", help="采集推文数据")
     p_collect.add_argument("--output", "-o", default="data/tweets.json", help="输出文件路径")
-    p_collect.add_argument("--limit", type=int, default=150, help="采集数量上限")
-    p_collect.add_argument("--visible", action="store_true", help="显示浏览器窗口")
-    p_collect.add_argument("--profile", help="Firefox profile 路径")
-    p_collect.add_argument("--with-comments", action="store_true", help="抓取评论")
-    p_collect.add_argument("--comments-per-tweet", type=int, default=10)
-    p_collect.add_argument("--min-likes", type=int, default=100, help="抓评论的最低点赞数")
+    p_collect.add_argument("--per-user", type=int, default=20, help="每人采集条数")
+    p_collect.add_argument("--hours", type=int, default=48, help="时间窗口（小时）")
+    p_collect.add_argument("--no-filter", action="store_true", help="不过滤投资关键词")
+    p_collect.add_argument("--auth-token", default="", help="X auth_token（也可用环境变量 AUTH_TOKEN）")
+    p_collect.add_argument("--ct0", default="", help="X ct0（也可用环境变量 CT0）")
 
     # brief
     p_brief = subparsers.add_parser("brief", help="生成数据简报")
@@ -305,10 +277,11 @@ def main() -> None:
     # run
     p_run = subparsers.add_parser("run", help="完整流程：采集+简报+报告")
     p_run.add_argument("--output", "-o", default="report.md", help="报告输出路径")
-    p_run.add_argument("--limit", type=int, default=150, help="采集数量上限")
-    p_run.add_argument("--visible", action="store_true", help="显示浏览器窗口")
-    p_run.add_argument("--profile", help="Firefox profile 路径")
-    p_run.add_argument("--with-comments", action="store_true", help="抓取评论")
+    p_run.add_argument("--per-user", type=int, default=20, help="每人采集条数")
+    p_run.add_argument("--hours", type=int, default=48, help="时间窗口（小时）")
+    p_run.add_argument("--no-filter", action="store_true", help="不过滤投资关键词")
+    p_run.add_argument("--auth-token", default="", help="X auth_token")
+    p_run.add_argument("--ct0", default="", help="X ct0")
 
     args = parser.parse_args()
 
