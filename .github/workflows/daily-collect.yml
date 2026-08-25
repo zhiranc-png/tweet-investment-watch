@@ -9,7 +9,7 @@ on:
 jobs:
   collect-and-upload:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout code
@@ -23,6 +23,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
+          python -m playwright install firefox
+          python -m playwright install-deps firefox
 
       - name: Run data collection
         env:
@@ -33,7 +35,7 @@ jobs:
             --auth-token "$AUTH_TOKEN" \
             --ct0 "$CT0" \
             --output "report_$(date +%Y%m%d).md" \
-            --limit 150 \
+            --limit 120 \
             --with-comments
 
       - name: Upload brief JSON as artifact
