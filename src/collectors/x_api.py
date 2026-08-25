@@ -11,19 +11,22 @@ from datetime import datetime, timezone, timedelta
 BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
 
 # 投资大V列表 (screen_name: 姓名/机构)
+# 精选纯投资/财经类账号，去掉杂讯多的科技CEO和政治人物
 DEFAULT_INFLUENCERS = {
-    # 宏观 / 央行
+    # ── 官方/央行/数据机构（高权重，信息权威）──
     "federalreserve": "美联储",
     "ecb": "欧洲央行",
     "bankofengland": "英格兰银行",
-    "jimcramer": "吉姆·克莱默",
-    # 投资大佬
-    "WarrenBuffett": "巴菲特",
-    "RayDalio": "瑞·达利欧",
-    "Carl_C_Icahn": "卡尔·伊坎",
-    "BillAckman": "比尔·阿克曼",
-    "pmarca": "Marc Andreessen",
-    # 财经媒体
+    "BLS_gov": "美国劳工统计局",
+    "BEA_News": "美国经济分析局",
+    "SecDev": "美国SEC",
+    "IMFNews": "IMF",
+    "OPEC": "OPEC",
+    "GOLDCOUNCIL": "世界黄金协会",
+    # ── 快讯/实时新闻（速度优先）──
+    "DeItaone": "Delta One",
+    "LiveSquawk": "LiveSquawk",
+    "financialjuice": "Financial Juice",
     "Reuters": "路透社",
     "Bloomberg": "彭博",
     "WSJ": "华尔街日报",
@@ -31,54 +34,57 @@ DEFAULT_INFLUENCERS = {
     "CNBC": "CNBC",
     "MarketWatch": "MarketWatch",
     "SeekingAlpha": "Seeking Alpha",
-    "TheStalwart": "The Stalwart",
-    # 科技 / 企业领袖
-    "elonmusk": "马斯克",
-    "tim_cook": "库克",
-    "sundarpichai": "皮查伊",
-    "satyanadella": "纳德拉",
-    "JeffBezos": "贝索斯",
-    "BillGates": "比尔盖茨",
-    # 加密 / 另类投资
-    "VitalikButerin": "V神",
-    "CZ_Binance": "赵长鹏",
-    "a16z": "a16z",
-    "CathieDWood": "木头姐",
-    # 对冲基金 / 分析师
-    "HedgeMind": "HedgeMind",
-    "zerohedge": "ZeroHedge",
-    "davidmarcus": "David Marcus",
-    "chamath": "Chamath",
+    "Techmeme": "Techmeme",
+    # ── 顶级投资人/基金经理（观点权重高）──
+    "RayDalio": "瑞·达利欧",
+    "BillAckman": "比尔·阿克曼",
     "michaeljburry": "Michael Burry",
-    # 经济 / 研究
-    "paulkrugman": "克鲁格曼",
-    "Nouriel": "鲁比尼",
-    "MishGEA": "Mish Shedlock",
-    "LynAldenContact": "Lyn Alden",
+    "chamath": "Chamath",
+    "CathieDWood": "木头姐",
+    "pmarca": "Marc Andreessen (a16z)",
     "RaoulGMI": "Raoul Pal",
     "Arthur_0x": "Arthur Hayes",
-    # 数据 / 研究机构
-    "BLS_gov": "美国劳工统计局",
-    "BEA_News": "美国经济分析局",
-    "SoberLook": "Sober Look",
+    # ── 宏观策略师/分析师（深度分析）──
     "biancoresearch": "Bianco Research",
+    "LynAldenContact": "Lyn Alden",
+    "LukeGromen": "Luke Gromen",
+    "SoberLook": "Sober Look",
     "charliebilello": "Charlie Bilello",
     "LizAnnSonders": "Liz Ann Sonders",
+    "TheStalwart": "The Stalwart",
+    "zerohedge": "ZeroHedge",
+    "HedgeMind": "HedgeMind",
+    "downtownjbrown": "Josh Brown",
+    "markminervini": "Mark Minervini",
+    # ── 大宗商品/能源──
+    "JavierBlas": "Javier Blas (彭博大宗商品)",
+    # ── 中国/中概/港股──
+    "HaoHongCFA": "洪灏",
+    "caixin": "财新网",
+    "FTChinese": "FT中文网",
+    "SCMPNews": "南华早报",
+    "realDawningW": "Dawning W (中概股)",
+    # ── 科技/AI（投资视角，非产品视角）──
+    "a16z": "a16z",
+    "verge": "The Verge",
 }
 
-# 投资关键词（用于过滤）
+# 投资关键词（旧版，保留兼容）
+# v2 版本过滤器在 filter.py 中，使用分级评分系统
 INVESTMENT_KEYWORDS = [
-    "stock", "market", "fed", "interest rate", "inflation", "recession",
+    # 强相关（命中即算）
+    "fed", "federal reserve", "interest rate", "inflation", "recession",
     "earnings", "revenue", "profit", "dividend", "buyback", "ipo",
-    "merger", "acquisition", "bankruptcy", "crypto", "bitcoin", "ethereum",
-    "gold", "silver", "oil", "bond", "treasury", "yield", "dollar",
-    "gdp", "cpi", "unemployment", "jobs", "recession", "growth",
-    "ai", "nvidia", "tesla", "apple", "microsoft", "google", "amazon",
-    "meta", "芯片", "半导体", "新能源", "美股", "港股", "A股",
-    "加息", "降息", "通胀", "衰退", "财报", "估值", "牛市", "熊市",
-    "stock", "share", "equity", "fund", "etf", "index",
-    "tariff", "trade", "economy", "economic", "rate cut", "rate hike",
-    "quantitative", "fed rate", "central bank", "monetary policy",
+    "bitcoin", "ethereum", "gold", "silver", "oil", "bond", "treasury",
+    "yield", "cpi", "pce", "unemployment", "gdp", "rate cut", "rate hike",
+    "fomc", "jackson hole", "central bank", "monetary policy",
+    "semiconductor", "chip", "gpu", "ai chip", "computing",
+    "标普", "纳斯达克", "恒生指数", "上证指数", "美债", "国债",
+    "美联储", "鲍威尔", "加息", "降息", "通胀", "衰退", "财报",
+    "半导体", "芯片", "算力", "大模型", "黄金", "原油", "比特币",
+    "牛市", "熊市", "抄底", "做空", "做多", "北向资金", "中概股",
+    "美股", "港股", "a股", "创业板", "科创板",
+    "vix", "波动率", "恐慌指数", "收益率曲线", "软着陆", "滞胀",
 ]
 
 
@@ -282,9 +288,12 @@ class XCollector:
     
     def collect(self, influencers=None, per_user_count=20, filter_investment=True, hours=48):
         """
-        采集多个大V的推文
+        采集多个大V的推文（增强版）
+        - 分级投资相关性过滤
+        - 资产/主题自动提取
+        - 按质量分排序
         hours: 只保留最近 N 小时的推文
-        返回: list of tweet dicts, 按热度排序
+        返回: list of tweet dicts, 按质量分排序
         """
         if influencers is None:
             influencers = DEFAULT_INFLUENCERS
@@ -304,6 +313,7 @@ class XCollector:
                     t["influencer_name"] = display_name
                     t["source"] = "x"
                     t["source_detail"] = f"@{screen_name}"
+                    t["is_kol"] = True
                 all_tweets.extend(tweets)
                 success += 1
                 time.sleep(0.3)  # 限速
@@ -319,17 +329,49 @@ class XCollector:
                     time_filtered.append(t)
             all_tweets = time_filtered
         
-        # 过滤投资相关
+        # ── 投资相关性过滤（增强版 v2）──
         if filter_investment:
-            filtered = []
-            for t in all_tweets:
-                text_lower = t["text"].lower()
-                if any(kw.lower() in text_lower for kw in INVESTMENT_KEYWORDS):
-                    filtered.append(t)
-            all_tweets = filtered
+            try:
+                from .filter import calculate_investment_score
+                scored_tweets = []
+                for t in all_tweets:
+                    score, matched_kw = calculate_investment_score(t["text"], "x")
+                    if score >= 15.0:  # 推文阈值稍低
+                        t["investment_score"] = round(score, 1)
+                        t["matched_keywords"] = matched_kw[:5]
+                        scored_tweets.append(t)
+                all_tweets = scored_tweets
+            except ImportError:
+                # 降级到旧版简单过滤
+                filtered = []
+                for t in all_tweets:
+                    text_lower = t["text"].lower()
+                    if any(kw.lower() in text_lower for kw in INVESTMENT_KEYWORDS):
+                        filtered.append(t)
+                all_tweets = filtered
         
-        # 按热度排序
-        all_tweets.sort(key=lambda x: x["score"], reverse=True)
+        # ── 资产 & 主题提取 ──
+        try:
+            from .asset_extractor import extract_assets, extract_themes
+            for t in all_tweets:
+                assets = extract_assets(t["text"])
+                themes = extract_themes(t["text"])
+                t["assets"] = [list(a) for a in assets]  # [[symbol, name], ...]
+                t["themes"] = themes
+        except ImportError:
+            # 如果提取器不可用，留空
+            for t in all_tweets:
+                t["assets"] = []
+                t["themes"] = []
+        
+        # 按综合质量分排序（热度分 + 投资相关性加权）
+        for t in all_tweets:
+            inv_score = t.get("investment_score", 10)
+            base_score = t.get("score", 0)
+            # 投资相关性越高，排名越靠前（最高 +50% 权重）
+            t["quality_score"] = round(base_score * (1 + inv_score / 200), 1)
+        
+        all_tweets.sort(key=lambda x: x.get("quality_score", x.get("score", 0)), reverse=True)
         
         return {
             "tweets": all_tweets,
@@ -337,6 +379,7 @@ class XCollector:
             "success_users": success,
             "failed_users": failed,
             "time_window_hours": hours,
+            "kol_count": len(influencers),
         }
     
     def health_check(self):

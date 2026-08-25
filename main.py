@@ -33,20 +33,50 @@ from src.collectors.models import Tweet
 
 def _dict_to_tweet(t: dict) -> Tweet:
     """将 XCollector 返回的 dict 转换为 Tweet 对象"""
+    # 资产提取：优先使用已提取的，否则从文本中提取
+    assets_raw = t.get("assets", [])
+    assets = []
+    for a in assets_raw:
+        if isinstance(a, (list, tuple)) and len(a) >= 2:
+            assets.append((str(a[0]), str(a[1])))
+    
+    # 如果没有预提取的资产，从文本中提取
+    if not assets:
+        try:
+            from src.collectors.asset_extractor import extract_assets
+            assets = extract_assets(t.get("text", ""))
+        except ImportError:
+            pass
+    
+    # 主题提取
+    themes = t.get("themes", [])
+    if not themes:
+        try:
+            from src.collectors.asset_extractor import extract_themes
+            themes = extract_themes(t.get("text", ""))
+        except ImportError:
+            pass
+    
+    # 作者：优先用 screen_name（@handle），保持一致性
+    author = t.get("user_screen", "") or t.get("influencer_name", "") or t.get("user_name", "")
+    author_name = t.get("influencer_name", "") or t.get("user_name", "") or author
+    
     return Tweet(
-        tweet_id=t.get("tweet_id", ""),
-        author=t.get("influencer_name", t.get("user_name", "")),
+        tweet_id=t.get("id", t.get("tweet_id", "")),
+        author=author,
+        author_name=author_name,
         content=t.get("text", ""),
         likes=t.get("likes", 0),
         reposts=t.get("retweets", 0),
         replies=t.get("replies", 0),
+        views=t.get("views", 0),
         created_at=t.get("created_at", ""),
         url=t.get("url", ""),
-        tags=[],
-        assets=[],
-        themes=[],
-        quality_score=t.get("score", 0),
-        is_kol=True,  # 大V账号默认都是 KOL
+        tags=t.get("matched_keywords", []),
+        assets=assets,
+        themes=themes,
+        quality_score=t.get("quality_score", t.get("score", 0)),
+        is_kol=t.get("is_kol", True),
         comments=[],
     )
 
