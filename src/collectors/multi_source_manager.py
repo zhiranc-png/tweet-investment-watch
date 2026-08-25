@@ -292,3 +292,14 @@ class MultiSourceCollector:
             url=item.url,
             tags=["zhihu_hot"],
         )
+
+    def filter_investment(self, posts: List[UnifiedPost]) -> List[UnifiedPost]:
+        """筛选投资相关内容"""
+        try:
+            from .filter import filter_investment_posts
+            filtered = filter_investment_posts(posts)
+            print(f"🔍 投资内容过滤: {len(posts)} → {len(filtered)} 条")
+            return filtered
+        except ImportError:
+            print("⚠️ filter 模块不可用，跳过过滤")
+            return posts
