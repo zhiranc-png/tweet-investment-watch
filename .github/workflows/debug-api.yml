@@ -13,4 +13,4 @@ jobs:
       - env:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           CT0: ${{ secrets.CT0 }}
-        run: python parse_tweets.py
+        run: python deep_debug.py
