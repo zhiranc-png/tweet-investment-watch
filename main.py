@@ -26,7 +26,6 @@ from pathlib import Path
 # 确保 src 在路径中
 sys.path.insert(0, str(Path(__file__).parent))
 
-from src.collectors.x_twitter import XTwitterCollector
 from src.collectors.x_api import XApiCollector
 from src.analysis.signal_aggregator import generate_brief
 from src.output.report_generator import generate_markdown_report, save_report, save_brief_json
@@ -38,6 +37,7 @@ import os
 
 def _collect_with_playwright(args, kol_handles, kol_queries, keyword_queries):
     """使用 Playwright 浏览器模式采集（备用方案）"""
+    from src.collectors.x_twitter import XTwitterCollector
     collector = XTwitterCollector(
         headless=not args.visible,
         firefox_profile=args.profile,
@@ -148,7 +148,7 @@ def cmd_brief(args: argparse.Namespace) -> None:
     """生成数据简报（聚合统计）"""
     print("📊 生成数据简报...")
 
-    from src.collectors.x_twitter import Tweet
+    from src.collectors.models import Tweet
 
     # 读取推文数据
     input_path = Path(args.input)
