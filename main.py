@@ -199,8 +199,9 @@ def cmd_brief(args: argparse.Namespace) -> None:
     output_path = Path(args.output)
     save_brief_json(brief, output_path)
     print(f"✅ 简报已保存到: {output_path}")
-    print(f"   涉及标的: {brief['stats']['unique_assets']} 个")
-    print(f"   热门主题: {brief['stats']['unique_themes']} 个")
+    stats = brief.get("stats", {})
+    print(f"   涉及标的: {stats.get('unique_assets', 0)} 个")
+    print(f"   热门主题: {stats.get('unique_themes', 0)} 个")
 
 
 def cmd_report(args: argparse.Namespace) -> None:
