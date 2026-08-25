@@ -1,4 +1,4 @@
-"""深度调试：打印 API 原始响应"""
+"""测试不同的 X API 方案"""
 import os
 import sys
 import json
@@ -15,7 +15,6 @@ print()
 import requests
 
 BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-QUERY_ID = "7c31s4h0q57s8fr76n2a0g"
 
 s = requests.Session()
 s.headers.update({
@@ -29,65 +28,96 @@ s.headers.update({
 s.cookies.set("auth_token", auth_token, domain=".x.com")
 s.cookies.set("ct0", ct0, domain=".x.com")
 
+# 方案 1: v1.1 search/tweets (旧版 API，可能还能用)
+print("=" * 60)
+print("方案 1: v1.1 search/tweets.json")
+print("=" * 60)
+try:
+    resp = s.get("https://api.x.com/1.1/search/tweets.json", 
+                 params={"q": "NVDA", "count": 5, "result_type": "popular"},
+                 timeout=15)
+    print(f"状态码: {resp.status_code}")
+    if resp.status_code == 200:
+        data = resp.json()
+        statuses = data.get("statuses", [])
+        print(f"返回 {len(statuses)} 条")
+        if statuses:
+            for t in statuses[:2]:
+                print(f"  - @{t.get('user',{}).get('screen_name','')}: {t.get('text','')[:80]}")
+    else:
+        print(f"响应: {resp.text[:300]}")
+except Exception as e:
+    print(f"异常: {e}")
+
+print()
+
+# 方案 2: 尝试不同的 SearchTimeline queryId
+print("=" * 60)
+print("方案 2: 测试多个 GraphQL queryId")
+print("=" * 60)
+
+# 一些已知的 queryId（不同时期的）
+query_ids = [
+    ("7c31s4h0q57s8fr76n2a0g", "旧版"),
+    ("lWkt2jfYlM8Pj074jVbL8Q", "另一个版本"),
+    ("5v2Zz3-fN9T5f7hH2kG9dQ", "变体A"),
+]
+
 features = {
     "responsive_web_graphql_exclude_directive_enabled": True,
     "verified_phone_label_enabled": False,
     "creator_subscriptions_tweet_preview_api_enabled": True,
     "responsive_web_graphql_timeline_navigation_enabled": True,
-    "c9s_tweet_anatomy_moderator_badge_enabled": True,
 }
 
-print("=" * 60)
-print("测试 1: 搜索 'NVDA min_faves:100'")
-print("=" * 60)
+variables = {"rawQuery": "NVDA", "count": 5, "querySource": "typed_query", "product": "Top"}
 
-url = f"https://x.com/i/api/graphql/{QUERY_ID}/SearchTimeline"
-variables = {"rawQuery": "NVDA min_faves:100", "count": 10, "querySource": "typed_query", "product": "Top"}
-
-try:
-    resp = s.get(url, params={"variables": json.dumps(variables), "features": json.dumps(features)}, timeout=15)
-    print(f"状态码: {resp.status_code}")
-    print(f"响应头 Content-Type: {resp.headers.get('content-type', '')}")
-    print()
-    
-    if resp.status_code == 200:
-        data = resp.json()
-        print(f"JSON keys: {list(data.keys())}")
-        
-        if "data" in data:
-            search = data["data"].get("search_by_raw_query", {})
-            print(f"search_by_raw_query keys: {list(search.keys())}")
-            
-            timeline = search.get("search_timeline", {}).get("timeline", {})
-            print(f"timeline keys: {list(timeline.keys())}")
-            
-            instructions = timeline.get("instructions", [])
-            print(f"instructions 数量: {len(instructions)}")
-            
-            for i, inst in enumerate(instructions):
-                print(f"  [{i}] type={inst.get('type')}, entries={len(inst.get('entries', []))}")
-                if inst.get("entries"):
-                    for j, entry in enumerate(inst["entries"][:3]):
-                        print(f"      entry[{j}]: id={entry.get('entryId')[:50]}")
-        else:
-            print("没有 data 字段")
-            print(f"完整响应前 500 字: {resp.text[:500]}")
-    else:
-        print(f"响应内容前 500 字: {resp.text[:500]}")
-        
-except Exception as e:
-    print(f"❌ 异常: {e}")
-    import traceback
-    traceback.print_exc()
+for qid, desc in query_ids:
+    try:
+        url = f"https://x.com/i/api/graphql/{qid}/SearchTimeline"
+        resp = s.get(url, params={"variables": json.dumps(variables), "features": json.dumps(features)}, timeout=10)
+        print(f"  [{desc}] {qid[:12]}... -> {resp.status_code}")
+        if resp.status_code == 200:
+            try:
+                data = resp.json()
+                if "data" in data:
+                    print(f"    ✅ 有 data 字段!")
+                    print(f"    keys: {list(data['data'].keys())}")
+                else:
+                    print(f"    无 data，响应前 200 字: {resp.text[:200]}")
+            except:
+                print(f"    非 JSON 响应")
+    except Exception as e:
+        print(f"  [{desc}] 异常: {e}")
 
 print()
+
+# 方案 3: 用 UserByScreenName 测试认证是否有效
 print("=" * 60)
-print("测试 2: 检查 cookies 是否被正确发送")
+print("方案 3: 测试认证是否有效 (UserByScreenName)")
 print("=" * 60)
-# 访问一个简单的端点看看认证状态
-try:
-    resp2 = s.get("https://x.com/i/api/1.1/account/settings.json", timeout=10)
-    print(f"settings.json 状态码: {resp2.status_code}")
-    print(f"响应前 300 字: {resp2.text[:300]}")
-except Exception as e:
-    print(f"异常: {e}")
+
+user_query_ids = [
+    "G3KGOASz96M-Qu0nwmGXNg",
+    "sLV32h4s3d7f8j2k5l1m0n",
+]
+
+for qid in user_query_ids[:1]:
+    try:
+        url = f"https://x.com/i/api/graphql/{qid}/UserByScreenName"
+        vars_ = {"screen_name": "elonmusk", "withSafetyModeUserFields": True}
+        resp = s.get(url, params={"variables": json.dumps(vars_), "features": json.dumps(features)}, timeout=10)
+        print(f"  UserByScreenName -> {resp.status_code}")
+        if resp.status_code == 200:
+            data = resp.json()
+            if "data" in data:
+                print(f"    ✅ 认证有效！有 data 字段")
+                user = data["data"].get("user", {})
+                result = user.get("result", {})
+                print(f"    用户名: {result.get('legacy',{}).get('screen_name','N/A')}")
+            else:
+                print(f"    无 data: {resp.text[:200]}")
+        else:
+            print(f"    响应: {resp.text[:200]}")
+    except Exception as e:
+        print(f"  异常: {e}")
