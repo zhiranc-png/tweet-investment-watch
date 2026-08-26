@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml
+          pip install requests beautifulsoup4 lxml pyyaml
 
       - name: 采集 X 投资舆情（主流程）
         env:
@@ -46,24 +46,7 @@ jobs:
             --hours ${{ github.event.inputs.hours || 48 }}
 
       - name: 采集多源中文数据（补充）
-        run: |
-          python -c "
-import sys, json
-sys.path.insert(0, '.')
-from src.collectors.multi_source_manager import MultiSourceCollector
-from src.collectors.filter import filter_investment_posts
-
-mgr = MultiSourceCollector()
-results = mgr.collect_all()
-all_posts = mgr.get_all_posts(results)
-filtered = filter_investment_posts(all_posts)
-
-# 保存
-with open('data/multi_source.json', 'w', encoding='utf-8') as f:
-    json.dump([p.to_dict() for p in filtered], f, ensure_ascii=False, indent=2)
-
-print(f'多源采集: {len(all_posts)} 条 → 投资相关 {len(filtered)} 条')
-" || echo "多源采集部分失败，继续主流程"
+        run: python collect_multi_source.py || echo "多源采集部分失败，继续主流程"
 
       - name: Upload tweets data
         uses: actions/upload-artifact@v4
