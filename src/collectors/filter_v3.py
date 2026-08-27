@@ -427,21 +427,49 @@ def classify_and_score(text: str) -> dict:
 
 
 def extract_assets(text: str) -> List[Tuple[str, str]]:
-    """从文本中提取资产符号"""
+    """从文本中提取资产符号（过滤非交易标的）"""
     text_lower = text.lower()
     found = {}
+
+    # 非交易标的（缩写词、机构名等容易误匹配的）
+    skip_symbols = {
+        "AI", "CEO", "CFO", "GDP", "CPI", "PCE", "FOMC", "Fed", "FED",
+        "SEC", "FDA", "IPO", "ETF", "REIT", "ESG", "SAAS", "ROI",
+        "EV", "APP", "DATA", "CORE", "NEXT", "BEST", "TOP",
+        "NEW", "BIG", "SMALL", "MID", "LONG", "SHORT",
+        "HIGH", "LOW", "OPEN", "CLOSE", "FIRST", "LAST",
+        "ONE", "TWO", "THREE", "FOUR", "FIVE",
+        "YES", "NO", "ALL", "ANY", "NEWS",
+        "TIME", "YEAR", "MONTH", "WEEK", "DAY",
+        "USA", "US", "UK", "EU", "CN", "JP",
+        "Q1", "Q2", "Q3", "Q4",
+        "MONEY", "CASH", "RISK", "BETA", "ALPHA",
+        "SAVE", "BUY", "SELL", "HOLD",
+        "FUND", "STOCK", "BOND", "MARKET",
+        "TRADE", "TRADING", "INVEST", "INVESTING",
+        "PROFIT", "LOSS", "GAIN", "DROP",
+        "RATE", "YIELD", "PRICE", "VALUE",
+        "GROWTH", "QUALITY",
+        "GLOBAL", "WORLD", "CHINA", "AMERICA",
+        "OTC", "P/E", "EPS", "DCF", "NAV",
+        "AUM", "PM", "AM", "VP", "GM",
+        "IR", "PR", "HR", "IT",
+    }
+    skip_lower = {s.lower() for s in skip_symbols}
 
     # 1. $cashtag 格式
     cashtags = re.findall(r'\$([a-zA-Z]{1,5})', text)
     for tag in cashtags:
         tag_lower = tag.lower()
+        if tag_lower in skip_lower:
+            continue
         if tag_lower in ASSET_ALIASES:
             sym, atype = ASSET_ALIASES[tag_lower]
             found[sym] = atype
         else:
             found[tag.upper()] = "股票_未知"
 
-    # 2. 别名匹配
+    # 2. 别名匹配（只匹配已知别名，避免误匹配常见缩写）
     for alias, (symbol, atype) in ASSET_ALIASES.items():
         if alias in text_lower:
             found[symbol] = atype

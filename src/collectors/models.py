@@ -23,4 +23,8 @@ class Tweet:
     themes: list = field(default_factory=list)
     quality_score: float = 0.0
     is_kol: bool = False
+    sentiment: str = "neutral"    # bullish / bearish / neutral
+    sentiment_score: float = 0.0  # -1 ~ 1
+    info_density: float = 0.0     # 0 ~ 1
+    theme_details: list = field(default_factory=list)  # [{theme, score, confidence}]
     comments: list = field(default_factory=list)  # list[Tweet]

@@ -48,11 +48,13 @@ def _dict_to_tweet(t: dict, use_v3: bool = True) -> Tweet:
     if use_v3 and text:
         cls = classify_and_score(text)
     
-    # 资产提取：优先用 v3 结果，其次用已提取的，最后从文本中提取
+    # 资产提取：优先用 v3 结果（v3 已做非交易标的过滤）
     assets = []
-    if cls and cls["assets"]:
+    if cls is not None:
+        # v3 分类已执行，用 v3 结果（即使为空也信任，因为 v3 过滤了非交易标的）
         assets = cls["assets"]
     else:
+        # v3 未执行，用原始数据或从文本提取
         assets_raw = t.get("assets", [])
         for a in assets_raw:
             if isinstance(a, (list, tuple)) and len(a) >= 2:
@@ -66,11 +68,15 @@ def _dict_to_tweet(t: dict, use_v3: bool = True) -> Tweet:
             except ImportError:
                 pass
     
-    # 主题提取：优先用 v3 结果
+    # 主题提取：优先用 v3 结果（标准 11 主题）
     themes = []
-    if cls and cls["themes"]:
+    theme_details = []
+    if cls is not None:
+        # v3 分类已执行，用 v3 结果（标准主题名）
         themes = [th["theme"] for th in cls["themes"]]
+        theme_details = cls["themes"]
     else:
+        # v3 未执行，用原始数据或从文本提取
         themes = t.get("themes", [])
         if not themes:
             try:
@@ -90,10 +96,16 @@ def _dict_to_tweet(t: dict, use_v3: bool = True) -> Tweet:
     else:
         quality_score = t.get("quality_score", t.get("score", 0))
     
-    # 情绪
+    # 情绪 + 其他 v3 字段
     sentiment = "neutral"
+    sentiment_score = 0.0
+    info_density = 0.0
+    theme_details = []
     if cls:
         sentiment = cls["sentiment"]
+        sentiment_score = cls["sentiment_score"]
+        info_density = cls["info_density"]
+        theme_details = cls["themes"]
     
     tweet = Tweet(
         tweet_id=t.get("id", t.get("tweet_id", "")),
@@ -111,15 +123,12 @@ def _dict_to_tweet(t: dict, use_v3: bool = True) -> Tweet:
         themes=themes,
         quality_score=quality_score,
         is_kol=t.get("is_kol", True),
+        sentiment=sentiment,
+        sentiment_score=sentiment_score,
+        info_density=info_density,
+        theme_details=theme_details,
         comments=[],
     )
-    
-    # 附加 v3 分类结果（动态属性）
-    if cls:
-        tweet.sentiment = sentiment
-        tweet.sentiment_score = cls["sentiment_score"]
-        tweet.info_density = cls["info_density"]
-        tweet.theme_details = cls["themes"]
     
     return tweet
 
@@ -208,10 +217,12 @@ def cmd_brief(args: argparse.Namespace) -> dict:
             t = Tweet(
                 tweet_id=td["tweet_id"],
                 author=td["author"],
+                author_name=td.get("author_name", td.get("author", "")),
                 content=td["content"],
                 likes=td["likes"],
                 reposts=td["reposts"],
-                replies=td["replies"],
+                replies=td.get("replies", 0),
+                views=td.get("views", 0),
                 created_at=td["created_at"],
                 url=td["url"],
                 tags=td.get("tags", []),
@@ -219,6 +230,10 @@ def cmd_brief(args: argparse.Namespace) -> dict:
                 themes=td.get("themes", []),
                 quality_score=td.get("quality_score", 0),
                 is_kol=td.get("is_kol", False),
+                sentiment=td.get("sentiment", "neutral"),
+                sentiment_score=td.get("sentiment_score", 0.0),
+                info_density=td.get("info_density", 0.0),
+                theme_details=td.get("theme_details", []),
             )
             for cd in td.get("comments", []):
                 t.comments.append(Tweet(

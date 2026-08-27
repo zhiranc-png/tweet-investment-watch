@@ -81,8 +81,10 @@ def generate_markdown_report(brief: dict, signals: list | None = None, report_da
         lines.append("")
         for i, ts in enumerate(theme_signals[:10], 1):
             strength = ts.get("signal_strength", 0)
-            level = "🔴高" if strength >= 70 else "🟡中" if strength >= 40 else "🟢低"
-            consensus = ts.get("consensus", 0)
+            attention = ts.get("attention_level", "medium")
+            level_map = {"high": "🔴高", "medium": "🟡中", "low": "🟢低"}
+            level = level_map.get(attention, "🟡中")
+            consensus = ts.get("consensus_score", ts.get("consensus", 0))
             sentiment = ts.get("sentiment", "neutral")
             sentiment_emoji = {"bullish": "🟢 看多", "bearish": "🔴 看空", "neutral": "⚪ 中性"}.get(sentiment, "⚪ 中性")
 

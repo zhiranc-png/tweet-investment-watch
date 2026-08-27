@@ -80,6 +80,7 @@ SYMBOL_MAP = {
     "油价": ("hf_CL", "future"),
     "Oil": ("hf_CL", "future"),
     "WTI": ("hf_CL", "future"),
+    "WTI原油": ("hf_CL", "future"),
     "CL=F": ("hf_CL", "future"),
     "天然气": ("hf_NG", "future"),
     "布伦特": ("hf_BZ", "future"),
@@ -132,13 +133,25 @@ SYMBOL_MAP = {
     "XLP": ("gb_xlp", "us_etf"),
     "XLY": ("gb_xly", "us_etf"),
 
-    # ── 加密货币（用 ETF 代理） ──
-    "BTC": ("gb_bito", "us_etf"),  # 比特币 ETF 作为代理
-    "Bitcoin": ("gb_bito", "us_etf"),
-    "比特币": ("gb_bito", "us_etf"),
+    # ── 加密货币（CoinGecko 真实价格，优先） ──
+    "BTC": ("bitcoin", "crypto"),
+    "Bitcoin": ("bitcoin", "crypto"),
+    "比特币": ("bitcoin", "crypto"),
+    "ETH": ("ethereum", "crypto"),
+    "以太坊": ("ethereum", "crypto"),
+    "SOL": ("solana", "crypto"),
+    "Solana": ("solana", "crypto"),
+    "BNB": ("binancecoin", "crypto"),
+    "XRP": ("ripple", "crypto"),
+    "DOGE": ("dogecoin", "crypto"),
+    "ADA": ("cardano", "crypto"),
+    "AVAX": ("avalanche-2", "crypto"),
+    "DOT": ("polkadot", "crypto"),
+    "MATIC": ("matic-network", "crypto"),
+    "LINK": ("chainlink", "crypto"),
+    # ETF 代理（备用，价格低很多，仅作参考）
     "BITO": ("gb_bito", "us_etf"),
-    "ETH": ("gb_ethe", "us_etf"),
-    "以太坊": ("gb_ethe", "us_etf"),
+    "ETHE": ("gb_ethe", "us_etf"),
 
     # ── 外汇 ──
     "DXY": ("fx_susdcny", "forex"),  # 用美元/人民币代理（新浪没有DXY）
@@ -219,7 +232,7 @@ _SINA_HEADERS = {
 
 
 def _resolve_sina_code(symbol: str, asset_type: str = "") -> tuple[str, str] | None:
-    """将资产符号解析为 (新浪代码, 数据类型)"""
+    """将资产符号解析为 (新浪代码, 数据类型)，加密货币返回 None（走 CoinGecko）"""
     if not symbol:
         return None
 
@@ -235,6 +248,9 @@ def _resolve_sina_code(symbol: str, asset_type: str = "") -> tuple[str, str] | N
 
     for key, val in SYMBOL_MAP.items():
         if key.upper() == sym_upper or key.lower() == sym_lower:
+            # 加密货币走 CoinGecko，不走新浪
+            if val[1] == "crypto":
+                return None
             return val
 
     # 如果已经是新浪格式，直接返回
@@ -250,6 +266,23 @@ def _resolve_sina_code(symbol: str, asset_type: str = "") -> tuple[str, str] | N
     # 纯大写字母（1-5个），可能是美股代码，尝试 gb_ 前缀
     if 1 <= len(sym_upper) <= 5 and sym_upper.isalpha():
         return ("gb_" + sym_lower, "us_stock")
+
+    return None
+
+
+def _resolve_coingecko_id(symbol: str, asset_type: str = "") -> str | None:
+    """将资产符号解析为 CoinGecko coin id（仅加密货币）"""
+    if not symbol:
+        return None
+
+    sym_clean = symbol.strip().lstrip("$")
+    sym_upper = sym_clean.upper()
+    sym_lower = sym_clean.lower()
+
+    for key, val in SYMBOL_MAP.items():
+        if key.upper() == sym_upper or key.lower() == sym_lower:
+            if val[1] == "crypto":
+                return val[0]
 
     return None
 
@@ -411,6 +444,42 @@ def _fetch_sina_batch(codes: list[str], data_types: dict[str, str]) -> dict[str,
     return results
 
 
+def _fetch_coingecko_batch(coin_ids: list[str]) -> dict[str, dict]:
+    """批量获取 CoinGecko 加密货币行情（一次最多 250 个）"""
+    if not coin_ids:
+        return {}
+
+    results = {}
+    try:
+        url = "https://api.coingecko.com/api/v3/simple/price"
+        params = {
+            "ids": ",".join(coin_ids),
+            "vs_currencies": "usd",
+            "include_24hr_change": "true",
+            "include_last_updated_at": "true",
+        }
+        r = requests.get(url, params=params, timeout=15)
+        if r.status_code == 200:
+            data = r.json()
+            for cid, info in data.items():
+                price = info.get("usd", 0)
+                change_24h = info.get("usd_24h_change", 0)
+                results[cid] = {
+                    "ticker": cid,
+                    "name": cid.capitalize(),
+                    "price": round(price, 2),
+                    "change": round(price * change_24h / 100, 2) if price else 0,
+                    "change_pct_1d": round(change_24h, 2),
+                    "latest_date": "",
+                    "data_type": "crypto",
+                    "source": "coingecko",
+                }
+    except Exception:
+        pass
+
+    return results
+
+
 def _get_price(symbol: str, asset_type: str = "", use_cache: bool = True) -> dict | None:
     """获取单个资产的价格（带缓存）"""
     global _price_cache, _cache_timestamp
@@ -440,6 +509,7 @@ def _get_price(symbol: str, asset_type: str = "", use_cache: bool = True) -> dic
 def enrich_assets_with_prices(assets: list[dict]) -> list[dict]:
     """
     为资产列表添加价格数据（批量获取，效率更高）
+    支持新浪财经（美股/ETF/指数/期货/外汇）+ CoinGecko（加密货币）
 
     Args:
         assets: 资产列表，每项需包含 symbol 和 type 字段
@@ -448,37 +518,63 @@ def enrich_assets_with_prices(assets: list[dict]) -> list[dict]:
         enriched assets list，每项增加 price_data 字段
     """
     enriched = []
-    code_map = {}  # sina_code -> list of asset indices
-    data_types = {}  # sina_code -> data_type
+    # 新浪财经: sina_code -> list of asset indices
+    sina_code_map: dict[str, list[int]] = {}
+    sina_data_types: dict[str, str] = {}
+    # CoinGecko: coin_id -> list of asset indices
+    coingecko_map: dict[str, list[int]] = {}
 
-    # 第一遍：解析所有资产的新浪代码
+    # 第一遍：解析所有资产的代码
     for i, asset in enumerate(assets):
         symbol = asset.get("symbol", "")
         atype = asset.get("type", "")
-        resolved = _resolve_sina_code(symbol, atype)
-
         asset_copy = dict(asset)
+
+        # 先试 CoinGecko（加密货币）
+        cg_id = _resolve_coingecko_id(symbol, atype)
+        if cg_id:
+            asset_copy["_cg_id"] = cg_id
+            if cg_id not in coingecko_map:
+                coingecko_map[cg_id] = []
+            coingecko_map[cg_id].append(i)
+            enriched.append(asset_copy)
+            continue
+
+        # 再试新浪财经
+        resolved = _resolve_sina_code(symbol, atype)
         if resolved:
             sina_code, dtype = resolved
             asset_copy["_sina_code"] = sina_code
-            if sina_code not in code_map:
-                code_map[sina_code] = []
-                data_types[sina_code] = dtype
-            code_map[sina_code].append(i)
+            if sina_code not in sina_code_map:
+                sina_code_map[sina_code] = []
+                sina_data_types[sina_code] = dtype
+            sina_code_map[sina_code].append(i)
         else:
             asset_copy["price_data"] = None
             asset_copy["price_available"] = False
 
         enriched.append(asset_copy)
 
-    # 批量获取价格
-    if code_map:
-        all_codes = list(code_map.keys())
-        price_results = _fetch_sina_batch(all_codes, data_types)
-
-        # 回填
-        for sina_code, indices in code_map.items():
+    # 批量获取新浪价格
+    if sina_code_map:
+        all_codes = list(sina_code_map.keys())
+        price_results = _fetch_sina_batch(all_codes, sina_data_types)
+        for sina_code, indices in sina_code_map.items():
             price_data = price_results.get(sina_code)
+            for idx in indices:
+                if price_data:
+                    enriched[idx]["price_data"] = price_data
+                    enriched[idx]["price_available"] = True
+                else:
+                    enriched[idx]["price_data"] = None
+                    enriched[idx]["price_available"] = False
+
+    # 批量获取 CoinGecko 价格
+    if coingecko_map:
+        all_coins = list(coingecko_map.keys())
+        cg_results = _fetch_coingecko_batch(all_coins)
+        for cg_id, indices in coingecko_map.items():
+            price_data = cg_results.get(cg_id)
             for idx in indices:
                 if price_data:
                     enriched[idx]["price_data"] = price_data
@@ -490,6 +586,7 @@ def enrich_assets_with_prices(assets: list[dict]) -> list[dict]:
     # 清理临时字段
     for a in enriched:
         a.pop("_sina_code", None)
+        a.pop("_cg_id", None)
 
     return enriched
 
@@ -526,42 +623,63 @@ def enrich_brief_with_prices(brief: dict) -> dict:
     theme_signals = result.get("theme_signals", [])
     theme_rep_map = _get_theme_representatives()
 
-    # 批量获取主题代表资产价格
-    rep_codes = []
-    rep_dtypes = {}
-    for theme in theme_rep_map:
-        if theme in theme_rep_map:
-            code, dtype = theme_rep_map[theme]
-            rep_codes.append(code)
-            rep_dtypes[code] = dtype
+    # 分离新浪和 CoinGecko 的代表资产
+    sina_rep_codes = []
+    sina_rep_dtypes = {}
+    cg_rep_ids = []
+    theme_to_code = {}  # theme -> (code, source)
 
-    if rep_codes:
-        rep_prices = _fetch_sina_batch(rep_codes, rep_dtypes)
+    for theme, (code, source) in theme_rep_map.items():
+        theme_to_code[theme] = (code, source)
+        if source == "sina":
+            sina_rep_codes.append(code)
+            # 推断 data_type
+            if code.startswith("gb_"):
+                sina_rep_dtypes[code] = "us_etf" if code in ("gb_tlt", "gb_spy", "gb_kweb") else "us_stock"
+            elif code.startswith("int_"):
+                sina_rep_dtypes[code] = "index"
+            elif code.startswith("hf_"):
+                sina_rep_dtypes[code] = "future"
+            elif code.startswith("fx_"):
+                sina_rep_dtypes[code] = "forex"
+            else:
+                sina_rep_dtypes[code] = "us_stock"
+        elif source == "coingecko":
+            cg_rep_ids.append(code)
 
-        for ts in theme_signals:
-            theme = ts.get("theme", "")
-            if theme in theme_rep_map:
-                code, _ = theme_rep_map[theme]
-                if code in rep_prices:
-                    ts["representative_price"] = rep_prices[code]
+    rep_prices = {}
+    if sina_rep_codes:
+        rep_prices.update(_fetch_sina_batch(sina_rep_codes, sina_rep_dtypes))
+    if cg_rep_ids:
+        rep_prices.update(_fetch_coingecko_batch(cg_rep_ids))
+
+    for ts in theme_signals:
+        theme = ts.get("theme", "")
+        if theme in theme_to_code:
+            code, _ = theme_to_code[theme]
+            if code in rep_prices:
+                ts["representative_price"] = rep_prices[code]
 
     return result
 
 
 def _get_theme_representatives() -> dict[str, tuple[str, str]]:
-    """获取每个主题的代表性资产 (sina_code, data_type)"""
+    """获取每个主题的代表性资产
+    返回格式: {theme: (code, source_type)}
+    source_type: 'sina' 或 'coingecko'
+    """
     return {
-        "美债_固定收益": ("gb_tlt", "us_etf"),
-        "黄金_贵金属": ("hf_GC", "future"),
-        "原油_能源": ("hf_CL", "future"),
-        "AI_科技": ("gb_nvda", "us_stock"),
-        "加密货币": ("gb_bito", "us_etf"),
-        "美股_大盘": ("gb_spy", "us_etf"),
-        "A股_港股": ("gb_kweb", "us_etf"),
-        "外汇_汇率": ("fx_susdcny", "forex"),
-        "宏观_利率政策": ("gb_tlt", "us_etf"),
-        "地缘政治": ("int_vix", "index"),
-        "公司_财报": ("gb_spy", "us_etf"),
+        "美债_固定收益": ("gb_tlt", "sina"),
+        "黄金_贵金属": ("hf_GC", "sina"),
+        "原油_能源": ("hf_CL", "sina"),
+        "AI_科技": ("gb_nvda", "sina"),
+        "加密货币": ("bitcoin", "coingecko"),
+        "美股_大盘": ("gb_spy", "sina"),
+        "A股_港股": ("gb_kweb", "sina"),
+        "外汇_汇率": ("fx_susdcny", "sina"),
+        "宏观_利率政策": ("gb_tlt", "sina"),
+        "地缘政治": ("int_vix", "sina"),
+        "公司_财报": ("gb_spy", "sina"),
     }
 
 
