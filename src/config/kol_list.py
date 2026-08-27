@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-KOL 监测池 v2.1 — 结构优化版（2026-08-27）
+KOL 监测池 v2.2 — 结构优化版（2026-08-27）
 
 优化方向：
 1. 新增美债/固收策略师组（+6）
@@ -10,8 +10,9 @@ KOL 监测池 v2.1 — 结构优化版（2026-08-27）
 5. 削减快讯/杂讯类账号（-6）
 6. 宏观组补充偏债市策略师（+2）
 7. A股/港股补充高质量KOL（+3，含 华尔街没有名字）
+8. 新增前沿科技资本（+1，168X）
 
-净变化：从 54 人到 65 人（+11 净增，实际 +17 新增 -6 削减）
+净变化：从 54 人到 66 人（+12 净增，实际 +18 新增 -6 削减）
 """
 
 # 全量监测池（按主题分组，便于维护）
@@ -57,7 +58,7 @@ KOL_LIST = [
     "EIAgov",              # 能源信息署
     "USTreasury",          # 美国财政部
 
-    # ── 美股/投资大V（14人）──
+    # ── 美股/投资大V（15人）──
     "charliebilello",      # Charlie Bilello - 量化图表大师
     "RyanDetrick",         # Ryan Detrick - 市场历史数据
     "EricBalchunas",       # ETF专家
@@ -72,6 +73,7 @@ KOL_LIST = [
     "CathieDWood",         # 木头姐 - ARK Invest
     "PeterLBrandt",        # 技术分析大师
     "John_Hempton",        # 做空专家
+    "168X_Fortune",        # 168X - 前沿科技+资本
 
     # ── 知名交易者（5人）──
     "aleabitoreddit",      # Serenity - AI供应链瓶颈挖掘
@@ -141,6 +143,7 @@ KOL_WEIGHTS = {
     "CathieDWood": 3.0,
     "PeterLBrandt": 3.5,
     "John_Hempton": 3.5,
+    "168X_Fortune": 3.0,
     "aleabitoreddit": 4.0,
     "ripster47": 3.5,
     "matt_levine": 3.5,

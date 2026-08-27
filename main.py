@@ -27,45 +27,78 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from src.collectors.x_api import XCollector, DEFAULT_INFLUENCERS
 from src.analysis.signal_aggregator import generate_brief
+from src.analysis.signal_aggregator_v2 import generate_brief_v2
 from src.output.report_generator import generate_markdown_report, save_report, save_brief_json
 from src.collectors.models import Tweet
+from src.collectors.filter_v3 import classify_and_score
 
 
-def _dict_to_tweet(t: dict) -> Tweet:
-    """将 XCollector 返回的 dict 转换为 Tweet 对象"""
-    # 资产提取：优先使用已提取的，否则从文本中提取
-    assets_raw = t.get("assets", [])
+def _dict_to_tweet(t: dict, use_v3: bool = True) -> Tweet:
+    """将 XCollector 返回的 dict 转换为 Tweet 对象
+    
+    Args:
+        t: 原始推文字典
+        use_v3: 是否使用 v3 过滤器（主题分类+资产提取+情绪判断）
+    """
+    text = t.get("text", "")
+    
+    # v3 过滤器：主题分类 + 资产提取 + 情绪判断
+    cls = None
+    if use_v3 and text:
+        cls = classify_and_score(text)
+    
+    # 资产提取：优先用 v3 结果，其次用已提取的，最后从文本中提取
     assets = []
-    for a in assets_raw:
-        if isinstance(a, (list, tuple)) and len(a) >= 2:
-            assets.append((str(a[0]), str(a[1])))
+    if cls and cls["assets"]:
+        assets = cls["assets"]
+    else:
+        assets_raw = t.get("assets", [])
+        for a in assets_raw:
+            if isinstance(a, (list, tuple)) and len(a) >= 2:
+                assets.append((str(a[0]), str(a[1])))
+        
+        # 如果没有预提取的资产，从文本中提取
+        if not assets:
+            try:
+                from src.collectors.asset_extractor import extract_assets
+                assets = extract_assets(text)
+            except ImportError:
+                pass
     
-    # 如果没有预提取的资产，从文本中提取
-    if not assets:
-        try:
-            from src.collectors.asset_extractor import extract_assets
-            assets = extract_assets(t.get("text", ""))
-        except ImportError:
-            pass
-    
-    # 主题提取
-    themes = t.get("themes", [])
-    if not themes:
-        try:
-            from src.collectors.asset_extractor import extract_themes
-            themes = extract_themes(t.get("text", ""))
-        except ImportError:
-            pass
+    # 主题提取：优先用 v3 结果
+    themes = []
+    if cls and cls["themes"]:
+        themes = [th["theme"] for th in cls["themes"]]
+    else:
+        themes = t.get("themes", [])
+        if not themes:
+            try:
+                from src.collectors.asset_extractor import extract_themes
+                themes = extract_themes(text)
+            except ImportError:
+                pass
     
     # 作者：优先用 screen_name（@handle），保持一致性
     author = t.get("user_screen", "") or t.get("influencer_name", "") or t.get("user_name", "")
     author_name = t.get("influencer_name", "") or t.get("user_name", "") or author
     
-    return Tweet(
+    # 质量分：优先用 v3 的 investment_score
+    quality_score = 0.0
+    if cls:
+        quality_score = cls["investment_score"]
+    else:
+        quality_score = t.get("quality_score", t.get("score", 0))
+    
+    # 情绪
+    sentiment = "neutral"
+    if cls:
+        sentiment = cls["sentiment"]
+    
+    tweet = Tweet(
         tweet_id=t.get("id", t.get("tweet_id", "")),
         author=author,
         author_name=author_name,
-        content=t.get("text", ""),
+        content=text,
         likes=t.get("likes", 0),
         reposts=t.get("retweets", 0),
         replies=t.get("replies", 0),
@@ -75,10 +108,19 @@ def _dict_to_tweet(t: dict) -> Tweet:
         tags=t.get("matched_keywords", []),
         assets=assets,
         themes=themes,
-        quality_score=t.get("quality_score", t.get("score", 0)),
+        quality_score=quality_score,
         is_kol=t.get("is_kol", True),
         comments=[],
     )
+    
+    # 附加 v3 分类结果（动态属性）
+    if cls:
+        tweet.sentiment = sentiment
+        tweet.sentiment_score = cls["sentiment_score"]
+        tweet.info_density = cls["info_density"]
+        tweet.theme_details = cls["themes"]
+    
+    return tweet
 
 
 def cmd_collect(args: argparse.Namespace) -> list[Tweet]:
@@ -192,16 +234,26 @@ def cmd_brief(args: argparse.Namespace) -> dict:
 
     print(f"   读取 {len(tweets)} 条推文")
 
-    # 生成简报
-    brief = generate_brief(tweets)
+    # 生成简报（v1 或 v2）
+    use_v2 = getattr(args, 'v2', False)
+    if use_v2:
+        print("   使用 v2 信号聚合器（主题信号+共识度+信号强度）")
+        brief = generate_brief_v2(tweets)
+    else:
+        brief = generate_brief(tweets)
 
     # 保存
     output_path = Path(args.output)
     save_brief_json(brief, output_path)
     print(f"✅ 简报已保存到: {output_path}")
     stats = brief.get("stats", {})
+    print(f"   版本: {brief.get('version', '1.0')}")
     print(f"   涉及标的: {stats.get('unique_assets', 0)} 个")
     print(f"   热门主题: {stats.get('unique_themes', 0)} 个")
+    if use_v2:
+        print(f"   主题信号: {len(brief.get('theme_signals', []))} 个")
+        print(f"   整体情绪: {stats.get('overall_sentiment', 'N/A')}")
+        print(f"   整体共识度: {stats.get('overall_consensus', 0)}")
 
     return brief
 
@@ -264,6 +316,7 @@ def cmd_run(args: argparse.Namespace) -> None:
     brief_args = argparse.Namespace(
         input=str(tweets_file),
         output=str(brief_file),
+        v2=getattr(args, 'v2', False),
     )
     cmd_brief(brief_args)
 
@@ -297,6 +350,7 @@ def main() -> None:
     p_brief = subparsers.add_parser("brief", help="生成数据简报")
     p_brief.add_argument("--input", "-i", required=True, help="推文 JSON 文件")
     p_brief.add_argument("--output", "-o", default="data/brief.json", help="输出文件路径")
+    p_brief.add_argument("--v2", action="store_true", help="使用 v2 信号聚合器（主题信号+共识度+信号强度）")
 
     # report
     p_report = subparsers.add_parser("report", help="生成 Markdown 报告")
@@ -310,6 +364,7 @@ def main() -> None:
     p_run.add_argument("--per-user", type=int, default=20, help="每人采集条数")
     p_run.add_argument("--hours", type=int, default=48, help="时间窗口（小时）")
     p_run.add_argument("--no-filter", action="store_true", help="不过滤投资关键词")
+    p_run.add_argument("--v2", action="store_true", help="使用 v2 信号聚合器")
     p_run.add_argument("--auth-token", default="", help="X auth_token")
     p_run.add_argument("--ct0", default="", help="X ct0")
 
