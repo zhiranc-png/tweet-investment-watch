@@ -1,19 +1,22 @@
-name: 投资舆情每日采集
+name: 多源中文采集（原投资舆情每日采集）
+
+# ─────────────────────────────────────────────────────────────────
+# 2026-08-27 第二批优化 A 项：X 采集部分正式退役。
+# 原因：X 采集已由 hybrid/ 管道（hybrid-collect.yml，UTC 04:00）承担，
+#       旧管道的 X 主流程与本仓库共用同一小号 cookie 限流窗口，双跑必撞 429。
+# 保留：多源中文采集（华尔街见闻/财联社/雪球/知乎/微博等）作为日报中文圈补充数据源，
+#       并新增「数据提交回仓库」步骤，与 hybrid 数据同目录永久可溯。
+# 如需恢复 X 部分：取消下方注释块即可（代码未删）。
+# ─────────────────────────────────────────────────────────────────
 
 on:
   schedule:
-    # 每天 UTC 04:00 = 北京时间 12:00
-    - cron: '0 4 * * *'
+    # 每天 UTC 05:00 = HKT 13:00（X 部分退役后不再占用小号限流窗口，时段仅作惯例保留）
+    - cron: '0 5 * * *'
   workflow_dispatch:
-    inputs:
-      per_user:
-        description: '每人采集条数'
-        required: false
-        default: '20'
-      hours:
-        description: '时间窗口（小时）'
-        required: false
-        default: '48'
+
+permissions:
+  contents: write
 
 jobs:
   collect:
@@ -34,35 +37,36 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4 lxml pyyaml
 
-      - name: 采集 X 投资舆情（主流程）
-        env:
-          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-          CT0: ${{ secrets.CT0 }}
-        run: |
-          mkdir -p data report
-          python main.py run \
-            --output report/daily_report.md \
-            --per-user ${{ github.event.inputs.per_user || 20 }} \
-            --hours ${{ github.event.inputs.hours || 48 }} \
-            --v2 \
-            --with-price
+      # ── X 采集部分已退役（2026-08-27，第二批优化 A 项）──
+      # X 时间线采集统一由 hybrid/ 管道负责；此处不再消耗小号限流窗口。
+      # - name: 采集 X 投资舆情（主流程）【已退役】
+      #   env:
+      #     AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+      #     CT0: ${{ secrets.CT0 }}
+      #   run: |
+      #     mkdir -p data report
+      #     python main.py run \
+      #       --output report/daily_report.md \
+      #       --per-user 20 \
+      #       --hours 48 \
+      #       --v2 \
+      #       --with-price
 
-      - name: 采集多源中文数据（补充）
+      - name: 采集多源中文数据（保留，日报中文圈补充源）
         run: python collect_multi_source.py || echo "多源采集部分失败，继续主流程"
 
-      - name: Upload tweets data
-        uses: actions/upload-artifact@v4
-        with:
-          name: tweet-data
-          path: data/tweets_*.json
-          retention-days: 30
-
-      - name: Upload brief data
-        uses: actions/upload-artifact@v4
-        with:
-          name: brief-data
-          path: data/brief_*.json
-          retention-days: 30
+      - name: 多源数据提交回仓库（可溯，与 hybrid 数据同目录）
+        run: |
+          if [ -f data/multi_source.json ]; then
+            cp data/multi_source.json "data/multi_source_$(date -u +%Y%m%d).json"
+            git config user.name "tweet-watch-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add data/multi_source_*.json
+            git diff --quiet --staged || git commit -m "data: multi-source $(date -u +%Y%m%d)"
+            git push
+          else
+            echo "多源数据不存在，跳过提交"
+          fi
 
       - name: Upload multi-source data
         uses: actions/upload-artifact@v4
@@ -72,9 +76,22 @@ jobs:
           retention-days: 30
         if: success() || failure()
 
-      - name: Upload report
-        uses: actions/upload-artifact@v4
-        with:
-          name: daily-report
-          path: report/daily_report.md
-          retention-days: 30
+      # ── X 流程产物上传，随 X 部分一并退役 ──
+      # - name: Upload tweets data【已退役】
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: tweet-data
+      #     path: data/tweets_*.json
+      #     retention-days: 30
+      # - name: Upload brief data【已退役】
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: brief-data
+      #     path: data/brief_*.json
+      #     retention-days: 30
+      # - name: Upload report【已退役】
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: daily-report
+      #     path: report/daily_report.md
+      #     retention-days: 30
