@@ -16,7 +16,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 25    # 429 退避会吃时间（8/27 验收跑 14min），按试点教训留足
+    timeout-minutes: 40    # 93个KOL全量采集，按经验约20-25min，留足余量
     steps:
       - uses: actions/checkout@v4
 
