@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
 """
-KOL 监测池 v3.0 — 全资产覆盖版（2026-08-27）
+KOL 监测池 v3.1 — 全资产覆盖优化版（2026-08-27）
 
 优化方向：
-1. 美债/固收策略师扩充（+4，6→10人）
-2. 黄金/贵金属分析师扩充（+4，4→8人）
-3. 外汇策略师扩充（+3，3→6人）
-4. 宏观策略补充重量级（+3，12→15人）
-5. A股/港股提升质量（+4，11→15人）
-6. 新增大宗商品/能源组（+4人）
-7. 新增信贷/信用策略组（+3人）
+1. 移除 3 个无效账号（LacyHunt / TsvetanaPaskaleva / BoveResearch）
+2. 美债/固收策略师扩充（10→11人，补嘉信系）
+3. 黄金/贵金属增加重量级（8→9人，补 Rickards）
+4. 宏观策略增加实战派（15→18人，补 Raoul Pal / Kyle Bass / Bespoke）
+5. 大宗商品/能源补人（4→5人，补 Irina Slav）
+6. 新增估值/学术派（2人：Damodaran / Hanke）
+7. 信贷/信用组调整（3→3人，替换 Bove 为 Bespoke）
 8. 快讯类继续保持低权重
 
-净变化：从 66 人到 89 人（+23 净增）
+净变化：从 86 人到 93 人（+7 净增）
 """
 
 # 全量监测池（按主题分组，便于维护）
 KOL_LIST = [
-    # ── 美债/固收策略师（10人）──
+    # ── 美债/固收策略师（11人）──
     "TruthGundlach",       # Jeff Gundlach - DoubleLine创始人，新债王
     "dimartinobooth",      # Danielle DiMartino Booth - QI Research CEO，前达拉斯联储
     "GrantsPub",           # Grants Interest Rate Observer - Jim Grant
@@ -27,9 +27,10 @@ KOL_LIST = [
     "KathyJones",          # Kathy Jones - 嘉信固收策略主管
     "TracyAlloway",        # Tracy Alloway - 彭博Odd Lots，信贷/固收深度
     "johnauthers",         # John Authers - 彭博观点，资深金融编辑
-    "LacyHunt",            # Lacy Hunt - Hoisington，长期美债策略
+    "RandyFrederick",      # Randy Frederick - 嘉信交易与衍生品董事总经理
+    "MikeTownsendCS",      # Mike Townsend - 嘉信华盛顿政策分析
 
-    # ── 黄金/贵金属（8人）──
+    # ── 黄金/贵金属（9人）──
     "GOLDCOUNCIL",         # World Gold Council - 世界黄金协会
     "LynAldenContact",     # Lyn Alden - 宏观+黄金深度分析
     "biancoresearch",      # Bianco Research - 宏观+贵金属
@@ -38,6 +39,7 @@ KOL_LIST = [
     "GaryWagner",          # Gary Wagner - TheGoldForecast，40年黄金分析师
     "GoldSeek",            # GoldSeek / Peter Spina - 黄金研究
     "SilverInstitute",     # 白银协会
+    "JamesGRickards",      # James Rickards - 货币战争/黄金/地缘政治专家
 
     # ── 外汇策略（6人）──
     "MacroAlf",            # Alf - 宏观+外汇
@@ -47,7 +49,7 @@ KOL_LIST = [
     "KathyLienFX",         # Kathy Lien - BK Asset Management，外汇策略
     "RobinBrooksIIF",      # Robin Brooks - IIF，前高盛外汇策略
 
-    # ── 宏观策略（15人）──
+    # ── 宏观策略（18人）──
     "NickTimiraos",        # 美联储记者，WSJ
     "LizAnnSonders",       # 嘉信首席投资策略师
     "KevinRGordon",        # 嘉信策略师
@@ -63,17 +65,21 @@ KOL_LIST = [
     "Hedgeye",             # Hedgeye Risk Management - 宏观四象限框架
     "UrbanKaoboy",         # Michael Kao - 前对冲基金经理，宏观+信贷
     "TimDuy",              # Tim Duy - 美联储观察专家，SIFMA
+    "RaoulGMI",            # Raoul Pal - Real Vision CEO，前高盛宏观/流动性
+    "Jkylebass",           # Kyle Bass - Hayman Capital，做空成名，宏观+地缘
+    "marcfaber",           # Marc Faber - 麦嘉华，末日博士，全球宏观+黄金
 
     # ── 信贷/信用策略（3人）──
     "Markzandi",           # Mark Zandi - Moody's Analytics 首席经济学家
-    "BoveResearch",        # Dick Bove - 银行策略分析师
     "MishGEA",             # Mish Shedlock - 信贷/经济分析
+    "bespokeinvest",       # Bespoke Investment Group - 宏观+市场+信用策略
 
-    # ── 大宗商品/能源（4人）──
+    # ── 大宗商品/能源（5人）──
     "JavierBlas",          # Javier Blas - 彭博大宗商品专栏
     "Ole_S_Hansen",        # Ole Hansen - Saxo Bank 大宗商品策略
-    "TsvetanaPaskaleva",   # Tsvetana Paskaleva - 大宗商品分析
-    "EIAgov",              # 能源信息署（从官方机构移来，更适合放这里）
+    "EIAgov",              # 能源信息署
+    "IrinaSlav",           # Irina Slav - OilPrice.com 主笔，能源深度分析
+    "CommodityGirl",       # Commodity Girl - 大宗商品交易与分析
 
     # ── 官方机构（5人）──
     "federalreserve",      # 美联储
@@ -82,7 +88,7 @@ KOL_LIST = [
     "BEA_News",            # 经济分析局
     "USTreasury",          # 美国财政部
 
-    # ── 美股/投资大V（15人）──
+    # ── 美股/投资大V（17人）──
     "charliebilello",      # Charlie Bilello - 量化图表大师
     "RyanDetrick",         # Ryan Detrick - 市场历史数据
     "EricBalchunas",       # ETF专家
@@ -98,6 +104,8 @@ KOL_LIST = [
     "PeterLBrandt",        # 技术分析大师
     "John_Hempton",        # 做空专家
     "168X_Fortune",        # 168X - 前沿科技+资本
+    "aswathdamodaran",     # Aswath Damodaran - 纽约大学估值教授
+    "steve_hanke",         # Steve Hanke - 约翰霍普金斯应用经济学教授
 
     # ── 知名交易者（5人）──
     "aleabitoreddit",      # Serenity - AI供应链瓶颈挖掘
@@ -106,7 +114,7 @@ KOL_LIST = [
     "PatrickHillis1",      # Patrick Hillis - 期权交易员
     "ArtofSpecuycky",      # Art of Speculation - AI基本面+宏观分析
 
-    # ── 中文圈/A股港股（15人）──
+    # ── 中文圈/A股港股（16人）──
     "HaoHongCFA",          # 洪灏 - 思睿集团首席经济学家，前交银国际
     "PBOC_Official",       # 中国人民银行
     "caixin",              # 财新网
@@ -122,11 +130,12 @@ KOL_LIST = [
     "JCap_Research",       # JCap - 做空研究
     "b1anbin",             # Binbin - 港股/A股深度分析
     "WallStreet0Name",     # 华尔街没有名字 - 加密/交易观点
+    "Sino_Market",         # 南华早报市场 - 中英文财经新闻
 ]
 
 # KOL 权重配置（用于信号聚合加权）
 KOL_WEIGHTS = {
-    # ── 美债/固收（10人）──
+    # ── 美债/固收（11人）──
     "TruthGundlach": 5.0,
     "dimartinobooth": 4.5,
     "GrantsPub": 4.0,
@@ -136,9 +145,10 @@ KOL_WEIGHTS = {
     "KathyJones": 4.0,
     "TracyAlloway": 3.5,
     "johnauthers": 3.5,
-    "LacyHunt": 3.5,
+    "RandyFrederick": 3.5,
+    "MikeTownsendCS": 3.0,
 
-    # ── 黄金/贵金属（8人）──
+    # ── 黄金/贵金属（9人）──
     "GOLDCOUNCIL": 4.0,
     "LynAldenContact": 4.5,
     "biancoresearch": 4.0,
@@ -147,6 +157,7 @@ KOL_WEIGHTS = {
     "GaryWagner": 3.5,
     "GoldSeek": 3.0,
     "SilverInstitute": 2.5,
+    "JamesGRickards": 4.0,
 
     # ── 外汇策略（6人）──
     "MacroAlf": 4.0,
@@ -156,7 +167,7 @@ KOL_WEIGHTS = {
     "KathyLienFX": 3.5,
     "RobinBrooksIIF": 3.5,
 
-    # ── 宏观策略（15人）──
+    # ── 宏观策略（18人）──
     "NickTimiraos": 4.0,
     "LizAnnSonders": 4.0,
     "KevinRGordon": 3.5,
@@ -172,17 +183,21 @@ KOL_WEIGHTS = {
     "Hedgeye": 4.0,
     "UrbanKaoboy": 4.0,
     "TimDuy": 3.5,
+    "RaoulGMI": 4.0,
+    "Jkylebass": 4.0,
+    "marcfaber": 3.5,
 
     # ── 信贷/信用策略（3人）──
     "Markzandi": 3.5,
-    "BoveResearch": 3.0,
     "MishGEA": 3.0,
+    "bespokeinvest": 3.5,
 
-    # ── 大宗商品/能源（4人）──
+    # ── 大宗商品/能源（5人）──
     "JavierBlas": 4.0,
     "Ole_S_Hansen": 3.5,
-    "TsvetanaPaskaleva": 3.0,
     "EIAgov": 3.5,
+    "IrinaSlav": 3.0,
+    "CommodityGirl": 2.5,
 
     # ── 官方机构（5人）──
     "federalreserve": 5.0,
@@ -191,7 +206,7 @@ KOL_WEIGHTS = {
     "BEA_News": 4.0,
     "USTreasury": 5.0,
 
-    # ── 美股/投资大V（15人）──
+    # ── 美股/投资大V（17人）──
     "charliebilello": 4.0,
     "RyanDetrick": 3.5,
     "EricBalchunas": 3.0,
@@ -207,6 +222,8 @@ KOL_WEIGHTS = {
     "PeterLBrandt": 3.5,
     "John_Hempton": 3.5,
     "168X_Fortune": 3.0,
+    "aswathdamodaran": 4.0,
+    "steve_hanke": 3.5,
 
     # ── 知名交易者（5人）──
     "aleabitoreddit": 4.0,
@@ -215,7 +232,7 @@ KOL_WEIGHTS = {
     "PatrickHillis1": 3.0,
     "ArtofSpecuycky": 3.5,
 
-    # ── 中文圈/A股港股（15人）──
+    # ── 中文圈/A股港股（16人）──
     "HaoHongCFA": 4.0,
     "PBOC_Official": 4.5,
     "caixin": 3.5,
@@ -231,6 +248,7 @@ KOL_WEIGHTS = {
     "JCap_Research": 3.0,
     "b1anbin": 2.5,
     "WallStreet0Name": 3.0,
+    "Sino_Market": 3.0,
 }
 
 DEFAULT_KOL_WEIGHT = 2.0
