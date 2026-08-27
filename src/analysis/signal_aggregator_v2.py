@@ -1,176 +1,460 @@
 """
-信号聚合器 v2 — 增强版
-从推文中提取统计信息、主题信号、共识度、信号强度
+信号聚合器 v2 — 增加共识度指标 + 增强情感分析
 
-相比 v1 的改进：
-1. 按主题聚类生成信号（11个主题）
-2. 共识度计算：多空比例 + KOL加权 + 互动加权
-3. 信号强度：综合热度、互动量、共识度、KOL参与度
-4. 每个主题下的子信号（按资产/事件细分）
-5. 反对观点提取
+新增功能：
+1. consensus_score（共识度）：量化多空分歧程度
+2. kol_weighted_sentiment（KOL加权情感）：按影响力加权
+3. signal_strength（信号强度）：综合热度+共识+互动量
+4. trend_direction（趋势方向）：从推文中提取明确的方向性判断
 """
 from __future__ import annotations
 
 from collections import Counter, defaultdict
 from datetime import datetime
 from typing import Any
-import math
 
-from ..collectors.models import Tweet
-from ..config.kol_list import KOL_WEIGHTS, DEFAULT_KOL_WEIGHT
+# 兼容两种导入方式
+try:
+    from ..collectors.models import Tweet
+except ImportError:
+    from collectors.models import Tweet
 
 
-def get_kol_weight(author: str) -> float:
-    """获取 KOL 权重"""
-    return KOL_WEIGHTS.get(author, DEFAULT_KOL_WEIGHT)
+# ── 情感词典 v2（更丰富、带权重）──────────────────────────────────
+BULLISH_WORDS = {
+    # 强看多（+2）
+    "strong buy": 2, "conviction buy": 2, "all in": 2, "mooning": 2,
+    "to the moon": 2, "parabolic": 2, "massive rally": 2, "blow off top": 2,
+    "强烈看好": 2, "满仓": 2, "all-in": 2, "爆涨": 2, "暴涨": 2,
+    # 中等看多（+1.5）
+    "bullish": 1.5, "buy the dip": 1.5, "accumulate": 1.5, "breakout": 1.5,
+    "uptrend": 1.5, "outperform": 1.5, "overweight": 1.5,
+    "看好": 1.5, "买入": 1.5, "做多": 1.5, "突破": 1.5, "加仓": 1.5,
+    "抄底": 1.5, "低估": 1.5, "便宜": 1.5,
+    # 弱看多（+1）
+    "rally": 1, "surge": 1, "soar": 1, "jump": 1, "gain": 1,
+    "rise": 1, "higher": 1, "rebound": 1, "recovery": 1,
+    "上涨": 1, "涨": 1, "反弹": 1, "回升": 1, "走牛": 1,
+    "牛市": 1, "上行": 1, "走高": 1, "收涨": 1, "走强": 1,
+    "利好": 1, "利多": 1, "超预期": 1.5, "beat": 1.5,
+    "增持": 1, "跑赢": 1, "买入评级": 1,
+    # 弱信号看多（+0.5）— 有倾向但不强烈
+    "optimistic": 0.5, "bull": 0.5, "green": 0.5,
+    "positive": 0.5, "improve": 0.5, "improvement": 0.5,
+    "growth": 0.5, "expansion": 0.5, "upside": 0.5,
+    "support": 0.5, "bottom": 0.5, "recovery": 0.5,
+    "看好": 1.5, "乐观": 0.5, "复苏": 1, "增长": 0.5,
+    "支撑": 0.5, "企稳": 0.5, "回暖": 0.5,
+}
+
+BEARISH_WORDS = {
+    # 强看空（-2）
+    "crash": -2, "collapse": -2, "meltdown": -2, "bloodbath": -2,
+    "capitulation": -2, "hard landing": -2, "depression": -2,
+    "暴跌": -2, "崩盘": -2, "爆仓": -2, "清仓": -2, "熔断": -2,
+    # 中等看空（-1.5）
+    "bearish": -1.5, "short": -1.5, "sell": -1.5, "overvalued": -1.5,
+    "bubble": -1.5, "downtrend": -1.5, "underweight": -1.5,
+    "underperform": -1.5, "tanking": -1.5,
+    "看空": -1.5, "卖出": -1.5, "做空": -1.5, "高估": -1.5,
+    "泡沫": -1.5, "减持": -1.5, "抛售": -1.5,
+    # 弱看空（-1）
+    "drop": -1, "fall": -1, "decline": -1, "lower": -1, "dump": -1,
+    "pullback": -1, "correction": -1, "sell-off": -1, "selloff": -1,
+    "下跌": -1, "跌": -1, "回调": -1, "走熊": -1, "熊市": -1,
+    "走低": -1, "走弱": -1, "下挫": -1, "回落": -1, "收跌": -1,
+    "下行": -1, "跑输": -1, "减持评级": -1,
+    # 弱信号看空（-0.5）— 有倾向但不强烈
+    "pessimistic": -0.5, "bear": -0.5, "red": -0.5,
+    "negative": -0.5, "concern": -0.5, "worried": -0.5,
+    "risk": -0.5, "danger": -0.5, "warning": -0.5,
+    "slowdown": -0.5, "contraction": -0.5, "downside": -0.5,
+    "pressure": -0.5, "weak": -0.5, "weakness": -0.5,
+    "stress": -0.5, "crisis": -1, "default": -1,
+    "悲观": -0.5, "担忧": -0.5, "风险": -0.5, "压力": -0.5,
+    "疲软": -0.5, "放缓": -0.5, "下行压力": -1,
+    "利空": -1.5, "不及预期": -1.5, "低于预期": -1.5,
+    "减持": -1.5, "抛售": -1.5, "清仓": -2,
+    "高估": -1.5, "泡沫": -1.5, "过热": -1,
+}
+
+NEUTRAL_PHRASES = [
+    "sideways", "range bound", "consolidation", "wait and see",
+    "on hold", "neutral", "hold", "uncertain", "unclear",
+    "震荡", "横盘", "观望", "中性", "持有", "不确定",
+]
+
+
+def calculate_sentiment_score(text: str) -> dict:
+    """
+    计算单条推文的情感分数
+    返回: {score, bullish_words, bearish_words, intensity, direction}
+    """
+    text_lower = text.lower()
+    bull_score = 0.0
+    bear_score = 0.0
+    bull_matched = []
+    bear_matched = []
+
+    for word, weight in BULLISH_WORDS.items():
+        if word in text_lower:
+            bull_score += weight
+            bull_matched.append(word)
+
+    for word, weight in BEARISH_WORDS.items():
+        if word in text_lower:
+            bear_score += abs(weight)
+            bear_matched.append(word)
+
+    total = bull_score + bear_score
+    if total == 0:
+        return {
+            "score": 0.0,
+            "direction": "neutral",
+            "intensity": 0.0,
+            "bullish_words": [],
+            "bearish_words": [],
+        }
+
+    # 净情感分：-1 到 +1
+    net = (bull_score - bear_score) / total
+    intensity = min(total / 3.0, 1.0)  # 强度：命中越多越强，上限3个词
+
+    if net > 0.3:
+        direction = "bullish"
+    elif net < -0.3:
+        direction = "bearish"
+    else:
+        direction = "neutral"
+
+    return {
+        "score": round(net, 3),
+        "direction": direction,
+        "intensity": round(intensity, 3),
+        "bullish_words": bull_matched,
+        "bearish_words": bear_matched,
+    }
+
+
+def calculate_consensus(tweets: list[Tweet]) -> dict:
+    """
+    计算一组推文的共识度
+    
+    共识度 = 1 - 分歧度
+    分歧度 = 看空比例 × 看多比例 × 4（最大值为1，当多空各50%时）
+    
+    还计算：
+    - kol_weighted_score: 按KOL影响力加权的情感分
+    - engagement_weighted_score: 按互动量加权的情感分
+    """
+    if not tweets:
+        return {
+            "consensus_score": 0.0,
+            "kol_consensus": 0.0,
+            "bull_ratio": 0.0,
+            "bear_ratio": 0.0,
+            "neutral_ratio": 0.0,
+            "kol_weighted_sentiment": 0.0,
+            "engagement_weighted_sentiment": 0.0,
+            "bull_count": 0,
+            "bear_count": 0,
+            "neutral_count": 0,
+        }
+
+    sentiments = []
+    for t in tweets:
+        text = t.content or ""
+        sent = calculate_sentiment_score(text)
+        sent["tweet"] = t
+        sent["is_kol"] = t.is_kol
+        views = getattr(t, "views", 0)
+        sent["engagement"] = t.likes + t.reposts + views * 0.01
+        sentiments.append(sent)
+
+    bull_count = sum(1 for s in sentiments if s["direction"] == "bullish")
+    bear_count = sum(1 for s in sentiments if s["direction"] == "bearish")
+    neutral_count = sum(1 for s in sentiments if s["direction"] == "neutral")
+    total = len(sentiments)
+
+    bull_ratio = bull_count / total
+    bear_ratio = bear_count / total
+    neutral_ratio = neutral_count / total
+
+    # 观点密度 = 有明确观点的推文占比（看多+看空）/总数
+    opinion_density = (bull_count + bear_count) / total if total > 0 else 0.0
+
+    # 分歧度：多空比例差异越小，分歧越大
+    # 共识度 = |看多比例 - 看空比例| / (看多比例 + 看空比例)
+    # 最大值 = 1.0（全部看多 或 全部看空）
+    # 最小值 = 0.0（多空各50%）
+    if (bull_ratio + bear_ratio) > 0:
+        raw_consensus = abs(bull_ratio - bear_ratio) / (bull_ratio + bear_ratio)
+    else:
+        raw_consensus = 0.0
+
+    # 共识度 = 纯多空分歧度（只在有明确观点的推文中计算）
+    # 最大值 = 1.0（有观点的人全部看多 或 全部看空）
+    # 最小值 = 0.0（有观点的人多空各50%）
+    # 观点密度是独立指标：有多少推文表达了明确观点
+    # 两者不相乘 — "观点少"和"分歧大"是两回事
+    # 例：100条里99条新闻+1条买入 → 共识度=100%，观点密度=1%
+    consensus_score = raw_consensus
+
+    # KOL 共识度（只看KOL的推文）
+    kol_sents = [s for s in sentiments if s["is_kol"]]
+    if kol_sents:
+        kol_bull = sum(1 for s in kol_sents if s["direction"] == "bullish")
+        kol_bear = sum(1 for s in kol_sents if s["direction"] == "bearish")
+        kol_total = len(kol_sents)
+        if (kol_bull + kol_bear) > 0:
+            kol_consensus = abs(kol_bull - kol_bear) / (kol_bull + kol_bear)
+        else:
+            kol_consensus = 0.0
+    else:
+        kol_consensus = 0.0
+
+    # KOL 加权情感分（KOL权重更高）
+    kol_weight = 3.0  # KOL权重是普通的3倍
+    total_weight = 0.0
+    weighted_sum = 0.0
+    for s in sentiments:
+        w = kol_weight if s["is_kol"] else 1.0
+        weighted_sum += s["score"] * w
+        total_weight += w
+    kol_weighted_sent = weighted_sum / total_weight if total_weight > 0 else 0.0
+
+    # 互动量加权情感分
+    total_eng = sum(s["engagement"] for s in sentiments)
+    if total_eng > 0:
+        eng_weighted = sum(s["score"] * s["engagement"] for s in sentiments) / total_eng
+    else:
+        eng_weighted = 0.0
+
+    return {
+        "consensus_score": round(consensus_score, 3),
+        "opinion_density": round(opinion_density, 3),
+        "kol_consensus": round(kol_consensus, 3),
+        "bull_ratio": round(bull_ratio, 3),
+        "bear_ratio": round(bear_ratio, 3),
+        "neutral_ratio": round(neutral_ratio, 3),
+        "kol_weighted_sentiment": round(kol_weighted_sent, 3),
+        "engagement_weighted_sentiment": round(eng_weighted, 3),
+        "bull_count": bull_count,
+        "bear_count": bear_count,
+        "neutral_count": neutral_count,
+        "total_count": total,
+    }
+
+
+MIN_RELIABLE_SAMPLE = 5  # 低于这个数量的样本，情绪/共识度标记为不可靠
+
+
+def calculate_signal_strength(
+    mention_count: int,
+    engagement: int,
+    consensus: float,
+    kol_mentions: int,
+    total_tweets: int,
+    sample_reliable: bool = True,
+) -> float:
+    """
+    计算信号强度（0-100分）
+    综合考虑：讨论热度、互动量、共识度、KOL参与度
+    样本量不足时打折扣
+    """
+    # 热度分：讨论量占比
+    heat_score = min(mention_count / max(total_tweets * 0.1, 1) * 40, 30)
+    
+    # 互动分（对数缩放）
+    import math
+    eng_score = min(math.log1p(max(engagement, 0)) / 3 * 25, 25)
+    
+    # 共识分
+    cons_score = consensus * 25
+    
+    # KOL 分
+    kol_score = min(kol_mentions * 5, 20)
+    
+    total = heat_score + eng_score + cons_score + kol_score
+
+    # 样本量不足惩罚：最多扣 30 分
+    if not sample_reliable:
+        total = total * 0.6
+
+    return round(min(total, 100), 1)
 
 
 def generate_brief_v2(tweets: list[Tweet]) -> dict[str, Any]:
     """
-    生成 v2 数据简报：
-    - 基础统计
-    - 主题信号（含共识度、信号强度、多空分布）
-    - 资产热度排行
-    - KOL 观点汇总
-    - 精选推文
+    v2 版本：增加共识度、信号强度、KOL加权情感
     """
     if not tweets:
-        return {
-            "version": "2.0",
-            "stats": {},
-            "theme_signals": [],
-            "top_assets": [],
-            "kol_summary": [],
-            "top_tweets": [],
-        }
+        return {"stats": {}, "assets": {}, "themes": {}, "top_tweets": [], "kol_tweets": []}
 
-    # ── 基础统计 ──────────────────────────────────────────────
+    # ── 基础统计 ──────────────────────────────────────────────────
     total_tweets = len(tweets)
     kol_tweets = [t for t in tweets if t.is_kol]
     total_likes = sum(t.likes for t in tweets)
     total_reposts = sum(t.reposts for t in tweets)
     total_replies = sum(t.replies for t in tweets)
-    total_views = sum(t.views for t in tweets)
-    total_engagement = total_likes + total_reposts + total_replies
+    total_views = sum(getattr(t, "views", 0) for t in tweets)
 
     unique_authors = len(set(t.author for t in tweets))
     kol_count = len(set(t.author for t in kol_tweets))
 
-    # ── 主题信号聚合 ──────────────────────────────────────────
-    theme_tweets: dict[str, list[Tweet]] = defaultdict(list)
-    theme_engagement: dict[str, int] = defaultdict(int)
-    theme_kol_count: dict[str, set] = defaultdict(set)
+    # ── 整体市场情绪 ──────────────────────────────────────────────
+    overall_sentiment = calculate_consensus(tweets)
 
-    for t in tweets:
-        for theme in t.themes:
-            theme_tweets[theme].append(t)
-            eng = t.likes + t.reposts + t.replies
-            theme_engagement[theme] += eng
-            if t.is_kol:
-                theme_kol_count[theme].add(t.author)
-
-    # 计算每个主题的信号
-    theme_signals = []
-    for theme, tw_list in theme_tweets.items():
-        signal = _calc_theme_signal(theme, tw_list, theme_kol_count[theme])
-        signal["engagement"] = theme_engagement[theme]
-        signal["tweet_count"] = len(tw_list)
-        signal["kol_count"] = len(theme_kol_count[theme])
-        theme_signals.append(signal)
-
-    # 按信号强度排序
-    theme_signals.sort(key=lambda x: x["signal_strength"], reverse=True)
-
-    # ── 资产统计 ──────────────────────────────────────────────
+    # ── 标的统计（v2：带共识度）───────────────────────────────────
     asset_counter: Counter = Counter()
     asset_tweets: dict[str, list[Tweet]] = defaultdict(list)
     asset_engagement: dict[str, int] = defaultdict(int)
-    asset_kol: dict[str, set] = defaultdict(set)
 
     for t in tweets:
-        for sym, atype in t.assets:
-            key = f"{sym}|{atype}"
+        for sym, name in t.assets:
+            key = f"{sym}|{name}"
             asset_counter[key] += 1
             asset_tweets[key].append(t)
             asset_engagement[key] += t.likes + t.reposts
-            if t.is_kol:
-                asset_kol[key].add(t.author)
 
     top_assets = []
-    for key, count in asset_counter.most_common(20):
-        sym, atype = key.split("|", 1)
+    for key, count in asset_counter.most_common(15):
+        sym, name = key.split("|", 1)
         tw_list = asset_tweets[key]
         eng = asset_engagement[key]
+        kol_mentions = sum(1 for t in tw_list if t.is_kol)
 
-        # 情感分析（加权）
-        sentiment_result = _calc_weighted_sentiment(tw_list)
+        # 共识度分析
+        consensus = calculate_consensus(tw_list)
+        sample_reliable = count >= MIN_RELIABLE_SAMPLE
+
+        # 信号强度
+        signal_strength = calculate_signal_strength(
+            count, eng, consensus["consensus_score"], kol_mentions, total_tweets,
+            sample_reliable=sample_reliable,
+        )
+
+        # 数据不足标记
+        reliability_flag = "数据不足" if not sample_reliable else "可靠"
 
         top_assets.append({
             "symbol": sym,
-            "type": atype,
+            "name": name,
             "mention_count": count,
             "engagement": eng,
-            "kol_mentions": len(asset_kol[key]),
-            "sentiment": sentiment_result["label"],
-            "sentiment_score": sentiment_result["score"],
-            "bullish_weighted": sentiment_result["bullish_weighted"],
-            "bearish_weighted": sentiment_result["bearish_weighted"],
-            "consensus_score": sentiment_result["consensus"],
+            "kol_mentions": kol_mentions,
+            "signal_strength": signal_strength,
+            "consensus": consensus,
+            "reliability": reliability_flag,
+            "sample_reliable": sample_reliable,
+            "sample_tweets": [
+                {
+                    "author": t.author,
+                    "author_name": getattr(t, "author_name", t.author),
+                    "content": t.content[:200],
+                    "likes": t.likes,
+                    "url": t.url,
+                    "is_kol": t.is_kol,
+                    "sentiment": calculate_sentiment_score(t.content or "")["direction"],
+                }
+                for t in sorted(tw_list, key=lambda x: x.likes, reverse=True)[:5]
+            ],
         })
 
-    # 按互动量排序
-    top_assets.sort(key=lambda x: x["engagement"], reverse=True)
+    # ── 主题统计（v2：带共识度 + 主题归属修正）───────────────
+    theme_counter: Counter = Counter()
+    theme_engagement: dict[str, int] = defaultdict(int)
+    theme_tweets: dict[str, list[Tweet]] = defaultdict(list)
 
-    # ── KOL 观点汇总 ──────────────────────────────────────────
-    kol_activity = defaultdict(list)
-    for t in kol_tweets:
-        kol_activity[t.author].append(t)
+    # 主题归属修正：每条推文只分配给置信度最高的 TOP_N_THEMES 个主题
+    # 避免一条推文的情绪被重复计算到多个主题（串扰问题）
+    TOP_N_THEMES = 2  # 每条推文最多归属 2 个主题
 
-    kol_summary = []
-    for author, tws in sorted(kol_activity.items(), key=lambda x: sum(t.likes + t.reposts for t in x[1]), reverse=True)[:15]:
-        top_tweet = max(tws, key=lambda t: t.likes + t.reposts)
-        total_eng = sum(t.likes + t.reposts for t in tws)
-        kol_summary.append({
-            "author": author,
-            "author_name": top_tweet.author_name,
-            "tweet_count": len(tws),
-            "total_engagement": total_eng,
-            "weight": get_kol_weight(author),
-            "top_tweet": {
-                "content": top_tweet.content[:200],
-                "likes": top_tweet.likes,
-                "reposts": top_tweet.reposts,
-                "url": top_tweet.url,
-                "themes": top_tweet.themes,
-                "assets": top_tweet.assets,
-            },
+    for t in tweets:
+        # 只取前 N 个置信度最高的主题
+        top_themes = t.themes[:TOP_N_THEMES]
+        for theme in top_themes:
+            theme_counter[theme] += 1
+            theme_engagement[theme] += t.likes + t.reposts
+            theme_tweets[theme].append(t)
+
+    top_themes = []
+    for theme, count in theme_counter.most_common(10):
+        tw_list = theme_tweets[theme]
+        consensus = calculate_consensus(tw_list)
+        kol_mentions = sum(1 for t in tw_list if t.is_kol)
+
+        sample_reliable = count >= MIN_RELIABLE_SAMPLE
+        signal_strength = calculate_signal_strength(
+            count, theme_engagement[theme], consensus["consensus_score"],
+            kol_mentions, total_tweets,
+            sample_reliable=sample_reliable,
+        )
+        reliability_flag = "数据不足" if not sample_reliable else "可靠"
+
+        top_themes.append({
+            "theme": theme,
+            "tweet_count": count,
+            "engagement": theme_engagement[theme],
+            "kol_mentions": kol_mentions,
+            "signal_strength": signal_strength,
+            "consensus": consensus,
+            "reliability": reliability_flag,
+            "sample_reliable": sample_reliable,
+            "top_tweets": [
+                {
+                    "author": t.author,
+                    "author_name": getattr(t, "author_name", t.author),
+                    "content": t.content[:150],
+                    "likes": t.likes,
+                    "url": t.url,
+                    "is_kol": t.is_kol,
+                    "sentiment": calculate_sentiment_score(t.content or "")["direction"],
+                }
+                for t in sorted(tw_list, key=lambda x: x.likes, reverse=True)[:3]
+            ],
         })
 
-    # ── 高互动推文 ────────────────────────────────────────────
-    top_tweets = sorted(tweets, key=lambda t: t.likes + t.reposts, reverse=True)[:20]
-    top_tweets_data = []
-    for t in top_tweets:
-        top_tweets_data.append({
+    # ── Top 推文（按质量分）───────────────────────────────────────
+    top_tweets = []
+    for t in sorted(tweets, key=lambda x: x.quality_score, reverse=True)[:20]:
+        sent = calculate_sentiment_score(t.content or "")
+        top_tweets.append({
             "author": t.author,
-            "author_name": t.author_name,
-            "content": t.content[:200],
+            "author_name": getattr(t, "author_name", t.author),
+            "content": t.content,
             "likes": t.likes,
             "reposts": t.reposts,
             "replies": t.replies,
-            "views": t.views,
-            "url": t.url,
-            "is_kol": t.is_kol,
-            "themes": t.themes,
-            "assets": t.assets,
-            "quality_score": t.quality_score,
+            "views": getattr(t, "views", 0),
             "created_at": t.created_at,
+            "url": t.url,
+            "assets": [list(a) for a in t.assets],
+            "themes": t.themes,
+            "quality_score": t.quality_score,
+            "is_kol": t.is_kol,
+            "sentiment": sent["direction"],
+            "sentiment_score": sent["score"],
+            "sentiment_intensity": sent["intensity"],
         })
 
-    # ── 整体市场情绪 ──────────────────────────────────────────
-    overall_sentiment = _calc_weighted_sentiment(tweets)
+    # ── KOL 观点汇总 ──────────────────────────────────────────────
+    kol_summary = []
+    for t in sorted(kol_tweets, key=lambda x: x.likes, reverse=True)[:15]:
+        sent = calculate_sentiment_score(t.content or "")
+        kol_summary.append({
+            "author": t.author,
+            "author_name": getattr(t, "author_name", t.author),
+            "content": t.content,
+            "likes": t.likes,
+            "url": t.url,
+            "assets": [list(a) for a in t.assets],
+            "themes": t.themes,
+            "sentiment": sent["direction"],
+            "sentiment_score": sent["score"],
+        })
 
     return {
-        "version": "2.0",
         "generated_at": datetime.now().isoformat(),
         "stats": {
             "total_tweets": total_tweets,
@@ -181,179 +465,17 @@ def generate_brief_v2(tweets: list[Tweet]) -> dict[str, Any]:
             "total_reposts": total_reposts,
             "total_replies": total_replies,
             "total_views": total_views,
-            "total_engagement": total_engagement,
             "unique_assets": len(asset_counter),
-            "unique_themes": len(theme_tweets),
-            "overall_sentiment": overall_sentiment["label"],
-            "overall_sentiment_score": overall_sentiment["score"],
-            "overall_consensus": overall_sentiment["consensus"],
+            "unique_themes": len(theme_counter),
         },
-        "theme_signals": theme_signals,
+        "overall_market_sentiment": overall_sentiment,
         "top_assets": top_assets,
+        "top_themes": top_themes,
+        "top_tweets": top_tweets,
         "kol_summary": kol_summary,
-        "top_tweets": top_tweets_data,
     }
 
 
-def _calc_theme_signal(theme: str, tweets: list[Tweet], kol_authors: set) -> dict:
-    """计算单个主题的信号强度和共识度"""
-    # 情感分析
-    sentiment = _calc_weighted_sentiment(tweets)
-
-    # 热度分（0-30）：基于推文数量和互动量
-    tweet_count = len(tweets)
-    total_eng = sum(t.likes + t.reposts for t in tweets)
-    heat_score = min(30, math.log1p(tweet_count) * 8 + math.log1p(total_eng / 100) * 5)
-
-    # 互动量分（0-25）
-    eng_score = min(25, math.log1p(total_eng / 10) * 4)
-
-    # 共识度分（0-25）：|看多-看空| / (看多+看空) * 25
-    consensus_score = abs(sentiment["consensus"]) * 25
-
-    # KOL 参与分（0-20）
-    kol_count = len(kol_authors)
-    kol_weight_sum = sum(get_kol_weight(a) for a in kol_authors)
-    kol_score = min(20, kol_count * 2 + math.log1p(kol_weight_sum) * 3)
-
-    # 总信号强度（0-100）
-    signal_strength = round(heat_score + eng_score + consensus_score + kol_score, 1)
-
-    # 关注度等级
-    if signal_strength >= 60:
-        attention_level = "high"  # 🔴高度关注
-    elif signal_strength >= 35:
-        attention_level = "medium"  # 🟡需观察
-    else:
-        attention_level = "low"  # 🟢信息性
-
-    # 提取代表性推文（最高互动的看多和看空各1条）
-    bullish_tweets = sorted(
-        [t for t in tweets if getattr(t, 'sentiment', 'neutral') == 'bullish'],
-        key=lambda t: t.likes + t.reposts, reverse=True
-    )[:2]
-    bearish_tweets = sorted(
-        [t for t in tweets if getattr(t, 'sentiment', 'neutral') == 'bearish'],
-        key=lambda t: t.likes + t.reposts, reverse=True
-    )[:2]
-
-    # 最活跃 KOL
-    kol_tweets_list = [t for t in tweets if t.is_kol]
-    top_kol = Counter(t.author for t in kol_tweets_list).most_common(3)
-
-    return {
-        "theme": theme,
-        "signal_strength": signal_strength,
-        "attention_level": attention_level,
-        "sentiment": sentiment["label"],
-        "sentiment_score": sentiment["score"],
-        "consensus_score": round(sentiment["consensus"], 2),
-        "bullish_count": sentiment["bullish_count"],
-        "bearish_count": sentiment["bearish_count"],
-        "neutral_count": sentiment["neutral_count"],
-        "bullish_weighted": round(sentiment["bullish_weighted"], 1),
-        "bearish_weighted": round(sentiment["bearish_weighted"], 1),
-        "top_kol": [{"author": a, "count": c} for a, c in top_kol],
-        "bullish_samples": [
-            {"author": t.author, "content": t.content[:150], "url": t.url, "likes": t.likes}
-            for t in bullish_tweets
-        ],
-        "bearish_samples": [
-            {"author": t.author, "content": t.content[:150], "url": t.url, "likes": t.likes}
-            for t in bearish_tweets
-        ],
-    }
-
-
-def _calc_weighted_sentiment(tweets: list[Tweet]) -> dict:
-    """
-    计算加权情感
-    返回: {label, score, consensus, bullish_count, bearish_count, neutral_count,
-           bullish_weighted, bearish_weighted}
-    """
-    bullish_count = 0
-    bearish_count = 0
-    neutral_count = 0
-    bullish_weighted = 0.0
-    bearish_weighted = 0.0
-
-    for t in tweets:
-        # 获取推文的情感（如果有的话），否则根据内容简单判断
-        sentiment = getattr(t, 'sentiment', None)
-        if not sentiment:
-            sentiment = _simple_sentiment(t.content)
-
-        # 权重 = KOL权重 * 互动量对数
-        kol_w = get_kol_weight(t.author) if t.is_kol else 1.0
-        eng_w = math.log1p(t.likes + t.reposts + 1)
-        weight = kol_w * eng_w
-
-        if sentiment == "bullish":
-            bullish_count += 1
-            bullish_weighted += weight
-        elif sentiment == "bearish":
-            bearish_count += 1
-            bearish_weighted += weight
-        else:
-            neutral_count += 1
-
-    total_weighted = bullish_weighted + bearish_weighted
-    if total_weighted > 0:
-        sentiment_score = (bullish_weighted - bearish_weighted) / total_weighted
-        consensus = abs(bullish_weighted - bearish_weighted) / total_weighted
-    else:
-        sentiment_score = 0.0
-        consensus = 0.0
-
-    if sentiment_score > 0.2:
-        label = "bullish"
-    elif sentiment_score < -0.2:
-        label = "bearish"
-    else:
-        label = "neutral"
-
-    return {
-        "label": label,
-        "score": round(sentiment_score, 2),
-        "consensus": round(consensus, 2),
-        "bullish_count": bullish_count,
-        "bearish_count": bearish_count,
-        "neutral_count": neutral_count,
-        "bullish_weighted": round(bullish_weighted, 1),
-        "bearish_weighted": round(bearish_weighted, 1),
-    }
-
-
-def _simple_sentiment(text: str) -> str:
-    """简单的基于关键词的情感判断（备用）"""
-    text_lower = text.lower()
-    bullish_words = [
-        "bullish", "看多", "看涨", "buy", "买入", "long", "做多",
-        "surge", "rally", "soar", "jump", "上涨", "涨", "新高", "突破",
-        "beat", "超预期", "strong", "强劲", "positive", "利好",
-        "optimistic", "乐观", "recovery", "复苏", "rebound", "反弹",
-    ]
-    bearish_words = [
-        "bearish", "看空", "看跌", "sell", "卖出", "short", "做空",
-        "crash", "plunge", "drop", "tumble", "下跌", "跌", "新低", "破位",
-        "miss", "不及预期", "weak", "疲软", "negative", "利空",
-        "pessimistic", "悲观", "recession", "衰退", "crisis", "危机",
-        "risk", "风险", "warning", "警告", "concern", "担忧",
-    ]
-
-    bullish_hits = sum(text_lower.count(w) for w in bullish_words)
-    bearish_hits = sum(text_lower.count(w) for w in bearish_words)
-
-    if bullish_hits > bearish_hits * 1.5:
-        return "bullish"
-    elif bearish_hits > bullish_hits * 1.5:
-        return "bearish"
-    else:
-        return "neutral"
-
-
-if __name__ == "__main__":
-    # 快速测试
-    print("signal_aggregator_v2 加载成功")
-    print(f"主题数量: 11")
-    print(f"KOL 权重配置: {len(KOL_WEIGHTS)} 个")
+# 兼容旧接口
+def generate_brief(tweets: list[Tweet]) -> dict[str, Any]:
+    return generate_brief_v2(tweets)

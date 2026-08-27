@@ -1,533 +1,519 @@
 """
-投资内容过滤器 v3 — 语义分类版
-从多源数据中筛选投资相关内容，并自动分类到 11 个主题 + 提取资产
+投资内容过滤器 v3 — 语义分类增强版
 
-相比 v2 的改进：
-1. 从"是/否投资相关"升级为"11 个主题分类"
-2. 每个主题有独立关键词词典和权重
-3. 增强资产提取（支持 $cashtag + 50+ 别名映射）
-4. 输出信息密度评分
-5. 初步情绪倾向判断
+改进点：
+1. 分类体系：按主题分类（不只是"是/否投资相关"）
+2. 语义模式：增加短语级匹配，减少误判
+3. 上下文感知：检查关键词周围的语境
+4. 多维度评分：相关性 + 信息量 + 情绪强度
+5. 资产识别增强：支持更多资产类别和别名
 """
 from __future__ import annotations
 
 import re
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Dict, Optional
+from dataclasses import dataclass, field
 
 
-# ═══════════════════════════════════════════════════════════════
-# 11 个主题分类 + 关键词词典
-# ═══════════════════════════════════════════════════════════════
+@dataclass
+class FilterResult:
+    """过滤结果"""
+    is_investment: bool
+    score: float  # 0-100
+    categories: List[str] = field(default_factory=list)  # 匹配到的主题分类
+    matched_assets: List[tuple] = field(default_factory=list)  # (symbol, name)
+    matched_keywords: List[str] = field(default_factory=list)
+    sentiment_hint: str = "neutral"  # 初步情绪倾向
+    info_density: float = 0.0  # 信息密度 0-1
 
-THEME_KEYWORDS = {
-    "美债_固定收益": {
-        "weight": 1.2,
-        "strong": [
-            "美债", "国债", "treasury", "tlt", "tlh", "ief", "shy",
-            "收益率曲线", "yield curve", "长端利率", "短端利率",
-            "债券收益率", "bond yield", "债市", "bond market",
-            "久期", "duration", "息差", "spread", "信用债", "credit",
-            "利率债", "固收", "fixed income", "debt ceiling", "债务上限",
-            "bessent", "债王", "gundlach", "jeff gundlach", "danielle dimartino",
-            "jim grant", "grants interest rate",
-        ],
-        "weak": [
-            "yield", "treasuries", "bonds", "bond", "rates", "rate",
-            "coupon", "maturity", "default",
-        ],
-    },
-    "黄金_贵金属": {
-        "weight": 1.1,
-        "strong": [
-            "黄金", "gold", "金价", "gold price", "bullion",
-            "白银", "silver", "铂金", "platinum", "钯金", "palladium",
-            "gld", "slv", "贵金属", "precious metal",
-            "黄金储备", "gold reserve", "金本位", "gold standard",
-            "黄金重估", "gold revaluation", "世界黄金协会", "gold council",
-            "lyn alden", "luke gromen",
-        ],
-        "weak": [
-            "xau", "xag", "金饰", "金币", "金条", "mining", "金矿",
-        ],
-    },
-    "原油_能源": {
-        "weight": 1.0,
-        "strong": [
-            "原油", "oil", "wti", "brent", "油价", "oil price",
-            "opec", "opec+", "欧佩克", "减产", "production cut",
-            "天然气", "natural gas", "lng", "煤炭", "coal",
-            "能源危机", "energy crisis", "战略石油储备", "spr",
-            "霍尔木兹", "hormuz", "马六甲", "malacca",
-            "eia", "iea",
-        ],
-        "weak": [
-            "energy", "石油", "gas", "fuel", "汽油", "柴油",
-            "pipeline", "管道", "炼油", "refinery",
-        ],
-    },
+
+# ── 主题分类词典 ────────────────────────────────────────────────
+# 每个主题对应一组特征词，命中越多置信度越高
+THEME_CATEGORIES = {
     "宏观_利率政策": {
-        "weight": 1.2,
-        "strong": [
-            "美联储", "federal reserve", "fed", "鲍威尔", "powell",
+        "keywords": [
+            "美联储", "fed", "federal reserve", "鲍威尔", "powell", "耶伦", "yellen",
             "加息", "降息", "rate hike", "rate cut", "fomc", "议息",
             "通胀", "inflation", "cpi", "pce", "ppi", "通缩", "deflation",
             "非农", "nfp", "失业率", "unemployment", "gdp", "衰退", "recession",
             "软着陆", "soft landing", "硬着陆", "hard landing", "滞胀", "stagflation",
             "央行", "central bank", "货币政策", "monetary policy", "财政政策", "fiscal policy",
-            "杰克逊霍尔", "jackson hole", "点阵图", "dot plot",
-            "财政赤字", "deficit", "债务", "debt", "财政主导", "fiscal dominance",
+            "杰克逊霍尔", "jackson hole", "ecb", "欧洲央行", "boj", "日本央行",
+            "pbo", "人民银行", "lpr", "mlf", "降准", "存款准备金",
         ],
-        "weak": [
-            "economy", "economic", "growth", "employment", "jobs",
-            "宏观", "macro", "经济", "物价", "就业",
+        "weight": 2.0,
+    },
+    "美债_固定收益": {
+        "keywords": [
+            "美债", "国债", "收益率曲线", "yield curve", "债券", "treasury",
+            "tlt", "ief", "shy", "tbf", "tbt", "tmv",
+            "10年期", "10-year", "2年期", "2-year", "30年期", "30-year",
+            "债券收益率", "bond yield", "收益率倒挂", "inverted yield",
+            "久期", "duration", "信用利差", "credit spread",
+            "高收益债", "high yield", "投资级", "investment grade",
+            "债市", "bond market", "国债收益率",
         ],
+        "weight": 2.0,
+    },
+    "黄金_贵金属": {
+        "keywords": [
+            "黄金", "gold", "白银", "silver", "铂金", "platinum", "钯金", "palladium",
+            "gld", "slv", "iau", "gdx", "gold miner",
+            "金价", "银价", "贵金属", "precious metal",
+            "避险", "safe haven", "去美元化", "dedollarization",
+            "黄金储备", "gold reserve", "央行购金",
+        ],
+        "weight": 2.0,
+    },
+    "原油_能源": {
+        "keywords": [
+            "原油", "oil", "wti", "brent", "opec", "opec+",
+            "天然气", "natural gas", "lng", "石油", "油价",
+            "xle", "uso", "usoil", "ukoil",
+            "霍尔木兹", "hormuz", "石油禁运", "oil embargo",
+            "能源危机", "energy crisis", "能源价格",
+            "新能源", "光伏", "储能", "solar", "battery",
+            "电动车", "ev", "tesla", "tsla", "比亚迪",
+        ],
+        "weight": 1.8,
     },
     "AI_科技": {
-        "weight": 1.0,
-        "strong": [
+        "keywords": [
             "人工智能", "artificial intelligence", "大模型", "llm", "ai chip",
-            "算力", "computing power", "gpu", "半导体", "semiconductor", "芯片",
-            "英伟达", "nvidia", "nvda", "台积电", "tsmc", "asml",
-            "ai capex", "资本开支", "capex",
-            "agent", "智能体", "多模态", "multimodal",
-            "openai", "chatgpt", "gpt", "claude", "gemini",
+            "英伟达", "nvidia", "nvda", "amd", "台积电", "tsmc", "tsm",
+            "半导体", "semiconductor", "芯片", "chip", "算力", "computing power", "gpu",
+            "soxl", "soxx", "smh", "nvda", "amd",
+            "meta", "microsoft", "msft", "google", "googl", "amazon", "amzn", "apple", "aapl",
+            "ai capex", "数据中心", "data center", "云计算", "cloud computing",
+            "科技股", "tech stock", "纳斯达克", "nasdaq", "qqq",
+            "openai", "chatgpt", "claude", "gemini",
         ],
-        "weak": [
-            "tech", "technology", "科技", "软件", "software",
-            "硬件", "hardware", "数据中心", "data center",
-            "cloud", "云", "aws", "azure",
-        ],
+        "weight": 1.8,
     },
     "加密货币": {
-        "weight": 1.0,
-        "strong": [
+        "keywords": [
             "比特币", "bitcoin", "btc", "以太坊", "ethereum", "eth",
             "加密货币", "crypto", "加密", "区块链", "blockchain",
-            "solana", "sol", "币安", "binance", "coinbase",
-            "减半", "halving", "现货etf", "spot etf",
+            "solana", "sol", "cardano", "ada", "xrp", "ripple",
+            "dogecoin", "doge", "shib", "pepe",
+            "减半", "halving", "现货etf", "spot etf", "bitcoin etf",
+            "币安", "binance", "coinbase", "coin",
             "链上", "on-chain", "defi", "nft",
-            "saylor", "michael saylor", "microstrategy",
         ],
-        "weak": [
-            "coin", "token", "wallet", "交易所", "exchange",
-            "挖矿", "mining", "公链", "layer2",
-        ],
+        "weight": 2.0,
     },
     "美股_大盘": {
-        "weight": 0.9,
-        "strong": [
-            "标普", "sp500", "s&p 500", "s&p500", "纳斯达克", "nasdaq",
-            "道琼斯", "djia", "qqq", "spy", "tqqq", "sqqq",
-            "美股", "us stocks", "us equities",
-            "牛市", "bull market", "熊市", "bear market",
-            "回调", "correction", "反弹", "rally",
-            "波动率", "vix", "恐慌指数",
+        "keywords": [
+            "标普", "sp500", "s&p 500", "s&p500", "道琼斯", "djia",
+            "spy", "qqq", "djia", "vix", "恐慌指数",
+            "美股", "us stock", "us equities",
+            "牛市", "bull market", "熊市", "bear market", "回调", "correction",
+            "财报季", "earnings season",
+            "magnificent seven", "mag7", "七巨头",
+            "散户", "retail", "机构", "institutional",
+            "对冲基金", "hedge fund", "共同基金", "mutual fund",
         ],
-        "weak": [
-            "stock", "stocks", "equity", "equities", "market",
-            "index", "indices", "大盘", "指数",
-        ],
+        "weight": 1.5,
     },
     "A股_港股": {
-        "weight": 0.9,
-        "strong": [
-            "恒生指数", "hang seng", "上证指数", "沪指", "深成指",
-            "创业板", "科创板", "港股", "a股", "中概股", "chinese stocks",
+        "keywords": [
+            "上证指数", "沪指", "深成指", "创业板", "科创板",
+            "恒生指数", "hang seng", "恒生科技", "港股", "a股",
             "北向资金", "南向资金", "融资融券", "margin",
-            "涨停", "跌停", "证监会", "csrc",
+            "涨停", "跌停", "茅台", "宁德时代", "腾讯", "阿里巴巴", "baba",
+            "中概股", "chinese stocks", "中概",
+            "证监会", "金管局", "hkma",
             "港股通", "沪港通", "深港通",
         ],
-        "weak": [
-            "中国经济", "china economy", "中国市场", "china market",
-            "地产", "房地产", "楼市", "房价",
-        ],
+        "weight": 1.8,
     },
     "外汇_汇率": {
-        "weight": 0.9,
-        "strong": [
+        "keywords": [
             "美元指数", "dxy", "汇率", "外汇", "forex", "fx",
-            "美元", "dollar", "usd", "人民币", "yuan", "renminbi", "cny",
-            "欧元", "euro", "eur", "日元", "yen", "jpy",
+            "美元", "dollar", "人民币", "yuan", "renminbi", "cny",
+            "日元", "yen", "jpy", "欧元", "euro", "eur",
             "英镑", "pound", "gbp", "瑞郎", "chf",
-            "汇率政策", "exchange rate", "货币贬值", "devaluation",
-            "货币升值", "appreciation", "外汇储备",
-            "去美元化", "dedollarization", "美元霸权",
+            "汇率政策", "汇率干预", "currency intervention",
+            "去美元化", "dedollarization", "金砖", "brics",
         ],
-        "weak": [
-            "currency", "货币", "汇率制度", "固定汇率", "浮动汇率",
-        ],
+        "weight": 1.5,
     },
     "地缘政治": {
-        "weight": 0.8,
-        "strong": [
-            "地缘政治", "geopolitical", "地缘风险", "geopolitical risk",
-            "战争", "war", "冲突", "conflict", "制裁", "sanction",
-            "关税", "tariff", "贸易战", "trade war",
-            "中东", "middle east", "伊朗", "iran", "以色列", "israel",
-            "俄乌", "russia", "ukraine", "台海", "taiwan",
-            "北约", "nato", "金砖", "brics", "g7", "g20",
+        "keywords": [
+            "地缘政治", "geopolitical", "战争", "war", "冲突", "conflict",
+            "制裁", "sanction", "关税", "tariff", "贸易战", "trade war",
+            "伊朗", "iran", "以色列", "israel", "加沙", "gaza",
+            "乌克兰", "ukraine", "俄罗斯", "russia",
+            "台海", "taiwan", "中东", "middle east",
+            "霍尔木兹", "hormuz", "红海", "red sea",
             "选举", "election", "大选", "总统选举",
+            "欧佩克", "opec", "opec+",
         ],
-        "weak": [
-            "政治", "political", "外交", "diplomatic",
-            "国际", "international", "全球秩序", "global order",
-        ],
+        "weight": 1.2,  # 地缘政治本身不算纯投资，但会影响市场
     },
     "公司_财报": {
-        "weight": 0.8,
-        "strong": [
+        "keywords": [
             "财报", "earnings", "业绩", "营收", "revenue", "利润", "profit",
-            "亏损", "loss", "eps", "市盈率", "pe ratio",
-            "估值", "valuation", "回购", "buyback", "分红", "dividend",
+            "eps", "市盈率", "pe ratio", "估值", "valuation",
+            "回购", "buyback", "分红", "dividend", "股息",
             "ipo", "上市", "退市", "并购", "merger", "收购", "acquisition",
-            "季报", "年报", "q1", "q2", "q3", "q4",
-            "guidance", "指引", "业绩指引",
+            "业绩指引", "guidance", "超预期", "beat", "不及预期", "miss",
+            "毛利率", "gross margin", "净利率", "net margin",
         ],
-        "weak": [
-            "公司", "company", "企业", "corporate", "行业", "industry",
-            "板块", "sector", "财报季", "earnings season",
-        ],
+        "weight": 1.5,
     },
 }
 
-
-# ═══════════════════════════════════════════════════════════════
-# 资产别名映射（符号 → 标准名 + 类型）
-# ═══════════════════════════════════════════════════════════════
-
-ASSET_ALIASES = {
-    # 美股大盘 ETF
-    "spy": ("SPY", "美股_ETF"), "spx": ("SPX", "美股_指数"), "sp500": ("S&P 500", "美股_指数"),
-    "qqq": ("QQQ", "美股_ETF"), "ndx": ("NDX", "美股_指数"), "nasdaq": ("纳斯达克", "美股_指数"),
-    "djia": ("道琼斯", "美股_指数"), "dia": ("DIA", "美股_ETF"),
-    "iwm": ("IWM", "美股_ETF"), "vti": ("VTI", "美股_ETF"),
-    "vix": ("VIX", "波动率"),
-
-    # 美债 ETF
-    "tlt": ("TLT", "美债_ETF"), "tlh": ("TLH", "美债_ETF"),
-    "ief": ("IEF", "美债_ETF"), "shy": ("SHY", "美债_ETF"),
-    "gld": ("GLD", "黄金_ETF"), "slv": ("SLV", "白银_ETF"),
-
-    # 科技股
-    "nvda": ("NVDA", "美股_科技"), "nvidia": ("NVDA", "美股_科技"),
-    "aapl": ("AAPL", "美股_科技"), "apple": ("AAPL", "美股_科技"),
-    "msft": ("MSFT", "美股_科技"), "microsoft": ("MSFT", "美股_科技"),
-    "googl": ("GOOGL", "美股_科技"), "google": ("GOOGL", "美股_科技"),
-    "amzn": ("AMZN", "美股_科技"), "amazon": ("AMZN", "美股_科技"),
-    "meta": ("META", "美股_科技"), "facebook": ("META", "美股_科技"),
-    "tsla": ("TSLA", "美股_科技"), "tesla": ("TSLA", "美股_科技"),
-    "tsmc": ("TSMC", "美股_科技"), "台积电": ("TSMC", "美股_科技"),
-    "asml": ("ASML", "美股_科技"),
-    "amd": ("AMD", "美股_科技"),
-
-    # 加密货币
-    "btc": ("BTC", "加密货币"), "bitcoin": ("BTC", "加密货币"),
-    "eth": ("ETH", "加密货币"), "ethereum": ("ETH", "加密货币"),
-    "sol": ("SOL", "加密货币"), "solana": ("SOL", "加密货币"),
-
-    # 外汇
-    "dxy": ("DXY", "外汇"), "美元指数": ("DXY", "外汇"),
-    "usd": ("USD", "外汇"), "cny": ("CNY", "外汇"), "人民币": ("CNY", "外汇"),
-    "eur": ("EUR", "外汇"), "jpy": ("JPY", "外汇"), "日元": ("JPY", "外汇"),
-    "gbp": ("GBP", "外汇"), "chf": ("CHF", "外汇"),
-
-    # 大宗商品
-    "wti": ("WTI原油", "大宗商品"), "brent": ("布伦特原油", "大宗商品"),
-    "原油": ("WTI原油", "大宗商品"), "oil": ("WTI原油", "大宗商品"),
-    "gold": ("黄金", "贵金属"), "黄金": ("黄金", "贵金属"),
-    "silver": ("白银", "贵金属"), "白银": ("白银", "贵金属"),
-    "天然气": ("天然气", "大宗商品"), "natural gas": ("天然气", "大宗商品"),
-
-    # A股/港股指数
-    "上证指数": ("上证指数", "A股_指数"), "沪指": ("上证指数", "A股_指数"),
-    "深成指": ("深证成指", "A股_指数"),
-    "创业板": ("创业板指", "A股_指数"),
-    "恒生指数": ("恒生指数", "港股_指数"), "hang seng": ("恒生指数", "港股_指数"),
+# ── 排除模式（v3：更精细）───────────────────────────────────────
+EXCLUDE_CATEGORIES = {
+    "娱乐八卦": [
+        "明星", "爱豆", "粉丝", "追星", "综艺", "电视剧", "电影", "选秀",
+        "微博之夜", "吃瓜", "八卦", "恋情", "出轨", "离婚", "结婚",
+        "演唱会", "专辑", "新歌", "红毯", "时尚", "穿搭", "美妆",
+    ],
+    "社会民生": [
+        "车祸", "命案", "凶杀", "强奸", "失踪", "地震", "洪水", "台风",
+        "美食", "旅游", "健身", "宠物", "萌宠", "游戏", "电竞",
+        "生日快乐", "祝福", "节日祝福", "圣诞快乐", "新年快乐",
+    ],
+    "纯政治": [
+        "选举辩论", "竞选造势", "投票率", "候选人提名", "党代表大会",
+        # 注意：涉及经济政策的政治内容不算排除
+    ],
+    "垃圾营销": [
+        "giveaway", "airdrop", "free mint", "join our telegram",
+        "click here", "sign up now", "limited offer",
+        "抽奖", "转发抽奖", "关注抽奖", "福利", "薅羊毛",
+    ],
 }
 
+# ── 资产别名映射（更全）─────────────────────────────────────────
+ASSET_ALIASES = {
+    # 美股科技
+    "nvda": ("NVDA", "英伟达"),
+    "nvidia": ("NVDA", "英伟达"),
+    "aapl": ("AAPL", "苹果"),
+    "apple": ("AAPL", "苹果"),
+    "msft": ("MSFT", "微软"),
+    "microsoft": ("MSFT", "微软"),
+    "googl": ("GOOGL", "谷歌"),
+    "google": ("GOOGL", "谷歌"),
+    "amzn": ("AMZN", "亚马逊"),
+    "amazon": ("AMZN", "亚马逊"),
+    "meta": ("META", "Meta"),
+    "facebook": ("META", "Meta"),
+    "tsla": ("TSLA", "特斯拉"),
+    "tesla": ("TSLA", "特斯拉"),
+    "amd": ("AMD", "AMD"),
+    "nvda": ("NVDA", "英伟达"),
+    "tsm": ("TSM", "台积电"),
+    "taiwan semiconductor": ("TSM", "台积电"),
+    
+    # ETF
+    "spy": ("SPY", "标普500ETF"),
+    "qqq": ("QQQ", "纳指100ETF"),
+    "tqqq": ("TQQQ", "纳指三倍做多"),
+    "sqqq": ("SQQQ", "纳指三倍做空"),
+    "soxl": ("SOXL", "半导体三倍做多"),
+    "soxs": ("SOXS", "半导体三倍做空"),
+    "gld": ("GLD", "黄金ETF"),
+    "slv": ("SLV", "白银ETF"),
+    "tlt": ("TLT", "美债20年+ETF"),
+    "ief": ("IEF", "美债7-10年ETF"),
+    "vix": ("VIX", "恐慌指数"),
+    "dxy": ("DXY", "美元指数"),
+    "uso": ("USO", "原油ETF"),
+    "xle": ("XLE", "能源ETF"),
+    "arkk": ("ARKK", "方舟创新ETF"),
+    
+    # 加密
+    "btc": ("BTC", "比特币"),
+    "bitcoin": ("BTC", "比特币"),
+    "eth": ("ETH", "以太坊"),
+    "ethereum": ("ETH", "以太坊"),
+    "sol": ("SOL", "Solana"),
+    "solana": ("SOL", "Solana"),
+    
+    # 大宗商品
+    "gold": ("XAU", "黄金"),
+    "silver": ("XAG", "白银"),
+    "wti": ("WTI", "WTI原油"),
+    "brent": ("Brent", "布伦特原油"),
+    
+    # A股/港股
+    "茅台": ("600519.SH", "贵州茅台"),
+    "宁德时代": ("300750.SZ", "宁德时代"),
+    "腾讯": ("0700.HK", "腾讯控股"),
+    "阿里巴巴": ("BABA", "阿里巴巴"),
+}
 
-# ═══════════════════════════════════════════════════════════════
-# 排除关键词（降低评分）
-# ═══════════════════════════════════════════════════════════════
+# 非交易标的排除列表（这些是机构/指标/术语，不是可交易的资产）
+NON_TRADING_ASSETS = {
+    # 机构/组织
+    "fed", "federal reserve", "ecb", "boj", "pboc", "opec", "opec+",
+    "美联储", "欧洲央行", "日本央行", "人民银行", "央行", "欧佩克",
+    "imf", "world bank", "treasury", "财政部",
+    # 经济指标（不是交易标的）
+    "cpi", "ppi", "gdp", "nfp", "pce",
+    "通胀", "通缩", "衰退", "滞胀",
+    # 债券期限（不是独立标的，已通过 TLT/IEF 等 ETF 覆盖）
+    "10y", "2y", "30y", "5y", "1y", "20y", "7y", "3m", "6m",
+    "10年期", "2年期", "30年期", "5年期",
+    # 其他术语
+    "yield", "rate", "spread", "收益率", "利率", "利差",
+    "ev",  # 电动车缩写太泛，容易误匹配
+    "macro",  # 宏观缩写，不是标的
+    "intl", "int",  # 国际/内部缩写
+}
 
-EXCLUDE_KEYWORDS = [
-    "明星", "爱豆", "粉丝", "追星", "综艺", "电视剧", "电影", "选秀",
-    "微博之夜", "吃瓜", "八卦", "恋情", "出轨", "离婚", "结婚",
-    "车祸", "命案", "凶杀", "强奸", "诈骗案", "失踪",
-    "美食", "旅游", "穿搭", "美妆", "健身", "宠物", "萌宠",
-    "生日快乐", "祝福", "圣诞", "新年", "节日",
-    "抽奖", "giveaway", "空投", "airdrop",
-]
-
-HARD_EXCLUDE_PATTERNS = [
-    r"happy birthday",
-    r"生日快乐",
-    r"merry christmas",
-    r"新年快乐",
-    r"抽奖.*关注",
-    r"关注.*抽奖",
-    r"giveaway",
-]
-
-
-# ═══════════════════════════════════════════════════════════════
-# 情感关键词词典（用于初步情感判断）
-# ═══════════════════════════════════════════════════════════════
-
-BULLISH_KEYWORDS = [
-    "bullish", "看多", "看涨", "买入", "buy", "long", "做多",
-    "上涨", "涨", "新高", "突破", "surge", "rally", "soar", "jump",
-    "利好", "positive", "optimistic", "乐观",
-    "超预期", "beat", "exceed", "strong", "强劲",
-    "复苏", "recovery", "rebound", "反弹",
-]
-
-BEARISH_KEYWORDS = [
-    "bearish", "看空", "看跌", "卖出", "sell", "short", "做空",
-    "下跌", "跌", "新低", "破位", "crash", "plunge", "drop", "tumble",
-    "利空", "negative", "pessimistic", "悲观",
-    "不及预期", "miss", "weak", "疲软", "下滑",
-    "衰退", "recession", "危机", "crisis", "崩盘",
-    "风险", "risk", "警告", "warning", "担忧", "concern",
-]
+# 股票代码模式：$AAPL, $NVDA 等 cashtag
+CASH_TAG_PATTERN = re.compile(r'\$([A-Z]{1,5})\b')
 
 
-# ═══════════════════════════════════════════════════════════════
-# 核心函数
-# ═══════════════════════════════════════════════════════════════
-
-def classify_and_score(text: str) -> dict:
+def classify_text(text: str) -> Dict[str, float]:
     """
-    对文本进行主题分类 + 投资相关性评分 + 资产提取 + 情绪判断
-
-    返回:
-    {
-        "is_investment_related": bool,
-        "investment_score": float,  # 0-100
-        "themes": [{"theme": str, "score": float, "confidence": str}],
-        "assets": [(symbol, asset_type), ...],
-        "sentiment": "bullish" | "bearish" | "neutral",
-        "sentiment_score": float,  # -1 到 1
-        "info_density": float,  # 信息密度 0-1
-    }
+    对文本进行多主题分类
+    返回: {主题名: 置信度 0-1}
     """
     text_lower = text.lower()
-    result = {
-        "is_investment_related": False,
-        "investment_score": 0.0,
-        "themes": [],
-        "assets": [],
-        "sentiment": "neutral",
-        "sentiment_score": 0.0,
-        "info_density": 0.0,
-    }
 
-    # ── 硬排除 ────────────────────────────────────────────────
-    for pattern in HARD_EXCLUDE_PATTERNS:
-        if re.search(pattern, text_lower):
-            return result
+    # 黄金比喻消歧：如果 "gold" 是比喻用法，不归类到黄金_贵金属
+    gold_is_metaphor = _is_gold_rush_metaphor(text)
 
-    # ── 主题分类 + 评分 ───────────────────────────────────────
-    theme_scores = {}
-    for theme, config in THEME_KEYWORDS.items():
-        score = 0.0
-        matched_strong = []
-        matched_weak = []
+    scores = {}
 
-        for kw in config["strong"]:
-            count = text_lower.count(kw.lower())
-            if count > 0:
-                score += count * 15 * config["weight"]
-                matched_strong.append(kw)
+    for category, config in THEME_CATEGORIES.items():
+        keywords = config["keywords"]
+        weight = config["weight"]
+        matches = 0
+        matched_words = []
 
-        for kw in config["weak"]:
-            count = text_lower.count(kw.lower())
-            if count > 0:
-                score += count * 5 * config["weight"]
-                matched_weak.append(kw)
+        for kw in keywords:
+            if kw.lower() in text_lower:
+                # 黄金主题特殊处理：比喻用法跳过
+                if category == "黄金_贵金属" and gold_is_metaphor:
+                    continue
+                matches += 1
+                matched_words.append(kw)
 
-        if score > 0:
-            # 限制弱关键词贡献上限
-            weak_score = len(matched_weak) * 5 * config["weight"]
-            if weak_score > score * 0.4:
-                score = score - weak_score + score * 0.4
-            theme_scores[theme] = {
-                "score": round(score, 1),
-                "matched_strong": matched_strong,
-                "matched_weak": matched_weak,
-            }
+        if matches > 0:
+            # 置信度：命中词数 / 总词数的开方，再乘权重
+            confidence = min(matches / (len(keywords) ** 0.4) * weight, 1.0)
+            scores[category] = round(confidence, 3)
 
-    # ── 排除关键词扣分 ────────────────────────────────────────
-    exclude_hits = sum(1 for kw in EXCLUDE_KEYWORDS if kw.lower() in text_lower)
-    exclude_penalty = exclude_hits * 10
-
-    # ── 总投资相关性评分 ──────────────────────────────────────
-    num_count = len(re.findall(r'\d+\.?\d*%?', text))
-
-    if theme_scores:
-        # 取最高主题分 + 其他主题的 30% 加权
-        sorted_themes = sorted(theme_scores.items(), key=lambda x: x[1]["score"], reverse=True)
-        top_score = sorted_themes[0][1]["score"]
-        other_score = sum(t[1]["score"] for t in sorted_themes[1:]) * 0.3
-        total_score = top_score + other_score - exclude_penalty
-
-        # 长度加成（太短的内容信息量低）
-        length = len(text)
-        if length < 50:
-            total_score *= 0.6
-        elif length < 100:
-            total_score *= 0.8
-        elif length > 500:
-            total_score *= 1.1  # 长文加成
-
-        # 数字/数据含量加成
-        if num_count >= 3:
-            total_score *= 1.15
-
-        result["investment_score"] = max(0.0, min(100.0, round(total_score, 1)))
-        result["is_investment_related"] = result["investment_score"] >= 15
-
-        # 整理主题列表
-        for theme, data in sorted_themes:
-            confidence = "high" if data["score"] >= 30 else "medium" if data["score"] >= 15 else "low"
-            if data["score"] >= 10:
-                result["themes"].append({
-                    "theme": theme,
-                    "score": data["score"],
-                    "confidence": confidence,
-                })
-
-    # ── 资产提取 ──────────────────────────────────────────────
-    assets = extract_assets(text)
-    result["assets"] = assets
-
-    # ── 情绪判断 ──────────────────────────────────────────────
-    bullish_hits = sum(text_lower.count(kw.lower()) for kw in BULLISH_KEYWORDS)
-    bearish_hits = sum(text_lower.count(kw.lower()) for kw in BEARISH_KEYWORDS)
-    total_sentiment_hits = bullish_hits + bearish_hits
-
-    if total_sentiment_hits > 0:
-        sentiment_score = (bullish_hits - bearish_hits) / total_sentiment_hits
-        result["sentiment_score"] = round(sentiment_score, 2)
-        if sentiment_score > 0.3:
-            result["sentiment"] = "bullish"
-        elif sentiment_score < -0.3:
-            result["sentiment"] = "bearish"
-        else:
-            result["sentiment"] = "neutral"
-
-    # ── 信息密度 ──────────────────────────────────────────────
-    word_count = len(text.split())
-    unique_words = len(set(text.lower().split()))
-    diversity = unique_words / max(word_count, 1)
-    number_density = num_count / max(word_count, 1) * 10
-    result["info_density"] = round(min(1.0, diversity * 0.5 + number_density * 0.5), 2)
-
-    return result
+    return scores
 
 
-def extract_assets(text: str) -> List[Tuple[str, str]]:
-    """从文本中提取资产符号（过滤非交易标的）"""
+def extract_assets(text: str) -> List[tuple]:
+    """
+    从文本中提取提到的资产
+    返回: [(symbol, name), ...]
+    """
     text_lower = text.lower()
     found = {}
 
-    # 非交易标的（缩写词、机构名等容易误匹配的）
-    skip_symbols = {
-        # 英文缩写（宏观/经济/政策术语）
-        "AI", "CEO", "CFO", "GDP", "CPI", "PCE", "FOMC", "Fed", "FED",
-        "SEC", "FDA", "IPO", "ETF", "REIT", "ESG", "SAAS", "ROI",
-        "EV", "APP", "DATA", "CORE", "NEXT", "BEST", "TOP",
-        "NEW", "BIG", "SMALL", "MID", "LONG", "SHORT",
-        "HIGH", "LOW", "OPEN", "CLOSE", "FIRST", "LAST",
-        "ONE", "TWO", "THREE", "FOUR", "FIVE",
-        "YES", "NO", "ALL", "ANY", "NEWS",
-        "TIME", "YEAR", "MONTH", "WEEK", "DAY",
-        "USA", "US", "UK", "EU", "CN", "JP",
-        "Q1", "Q2", "Q3", "Q4",
-        "MONEY", "CASH", "RISK", "BETA", "ALPHA",
-        "SAVE", "BUY", "SELL", "HOLD",
-        "FUND", "STOCK", "BOND", "MARKET",
-        "TRADE", "TRADING", "INVEST", "INVESTING",
-        "PROFIT", "LOSS", "GAIN", "DROP",
-        "RATE", "YIELD", "PRICE", "VALUE",
-        "GROWTH", "QUALITY",
-        "GLOBAL", "WORLD", "CHINA", "AMERICA",
-        "OTC", "P/E", "EPS", "DCF", "NAV",
-        "AUM", "PM", "AM", "VP", "GM",
-        "IR", "PR", "HR", "IT",
-        # 其他非交易标的
-        "MACRO", "MICRO", "DEFI", "NFT", "WEB3",
-        "10Y", "20Y", "30Y", "2Y", "5Y", "7Y",
-        "CURVE", "INFLATION", "RECESSION",
-        "HAWK", "DOV", "PIVOT",
-    }
-    skip_lower = {s.lower() for s in skip_symbols}
-
-    # 1. $cashtag 格式
-    cashtags = re.findall(r'\$([a-zA-Z]{1,5})', text)
-    for tag in cashtags:
-        tag_lower = tag.lower()
-        if tag_lower in skip_lower:
+    # 1. Cashtag 匹配 ($AAPL, $NVDA)
+    for match in CASH_TAG_PATTERN.finditer(text):
+        sym = match.group(1).upper()
+        # 排除非交易标的（cashtag 形式的也要排除）
+        if sym.lower() in NON_TRADING_ASSETS:
             continue
-        if tag_lower in ASSET_ALIASES:
-            sym, atype = ASSET_ALIASES[tag_lower]
-            found[sym] = atype
-        else:
-            found[tag.upper()] = "股票_未知"
+        found[sym] = (sym, sym)  # 先用 symbol 当名字
 
-    # 2. 别名匹配（只匹配已知别名，避免误匹配常见缩写）
-    for alias, (symbol, atype) in ASSET_ALIASES.items():
+    # 2. 别名匹配（带上下文消歧）
+    for alias, (sym, name) in ASSET_ALIASES.items():
         if alias in text_lower:
-            found[symbol] = atype
+            # 排除非交易标的
+            if sym.lower() in NON_TRADING_ASSETS:
+                continue
+            if alias.lower() in NON_TRADING_ASSETS:
+                continue
+            # ── 上下文消歧：避免 "AI gold rush" 被识别为黄金 ──
+            if sym == "XAU" and _is_gold_rush_metaphor(text):
+                continue
+            if sym == "GLD" and _is_gold_rush_metaphor(text):
+                continue
+            found[sym] = (sym, name)
 
-    return list(found.items())
+    return list(found.values())
 
 
-def filter_tweets(tweets: list, min_score: float = 25.0) -> list:
+# ── 黄金比喻消歧 ─────────────────────────────────────────────
+# "AI gold rush"、"data is the new gold"、"voice is the new gold"
+# 这些都是比喻用法，不是讨论黄金本身
+_GOLD_RUSH_NON_METAL_PATTERNS = [
+    r"ai\s+gold\s+rush",
+    r"data\s+is\s+the\s+new\s+gold",
+    r"voice\s+is\s+the\s+new\s+gold",
+    r"attention\s+is\s+the\s+new\s+gold",
+    r"content\s+is\s+the\s+new\s+gold",
+    r"users\s+are\s+the\s+new\s+gold",
+    r"gold\s+rush\s+(?:for|of|to)\s+(?:ai|tech|crypto|semiconductor)",
+    r"goldmine", r"gold mine",
+    r"淘金热",
+    r"黄金时代",  # "AI 的黄金时代" 也不是讨论金价
+    r"黄金赛道",  # 行业用词
+    r"含金量",    # 形容词用法
+]
+
+_GOLD_RUSH_PATTERN = re.compile("|".join(_GOLD_RUSH_NON_METAL_PATTERNS), re.IGNORECASE)
+
+
+def _is_gold_rush_metaphor(text: str) -> bool:
     """
-    过滤推文列表，只保留投资相关的，并附上分类结果
-
-    返回: list of (tweet_dict, classification_result)
+    检测 "gold" 出现在比喻语境（不是讨论黄金价格/资产）
     """
-    filtered = []
-    for tweet in tweets:
-        text = tweet.get("text", "") or tweet.get("content", "")
-        cls = classify_and_score(text)
-        if cls["is_investment_related"] and cls["investment_score"] >= min_score:
-            # 把分类结果注入 tweet
-            enriched = dict(tweet)
-            enriched["themes"] = [t["theme"] for t in cls["themes"]]
-            enriched["theme_details"] = cls["themes"]
-            enriched["assets"] = cls["assets"]
-            enriched["investment_score"] = cls["investment_score"]
-            enriched["sentiment"] = cls["sentiment"]
-            enriched["sentiment_score"] = cls["sentiment_score"]
-            enriched["info_density"] = cls["info_density"]
-            filtered.append((enriched, cls))
-    return filtered
+    return bool(_GOLD_RUSH_PATTERN.search(text))
 
 
-def get_theme_list() -> list:
-    """返回所有主题名称列表"""
-    return list(THEME_KEYWORDS.keys())
 
-
-if __name__ == "__main__":
-    # 快速测试
-    test_texts = [
-        "Fed 主席鲍威尔暗示可能再次加息，美债收益率飙升，TLT 暴跌 2%",
-        "黄金价格突破 2500 美元，GLD 创历史新高，央行持续增持",
-        "英伟达 NVDA 财报超预期，AI capex 继续增长",
-        "生日快乐！今天天气真好",
-        "伊朗袭击以色列，油价暴涨，地缘风险升级",
-        "BTC 突破 7 万，MicroStrategy 继续加仓",
+def check_exclusion(text: str) -> Tuple[bool, str]:
+    """
+    检查是否应该被排除
+    返回: (是否排除, 排除原因)
+    """
+    text_lower = text.lower()
+    
+    # 硬排除模式
+    hard_patterns = [
+        r"^(rt\s+@\w+:\s*)?happy birthday",
+        r"生日快乐",
+        r"giveaway.*free|free.*giveaway",
+        r"airdrop.*crypto|crypto.*airdrop",
+        r"join.*telegram.*now",
+        r"转发.*抽奖|关注.*抽奖",
     ]
-    for i, text in enumerate(test_texts, 1):
-        result = classify_and_score(text)
-        print(f"\n[{i}] {text[:50]}...")
-        print(f"  投资相关: {result['is_investment_related']}")
-        print(f"  评分: {result['investment_score']}")
-        print(f"  主题: {[t['theme'] for t in result['themes'][:3]]}")
-        print(f"  资产: {result['assets']}")
-        print(f"  情绪: {result['sentiment']} ({result['sentiment_score']})")
-        print(f"  信息密度: {result['info_density']}")
+    for pat in hard_patterns:
+        if re.search(pat, text_lower):
+            return True, "硬排除模式"
+    
+    # 分类排除：如果某个排除分类命中很多词，且没有投资相关词
+    for cat_name, keywords in EXCLUDE_CATEGORIES.items():
+        exclude_matches = sum(1 for kw in keywords if kw.lower() in text_lower)
+        if exclude_matches >= 2:
+            # 检查有没有投资关键词抵消
+            invest_count = 0
+            for cat_config in THEME_CATEGORIES.values():
+                invest_count += sum(1 for kw in cat_config["keywords"] if kw.lower() in text_lower)
+            if invest_count < exclude_matches:
+                return True, f"排除分类: {cat_name}"
+    
+    return False, ""
+
+
+def calculate_info_density(text: str) -> float:
+    """
+    计算信息密度（0-1）
+    基于：长度、数字占比、专有名词数量
+    """
+    if not text:
+        return 0.0
+    
+    # 长度分（100字以上满分）
+    length_score = min(len(text) / 200, 1.0)
+    
+    # 数字/百分比/价格（信息含量高）
+    numbers = re.findall(r'\d+(?:\.\d+)?%?', text)
+    number_score = min(len(numbers) / 3, 1.0)
+    
+    # 链接数量（有来源的信息更可信）
+    urls = re.findall(r'https?://', text)
+    url_score = min(len(urls) * 0.3, 0.3)
+    
+    density = (length_score * 0.4 + number_score * 0.4 + url_score * 0.2)
+    return round(density, 3)
+
+
+def filter_and_classify(
+    text: str,
+    source: str = "",
+    threshold: float = 25.0,
+) -> FilterResult:
+    """
+    主函数：过滤 + 分类 + 资产提取
+    
+    返回 FilterResult，包含：
+    - 是否投资相关
+    - 综合评分
+    - 匹配的主题分类
+    - 提取的资产
+    - 信息密度
+    """
+    if not text or not text.strip():
+        return FilterResult(is_investment=False, score=0.0)
+    
+    text_lower = text.lower()
+    
+    # 1. 排除检查
+    excluded, reason = check_exclusion(text)
+    if excluded:
+        return FilterResult(is_investment=False, score=0.0)
+    
+    # 2. 主题分类
+    categories = classify_text(text)
+    
+    # 3. 资产提取
+    assets = extract_assets(text)
+    
+    # 4. 计算综合评分
+    if categories:
+        # 取最高的 3 个分类分数加权
+        top_cats = sorted(categories.values(), reverse=True)[:3]
+        cat_score = sum(top_cats) / len(top_cats) * 70  # 最高 70 分
+    else:
+        cat_score = 0.0
+    
+    # 资产加分（提到具体标的说明更相关）
+    asset_score = min(len(assets) * 5, 15)
+    
+    # 信息密度加分
+    density = calculate_info_density(text)
+    density_score = density * 15
+    
+    # 来源加权
+    source_bonus = {
+        "xueqiu": 5, "wallstreetcn": 10, "cls": 10,
+        "hackernews": 3, "36kr": 3,
+        "x": 0, "twitter": 0,
+        "weibo": -5, "zhihu": -3,
+    }
+    source_score = source_bonus.get(source.lower(), 0)
+    
+    total_score = cat_score + asset_score + density_score + source_score
+    total_score = max(0.0, min(100.0, total_score))
+    
+    # 5. 初步情绪判断（简单版）
+    try:
+        from .sentiment_v2 import calculate_sentiment_score
+    except ImportError:
+        from sentiment_v2 import calculate_sentiment_score
+    sent = calculate_sentiment_score(text)
+    sentiment_hint = sent["direction"]
+    
+    # 6. 匹配的关键词列表
+    matched_kw = []
+    for cat, config in THEME_CATEGORIES.items():
+        for kw in config["keywords"]:
+            if kw.lower() in text_lower:
+                matched_kw.append(f"{cat}:{kw}")
+    
+    return FilterResult(
+        is_investment=total_score >= threshold,
+        score=round(total_score, 1),
+        categories=sorted(categories.keys(), key=lambda c: categories[c], reverse=True),
+        matched_assets=assets,
+        matched_keywords=matched_kw[:10],
+        sentiment_hint=sentiment_hint,
+        info_density=density,
+    )
+
+
+# 兼容旧接口
+def is_investment_related(text: str, source: str = "", threshold: float = 25.0) -> bool:
+    result = filter_and_classify(text, source, threshold)
+    return result.is_investment
+
+
+def calculate_investment_score(text: str, source: str = "") -> Tuple[float, List[str]]:
+    result = filter_and_classify(text, source)
+    return result.score, result.matched_keywords
