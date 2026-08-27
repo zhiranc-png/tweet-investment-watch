@@ -11,8 +11,9 @@ name: 多源中文采集（原投资舆情每日采集）
 
 on:
   schedule:
-    # 每天 UTC 05:00 = HKT 13:00（X 部分退役后不再占用小号限流窗口，时段仅作惯例保留）
-    - cron: '0 5 * * *'
+    # 每天 UTC 04:10 = HKT 12:10（第二批优化 A 项吸收动作：早于 12:50 的日报任务跑完并提交，
+    # 让日报当日即可读取 data/multi_source_<今日>.json 作为中文圈补充源；不占用 X 小号限流窗口）
+    - cron: '10 4 * * *'
   workflow_dispatch:
 
 permissions:
