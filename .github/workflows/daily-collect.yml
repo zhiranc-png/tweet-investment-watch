@@ -43,7 +43,9 @@ jobs:
           python main.py run \
             --output report/daily_report.md \
             --per-user ${{ github.event.inputs.per_user || 20 }} \
-            --hours ${{ github.event.inputs.hours || 48 }}
+            --hours ${{ github.event.inputs.hours || 48 }} \
+            --v2 \
+            --with-price
 
       - name: 采集多源中文数据（补充）
         run: python collect_multi_source.py || echo "多源采集部分失败，继续主流程"

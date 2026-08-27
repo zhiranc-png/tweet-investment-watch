@@ -28,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from src.collectors.x_api import XCollector, DEFAULT_INFLUENCERS
 from src.analysis.signal_aggregator import generate_brief
 from src.analysis.signal_aggregator_v2 import generate_brief_v2
+from src.analysis.asset_price import enrich_brief_with_prices
 from src.output.report_generator import generate_markdown_report, save_report, save_brief_json
 from src.collectors.models import Tweet
 from src.collectors.filter_v3 import classify_and_score
@@ -242,6 +243,13 @@ def cmd_brief(args: argparse.Namespace) -> dict:
     else:
         brief = generate_brief(tweets)
 
+    # 价格联动（可选）
+    if getattr(args, 'with_price', False):
+        print("   📈 接入行情数据，为标的添加涨跌幅...")
+        brief = enrich_brief_with_prices(brief)
+        stats = brief.get("stats", {})
+        print(f"   价格覆盖: {stats.get('assets_with_price', 0)}/{stats.get('assets_total', 0)} 个标的")
+
     # 保存
     output_path = Path(args.output)
     save_brief_json(brief, output_path)
@@ -317,6 +325,7 @@ def cmd_run(args: argparse.Namespace) -> None:
         input=str(tweets_file),
         output=str(brief_file),
         v2=getattr(args, 'v2', False),
+        with_price=getattr(args, 'with_price', False),
     )
     cmd_brief(brief_args)
 
@@ -351,6 +360,7 @@ def main() -> None:
     p_brief.add_argument("--input", "-i", required=True, help="推文 JSON 文件")
     p_brief.add_argument("--output", "-o", default="data/brief.json", help="输出文件路径")
     p_brief.add_argument("--v2", action="store_true", help="使用 v2 信号聚合器（主题信号+共识度+信号强度）")
+    p_brief.add_argument("--with-price", action="store_true", help="接入行情数据，为标的添加涨跌幅")
 
     # report
     p_report = subparsers.add_parser("report", help="生成 Markdown 报告")
@@ -365,6 +375,7 @@ def main() -> None:
     p_run.add_argument("--hours", type=int, default=48, help="时间窗口（小时）")
     p_run.add_argument("--no-filter", action="store_true", help="不过滤投资关键词")
     p_run.add_argument("--v2", action="store_true", help="使用 v2 信号聚合器")
+    p_run.add_argument("--with-price", action="store_true", help="接入行情数据，为标的添加涨跌幅")
     p_run.add_argument("--auth-token", default="", help="X auth_token")
     p_run.add_argument("--ct0", default="", help="X ct0")
 
