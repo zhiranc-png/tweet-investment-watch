@@ -362,6 +362,8 @@ def classify_and_score(text: str) -> dict:
     exclude_penalty = exclude_hits * 10
 
     # ── 总投资相关性评分 ──────────────────────────────────────
+    num_count = len(re.findall(r'\d+\.?\d*%?', text))
+
     if theme_scores:
         # 取最高主题分 + 其他主题的 30% 加权
         sorted_themes = sorted(theme_scores.items(), key=lambda x: x[1]["score"], reverse=True)
@@ -379,7 +381,6 @@ def classify_and_score(text: str) -> dict:
             total_score *= 1.1  # 长文加成
 
         # 数字/数据含量加成
-        num_count = len(re.findall(r'\d+\.?\d*%?', text))
         if num_count >= 3:
             total_score *= 1.15
 
