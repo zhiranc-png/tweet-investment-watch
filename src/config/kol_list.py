@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-KOL 监测池 v2 — 结构优化版（2026-08-27）
+KOL 监测池 v2.1 — 结构优化版（2026-08-27）
 
 优化方向：
 1. 新增美债/固收策略师组（+6）
 2. 新增黄金/贵金属组（+4）
 3. 新增外汇策略组（+3）
-4. 新增知名交易者组（+4）
+4. 新增知名交易者组（+5，含 Art of Speculation）
 5. 削减快讯/杂讯类账号（-6）
 6. 宏观组补充偏债市策略师（+2）
-7. A股/港股补充高质量KOL（+2）
+7. A股/港股补充高质量KOL（+3，含 华尔街没有名字）
 
-净变化：从 54 人到 63 人（+9 净增，实际 +15 新增 -6 削减）
+净变化：从 54 人到 65 人（+11 净增，实际 +17 新增 -6 削减）
 """
 
 # 全量监测池（按主题分组，便于维护）
@@ -73,13 +73,14 @@ KOL_LIST = [
     "PeterLBrandt",        # 技术分析大师
     "John_Hempton",        # 做空专家
 
-    # ── 知名交易者（4人）──
+    # ── 知名交易者（5人）──
     "aleabitoreddit",      # Serenity - AI供应链瓶颈挖掘
     "ripster47",           # Ripster - 交易员的交易员
     "matt_levine",         # Matt Levine - 彭博专栏
     "PatrickHillis1",      # Patrick Hillis - 期权交易员
+    "ArtofSpecuycky",      # Art of Speculation - AI基本面+宏观分析
 
-    # ── 中文圈/A股港股（10人）──
+    # ── 中文圈/A股港股（11人）──
     "maoxian",             # 猫哥
     "JIEDUJUN",            # 解读君
     "qinbafrank",          # Frank秦 - 宏观
@@ -90,6 +91,7 @@ KOL_LIST = [
     "muddywatersre",       # 浑水研究
     "JCap_Research",       # JCap - 做空研究
     "b1anbin",             # Binbin - 港股/A股深度分析
+    "WallStreet0Name",     # 华尔街没有名字 - 加密/交易观点
 ]
 
 # KOL 权重配置（用于信号聚合加权）
@@ -143,6 +145,7 @@ KOL_WEIGHTS = {
     "ripster47": 3.5,
     "matt_levine": 3.5,
     "PatrickHillis1": 3.0,
+    "ArtofSpecuycky": 3.5,
     "maoxian": 2.0,
     "JIEDUJUN": 2.5,
     "qinbafrank": 3.0,
@@ -153,6 +156,7 @@ KOL_WEIGHTS = {
     "muddywatersre": 3.5,
     "JCap_Research": 3.0,
     "b1anbin": 2.5,
+    "WallStreet0Name": 3.0,
 }
 
 DEFAULT_KOL_WEIGHT = 2.0
