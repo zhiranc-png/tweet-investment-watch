@@ -46,8 +46,9 @@ SYMBOL_MAP = {
     "IXIC": ("int_nasdaq", "index"),
     "纳斯达克": ("int_nasdaq", "index"),
     "纳指": ("int_nasdaq", "index"),
-    "VIX": ("int_vix", "index"),
-    "波动率": ("int_vix", "index"),
+    "VIX": ("gb_vxx", "us_etf"),  # 用 VXX ETF 代理（新浪 int_vix 无数据）
+    "波动率": ("gb_vxx", "us_etf"),
+    "VXX": ("gb_vxx", "us_etf"),
 
     # ── 美债/固收 ETF ──
     "TLT": ("gb_tlt", "us_etf"),
@@ -158,10 +159,23 @@ SYMBOL_MAP = {
     "美元指数": ("fx_susdcny", "forex"),
     "USDCNY": ("fx_susdcny", "forex"),
     "人民币": ("fx_susdcny", "forex"),
+    "美元": ("fx_susdcny", "forex"),
+    "USD": ("fx_susdcny", "forex"),  # USD 单独出现时用美元/人民币汇率
     "EURUSD": ("fx_seurusd", "forex"),
     "欧元": ("fx_seurusd", "forex"),
+    "EUR": ("fx_seurusd", "forex"),
     "USDJPY": ("fx_susdjpy", "forex"),
     "日元": ("fx_susdjpy", "forex"),
+    "JPY": ("fx_susdjpy", "forex"),
+    "USDCHF": ("fx_susdchf", "forex"),
+    "瑞郎": ("fx_susdchf", "forex"),
+    "CHF": ("fx_susdchf", "forex"),
+    "GBPUSD": ("fx_sgbpusd", "forex"),
+    "英镑": ("fx_sgbpusd", "forex"),
+    "GBP": ("fx_sgbpusd", "forex"),
+    "AUDUSD": ("fx_saudusd", "forex"),
+    "澳元": ("fx_saudusd", "forex"),
+    "AUD": ("fx_saudusd", "forex"),
 
     # ── 中概/港股 ──
     "BABA": ("gb_baba", "us_stock"),
@@ -200,6 +214,7 @@ SYMBOL_MAP = {
 
 # 已知非交易标的（跳过）
 SKIP_SYMBOLS = {
+    # 英文缩写（宏观/经济/政策术语）
     "AI", "CEO", "CFO", "GDP", "CPI", "PCE", "FOMC", "Fed", "FED",
     "SEC", "FDA", "IPO", "ETF", "REIT", "ESG", "SAAS", "ROI",
     "EV", "APP", "DATA", "CORE", "NEXT", "BEST", "TOP",
@@ -218,6 +233,16 @@ SKIP_SYMBOLS = {
     "RATE", "YIELD", "PRICE", "VALUE",
     "GROWTH", "QUALITY",
     "GLOBAL", "WORLD", "CHINA", "AMERICA",
+    # 其他非交易标的
+    "MACRO", "MICRO", "DEFI", "NFT", "WEB3",
+    "10Y", "20Y", "30Y", "2Y", "5Y", "7Y",
+    "YIELD", "CURVE", "INFLATION", "RECESSION",
+    "Hawk", "Dov", "Pivot",
+    # 中文术语（纯中文非交易标的）
+    "美联储", "加息", "降息", "通胀", "通缩",
+    "衰退", "软着陆", "硬着陆", "量化宽松", "缩表",
+    "经济", "宏观", "政策", "监管",
+    "财报季", "业绩", "指引",
 }
 
 # ── 缓存 ───────────────────────────────────────────────────────
@@ -238,8 +263,8 @@ def _resolve_sina_code(symbol: str, asset_type: str = "") -> tuple[str, str] | N
 
     sym_clean = symbol.strip().lstrip("$")
 
-    # 跳过已知非交易标的
-    if sym_clean.upper() in SKIP_SYMBOLS:
+    # 跳过已知非交易标的（英文不区分大小写，中文精确匹配）
+    if sym_clean.upper() in SKIP_SYMBOLS or sym_clean in SKIP_SYMBOLS:
         return None
 
     # 直接映射（不区分大小写）
@@ -331,14 +356,29 @@ def _parse_sina_response(raw_line: str, data_type: str) -> dict | None:
             }
 
         elif data_type == "index":
-            # 指数格式: 名称,现价,涨跌额,开盘,最高,最低,昨收,买一,卖一,成交量,成交额,涨跌幅...
-            if len(fields) < 7:
+            # 指数格式有两种：
+            # 国际指数(int_): 名称,现价,涨跌额,涨跌幅  (4个字段)
+            # 国内指数(sh/sz): 名称,现价,涨跌额,开盘,最高,最低,昨收,... (更多字段)
+            if len(fields) < 4:
                 return None
             name = fields[0]
-            price = float(fields[1])
-            change_amt = float(fields[2])
-            prev_close = float(fields[6]) if fields[6] else 0
-            change_pct = (change_amt / prev_close * 100) if prev_close else 0
+            try:
+                price = float(fields[1])
+                change_amt = float(fields[2]) if fields[2] else 0
+            except (ValueError, IndexError):
+                return None
+
+            # 4字段格式（国际指数）：第3字段是涨跌幅
+            if len(fields) == 4:
+                try:
+                    change_pct = float(fields[3])
+                except (ValueError, IndexError):
+                    change_pct = 0
+                prev_close = 0
+            # 多字段格式（国内指数）：从昨收计算涨跌幅
+            else:
+                prev_close = float(fields[6]) if len(fields) > 6 and fields[6] else 0
+                change_pct = (change_amt / prev_close * 100) if prev_close else 0
 
             return {
                 "ticker": code,
@@ -346,33 +386,41 @@ def _parse_sina_response(raw_line: str, data_type: str) -> dict | None:
                 "price": round(price, 2),
                 "change": round(change_amt, 2),
                 "change_pct_1d": round(change_pct, 2),
-                "prev_close": round(prev_close, 2),
+                "prev_close": round(prev_close, 2) if prev_close else None,
                 "latest_date": "",
                 "data_type": data_type,
                 "source": "sina",
             }
 
         elif data_type == "future":
-            # 期货格式比较复杂，取前几个关键字段
-            if len(fields) < 3:
+            # 新浪期货格式（纽约商品期货）:
+            # 现价,空,卖价,买价,最高,最低,时间,昨结,开盘,...日期,名称,...
+            #  [0]  [1] [2]  [3]  [4]  [5]  [6]  [7]  [8]    [12] [13]
+            if len(fields) < 9:
                 return None
-            # 期货: 现价,买价,卖价,最高,最低,昨结,开盘,持仓量,成交量...
             try:
                 price = float(fields[0])
-                prev_settle = float(fields[5]) if len(fields) > 5 and fields[5] else 0
+                prev_settle = float(fields[7]) if len(fields) > 7 and fields[7] else 0
+                high = float(fields[4]) if len(fields) > 4 and fields[4] else 0
+                low = float(fields[5]) if len(fields) > 5 and fields[5] else 0
+                open_price = float(fields[8]) if len(fields) > 8 and fields[8] else 0
                 change = price - prev_settle if prev_settle else 0
                 change_pct = (change / prev_settle * 100) if prev_settle else 0
+                name = fields[13] if len(fields) > 13 else code.replace("hf_", "")
             except (ValueError, IndexError):
                 return None
 
             return {
                 "ticker": code,
-                "name": code.replace("hf_", ""),
+                "name": name,
                 "price": round(price, 2),
                 "change": round(change, 2),
                 "change_pct_1d": round(change_pct, 2),
                 "prev_settle": round(prev_settle, 2),
-                "latest_date": "",
+                "open": round(open_price, 2),
+                "high": round(high, 2),
+                "low": round(low, 2),
+                "latest_date": fields[12] if len(fields) > 12 else "",
                 "data_type": data_type,
                 "source": "sina",
             }
@@ -678,7 +726,7 @@ def _get_theme_representatives() -> dict[str, tuple[str, str]]:
         "A股_港股": ("gb_kweb", "sina"),
         "外汇_汇率": ("fx_susdcny", "sina"),
         "宏观_利率政策": ("gb_tlt", "sina"),
-        "地缘政治": ("int_vix", "sina"),
+        "地缘政治": ("gb_vxx", "sina"),
         "公司_财报": ("gb_spy", "sina"),
     }
 

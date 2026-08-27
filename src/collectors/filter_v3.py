@@ -433,6 +433,7 @@ def extract_assets(text: str) -> List[Tuple[str, str]]:
 
     # 非交易标的（缩写词、机构名等容易误匹配的）
     skip_symbols = {
+        # 英文缩写（宏观/经济/政策术语）
         "AI", "CEO", "CFO", "GDP", "CPI", "PCE", "FOMC", "Fed", "FED",
         "SEC", "FDA", "IPO", "ETF", "REIT", "ESG", "SAAS", "ROI",
         "EV", "APP", "DATA", "CORE", "NEXT", "BEST", "TOP",
@@ -454,6 +455,11 @@ def extract_assets(text: str) -> List[Tuple[str, str]]:
         "OTC", "P/E", "EPS", "DCF", "NAV",
         "AUM", "PM", "AM", "VP", "GM",
         "IR", "PR", "HR", "IT",
+        # 其他非交易标的
+        "MACRO", "MICRO", "DEFI", "NFT", "WEB3",
+        "10Y", "20Y", "30Y", "2Y", "5Y", "7Y",
+        "CURVE", "INFLATION", "RECESSION",
+        "HAWK", "DOV", "PIVOT",
     }
     skip_lower = {s.lower() for s in skip_symbols}
 
