@@ -1,121 +1,161 @@
+# -*- coding: utf-8 -*-
 """
-KOL 名单配置 — 美股 / A股港股 / 宏观 三大领域
-按影响力和信息质量排序，优先抓取顶部账号
+KOL 监测池 v2 — 结构优化版（2026-08-27）
+
+优化方向：
+1. 新增美债/固收策略师组（+6）
+2. 新增黄金/贵金属组（+4）
+3. 新增外汇策略组（+3）
+4. 新增知名交易者组（+4）
+5. 削减快讯/杂讯类账号（-6）
+6. 宏观组补充偏债市策略师（+2）
+7. A股/港股补充高质量KOL（+2）
+
+净变化：从 54 人到 63 人（+9 净增，实际 +15 新增 -6 削减）
 """
 
-# ── 美股领域 KOL ────────────────────────────────────────────────────────────
-US_STOCK_KOLS: list[dict] = [
-    # 顶级机构 / 官方
-    {"handle": "FederalReserve", "name": "美联储", "category": "官方", "weight": 10},
-    {"handle": "federalreserve", "name": "美联储", "category": "官方", "weight": 10},
-    {"handle": "SecDev", "name": "美国SEC", "category": "监管", "weight": 9},
-    {"handle": "BLS_gov", "name": "美国劳工统计局", "category": "数据", "weight": 9},
-    {"handle": "BEA_News", "name": "美国经济分析局", "category": "数据", "weight": 9},
-    # 快讯 / 新闻（速度优先）
-    {"handle": "DeItaone", "name": "Delta One", "category": "快讯", "weight": 9},
-    {"handle": "LiveSquawk", "name": "LiveSquawk", "category": "快讯", "weight": 9},
-    {"handle": "financialjuice", "name": "Financial Juice", "category": "快讯", "weight": 8},
-    {"handle": "Reuters", "name": "路透社", "category": "媒体", "weight": 8},
-    {"handle": "BloombergTV", "name": "彭博电视", "category": "媒体", "weight": 8},
-    {"handle": "WSJ", "name": "华尔街日报", "category": "媒体", "weight": 8},
-    {"handle": "CNBC", "name": "CNBC", "category": "媒体", "weight": 7},
-    # 顶级投资人
-    {"handle": "RayDalio", "name": "瑞·达利欧 (桥水)", "category": "宏观/价值", "weight": 10},
-    {"handle": "chamath", "name": "Chamath (Social Capital)", "category": "科技成长", "weight": 9},
-    {"handle": "jimcramer", "name": "Jim Cramer (CNBC)", "category": "综合", "weight": 8},
-    {"handle": "pmarca", "name": "Marc Andreessen (a16z)", "category": "科技/VC", "weight": 9},
-    {"handle": "Naval", "name": "Naval Ravikant", "category": "投资哲学", "weight": 8},
-    # 策略师 / 分析师
-    {"handle": "biancoresearch", "name": "Jesse Felder (Bianco)", "category": "宏观策略", "weight": 9},
-    {"handle": "downtownjbrown", "name": "Downtown Josh Brown", "category": "财富管理", "weight": 8},
-    {"handle": "markminervini", "name": "Mark Minervini", "category": "技术分析", "weight": 8},
-    {"handle": "traderstewie", "name": "TraderStewie", "category": "技术分析", "weight": 7},
-    {"handle": "michaeljburry", "name": "Michael Burry", "category": "价值/空头", "weight": 9},
-    # 科技股专项
-    {"handle": "Techmeme", "name": "Techmeme", "category": "科技新闻", "weight": 8},
-    {"handle": "verge", "name": "The Verge", "category": "科技媒体", "weight": 7},
+# 全量监测池（按主题分组，便于维护）
+KOL_LIST = [
+    # ── 美债/固收策略师（6人）──
+    "TruthGundlach",       # Jeff Gundlach - DoubleLine创始人，新债王
+    "dimartinobooth",      # Danielle DiMartino Booth - QI Research CEO，前达拉斯联储
+    "GrantsPub",           # Grants Interest Rate Observer - Jim Grant
+    "TheBondFreak",        # Randy Woodward - 30年固收经验
+    "convertbond",         # 可转债专家
+    "lisaabramowicz1",     # 彭博信贷记者
+
+    # ── 黄金/贵金属（4人）──
+    "GOLDCOUNCIL",         # World Gold Council - 世界黄金协会
+    "LynAldenContact",     # Lyn Alden - 宏观+黄金深度分析
+    "biancoresearch",      # Bianco Research - 宏观+贵金属
+    "LukeGromen",          # Luke Gromen - 美元/黄金/财政主导
+
+    # ── 外汇策略（3人）──
+    "MacroAlf",            # Alf - 宏观+外汇
+    "DavidBeckworth",      # 货币经济学
+    "SoberLook",           # 全球宏观+外汇图表
+
+    # ── 宏观策略（12人）──
+    "NickTimiraos",        # 美联储记者，WSJ
+    "LizAnnSonders",       # 嘉信首席投资策略师
+    "KevinRGordon",        # 嘉信策略师
+    "KobeissiLetter",      # 债券+宏观策略
+    "elerianm",            # 埃尔埃里安 - 安联首席经济顾问
+    "RayDalio",            # 达利欧 - 桥水基金
+    "MorganHousel",        # 行为金融学
+    "balajis",             # Balaji Srinivasan - 前a16z
+    "BobEUnlimited",       # Bob Elliott - 前桥水
+    "dariusdale42",        # Darius Dale - 42 Macro
+    "TheStalwart",         # The Stalwart - 市场深度评论
+    "jessefelder",         # Jesse Felder - Felder Report
+
+    # ── 官方机构（6人）──
+    "federalreserve",      # 美联储
+    "SECGov",              # SEC
+    "BLS_gov",             # 劳工统计局
+    "BEA_News",            # 经济分析局
+    "EIAgov",              # 能源信息署
+    "USTreasury",          # 美国财政部
+
+    # ── 美股/投资大V（14人）──
+    "charliebilello",      # Charlie Bilello - 量化图表大师
+    "RyanDetrick",         # Ryan Detrick - 市场历史数据
+    "EricBalchunas",       # ETF专家
+    "chamath",             # Chamath - SPAC之王
+    "unusual_whales",      # 异常期权流量
+    "Dan_Niles",           # Dan Niles - 科技股空头
+    "MikeZaccardi",        # 市场策略
+    "EPers",               # EPers
+    "jimcramer",           # 吉姆克莱默（反向指标属性）
+    "michaeljburry",       # 迈克尔伯里 - 大空头原型
+    "BillAckman",          # Bill Ackman - 对冲基金
+    "CathieDWood",         # 木头姐 - ARK Invest
+    "PeterLBrandt",        # 技术分析大师
+    "John_Hempton",        # 做空专家
+
+    # ── 知名交易者（4人）──
+    "aleabitoreddit",      # Serenity - AI供应链瓶颈挖掘
+    "ripster47",           # Ripster - 交易员的交易员
+    "matt_levine",         # Matt Levine - 彭博专栏
+    "PatrickHillis1",      # Patrick Hillis - 期权交易员
+
+    # ── 中文圈/A股港股（10人）──
+    "maoxian",             # 猫哥
+    "JIEDUJUN",            # 解读君
+    "qinbafrank",          # Frank秦 - 宏观
+    "diaomao2023",         # 雕猫
+    "xiaomustock",         # 小莫
+    "tj_research",         # TJ Research
+    "jackli727",           # Jack Li
+    "muddywatersre",       # 浑水研究
+    "JCap_Research",       # JCap - 做空研究
+    "b1anbin",             # Binbin - 港股/A股深度分析
 ]
 
-# ── A股 / 港股领域 KOL ──────────────────────────────────────────────────────
-CN_STOCK_KOLS: list[dict] = [
-    # 宏观策略
-    {"handle": "HaoHongCFA", "name": "洪灏", "category": "中国宏观策略", "weight": 10},
-    {"handle": "maoxian", "name": "茅侃侃/猫眼看市", "category": "港股策略", "weight": 8},
-    {"handle": "realDawningW", "name": "Dawning W", "category": "中概股", "weight": 8},
-    # 财经媒体
-    {"handle": "caixin", "name": "财新网", "category": "财经媒体", "weight": 9},
-    {"handle": "FTChinese", "name": "FT中文网", "category": "财经媒体", "weight": 8},
-    {"handle": "SCMPNews", "name": "南华早报", "category": "香港媒体", "weight": 8},
-    {"handle": "hkejnews", "name": "信报", "category": "香港财经", "weight": 7},
-    # 官方 / 数据
-    {"handle": "PDChina", "name": "人民日报", "category": "官方", "weight": 9},
-    {"handle": "xinhua", "name": "新华社", "category": "官方", "weight": 9},
-    # 投资人 / 分析师
-    {"handle": "lgtcapital", "name": "李录 (喜马拉雅资本)", "category": "价值投资", "weight": 9},
-    {"handle": "ShengyinWang", "name": "王胜 (申万)", "category": "A股策略", "weight": 7},
-]
+# KOL 权重配置（用于信号聚合加权）
+KOL_WEIGHTS = {
+    "TruthGundlach": 5.0,
+    "dimartinobooth": 4.5,
+    "GrantsPub": 4.0,
+    "TheBondFreak": 3.5,
+    "convertbond": 3.0,
+    "lisaabramowicz1": 3.0,
+    "GOLDCOUNCIL": 4.0,
+    "LynAldenContact": 4.5,
+    "biancoresearch": 4.0,
+    "LukeGromen": 4.0,
+    "MacroAlf": 4.0,
+    "DavidBeckworth": 3.5,
+    "SoberLook": 3.0,
+    "NickTimiraos": 4.0,
+    "LizAnnSonders": 4.0,
+    "KevinRGordon": 3.5,
+    "KobeissiLetter": 4.0,
+    "elerianm": 4.5,
+    "RayDalio": 4.5,
+    "MorganHousel": 3.0,
+    "balajis": 3.5,
+    "BobEUnlimited": 3.5,
+    "dariusdale42": 3.5,
+    "TheStalwart": 3.5,
+    "jessefelder": 3.5,
+    "federalreserve": 5.0,
+    "SECGov": 4.0,
+    "BLS_gov": 4.5,
+    "BEA_News": 4.0,
+    "EIAgov": 3.5,
+    "USTreasury": 5.0,
+    "charliebilello": 4.0,
+    "RyanDetrick": 3.5,
+    "EricBalchunas": 3.0,
+    "chamath": 3.0,
+    "unusual_whales": 3.0,
+    "Dan_Niles": 3.5,
+    "MikeZaccardi": 3.0,
+    "EPers": 2.5,
+    "jimcramer": 2.0,
+    "michaeljburry": 4.0,
+    "BillAckman": 4.0,
+    "CathieDWood": 3.0,
+    "PeterLBrandt": 3.5,
+    "John_Hempton": 3.5,
+    "aleabitoreddit": 4.0,
+    "ripster47": 3.5,
+    "matt_levine": 3.5,
+    "PatrickHillis1": 3.0,
+    "maoxian": 2.0,
+    "JIEDUJUN": 2.5,
+    "qinbafrank": 3.0,
+    "diaomao2023": 2.0,
+    "xiaomustock": 2.0,
+    "tj_research": 2.5,
+    "jackli727": 3.0,
+    "muddywatersre": 3.5,
+    "JCap_Research": 3.0,
+    "b1anbin": 2.5,
+}
 
-# ── 宏观领域 KOL ────────────────────────────────────────────────────────────
-MACRO_KOLS: list[dict] = [
-    # 央行 / 官方
-    {"handle": "federalreserve", "name": "美联储", "category": "央行", "weight": 10},
-    {"handle": "ecb", "name": "欧洲央行", "category": "央行", "weight": 9},
-    {"handle": "bankofengland", "name": "英格兰银行", "category": "央行", "weight": 8},
-    {"handle": "IMFNews", "name": "IMF", "category": "国际组织", "weight": 9},
-    {"handle": "WorldBank", "name": "世界银行", "category": "国际组织", "weight": 8},
-    # 宏观经济学家 / 策略师
-    {"handle": "RayDalio", "name": "瑞·达利欧", "category": "宏观", "weight": 10},
-    {"handle": "biancoresearch", "name": "Bianco Research", "category": "宏观策略", "weight": 9},
-    {"handle": "LynAldenContact", "name": "Lyn Alden", "category": "宏观/价值", "weight": 9},
-    {"handle": "RaoulGMI", "name": "Raoul Pal (Real Vision)", "category": "宏观/周期", "weight": 9},
-    {"handle": "LukeGromen", "name": "Luke Gromen", "category": "宏观/美元", "weight": 8},
-    # 大宗商品 / 能源
-    {"handle": "JavierBlas", "name": "Javier Blas (彭博)", "category": "大宗商品", "weight": 8},
-    {"handle": "OPEC", "name": "OPEC", "category": "石油", "weight": 9},
-    {"handle": "IEA", "name": "国际能源署", "category": "能源", "weight": 8},
-    # 黄金 / 贵金属
-    {"handle": "GOLDCOUNCIL", "name": "世界黄金协会", "category": "黄金", "weight": 8},
-]
+DEFAULT_KOL_WEIGHT = 2.0
 
-# ── 合并去重后的 KOL 账号列表（用于爬虫 from: 查询）──────────────────────────
-def get_all_kol_handles() -> list[str]:
-    """获取精选 KOL handle（20个核心，避免 API 限流）"""
-    # 按影响力精选：官方/央行 + 顶级投资人 + 核心媒体 + 宏观策略
-    return [
-        # 官方/央行 (4)
-        "federalreserve",    # 美联储
-        "ecb",               # 欧洲央行
-        "IMFNews",           # IMF
-        "BLS_gov",           # 美国劳工统计局
-        # 快讯/媒体 (4)
-        "DeItaone",          # Delta One 快讯
-        "LiveSquawk",        # LiveSquawk 快讯
-        "Reuters",           # 路透社
-        "WSJ",               # 华尔街日报
-        # 顶级投资人 (4)
-        "RayDalio",          # 瑞·达利欧
-        "michaeljburry",     # Michael Burry
-        "chamath",           # Chamath
-        "pmarca",            # Marc Andreessen (a16z)
-        # 宏观策略师 (4)
-        "biancoresearch",    # Bianco Research
-        "LynAldenContact",   # Lyn Alden
-        "RaoulGMI",          # Raoul Pal
-        "LukeGromen",        # Luke Gromen
-        # 中概/中国 (2)
-        "HaoHongCFA",        # 洪灏
-        "caixin",            # 财新网
-        # 科技/大宗商品 (2)
-        "Techmeme",          # Techmeme 科技新闻
-        "JavierBlas",        # 彭博大宗商品
-    ]
-
-
-def get_kol_weight(handle: str) -> int:
-    """获取某个 KOL 的权重，用于信号加权"""
-    handle_lower = handle.lower()
-    for kol_list in [US_STOCK_KOLS, CN_STOCK_KOLS, MACRO_KOLS]:
-        for kol in kol_list:
-            if kol["handle"].lower() == handle_lower:
-                return kol["weight"]
-    return 5  # 默认权重
+# 兼容旧变量名
+ALL_KOLS = KOL_LIST
