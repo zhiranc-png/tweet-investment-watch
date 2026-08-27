@@ -18,10 +18,12 @@ from x_client import build_session, XGraphQLClient, RateLimited, AuthRejected
 
 # 待验证候选：中国/港股方向（2026-08-27 Jaron「增加a股，港股的kol跟踪」）
 CANDIDATES = [
-    "ChunHanYu",        # WSJ 中国记者，中国市场/政策
-    "PaulMozur",        # NYT 中国科技记者
-    "LiYuan6",          # NYT DealBook，中国科技/交易
-    "YicaiGlobal",      # 第一财经英文版
+    "butao",            # 唐朝（唐书房），A股价值选股
+    "francis_lun",      # Francis Lun，GEO Securities，港股评论
+    "TechBuzzChina",    # 中国科技股播客
+    "MarvinChen_",      # Bloomberg Intelligence 中国科技（猜测）
+    "andyxie",          # 谢国忠（猜测）
+    "XiangSongzuo",     # 向松祚（猜测）
 ]
 
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
