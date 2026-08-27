@@ -20,8 +20,11 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import PILOT_KOLS, TWEETS_PER_KOL, WINDOW_HOURS
 import x_client
 
-RETRY_BUDGET = 3      # 全局 429 重试预算
-RETRY_WAIT = 150
+RETRY_BUDGET = 8          # 全局 429 重试预算（93个KOL，放宽到8次）
+RETRY_WAIT_BASE = 180     # 429 基础退避时间（秒），每次重试递增 60s
+BASE_SLEEP_MIN = 8        # KOL 间基础间隔下限（秒）
+BASE_SLEEP_MAX = 14       # KOL 间基础间隔上限（秒）
+_slowdown_factor = 1.0    # 自适应减速因子，遇到 429 后递增
 _budget = RETRY_BUDGET
 
 CACHE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "user_ids.json")
@@ -42,8 +45,9 @@ def in_window(iso_ts: str, cutoff: dt.datetime) -> bool:
 
 
 def _fetch_once(client, handle: str, count: int):
-    """429 消耗全局预算退避重试。"""
-    global _budget
+    """429 消耗全局预算退避重试（指数退避 + 自适应减速）。"""
+    global _budget, _slowdown_factor
+    attempt = 0
     while True:
         try:
             return client.fetch_timeline(handle, count)
@@ -51,8 +55,11 @@ def _fetch_once(client, handle: str, count: int):
             if _budget <= 0:
                 raise
             _budget -= 1
-            print(f"  429 限流，退避 {RETRY_WAIT}s（剩余预算 {_budget}）", flush=True)
-            time.sleep(RETRY_WAIT)
+            attempt += 1
+            wait = RETRY_WAIT_BASE + (attempt - 1) * 60
+            _slowdown_factor = min(_slowdown_factor * 1.5, 4.0)  # 最多4倍减速
+            print(f"  429 限流，退避 {wait}s（第{attempt}次，剩余预算 {_budget}，减速因子 {_slowdown_factor:.1f}x）", flush=True)
+            time.sleep(wait)
 
 
 def fetch_with_budget(client, handle: str, count: int):
@@ -112,7 +119,7 @@ def main():
             except Exception as e:
                 failures.append({"handle": handle, "error": str(e)[:200]})
                 print(f"[{i}/{total}] {handle}: FAILED -> {str(e)[:200]}", flush=True)
-            time.sleep(random.uniform(6, 10))
+            time.sleep(random.uniform(BASE_SLEEP_MIN, BASE_SLEEP_MAX) * _slowdown_factor)
             continue
         try:
             tweets, name = fetch_with_budget(client, handle, TWEETS_PER_KOL)
@@ -128,7 +135,7 @@ def main():
         except Exception as e:
             failures.append({"handle": handle, "error": str(e)[:200]})
             print(f"[{i}/{total}] {handle}: FAILED -> {str(e)[:200]}", flush=True)
-        time.sleep(random.uniform(5, 9))
+        time.sleep(random.uniform(BASE_SLEEP_MIN, BASE_SLEEP_MAX) * _slowdown_factor)
 
     save_cache(client)
 

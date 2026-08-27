@@ -32,10 +32,10 @@ PILOT_KOLS = [
     "SilverInstitute",    # 白银协会
 
     # ── 外汇策略（4人）──
-    "RobinBrooksIIF",     # IIF 首席经济学家，外汇/全球宏观
-    "BrentDonnelly",      # Spectra Markets，前汇丰外汇
+    "donnelly_brent",     # Brent Donnelly，Spectra Markets，前汇丰外汇
     "KathyLienFX",        # Kathy Lien，BK Asset Management
     "Ole_S_Hansen",       # Ole Hansen，盛宝银行大宗商品/外汇策略
+    "marcmakingsense",    # Marc Chandler，Bannockburn Global Forex，40年外汇经验
 
     # ── 宏观策略（18人）──
     "NickTimiraos",       # 华尔街时报美联储记者
@@ -120,10 +120,9 @@ PILOT_KOLS = [
     "muddywatersre",      # 浑水
     "JCap_Research",      # JCap Research
     "StockMKTNewz",       # 股票市场新闻
-    "HaoHongCFA",         # 洪灏
+    "HaoHong_CFA",         # 洪灏
     "PBOC_Official",      # 中国人民银行
     "caixin",             # 财新网
-    "GavekalDragonom",    # 龙洲经讯
     "WallStreet0Name",    # 华尔街没有名字
     "168X_Fortune",       # 168X 前沿科技
     "Sino_Market",        # 南华早报市场
