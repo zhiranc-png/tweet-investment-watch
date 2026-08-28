@@ -1,28 +1,26 @@
-name: 多源中文采集（原投资舆情每日采集）
-
-# ─────────────────────────────────────────────────────────────────
-# 2026-08-27 第二批优化 A 项：X 采集部分正式退役。
-# 原因：X 采集已由 hybrid/ 管道（hybrid-collect.yml，UTC 04:00）承担，
-#       旧管道的 X 主流程与本仓库共用同一小号 cookie 限流窗口，双跑必撞 429。
-# 保留：多源中文采集（华尔街见闻/财联社/雪球/知乎/微博等）作为日报中文圈补充数据源，
-#       并新增「数据提交回仓库」步骤，与 hybrid 数据同目录永久可溯。
-# 如需恢复 X 部分：取消下方注释块即可（代码未删）。
-# ─────────────────────────────────────────────────────────────────
+name: 投资舆情每日采集（多源版）
 
 on:
   schedule:
-    # 每天 UTC 04:10 = HKT 12:10（第二批优化 A 项吸收动作：早于 12:50 的日报任务跑完并提交，
-    # 让日报当日即可读取 data/multi_source_<今日>.json 作为中文圈补充源；不占用 X 小号限流窗口）
-    - cron: '10 4 * * *'
+    # 北京时间 12:00（午间）= UTC 04:00
+    - cron: '0 4 * * *'
+    # 北京时间 24:00（午夜）= UTC 16:00
+    - cron: '0 16 * * *'
   workflow_dispatch:
-
-permissions:
-  contents: write
+    inputs:
+      per_user:
+        description: 'X 每人采集条数'
+        required: false
+        default: '20'
+      hours:
+        description: '时间窗口（小时）'
+        required: false
+        default: '48'
 
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
 
     steps:
       - name: Checkout code
@@ -36,63 +34,60 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 lxml pyyaml
+          pip install requests beautifulsoup4 lxml feedparser
 
-      # ── X 采集部分已退役（2026-08-27，第二批优化 A 项）──
-      # X 时间线采集统一由 hybrid/ 管道负责；此处不再消耗小号限流窗口。
-      # - name: 采集 X 投资舆情（主流程）【已退役】
-      #   env:
-      #     AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
-      #     CT0: ${{ secrets.CT0 }}
-      #   run: |
-      #     mkdir -p data report
-      #     python main.py run \
-      #       --output report/daily_report.md \
-      #       --per-user 20 \
-      #       --hours 48 \
-      #       --v2 \
-      #       --with-price
-
-      - name: 采集多源中文数据（保留，日报中文圈补充源）
-        run: python collect_multi_source.py || echo "多源采集部分失败，继续主流程"
-
-      - name: 多源数据提交回仓库（可溯，与 hybrid 数据同目录）
+      - name: Run full multi-source pipeline
+        env:
+          AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
+          CT0: ${{ secrets.CT0 }}
         run: |
-          if [ -f data/multi_source.json ]; then
-            cp data/multi_source.json "data/multi_source_$(date -u +%Y%m%d).json"
-            git config user.name "tweet-watch-bot"
-            git config user.email "bot@users.noreply.github.com"
-            git add data/multi_source_*.json
-            git diff --quiet --staged || git commit -m "data: multi-source $(date -u +%Y%m%d)"
-            git push
-          else
-            echo "多源数据不存在，跳过提交"
-          fi
+          mkdir -p data report
+          python run_all.py
 
-      - name: Upload multi-source data
+      - name: Upload X tweets data
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: multi-source-data
-          path: data/multi_source.json
+          name: x-tweets
+          path: data/tweets_*.json
           retention-days: 30
-        if: success() || failure()
 
-      # ── X 流程产物上传，随 X 部分一并退役 ──
-      # - name: Upload tweets data【已退役】
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: tweet-data
-      #     path: data/tweets_*.json
-      #     retention-days: 30
-      # - name: Upload brief data【已退役】
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: brief-data
-      #     path: data/brief_*.json
-      #     retention-days: 30
-      # - name: Upload report【已退役】
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: daily-report
-      #     path: report/daily_report.md
-      #     retention-days: 30
+      - name: Upload X brief data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: x-brief
+          path: data/brief_*.json
+          retention-days: 30
+
+      - name: Upload Xueqiu data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xueqiu-data
+          path: data/xueqiu_tweets_*.json
+          retention-days: 30
+
+      - name: Upload price data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: price-data
+          path: data/prices_*.json
+          retention-days: 30
+
+      - name: Upload news data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-data
+          path: data/news_*.json
+          retention-days: 30
+
+      - name: Upload daily report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report
+          path: report/daily_report.md
+          retention-days: 90
