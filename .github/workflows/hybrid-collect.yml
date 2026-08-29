@@ -16,7 +16,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 40    # 93个KOL全量采集，按经验约20-25min，留足余量
+    timeout-minutes: 60    # 93个KOL全量采集，按经验约20-25min，留足余量
     steps:
       - uses: actions/checkout@v4
 
@@ -38,6 +38,15 @@ jobs:
 
       - name: Pretag candidate signals（第二批优化 B 项：方向词+互动阈值预打标）
         run: python hybrid/pretag.py
+
+      - name: Upload data artifact（commit 失败时兜底可捞）
+        uses: actions/upload-artifact@v4
+        with:
+          name: hybrid-data-${{ github.run_number }}
+          path: |
+            data/hybrid_tweets_*.json
+            hybrid/user_ids.json
+          if-no-files-found: warn
 
       - name: Commit data
         run: |
