@@ -60,6 +60,13 @@ def collect_x(per_user=20, hours=48):
             hours=hours,
         )
         print(f"[X] ✅ 完成: {result.get('total', 0)} 条，{result.get('success_users', 0)}/{len(DEFAULT_INFLUENCERS)} 成功", flush=True)
+        failed = result.get("failed_users", [])
+        if failed:
+            print(f"[X] ⚠️  失败 {len(failed)} 个:", flush=True)
+            for name, err in failed[:5]:
+                print(f"    @{name}: {err}", flush=True)
+            if len(failed) > 5:
+                print(f"    ... 还有 {len(failed)-5} 个", flush=True)
 
         # 保存原始数据
         out_path = os.path.join(DATA_DIR, f"tweets_{today_str}.json")
