@@ -7,7 +7,11 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from typing import Any
 
-from ..collectors.models import Tweet
+# 兼容两种导入方式（包内相对导入 / 脚本直接导入）
+try:
+    from ..collectors.models import Tweet
+except ImportError:
+    from collectors.models import Tweet
 
 
 def generate_brief(tweets: list[Tweet]) -> dict[str, Any]:

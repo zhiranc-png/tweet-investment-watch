@@ -21,6 +21,8 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    permissions:
+      contents: write  # 用于提交快照到仓库
 
     steps:
       - name: Checkout code
@@ -103,6 +105,7 @@ jobs:
 
       - name: 提交快照到仓库
         if: always()
+        continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

@@ -553,7 +553,11 @@ def main():
     # 4. 发送
     print("\n[4/4] 推送飞书...", flush=True)
     webhook_url = os.environ.get("FEISHU_WEBHOOK", "")
-    success = send_card(card, webhook_url)
+    if not webhook_url:
+        print("[飞书] ⚠️  未配置 FEISHU_WEBHOOK，跳过推送", flush=True)
+        success = True  # 缺少配置不算失败，只是跳过
+    else:
+        success = send_card(card, webhook_url)
 
     # 5. 保存快照（不管推送成功与否，都保存）
     print("\n[快照] 保存本期数据...", flush=True)
