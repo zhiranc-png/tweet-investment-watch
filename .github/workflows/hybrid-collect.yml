@@ -2,7 +2,8 @@ name: hybrid-collect
 
 on:
   schedule:
-    - cron: "0 4 * * *"    # UTC 04:00 = HKT 12:00（Jaron 2026-08-27 拍板中午跑；旧流程已让位到 05:00）
+    - cron: "0 4 * * *"    # UTC 04:00 = HKT 12:00（午间版）
+    - cron: "0 16 * * *"   # UTC 16:00 = HKT 24:00（晚间/隔夜版）
   workflow_dispatch:
     inputs:
       seed_only:
@@ -16,7 +17,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 60    # 93个KOL全量采集，按经验约20-25min，留足余量
+    timeout-minutes: 40    # 93个KOL全量采集，按经验约20-25min，留足余量
     steps:
       - uses: actions/checkout@v4
 
@@ -39,21 +40,27 @@ jobs:
       - name: Pretag candidate signals（第二批优化 B 项：方向词+互动阈值预打标）
         run: python hybrid/pretag.py
 
-      - name: Upload data artifact（commit 失败时兜底可捞）
-        uses: actions/upload-artifact@v4
-        with:
-          name: hybrid-data-${{ github.run_number }}
-          path: |
-            data/hybrid_tweets_*.json
-            hybrid/user_ids.json
-          if-no-files-found: warn
+      - name: 生成信号简报（主题分类 + 情绪聚合 + 共识度）
+        run: |
+          TODAY=$(date -u +%Y%m%d)
+          python hybrid/generate_brief.py \
+            --input "data/hybrid_tweets_${TODAY}.json" \
+            --output "data/brief_${TODAY}.json"
+        continue-on-error: true
 
       - name: Commit data
         run: |
           git config user.name "tweet-watch-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add -f data/*.json 2>/dev/null || true
-          git add -f hybrid/user_ids.json 2>/dev/null || true
+          git add data/ hybrid/user_ids.json
           git diff --quiet --staged || git commit -m "data: hybrid $(date -u +%Y%m%d)"
           git pull --rebase origin main
           git push
+
+      - name: Upload brief artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: x-brief
+          path: data/brief_*.json
+          retention-days: 30
+        if: success() || failure()
