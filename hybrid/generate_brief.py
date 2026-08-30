@@ -16,7 +16,7 @@ from datetime import datetime
 # 确保能 import src 下的模块
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from collectors.filter_v3 import classify_and_score
+from collectors.filter_v3 import filter_and_classify
 from collectors.models import Tweet
 from analysis.signal_aggregator_v2 import generate_brief_v2
 
@@ -28,23 +28,23 @@ def hybrid_to_tweet(hybrid_tweet: dict) -> Tweet:
     display_name = hybrid_tweet.get('display_name', '')
     
     # 跑分类
-    classification = classify_and_score(text, source=handle)
+    result = filter_and_classify(text, source='x')
     
     themes = []
     assets = []
     sentiment = 'neutral'
     sentiment_score = 0.0
     
-    if classification:
+    if result and result.is_investment:
         themes = [
-            {'name': t['theme'], 'confidence': t['confidence']}
-            for t in classification.get('themes', [])
+            {'name': cat, 'confidence': 0.8}
+            for cat in (result.categories or [])[:5]
         ]
         assets = [
             {'symbol': sym, 'name': name}
-            for sym, name in classification.get('assets', [])
+            for sym, name in (result.matched_assets or [])
         ]
-        sentiment = classification.get('sentiment', 'neutral')
+        sentiment = result.sentiment_hint or 'neutral'
         # 简单映射到数值
         sentiment_map = {'bullish': 1.0, 'bearish': -1.0, 'neutral': 0.0}
         sentiment_score = sentiment_map.get(sentiment, 0.0)
@@ -67,7 +67,7 @@ def hybrid_to_tweet(hybrid_tweet: dict) -> Tweet:
         is_kol=True,
         sentiment=sentiment,
         sentiment_score=sentiment_score,
-        info_density=classification.get('info_density', 0.0) if classification else 0.0,
+        info_density=result.info_density if result else 0.0,
         theme_details=themes,
         comments=[],
     )
