@@ -20,8 +20,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from config import PILOT_KOLS, TWEETS_PER_KOL, WINDOW_HOURS
 import x_client
 
-RETRY_BUDGET = 8          # 全局 429 重试预算（93个KOL，放宽到8次）
-RETRY_WAIT_BASE = 180     # 429 基础退避时间（秒），每次重试递增 60s
+RETRY_BUDGET = int(os.environ.get("RETRY_BUDGET", "8"))      # 全局 429 重试预算，可用环境变量覆盖
+RETRY_WAIT_BASE = int(os.environ.get("RETRY_WAIT_BASE", "180"))  # 429 基础退避时间（秒），每次重试递增 60s
 BASE_SLEEP_MIN = 8        # KOL 间基础间隔下限（秒）
 BASE_SLEEP_MAX = 14       # KOL 间基础间隔上限（秒）
 _slowdown_factor = 1.0    # 自适应减速因子，遇到 429 后递增
@@ -108,6 +108,10 @@ def main():
     cutoff = dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=WINDOW_HOURS)
     order = list(PILOT_KOLS)
     random.Random(today).shuffle(order)  # 按日轮换，尾部损失不固定砸同一组
+    max_kols = os.environ.get("MAX_KOLS", "").strip()
+    if max_kols.isdigit() and int(max_kols) > 0:
+        order = order[:int(max_kols)]
+        print(f"MAX_KOLS 限量模式：只采集前 {len(order)} 个账号", flush=True)
 
     tweets_all, failures = [], []
     total = len(order)
