@@ -18,8 +18,7 @@ from x_client import build_session, XGraphQLClient, RateLimited, AuthRejected
 
 # 待验证候选：A股/港股个股方向（2026-08-31 Jaron「A股和港股分析太少，增加更多KOL」）
 CANDIDATES = [
-    "aleabitoreddit",   # Serenity「白毛股神」，A股概念股名单（绿的谐波/易事特等），66万+粉，媒体多方溯源
-    "HKValueInvest",    # 港股个股价值投资博主，12万粉（东方财富财富号 2026-06-08 引用其 5/28 推文）
+    "michaeljburry",    # Michael Burry，2026-07-17 在 X 发港股抄底观点+加仓京东（Bloomberg/WEEX/MoneyCheck 多源）
 ]
 
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
