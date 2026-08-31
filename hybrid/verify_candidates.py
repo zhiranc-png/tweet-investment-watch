@@ -16,14 +16,10 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from x_client import build_session, XGraphQLClient, RateLimited, AuthRejected
 
-# 待验证候选：中国/港股方向（2026-08-27 Jaron「增加a股，港股的kol跟踪」）
+# 待验证候选：A股/港股个股方向（2026-08-31 Jaron「A股和港股分析太少，增加更多KOL」）
 CANDIDATES = [
-    "butao",            # 唐朝（唐书房），A股价值选股
-    "francis_lun",      # Francis Lun，GEO Securities，港股评论
-    "TechBuzzChina",    # 中国科技股播客
-    "MarvinChen_",      # Bloomberg Intelligence 中国科技（猜测）
-    "andyxie",          # 谢国忠（猜测）
-    "XiangSongzuo",     # 向松祚（猜测）
+    "aleabitoreddit",   # Serenity「白毛股神」，A股概念股名单（绿的谐波/易事特等），66万+粉，媒体多方溯源
+    "HKValueInvest",    # 港股个股价值投资博主，12万粉（东方财富财富号 2026-06-08 引用其 5/28 推文）
 ]
 
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),
