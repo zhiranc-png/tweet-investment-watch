@@ -127,6 +127,9 @@ PILOT_KOLS = [
     "168X_Fortune",       # 168X 前沿科技
     "Sino_Market",        # 南华早报市场
     "TechBuzzChina",      # 科技乱炖
+    # ── A股/港股个股与策略（2026-08-31 扩容，2人，均经 verify-candidates 实抓验真）──
+    "aleabitoreddit",     # Serenity「白毛股神」，A股概念股名单引爆者（绿的谐波/易事特等），66万+粉，日更
+    "michaeljburry",      # Michael Burry，港股价值挖掘（7月公开看多港股、加仓京东），8/28 在点评美团盈利
 ]
 
 TWEETS_PER_KOL = 20      # 每个 KOL 拉最近 20 条
