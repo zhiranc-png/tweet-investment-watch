@@ -2,10 +2,10 @@ name: 投资舆情每日采集（多源版）
 
 on:
   schedule:
-    # 北京时间 12:00（午间）= UTC 04:00
-    - cron: '0 4 * * *'
-    # 北京时间 24:00（午夜）= UTC 16:00
-    - cron: '0 16 * * *'
+    # 北京时间 08:30（早间版）= UTC 00:30
+    - cron: '30 0 * * *'
+    # 北京时间 20:30（晚间版）= UTC 12:30
+    - cron: '30 12 * * *'
   workflow_dispatch:
     inputs:
       per_user:
@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 拉取完整历史，便于 commit
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -103,11 +105,33 @@ jobs:
           python feishu_notify.py
           echo "推送完成（失败也继续执行后续步骤）"
 
-      - name: 提交快照到仓库
+      - name: 提交快照到仓库（带重试）
         if: always()
         continue-on-error: true
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/last_snapshot.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: 更新日报快照 [skip ci]" && git push
+          
+          for i in 1 2 3; do
+            echo "--- 快照提交尝试 $i ---"
+            git add data/*.json 2>/dev/null || true
+            git add report/*.md 2>/dev/null || true
+            
+            if git diff --quiet --staged; then
+              echo "没有变更，跳过"
+              exit 0
+            fi
+            
+            git commit -m "chore: 更新日报快照 [skip ci]"
+            
+            if git pull --rebase origin main && git push; then
+              echo "✅ 提交成功"
+              exit 0
+            fi
+            
+            echo "第 $i 次失败，5秒后重试..."
+            sleep 5
+          done
+          
+          echo "❌ 3 次重试全部失败"
+          exit 1

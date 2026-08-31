@@ -54,24 +54,23 @@ jobs:
 
       - name: Pretag candidate signals（第二批优化 B 项：方向词+互动阈值预打标）
         run: python hybrid/pretag.py
-
-      - name: 生成信号简报（主题分类 + 情绪聚合 + 共识度）
-        run: |
-          TODAY=$(date -u +%Y%m%d)
-          python hybrid/generate_brief.py \
-            --input "data/hybrid_tweets_${TODAY}.json" \
-            --output "data/brief_${TODAY}.json"
         continue-on-error: true
 
-      - name: Commit data
+      - name: 生成信号简报（主题分类 + 情绪聚合 + 共识度）
+        id: brief
         run: |
-          git config user.name "tweet-watch-bot"
-          git config user.email "bot@users.noreply.github.com"
-          git add -f data/*.json 2>/dev/null || true
-          git add -f hybrid/user_ids.json 2>/dev/null || true
-          git diff --quiet --staged || git commit -m "data: hybrid $(date -u +%Y%m%d)"
-          git pull --rebase origin main
-          git push
+          TODAY=$(date -u +%Y%m%d)
+          INPUT="data/hybrid_tweets_${TODAY}.json"
+          OUTPUT="data/brief_${TODAY}.json"
+          
+          if [ -f "$INPUT" ]; then
+            python hybrid/generate_brief.py --input "$INPUT" --output "$OUTPUT"
+            echo "status=success" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️  输入文件不存在: $INPUT"
+            echo "status=skipped" >> $GITHUB_OUTPUT
+          fi
+        continue-on-error: true
 
       - name: Upload brief artifact
         uses: actions/upload-artifact@v4
@@ -80,3 +79,34 @@ jobs:
           path: data/brief_*.json
           retention-days: 30
         if: success() || failure()
+
+      - name: Commit data（带重试，失败不影响整体状态）
+        run: |
+          git config user.name "tweet-watch-bot"
+          git config user.email "bot@users.noreply.github.com"
+          
+          # 最多重试 3 次
+          for i in 1 2 3; do
+            echo "--- Commit 尝试 $i ---"
+            git add -f data/*.json 2>/dev/null || true
+            git add -f hybrid/user_ids.json 2>/dev/null || true
+            
+            if git diff --quiet --staged; then
+              echo "没有变更，跳过 commit"
+              exit 0
+            fi
+            
+            git commit -m "data: hybrid $(date -u +%Y%m%d)"
+            
+            if git pull --rebase origin main && git push; then
+              echo "✅ Commit & push 成功"
+              exit 0
+            fi
+            
+            echo "❌ 第 $i 次失败，10秒后重试..."
+            sleep 10
+          done
+          
+          echo "❌ 3 次重试全部失败"
+          exit 1
+        continue-on-error: true
