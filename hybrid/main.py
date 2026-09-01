@@ -140,21 +140,40 @@ def resolve_cutoff(now_utc: dt.datetime, incremental_on: bool, limited_mode: boo
 
 
 def merge_day_file(path: str, new_tweets: list) -> tuple:
-    """与当日已有文件按 tweet_id 去重合并（新值优先），返回 (合并后列表, 旧文件条数)。"""
+    """与当日已有文件按 tweet_id 去重合并（新值优先，全局唯一），返回 (合并后列表, 旧文件条数)。"""
     if not os.path.exists(path):
-        return list(new_tweets), 0
+        # 批次内部也可能有重复（KOL 列表重复 / 转发），全局去重
+        seen, out = set(), []
+        for t in new_tweets:
+            tid = t.get("tweet_id")
+            if tid in seen:
+                continue
+            seen.add(tid)
+            out.append(t)
+        return out, 0
     try:
         with open(path, encoding="utf-8") as f:
             prev = json.load(f)
         prev_tweets = prev.get("tweets", [])
-        seen = {t.get("tweet_id") for t in new_tweets}
-        kept_old = [t for t in prev_tweets if t.get("tweet_id") not in seen]
-        merged = list(new_tweets) + kept_old
-        print(f"merge: 旧文件 {len(prev_tweets)} 条 + 本次 {len(new_tweets)} 条 → 合并 {len(merged)} 条（去重 {len(prev_tweets)-len(kept_old)} 条）", flush=True)
+        merged_map = {}
+        for t in new_tweets:          # 新值优先
+            merged_map[t.get("tweet_id")] = t
+        for t in prev_tweets:         # 旧文件中未被新值覆盖的保留
+            merged_map.setdefault(t.get("tweet_id"), t)
+        merged = list(merged_map.values())
+        dup_new = len(new_tweets) + len(prev_tweets) - len(merged)
+        print(f"merge: 旧文件 {len(prev_tweets)} 条 + 本次 {len(new_tweets)} 条 → 合并 {len(merged)} 条（去重 {dup_new} 条）", flush=True)
         return merged, len(prev_tweets)
     except Exception as e:
         print(f"merge: 旧文件读取失败（{e}），仅写本次 {len(new_tweets)} 条", flush=True)
-        return list(new_tweets), 0
+        seen, out = set(), []
+        for t in new_tweets:
+            tid = t.get("tweet_id")
+            if tid in seen:
+                continue
+            seen.add(tid)
+            out.append(t)
+        return out, 0
 
 
 def main():
