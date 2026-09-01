@@ -1,55 +1,55 @@
 {
-  "generated_at": "2026-09-01T21:14:02.860896",
+  "generated_at": "2026-09-01T23:39:04.082691",
   "stats": {
-    "total_tweets": 783,
-    "kol_tweets": 512,
-    "unique_authors": 60,
-    "kol_count": 60,
-    "total_likes": 186313,
-    "total_reposts": 29273,
-    "total_replies": 12528,
-    "total_views": 27012329,
-    "unique_assets": 80,
+    "total_tweets": 849,
+    "kol_tweets": 549,
+    "unique_authors": 61,
+    "kol_count": 61,
+    "total_likes": 192280,
+    "total_reposts": 30127,
+    "total_replies": 13043,
+    "total_views": 28100516,
+    "unique_assets": 87,
     "unique_themes": 11,
-    "classified_tweets": 512,
+    "classified_tweets": 549,
     "kols_total": 94,
     "kols_ok": 94
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.129,
+    "consensus_score": 0.121,
     "opinion_density": 0.332,
-    "kol_consensus": 0.129,
-    "bull_ratio": 0.188,
-    "bear_ratio": 0.145,
+    "kol_consensus": 0.121,
+    "bull_ratio": 0.186,
+    "bear_ratio": 0.146,
     "neutral_ratio": 0.668,
-    "kol_weighted_sentiment": 0.044,
+    "kol_weighted_sentiment": 0.041,
     "engagement_weighted_sentiment": 0.071,
-    "bull_count": 96,
-    "bear_count": 74,
-    "neutral_count": 342,
-    "total_count": 512
+    "bull_count": 102,
+    "bear_count": 80,
+    "neutral_count": 367,
+    "total_count": 549
   },
   "top_assets": [
     {
       "symbol": "SOL",
       "name": "Solana",
-      "mention_count": 29,
-      "engagement": 6107,
-      "kol_mentions": 29,
-      "signal_strength": 74.5,
+      "mention_count": 31,
+      "engagement": 6149,
+      "kol_mentions": 31,
+      "signal_strength": 77.2,
       "consensus": {
-        "consensus_score": 0.273,
-        "opinion_density": 0.379,
-        "kol_consensus": 0.273,
-        "bull_ratio": 0.138,
-        "bear_ratio": 0.241,
-        "neutral_ratio": 0.621,
-        "kol_weighted_sentiment": -0.094,
-        "engagement_weighted_sentiment": 0.146,
+        "consensus_score": 0.385,
+        "opinion_density": 0.419,
+        "kol_consensus": 0.385,
+        "bull_ratio": 0.129,
+        "bear_ratio": 0.29,
+        "neutral_ratio": 0.581,
+        "kol_weighted_sentiment": -0.153,
+        "engagement_weighted_sentiment": 0.134,
         "bull_count": 4,
-        "bear_count": 7,
+        "bear_count": 9,
         "neutral_count": 18,
-        "total_count": 29
+        "total_count": 31
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -104,23 +104,23 @@
     {
       "symbol": "XAU",
       "name": "黄金",
-      "mention_count": 26,
-      "engagement": 16672,
-      "kol_mentions": 26,
-      "signal_strength": 74.5,
+      "mention_count": 29,
+      "engagement": 16703,
+      "kol_mentions": 29,
+      "signal_strength": 76.1,
       "consensus": {
-        "consensus_score": 0.368,
-        "opinion_density": 0.731,
-        "kol_consensus": 0.368,
-        "bull_ratio": 0.5,
-        "bear_ratio": 0.231,
-        "neutral_ratio": 0.269,
-        "kol_weighted_sentiment": 0.232,
-        "engagement_weighted_sentiment": 0.911,
-        "bull_count": 13,
+        "consensus_score": 0.4,
+        "opinion_density": 0.69,
+        "kol_consensus": 0.4,
+        "bull_ratio": 0.483,
+        "bear_ratio": 0.207,
+        "neutral_ratio": 0.31,
+        "kol_weighted_sentiment": 0.243,
+        "engagement_weighted_sentiment": 0.909,
+        "bull_count": 14,
         "bear_count": 6,
-        "neutral_count": 7,
-        "total_count": 26
+        "neutral_count": 9,
+        "total_count": 29
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -178,7 +178,7 @@
       "mention_count": 17,
       "engagement": 16819,
       "kol_mentions": 17,
-      "signal_strength": 61.9,
+      "signal_strength": 61.0,
       "consensus": {
         "consensus_score": 0.143,
         "opinion_density": 0.412,
@@ -244,12 +244,83 @@
       ]
     },
     {
+      "symbol": "AAPL",
+      "name": "苹果",
+      "mention_count": 13,
+      "engagement": 2995,
+      "kol_mentions": 13,
+      "signal_strength": 67.0,
+      "consensus": {
+        "consensus_score": 0.5,
+        "opinion_density": 0.308,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.231,
+        "bear_ratio": 0.077,
+        "neutral_ratio": 0.692,
+        "kol_weighted_sentiment": 0.154,
+        "engagement_weighted_sentiment": 0.111,
+        "bull_count": 3,
+        "bear_count": 1,
+        "neutral_count": 9,
+        "total_count": 13
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "New Apple $AAPL CEO John Ternus just joined X",
+          "likes": 950,
+          "url": "https://x.com/StockMKTNewz/status/2094814574096572851",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "$AAPL is now an important AI company apparently? \n\n-&gt; \"OpenAI Hoarding Tens Of Thousands Of Apple Mac mini and Mac Studio\" for reinforcement learning\n\n-&gt; Anthropic is renting Apple Mac mini unit",
+          "likes": 497,
+          "url": "https://x.com/aleabitoreddit/status/2094306322812666156",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Apple $AAPL stock is starting John Ternus' first day as the CEO of Apple higher\n\n🍏 https://t.co/U2rs2kSdwT",
+          "likes": 339,
+          "url": "https://x.com/StockMKTNewz/status/2094787099929059745",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Here is the updated full timeline of Apple $AAPL CEOs from 1977 to today\n\n- Michael Scott (1977-1981)\n- Mike Markkula (1981-1983)\n- John Sculley (1983-1993)\n- Michael Spindler (1993-1996)\n- Gil Amelio",
+          "likes": 317,
+          "url": "https://x.com/StockMKTNewz/status/2094753248460562675",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "APPLE $AAPL STOCK DESTROYED THE S&amp;P 500 UNDER TIM COOK\n\nApple stock was up by 2,736% 🟢 while Tim Cook was CEO of the company\n\nDuring the same time period the S&amp;P 500 Index was up 769% and the ",
+          "likes": 222,
+          "url": "https://x.com/StockMKTNewz/status/2094755895699808656",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
       "symbol": "META",
       "name": "Meta",
       "mention_count": 12,
       "engagement": 1098,
       "kol_mentions": 12,
-      "signal_strength": 58.0,
+      "signal_strength": 57.3,
       "consensus": {
         "consensus_score": 0.143,
         "opinion_density": 0.583,
@@ -315,167 +386,25 @@
       ]
     },
     {
-      "symbol": "AAPL",
-      "name": "苹果",
-      "mention_count": 10,
-      "engagement": 2498,
-      "kol_mentions": 10,
-      "signal_strength": 65.3,
-      "consensus": {
-        "consensus_score": 0.5,
-        "opinion_density": 0.4,
-        "kol_consensus": 0.5,
-        "bull_ratio": 0.3,
-        "bear_ratio": 0.1,
-        "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": 0.2,
-        "engagement_weighted_sentiment": 0.136,
-        "bull_count": 3,
-        "bear_count": 1,
-        "neutral_count": 6,
-        "total_count": 10
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "New Apple $AAPL CEO John Ternus just joined X",
-          "likes": 950,
-          "url": "https://x.com/StockMKTNewz/status/2094814574096572851",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "aleabitoreddit",
-          "author_name": "aleabitoreddit",
-          "content": "$AAPL is now an important AI company apparently? \n\n-&gt; \"OpenAI Hoarding Tens Of Thousands Of Apple Mac mini and Mac Studio\" for reinforcement learning\n\n-&gt; Anthropic is renting Apple Mac mini unit",
-          "likes": 497,
-          "url": "https://x.com/aleabitoreddit/status/2094306322812666156",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Apple $AAPL stock is starting John Ternus' first day as the CEO of Apple higher\n\n🍏 https://t.co/U2rs2kSdwT",
-          "likes": 339,
-          "url": "https://x.com/StockMKTNewz/status/2094787099929059745",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Here is the updated full timeline of Apple $AAPL CEOs from 1977 to today\n\n- Michael Scott (1977-1981)\n- Mike Markkula (1981-1983)\n- John Sculley (1983-1993)\n- Michael Spindler (1993-1996)\n- Gil Amelio",
-          "likes": 317,
-          "url": "https://x.com/StockMKTNewz/status/2094753248460562675",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "APPLE $AAPL STOCK DESTROYED THE S&amp;P 500 UNDER TIM COOK\n\nApple stock was up by 2,736% 🟢 while Tim Cook was CEO of the company\n\nDuring the same time period the S&amp;P 500 Index was up 769% and the ",
-          "likes": 222,
-          "url": "https://x.com/StockMKTNewz/status/2094755895699808656",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "DELL",
-      "name": "DELL",
-      "mention_count": 10,
-      "engagement": 2056,
-      "kol_mentions": 10,
-      "signal_strength": 65.3,
-      "consensus": {
-        "consensus_score": 0.5,
-        "opinion_density": 0.4,
-        "kol_consensus": 0.5,
-        "bull_ratio": 0.3,
-        "bear_ratio": 0.1,
-        "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": 0.2,
-        "engagement_weighted_sentiment": 0.537,
-        "bull_count": 3,
-        "bear_count": 1,
-        "neutral_count": 6,
-        "total_count": 10
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Dell stock, $DELL, surges over +9% after posting stronger than expected earnings due to AI. https://t.co/IXTBQCM7I4",
-          "likes": 1386,
-          "url": "https://x.com/KobeissiLetter/status/2094880975826096305",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: Dell, $DELL, earnings:\n\n- EPS: 7.04, est: 4.92\n- Revenue: $46.9 billion, est: $44.5 billion\n\n$PANW earnings:\n\n- EPS: 1.02, est: 0.98\n- Revenue: $3.41 billion, est: $3.35 billion",
-          "likes": 349,
-          "url": "https://x.com/unusual_whales/status/2094880201687920770",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "$DELL stock is up by almost 9% in after hours following its earnings \n\n🟢 https://t.co/tUneypoQUz",
-          "likes": 64,
-          "url": "https://x.com/StockMKTNewz/status/2094881753664004405",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "$DELL RAISED ITS FISCAL YEAR GUIDANCE\n\n- Dell expects its revenue to come in at $192 Billion beating expectations of $173B🟢",
-          "likes": 41,
-          "url": "https://x.com/StockMKTNewz/status/2094880575207141506",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "$DELL Dell Technologies Q2 Earnings &amp; FY Guidance\n\nTotal Net Revenue $46.97B, est. $44.78B\nAdjusted EPS $7.04, est. $4.90\nAdjusted Operating Income $5.93B, est. $4.18B\nAI-Optimized Servers Revenue",
-          "likes": 21,
-          "url": "https://x.com/financialjuice/status/2094879762133193142",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "symbol": "Brent",
       "name": "布伦特原油",
-      "mention_count": 10,
-      "engagement": 9241,
-      "kol_mentions": 10,
-      "signal_strength": 61.1,
+      "mention_count": 11,
+      "engagement": 9265,
+      "kol_mentions": 11,
+      "signal_strength": 61.3,
       "consensus": {
         "consensus_score": 0.333,
-        "opinion_density": 0.3,
+        "opinion_density": 0.273,
         "kol_consensus": 0.333,
-        "bull_ratio": 0.2,
-        "bear_ratio": 0.1,
-        "neutral_ratio": 0.7,
-        "kol_weighted_sentiment": 0.1,
-        "engagement_weighted_sentiment": 0.415,
+        "bull_ratio": 0.182,
+        "bear_ratio": 0.091,
+        "neutral_ratio": 0.727,
+        "kol_weighted_sentiment": 0.091,
+        "engagement_weighted_sentiment": 0.413,
         "bull_count": 2,
         "bear_count": 1,
-        "neutral_count": 7,
-        "total_count": 10
+        "neutral_count": 8,
+        "total_count": 11
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -528,12 +457,154 @@
       ]
     },
     {
+      "symbol": "DELL",
+      "name": "DELL",
+      "mention_count": 10,
+      "engagement": 3300,
+      "kol_mentions": 10,
+      "signal_strength": 64.8,
+      "consensus": {
+        "consensus_score": 0.5,
+        "opinion_density": 0.4,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.3,
+        "bear_ratio": 0.1,
+        "neutral_ratio": 0.6,
+        "kol_weighted_sentiment": 0.2,
+        "engagement_weighted_sentiment": 0.58,
+        "bull_count": 3,
+        "bear_count": 1,
+        "neutral_count": 6,
+        "total_count": 10
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Dell stock, $DELL, surges over +9% after posting stronger than expected earnings due to AI. https://t.co/IXTBQCM7I4",
+          "likes": 2295,
+          "url": "https://x.com/KobeissiLetter/status/2094880975826096305",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Dell, $DELL, earnings:\n\n- EPS: 7.04, est: 4.92\n- Revenue: $46.9 billion, est: $44.5 billion\n\n$PANW earnings:\n\n- EPS: 1.02, est: 0.98\n- Revenue: $3.41 billion, est: $3.35 billion",
+          "likes": 511,
+          "url": "https://x.com/unusual_whales/status/2094880201687920770",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "$DELL stock is up by almost 9% in after hours following its earnings \n\n🟢 https://t.co/tUneypoQUz",
+          "likes": 134,
+          "url": "https://x.com/StockMKTNewz/status/2094881753664004405",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "$DELL RAISED ITS FISCAL YEAR GUIDANCE\n\n- Dell expects its revenue to come in at $192 Billion beating expectations of $173B🟢",
+          "likes": 62,
+          "url": "https://x.com/StockMKTNewz/status/2094880575207141506",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "$DELL Dell Technologies Q2 Earnings &amp; FY Guidance\n\nTotal Net Revenue $46.97B, est. $44.78B\nAdjusted EPS $7.04, est. $4.90\nAdjusted Operating Income $5.93B, est. $4.18B\nAI-Optimized Servers Revenue",
+          "likes": 26,
+          "url": "https://x.com/financialjuice/status/2094879762133193142",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "谷歌",
+      "mention_count": 9,
+      "engagement": 3377,
+      "kol_mentions": 9,
+      "signal_strength": 51.6,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.222,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.111,
+        "bear_ratio": 0.111,
+        "neutral_ratio": 0.778,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": -0.37,
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 7,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "“Memory is a bubble.”Explain this then, KOSPI bears:\n\nSamsung has reportedly reserved ~70% of its memory production capacity through 2031 via LTAs with $NVDA, $MSFT, and $GOOGL as main counterparties.",
+          "likes": 1628,
+          "url": "https://x.com/aleabitoreddit/status/2094365307876040857",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "Just some TLDR news I found interesting:\n\n1. $GOOGL (missed this) also invested in Mediatek alongside $NVDA for their $3.9B raise. \n\nGoogle/Nvidia are goats with investments you look at $SPCX to Anthr",
+          "likes": 635,
+          "url": "https://x.com/aleabitoreddit/status/2094704372831920324",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Google $GOOGL owned YouTube just announced a new deal with Amazon $AMZN \n\n\"YouTube creators can now seamlessly tag Amazon products in their videos and livestreams\" - Bloomberg https://t.co/at7vWRUIAq",
+          "likes": 383,
+          "url": "https://x.com/StockMKTNewz/status/2094749861434347680",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jimcramer",
+          "author_name": "jimcramer",
+          "content": "New google product could be tough for Adobe....again...",
+          "likes": 225,
+          "url": "https://x.com/jimcramer/status/2094860551276859501",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Google $GOOGL owned Waymo will begin offering paid rides in its Self Driving Cars to the public in \n\nDenver, Colorodo\nSan Diego, California\nTampa, Florida\n\nWaymo is now available in 14 US cities - Blo",
+          "likes": 117,
+          "url": "https://x.com/StockMKTNewz/status/2094789831704391873",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "symbol": "NVDA",
       "name": "英伟达",
       "mention_count": 9,
-      "engagement": 5905,
+      "engagement": 5910,
       "kol_mentions": 9,
-      "signal_strength": 77.0,
+      "signal_strength": 76.6,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.111,
@@ -599,12 +670,83 @@
       ]
     },
     {
+      "symbol": "TSLA",
+      "name": "特斯拉",
+      "mention_count": 8,
+      "engagement": 17073,
+      "kol_mentions": 8,
+      "signal_strength": 63.3,
+      "consensus": {
+        "consensus_score": 0.5,
+        "opinion_density": 0.5,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.375,
+        "bear_ratio": 0.125,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.25,
+        "engagement_weighted_sentiment": 0.243,
+        "bull_count": 3,
+        "bear_count": 1,
+        "neutral_count": 4,
+        "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "The fact that the narrative went from “Teslas can’t even drive themselves” to “well, they have a supervisor” to “well, they have steering wheels” to “well, sure, they don’t have steering wheels, but t",
+          "likes": 8071,
+          "url": "https://x.com/SawyerMerritt/status/2094621822398394597",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tesla has just open-sourced one of the key pieces of evidence used to support the Netherlands approval of FSD (Supervised) to try and push for EU-wide approval, saying that its safety benefit remains ",
+          "likes": 2750,
+          "url": "https://x.com/SawyerMerritt/status/2094664994046501279",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tesla's global fleet has just crossed 14 billion miles driven on FSD (Supervised) after hitting 13 billion on August 3rd. https://t.co/JwdKnM3CQr",
+          "likes": 2306,
+          "url": "https://x.com/SawyerMerritt/status/2094523649562690042",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tesla's engineering test fleet has tested FSD (Supervised) across 22 European countries, driving about 1 million cumulative miles on FSD.\n\n• UK\n• France\n• Sweden\n• Germany\n• Slovakia\n• Hungary\n• Spain",
+          "likes": 1225,
+          "url": "https://x.com/SawyerMerritt/status/2094787126357319856",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Breakdown of FSD (Supervised) mileage accumulated in European countries by @Tesla's engineering test fleet:\n\n• Germany: 193,805 miles\n• Netherlands: 157,723 miles\n• Spain: 166,936 miles\n• France: 89,4",
+          "likes": 690,
+          "url": "https://x.com/SawyerMerritt/status/2094780135769592305",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
       "symbol": "IEF",
       "name": "美债7-10年ETF",
       "mention_count": 8,
       "engagement": 824,
       "kol_mentions": 8,
-      "signal_strength": 51.2,
+      "signal_strength": 50.8,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -675,7 +817,7 @@
       "mention_count": 7,
       "engagement": 711,
       "kol_mentions": 7,
-      "signal_strength": 50.5,
+      "signal_strength": 50.1,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.286,
@@ -741,154 +883,12 @@
       ]
     },
     {
-      "symbol": "GOOGL",
-      "name": "谷歌",
-      "mention_count": 7,
-      "engagement": 3353,
-      "kol_mentions": 7,
-      "signal_strength": 50.5,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.286,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.143,
-        "bear_ratio": 0.143,
-        "neutral_ratio": 0.714,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.384,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 5,
-        "total_count": 7
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "aleabitoreddit",
-          "author_name": "aleabitoreddit",
-          "content": "“Memory is a bubble.”Explain this then, KOSPI bears:\n\nSamsung has reportedly reserved ~70% of its memory production capacity through 2031 via LTAs with $NVDA, $MSFT, and $GOOGL as main counterparties.",
-          "likes": 1628,
-          "url": "https://x.com/aleabitoreddit/status/2094365307876040857",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "aleabitoreddit",
-          "author_name": "aleabitoreddit",
-          "content": "Just some TLDR news I found interesting:\n\n1. $GOOGL (missed this) also invested in Mediatek alongside $NVDA for their $3.9B raise. \n\nGoogle/Nvidia are goats with investments you look at $SPCX to Anthr",
-          "likes": 635,
-          "url": "https://x.com/aleabitoreddit/status/2094704372831920324",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Google $GOOGL owned YouTube just announced a new deal with Amazon $AMZN \n\n\"YouTube creators can now seamlessly tag Amazon products in their videos and livestreams\" - Bloomberg https://t.co/at7vWRUIAq",
-          "likes": 383,
-          "url": "https://x.com/StockMKTNewz/status/2094749861434347680",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "jimcramer",
-          "author_name": "jimcramer",
-          "content": "New google product could be tough for Adobe....again...",
-          "likes": 225,
-          "url": "https://x.com/jimcramer/status/2094860551276859501",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Google $GOOGL owned Waymo will begin offering paid rides in its Self Driving Cars to the public in \n\nDenver, Colorodo\nSan Diego, California\nTampa, Florida\n\nWaymo is now available in 14 US cities - Blo",
-          "likes": 117,
-          "url": "https://x.com/StockMKTNewz/status/2094789831704391873",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "name": "特斯拉",
-      "mention_count": 7,
-      "engagement": 16712,
-      "kol_mentions": 7,
-      "signal_strength": 75.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.429,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.429,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.571,
-        "kol_weighted_sentiment": 0.429,
-        "engagement_weighted_sentiment": 0.275,
-        "bull_count": 3,
-        "bear_count": 0,
-        "neutral_count": 4,
-        "total_count": 7
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "The fact that the narrative went from “Teslas can’t even drive themselves” to “well, they have a supervisor” to “well, they have steering wheels” to “well, sure, they don’t have steering wheels, but t",
-          "likes": 8071,
-          "url": "https://x.com/SawyerMerritt/status/2094621822398394597",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Tesla has just open-sourced one of the key pieces of evidence used to support the Netherlands approval of FSD (Supervised) to try and push for EU-wide approval, saying that its safety benefit remains ",
-          "likes": 2750,
-          "url": "https://x.com/SawyerMerritt/status/2094664994046501279",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Tesla's global fleet has just crossed 14 billion miles driven on FSD (Supervised) after hitting 13 billion on August 3rd. https://t.co/JwdKnM3CQr",
-          "likes": 2306,
-          "url": "https://x.com/SawyerMerritt/status/2094523649562690042",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Tesla's engineering test fleet has tested FSD (Supervised) across 22 European countries, driving about 1 million cumulative miles on FSD.\n\n• UK\n• France\n• Sweden\n• Germany\n• Slovakia\n• Hungary\n• Spain",
-          "likes": 1225,
-          "url": "https://x.com/SawyerMerritt/status/2094787126357319856",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Breakdown of FSD (Supervised) mileage accumulated in European countries by @Tesla's engineering test fleet:\n\n• Germany: 193,805 miles\n• Netherlands: 157,723 miles\n• Spain: 166,936 miles\n• France: 89,4",
-          "likes": 690,
-          "url": "https://x.com/SawyerMerritt/status/2094780135769592305",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
       "symbol": "XAG",
       "name": "白银",
       "mention_count": 6,
       "engagement": 753,
       "kol_mentions": 6,
-      "signal_strength": 62.2,
+      "signal_strength": 61.9,
       "consensus": {
         "consensus_score": 0.5,
         "opinion_density": 0.667,
@@ -959,7 +959,7 @@
       "mention_count": 6,
       "engagement": 534,
       "kol_mentions": 6,
-      "signal_strength": 58.0,
+      "signal_strength": 57.7,
       "consensus": {
         "consensus_score": 0.333,
         "opinion_density": 0.5,
@@ -1030,7 +1030,7 @@
       "mention_count": 5,
       "engagement": 1186,
       "kol_mentions": 5,
-      "signal_strength": 57.2,
+      "signal_strength": 57.0,
       "consensus": {
         "consensus_score": 0.333,
         "opinion_density": 0.6,
@@ -1099,23 +1099,23 @@
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 192,
-      "engagement": 100284,
-      "kol_mentions": 192,
-      "signal_strength": 78.8,
+      "tweet_count": 203,
+      "engagement": 102571,
+      "kol_mentions": 203,
+      "signal_strength": 78.3,
       "consensus": {
-        "consensus_score": 0.153,
-        "opinion_density": 0.307,
-        "kol_consensus": 0.153,
-        "bull_ratio": 0.177,
-        "bear_ratio": 0.13,
-        "neutral_ratio": 0.693,
-        "kol_weighted_sentiment": 0.051,
-        "engagement_weighted_sentiment": 0.097,
+        "consensus_score": 0.133,
+        "opinion_density": 0.296,
+        "kol_consensus": 0.133,
+        "bull_ratio": 0.167,
+        "bear_ratio": 0.128,
+        "neutral_ratio": 0.704,
+        "kol_weighted_sentiment": 0.044,
+        "engagement_weighted_sentiment": 0.093,
         "bull_count": 34,
-        "bear_count": 25,
-        "neutral_count": 133,
-        "total_count": 192
+        "bear_count": 26,
+        "neutral_count": 143,
+        "total_count": 203
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1151,23 +1151,23 @@
     },
     {
       "theme": "地缘政治",
-      "tweet_count": 109,
-      "engagement": 35398,
-      "kol_mentions": 109,
-      "signal_strength": 78.0,
+      "tweet_count": 118,
+      "engagement": 38831,
+      "kol_mentions": 118,
+      "signal_strength": 79.2,
       "consensus": {
-        "consensus_score": 0.118,
-        "opinion_density": 0.312,
-        "kol_consensus": 0.118,
-        "bull_ratio": 0.138,
-        "bear_ratio": 0.174,
-        "neutral_ratio": 0.688,
-        "kol_weighted_sentiment": -0.022,
-        "engagement_weighted_sentiment": 0.077,
+        "consensus_score": 0.167,
+        "opinion_density": 0.305,
+        "kol_consensus": 0.167,
+        "bull_ratio": 0.127,
+        "bear_ratio": 0.178,
+        "neutral_ratio": 0.695,
+        "kol_weighted_sentiment": -0.037,
+        "engagement_weighted_sentiment": 0.07,
         "bull_count": 15,
-        "bear_count": 19,
-        "neutral_count": 75,
-        "total_count": 109
+        "bear_count": 21,
+        "neutral_count": 82,
+        "total_count": 118
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1203,23 +1203,23 @@
     },
     {
       "theme": "加密货币",
-      "tweet_count": 83,
-      "engagement": 29037,
-      "kol_mentions": 83,
-      "signal_strength": 76.9,
+      "tweet_count": 85,
+      "engagement": 29079,
+      "kol_mentions": 85,
+      "signal_strength": 75.0,
       "consensus": {
-        "consensus_score": 0.077,
-        "opinion_density": 0.313,
-        "kol_consensus": 0.077,
-        "bull_ratio": 0.169,
-        "bear_ratio": 0.145,
-        "neutral_ratio": 0.687,
-        "kol_weighted_sentiment": 0.027,
-        "engagement_weighted_sentiment": 0.142,
+        "consensus_score": 0.0,
+        "opinion_density": 0.329,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.165,
+        "bear_ratio": 0.165,
+        "neutral_ratio": 0.671,
+        "kol_weighted_sentiment": 0.003,
+        "engagement_weighted_sentiment": 0.139,
         "bull_count": 14,
-        "bear_count": 12,
+        "bear_count": 14,
         "neutral_count": 57,
-        "total_count": 83
+        "total_count": 85
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1255,23 +1255,23 @@
     },
     {
       "theme": "宏观_利率政策",
-      "tweet_count": 74,
-      "engagement": 14067,
-      "kol_mentions": 74,
-      "signal_strength": 82.0,
+      "tweet_count": 79,
+      "engagement": 14187,
+      "kol_mentions": 79,
+      "signal_strength": 83.9,
       "consensus": {
-        "consensus_score": 0.28,
-        "opinion_density": 0.338,
-        "kol_consensus": 0.28,
-        "bull_ratio": 0.216,
-        "bear_ratio": 0.122,
-        "neutral_ratio": 0.662,
-        "kol_weighted_sentiment": 0.076,
-        "engagement_weighted_sentiment": 0.207,
-        "bull_count": 16,
+        "consensus_score": 0.357,
+        "opinion_density": 0.354,
+        "kol_consensus": 0.357,
+        "bull_ratio": 0.241,
+        "bear_ratio": 0.114,
+        "neutral_ratio": 0.646,
+        "kol_weighted_sentiment": 0.109,
+        "engagement_weighted_sentiment": 0.213,
+        "bull_count": 19,
         "bear_count": 9,
-        "neutral_count": 49,
-        "total_count": 74
+        "neutral_count": 51,
+        "total_count": 79
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1307,23 +1307,23 @@
     },
     {
       "theme": "AI_科技",
-      "tweet_count": 66,
-      "engagement": 58324,
-      "kol_mentions": 66,
+      "tweet_count": 71,
+      "engagement": 58904,
+      "kol_mentions": 71,
       "signal_strength": 77.5,
       "consensus": {
         "consensus_score": 0.1,
-        "opinion_density": 0.303,
+        "opinion_density": 0.282,
         "kol_consensus": 0.1,
-        "bull_ratio": 0.136,
-        "bear_ratio": 0.167,
-        "neutral_ratio": 0.697,
-        "kol_weighted_sentiment": -0.02,
-        "engagement_weighted_sentiment": -0.148,
+        "bull_ratio": 0.127,
+        "bear_ratio": 0.155,
+        "neutral_ratio": 0.718,
+        "kol_weighted_sentiment": -0.019,
+        "engagement_weighted_sentiment": -0.145,
         "bull_count": 9,
         "bear_count": 11,
-        "neutral_count": 46,
-        "total_count": 66
+        "neutral_count": 51,
+        "total_count": 71
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1359,23 +1359,23 @@
     },
     {
       "theme": "美债_固定收益",
-      "tweet_count": 66,
-      "engagement": 36593,
-      "kol_mentions": 66,
-      "signal_strength": 82.8,
+      "tweet_count": 69,
+      "engagement": 37055,
+      "kol_mentions": 69,
+      "signal_strength": 80.7,
       "consensus": {
-        "consensus_score": 0.31,
-        "opinion_density": 0.439,
-        "kol_consensus": 0.31,
-        "bull_ratio": 0.288,
-        "bear_ratio": 0.152,
-        "neutral_ratio": 0.561,
-        "kol_weighted_sentiment": 0.141,
-        "engagement_weighted_sentiment": 0.335,
+        "consensus_score": 0.226,
+        "opinion_density": 0.449,
+        "kol_consensus": 0.226,
+        "bull_ratio": 0.275,
+        "bear_ratio": 0.174,
+        "neutral_ratio": 0.551,
+        "kol_weighted_sentiment": 0.106,
+        "engagement_weighted_sentiment": 0.33,
         "bull_count": 19,
-        "bear_count": 10,
-        "neutral_count": 37,
-        "total_count": 66
+        "bear_count": 12,
+        "neutral_count": 38,
+        "total_count": 69
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1411,23 +1411,23 @@
     },
     {
       "theme": "公司_财报",
-      "tweet_count": 55,
-      "engagement": 8071,
-      "kol_mentions": 55,
-      "signal_strength": 86.4,
+      "tweet_count": 63,
+      "engagement": 9591,
+      "kol_mentions": 63,
+      "signal_strength": 86.5,
       "consensus": {
-        "consensus_score": 0.455,
-        "opinion_density": 0.4,
-        "kol_consensus": 0.455,
-        "bull_ratio": 0.291,
-        "bear_ratio": 0.109,
-        "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": 0.161,
-        "engagement_weighted_sentiment": 0.007,
-        "bull_count": 16,
-        "bear_count": 6,
-        "neutral_count": 33,
-        "total_count": 55
+        "consensus_score": 0.462,
+        "opinion_density": 0.413,
+        "kol_consensus": 0.462,
+        "bull_ratio": 0.302,
+        "bear_ratio": 0.111,
+        "neutral_ratio": 0.587,
+        "kol_weighted_sentiment": 0.172,
+        "engagement_weighted_sentiment": 0.064,
+        "bull_count": 19,
+        "bear_count": 7,
+        "neutral_count": 37,
+        "total_count": 63
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1436,7 +1436,7 @@
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
           "content": "BREAKING: Dell stock, $DELL, surges over +9% after posting stronger than expected earnings due to AI. https://t.co/IXTBQCM7I4",
-          "likes": 1386,
+          "likes": 2295,
           "url": "https://x.com/KobeissiLetter/status/2094880975826096305",
           "is_kol": true,
           "sentiment": "bullish"
@@ -1463,23 +1463,23 @@
     },
     {
       "theme": "外汇_汇率",
-      "tweet_count": 47,
-      "engagement": 4815,
-      "kol_mentions": 47,
+      "tweet_count": 49,
+      "engagement": 4905,
+      "kol_mentions": 49,
       "signal_strength": 75.0,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.34,
+        "opinion_density": 0.367,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.17,
-        "bear_ratio": 0.17,
-        "neutral_ratio": 0.66,
+        "bull_ratio": 0.184,
+        "bear_ratio": 0.184,
+        "neutral_ratio": 0.633,
         "kol_weighted_sentiment": -0.004,
-        "engagement_weighted_sentiment": 0.125,
-        "bull_count": 8,
-        "bear_count": 8,
+        "engagement_weighted_sentiment": 0.121,
+        "bull_count": 9,
+        "bear_count": 9,
         "neutral_count": 31,
-        "total_count": 47
+        "total_count": 49
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1515,23 +1515,23 @@
     },
     {
       "theme": "黄金_贵金属",
-      "tweet_count": 32,
-      "engagement": 17791,
-      "kol_mentions": 32,
-      "signal_strength": 76.8,
+      "tweet_count": 35,
+      "engagement": 17822,
+      "kol_mentions": 35,
+      "signal_strength": 78.1,
       "consensus": {
-        "consensus_score": 0.273,
-        "opinion_density": 0.688,
-        "kol_consensus": 0.273,
-        "bull_ratio": 0.438,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.312,
-        "kol_weighted_sentiment": 0.138,
-        "engagement_weighted_sentiment": 0.826,
-        "bull_count": 14,
+        "consensus_score": 0.304,
+        "opinion_density": 0.657,
+        "kol_consensus": 0.304,
+        "bull_ratio": 0.429,
+        "bear_ratio": 0.229,
+        "neutral_ratio": 0.343,
+        "kol_weighted_sentiment": 0.155,
+        "engagement_weighted_sentiment": 0.824,
+        "bull_count": 15,
         "bear_count": 8,
-        "neutral_count": 10,
-        "total_count": 32
+        "neutral_count": 12,
+        "total_count": 35
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1570,7 +1570,7 @@
       "tweet_count": 26,
       "engagement": 3767,
       "kol_mentions": 26,
-      "signal_strength": 73.6,
+      "signal_strength": 72.3,
       "consensus": {
         "consensus_score": 0.333,
         "opinion_density": 0.346,
@@ -1620,61 +1620,15 @@
   ],
   "top_tweets": [
     {
-      "author": "MikeZaccardi",
-      "author_name": "MikeZaccardi",
-      "content": "Corporate buybacks are slowing. Rubner Citadel https://t.co/TtNxwAY4fU",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "views": 377,
-      "created_at": "2026-09-01T20:46:00+00:00",
-      "url": "https://x.com/MikeZaccardi/status/2094889533607125167",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "US API GASOLINE STOCK CHANGE ACTUAL 0.3M (FORECAST -, PREVIOUS -3.2M) $MACRO",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 0,
-      "views": 10770,
-      "created_at": "2026-09-01T20:45:08+00:00",
-      "url": "https://x.com/financialjuice/status/2094889316983968190",
-      "assets": [
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币",
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "US API DISTILLATE STOCK CHANGE ACTUAL -0.3M (FORECAST -, PREVIOUS -0.5M) $MACRO",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 0,
-      "views": 10176,
-      "created_at": "2026-09-01T20:45:05+00:00",
-      "url": "https://x.com/financialjuice/status/2094889303201488912",
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "Model Y EPA range comparison:\n\n• Model Y Premium AWD with 19\" wheels: 327 miles\n• Model Y L Premium AWD with 19\" wheels: 332 miles\n• Model Y Premium AWD with 20\" wheels: 303 miles\n• Model Y L Premium AWD with 20\" wheels: 328 miles\n\nThe Model Y L (slightly larger battery) with https://t.co/5UzhjHlARB",
+      "likes": 85,
+      "reposts": 3,
+      "replies": 9,
+      "views": 9099,
+      "created_at": "2026-09-01T23:22:22+00:00",
+      "url": "https://x.com/SawyerMerritt/status/2094928883531264424",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -1686,85 +1640,18 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "US API CUSHING STOCK CHANGE ACTUAL 0.2M (FORECAST -, PREVIOUS 1M) $MACRO",
-      "likes": 3,
-      "reposts": 0,
-      "replies": 0,
-      "views": 10563,
-      "created_at": "2026-09-01T20:44:56+00:00",
-      "url": "https://x.com/financialjuice/status/2094889266283270414",
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "US oil refiners are set for an economic boom.\n\nThe S&amp;P 500 Oil &amp; Gas Refining &amp; Marketing index is now up +108% in 12 months, to ~3,250 points, near its all-time high.\n\nThe index tracks large US companies involved in refining, marketing, and transporting oil and gas.\n\nThis marks https://t.co/S2jMBqGVAi",
+      "likes": 208,
+      "reposts": 37,
+      "replies": 17,
+      "views": 41596,
+      "created_at": "2026-09-01T23:13:14+00:00",
+      "url": "https://x.com/KobeissiLetter/status/2094926585572872395",
       "assets": [],
       "themes": [
         "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "US API CRUDE OIL STOCK CHANGE ACTUAL -2.6M (FORECAST -, PREVIOUS 4.2M) $MACRO",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 2,
-      "views": 12639,
-      "created_at": "2026-09-01T20:43:36+00:00",
-      "url": "https://x.com/financialjuice/status/2094888929447084428",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "RT @_sholtodouglas: @TheStalwart On 1) a very handwavy explanation is that generalising well seems to induce shared representations (which…",
-      "likes": 0,
-      "reposts": 2,
-      "replies": 0,
-      "views": 514,
-      "created_at": "2026-09-01T20:33:30+00:00",
-      "url": "https://x.com/TheStalwart/status/2094886387845640664",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "John Ternus just took over as CEO of Apple $AAPL ... here is the full first letter he sent to all Apple employees:\n\n\"Team,\n\nToday, on my first day as CEO, I just wanted to send a quick note to thank everyone for the warm wishes. I also want to extend my deep appreciation to Tim https://t.co/YUZuHLVDlo",
-      "likes": 27,
-      "reposts": 1,
-      "replies": 11,
-      "views": 9179,
-      "created_at": "2026-09-01T20:31:54+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2094885986287444017",
-      "assets": [
-        [
-          "AAPL",
-          "苹果"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "原油_能源",
-        "地缘政治"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1775,41 +1662,14 @@
     {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
-      "content": "BREAKING: Russia is secretly helping Iran develop supersonic cruise missiles, per FT",
-      "likes": 760,
-      "reposts": 83,
-      "replies": 99,
-      "views": 80165,
-      "created_at": "2026-09-01T20:30:10+00:00",
-      "url": "https://x.com/unusual_whales/status/2094885547345101196",
+      "content": "The Unusual Whales Labor Day sale has begun.  \n\nGet 20% off on all site.  \n\nYou read that right.  \n\nEverything is 20% off.  \n\nCheck it out here: https://t.co/4gFmCvf8jt https://t.co/TbutDggTUo",
+      "likes": 12,
+      "reposts": 3,
+      "replies": 15,
+      "views": 44952,
+      "created_at": "2026-09-01T23:12:00+00:00",
+      "url": "https://x.com/unusual_whales/status/2094926273285947691",
       "assets": [],
-      "themes": [
-        "地缘政治",
-        "原油_能源",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "MikeZaccardi",
-      "author_name": "MikeZaccardi",
-      "content": "$XLE record high https://t.co/Di7v6x15k1",
-      "likes": 4,
-      "reposts": 0,
-      "replies": 2,
-      "views": 1483,
-      "created_at": "2026-09-01T20:28:25+00:00",
-      "url": "https://x.com/MikeZaccardi/status/2094885107236516086",
-      "assets": [
-        [
-          "XLE",
-          "能源ETF"
-        ]
-      ],
       "themes": [
         "原油_能源"
       ],
@@ -1820,44 +1680,109 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Bonds and Stocks Drop as Oil Soars on US-Iranian Fears – US Market Wrap https://t.co/HnhNwc9POF",
-      "likes": 15,
-      "reposts": 2,
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "The Tesla Model Y L Premium AWD has just received its official EPA range rating.\n\n• EPA range on base 19\" wheels: 332 miles (vs 325 originally listed\n• EPA range on 20\" wheels: 328 miles (vs 320 originally listed)\n\nPretty incredible how the 20\" wheels only give you a 4 hit to https://t.co/qddrtnYxJ8",
+      "likes": 334,
+      "reposts": 27,
+      "replies": 24,
+      "views": 23179,
+      "created_at": "2026-09-01T23:04:04+00:00",
+      "url": "https://x.com/SawyerMerritt/status/2094924279758340406",
+      "assets": [
+        [
+          "TSLA",
+          "特斯拉"
+        ]
+      ],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "SCMPNews",
+      "author_name": "SCMPNews",
+      "content": "Mainland China stepping up preparations for Taiwan blockade, report says https://t.co/iXpNmIwQe8",
+      "likes": 3,
+      "reposts": 0,
       "replies": 1,
-      "views": 21352,
-      "created_at": "2026-09-01T20:24:32+00:00",
-      "url": "https://x.com/financialjuice/status/2094884132484440400",
+      "views": 1287,
+      "created_at": "2026-09-01T23:03:42+00:00",
+      "url": "https://x.com/SCMPNews/status/2094924188381245498",
       "assets": [],
       "themes": [
-        "原油_能源",
+        "宏观_利率政策",
         "地缘政治"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "neutral",
       "sentiment_score": 0.0,
-      "sentiment_intensity": 0.667
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "ripster47",
-      "author_name": "ripster47",
-      "content": "RT @ripster47: $DELL 🚀🚀 THERE WE GO\nMost furus want you to gamble earnings!\nIt each and show live how to trade After Hours\n\nBased on @tenet…",
-      "likes": 0,
-      "reposts": 3,
+      "author": "KathyLienFX",
+      "author_name": "KathyLienFX",
+      "content": "Live Trading Gold in Asia https://t.co/c3htKghdqd",
+      "likes": 1,
+      "reposts": 0,
       "replies": 0,
-      "views": 0,
-      "created_at": "2026-09-01T20:22:43+00:00",
-      "url": "https://x.com/ripster47/status/2094883673757638913",
+      "views": 776,
+      "created_at": "2026-09-01T23:00:37+00:00",
+      "url": "https://x.com/KathyLienFX/status/2094923410367471887",
       "assets": [
         [
-          "DELL",
-          "DELL"
+          "XAU",
+          "黄金"
         ]
       ],
       "themes": [
-        "公司_财报"
+        "黄金_贵金属"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "The growth rate of the US money supply is SURGING.\n\nCenter for Financial Stability Divisia M4 grew at 7.9%/yr in July 2026. That's up from 5.4%/yr in July 2025.\n\nTHE INFLATION STORY IS A MONEY SUPPLY STORY. https://t.co/vn6myUhJI3",
+      "likes": 11,
+      "reposts": 3,
+      "replies": 2,
+      "views": 3275,
+      "created_at": "2026-09-01T23:00:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2094923254570070330",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "New Zealand Building Permits (M/M) Jul: -4.3% (prev -3.6%)",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 4918,
+      "created_at": "2026-09-01T22:45:25+00:00",
+      "url": "https://x.com/LiveSquawk/status/2094919584096629218",
+      "assets": [],
+      "themes": [
+        "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1868,70 +1793,38 @@
     {
       "author": "LiveSquawk",
       "author_name": "LiveSquawk",
-      "content": "RT @WSJbusiness: Dell Technologies Boosts Fiscal Year Outlook by $25 Billion as Server Revenue Surges https://t.co/zaFZT1CSSp",
-      "likes": 0,
-      "reposts": 3,
-      "replies": 0,
-      "views": 2772,
-      "created_at": "2026-09-01T20:22:24+00:00",
-      "url": "https://x.com/LiveSquawk/status/2094883595437396307",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Geopolitics expert Alexander Mercouris on what further Russian strikes could do to Ukraine’s energy grid:\n\n“Further massive strikes against [Ukraine's energy grid] ... could quite quickly bring it to the point of total collapse.” https://t.co/uzfzxBCja1",
+      "content": "US And Iran Trade Strikes In Latest Fight For Control Of Hormuz - WSJ\n\nhttps://t.co/DOTaiTI5PZ",
       "likes": 2,
-      "reposts": 1,
+      "reposts": 0,
       "replies": 0,
-      "views": 5001,
-      "created_at": "2026-09-01T20:20:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2094882988698059248",
+      "views": 5139,
+      "created_at": "2026-09-01T22:40:41+00:00",
+      "url": "https://x.com/LiveSquawk/status/2094918394105508049",
       "assets": [],
       "themes": [
-        "地缘政治"
+        "地缘政治",
+        "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -0.333,
-      "sentiment_intensity": 1.0
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "MikeZaccardi",
-      "author_name": "MikeZaccardi",
-      "content": "Out-year P/Es:\n$AAPL 34.1x\n$NVDA 14.0x\n$COST almost sub-40x\n$WMT 33x @finviz_com https://t.co/ofgfpmvKHZ",
-      "likes": 7,
-      "reposts": 0,
-      "replies": 4,
-      "views": 1774,
-      "created_at": "2026-09-01T20:18:13+00:00",
-      "url": "https://x.com/MikeZaccardi/status/2094882539211034986",
+      "author": "StockMKTNewz",
+      "author_name": "StockMKTNewz",
+      "content": "Apple $AAPL has now changed the name of Lake Ontario to Lake America on Apple Maps https://t.co/iUVnE2zNuG",
+      "likes": 104,
+      "reposts": 7,
+      "replies": 18,
+      "views": 14181,
+      "created_at": "2026-09-01T22:34:10+00:00",
+      "url": "https://x.com/StockMKTNewz/status/2094916756049363408",
       "assets": [
         [
           "AAPL",
           "苹果"
-        ],
-        [
-          "NVDA",
-          "英伟达"
-        ],
-        [
-          "COST",
-          "COST"
-        ],
-        [
-          "WMT",
-          "WMT"
         ]
       ],
       "themes": [
@@ -1944,94 +1837,218 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "MongoDB $MDB stock is down by more than 12% in after hours following its earnings \n\n🔴 https://t.co/Ty6fQgHA5s",
-      "likes": 32,
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "BREAKING: A US airstrike on Iran hit a wedding ceremony in Kuhestak, killing four people, including a child, and wounding more than 50 others, per NBC",
+      "likes": 1784,
+      "reposts": 363,
+      "replies": 241,
+      "views": 185738,
+      "created_at": "2026-09-01T22:26:54+00:00",
+      "url": "https://x.com/unusual_whales/status/2094914925391233055",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LizAnnSonders",
+      "author_name": "LizAnnSonders",
+      "content": "RT @RachelDashCS: Chart of the day:\n\n$CrudeOil broke above a key resistance level, accompanied by improving momentum indicators and trading…",
+      "likes": 0,
+      "reposts": 6,
+      "replies": 0,
+      "views": 2511,
+      "created_at": "2026-09-01T22:20:38+00:00",
+      "url": "https://x.com/LizAnnSonders/status/2094913347623719075",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "aswathdamodaran",
+      "author_name": "aswathdamodaran",
+      "content": "The spotlight was on US treasuries, in August 2026, as 10-year and 30-year rates edged towards highs not seen since 2008. US equities still had a good month, with the S&amp;P up 2.6%, pushing the equity risk premium down to 4.09%. https://t.co/NVHfXGQF7s https://t.co/v7jsE7sUV4",
+      "likes": 25,
+      "reposts": 3,
+      "replies": 2,
+      "views": 8265,
+      "created_at": "2026-09-01T22:19:58+00:00",
+      "url": "https://x.com/aswathdamodaran/status/2094913180162257120",
+      "assets": [],
+      "themes": [
+        "美债_固定收益",
+        "外汇_汇率",
+        "美股_大盘",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Former US Middle East negotiator Aaron David Miller on the Iran sanctions:\n\n“The five areas that the Americans want to target: gold, shipping, aviation, crypto, and digital services. Those five are going to hurt the Iranian public before they hurt the regime.” https://t.co/Hk9Ygx5TGL",
+      "likes": 15,
+      "reposts": 4,
+      "replies": 0,
+      "views": 5784,
+      "created_at": "2026-09-01T22:15:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2094911929588593077",
+      "assets": [
+        [
+          "XAU",
+          "黄金"
+        ]
+      ],
+      "themes": [
+        "地缘政治",
+        "黄金_贵金属",
+        "加密货币",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "PeterLBrandt",
+      "author_name": "PeterLBrandt",
+      "content": "RT @TechCharts: Looking for a long white candle and a close at the highs. #CRUDEOIL https://t.co/Y98g3KcGoT",
+      "likes": 0,
+      "reposts": 18,
+      "replies": 0,
+      "views": 7155,
+      "created_at": "2026-09-01T22:13:10+00:00",
+      "url": "https://x.com/PeterLBrandt/status/2094911469703905496",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "bespokeinvest",
+      "author_name": "bespokeinvest",
+      "content": "Industrials $XLI have been the weakest area of the market over the last few weeks.  Oversold now for the first time since the Iran War sell-off. https://t.co/1oyxx4Zjhy",
+      "likes": 9,
       "reposts": 1,
-      "replies": 14,
-      "views": 17354,
-      "created_at": "2026-09-01T20:16:33+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2094882120632087022",
+      "replies": 0,
+      "views": 4343,
+      "created_at": "2026-09-01T21:59:52+00:00",
+      "url": "https://x.com/bespokeinvest/status/2094908122460529084",
       "assets": [
         [
-          "MDB",
-          "MDB"
+          "XLI",
+          "XLI"
+        ],
+        [
+          "SOL",
+          "Solana"
         ]
       ],
       "themes": [
-        "公司_财报"
+        "地缘政治",
+        "加密货币"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 1.0
     },
     {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "$DELL stock is up by almost 9% in after hours following its earnings \n\n🟢 https://t.co/tUneypoQUz",
-      "likes": 64,
-      "reposts": 2,
-      "replies": 10,
-      "views": 17130,
-      "created_at": "2026-09-01T20:15:05+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2094881753664004405",
+      "author": "bespokeinvest",
+      "author_name": "bespokeinvest",
+      "content": "With weak breadth lately, the S&amp;P’s 10-Day Advance/Decline line reading is approaching oversold territory for the first time in a few months: https://t.co/iO1bzj1rL9",
+      "likes": 14,
+      "reposts": 1,
+      "replies": 1,
+      "views": 4363,
+      "created_at": "2026-09-01T21:57:20+00:00",
+      "url": "https://x.com/bespokeinvest/status/2094907485123436557",
       "assets": [
         [
-          "DELL",
-          "DELL"
+          "SOL",
+          "Solana"
         ]
       ],
       "themes": [
-        "公司_财报"
+        "加密货币"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Dell stock, $DELL, surges over +9% after posting stronger than expected earnings due to AI. https://t.co/IXTBQCM7I4",
-      "likes": 1386,
-      "reposts": 116,
-      "replies": 68,
-      "views": 109930,
-      "created_at": "2026-09-01T20:12:00+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2094880975826096305",
-      "assets": [
-        [
-          "DELL",
-          "DELL"
-        ]
-      ],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.5
     },
     {
       "author": "LiveSquawk",
       "author_name": "LiveSquawk",
-      "content": "Dell Raises Annual Revenue Outlook On Sustained AI Server Sales – BBG\n\nhttps://t.co/shnbJeNxZy",
-      "likes": 6,
-      "reposts": 0,
+      "content": "RT @sentdefender: According to a release from the Jordanian armed forces, 13 total Iranian ballistic missiles were fired at Jordan, of whic…",
+      "likes": 0,
+      "reposts": 60,
       "replies": 0,
-      "views": 6187,
-      "created_at": "2026-09-01T20:10:26+00:00",
-      "url": "https://x.com/LiveSquawk/status/2094880580735209542",
+      "views": 3913,
+      "created_at": "2026-09-01T21:36:35+00:00",
+      "url": "https://x.com/LiveSquawk/status/2094902261507870784",
       "assets": [],
       "themes": [
-        "原油_能源",
-        "公司_财报"
+        "公司_财报",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "bespokeinvest",
+      "author_name": "bespokeinvest",
+      "content": "Energy Inventories are slated for 10:30 AM ET tomorrow, followed by the Fed’s Beige Book at 2:00 PM. \n\nCostco $COST will also report August sales, while CrowdStrike $CRWD and JFrog $FROG hold investor days. https://t.co/ckUfrPDNFv",
+      "likes": 1,
+      "reposts": 1,
+      "replies": 0,
+      "views": 4472,
+      "created_at": "2026-09-01T21:35:00+00:00",
+      "url": "https://x.com/bespokeinvest/status/2094901863325831571",
+      "assets": [
+        [
+          "COST",
+          "COST"
+        ],
+        [
+          "CRWD",
+          "CRWD"
+        ],
+        [
+          "FROG",
+          "FROG"
+        ]
+      ],
+      "themes": [
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -2040,56 +2057,24 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "$DELL RAISED ITS FISCAL YEAR GUIDANCE\n\n- Dell expects its revenue to come in at $192 Billion beating expectations of $173B🟢",
-      "likes": 41,
-      "reposts": 0,
-      "replies": 6,
-      "views": 16752,
-      "created_at": "2026-09-01T20:10:24+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2094880575207141506",
-      "assets": [
-        [
-          "DELL",
-          "DELL"
-        ]
-      ],
+      "author": "USTreasury",
+      "author_name": "USTreasury",
+      "content": "Secretary of the Treasury Scott Bessent Delivers Remarks at the G20 Ministerial Press Conference https://t.co/THwa2qzJ6V",
+      "likes": 297,
+      "reposts": 70,
+      "replies": 10,
+      "views": 22201,
+      "created_at": "2026-09-01T21:31:40+00:00",
+      "url": "https://x.com/USTreasury/status/2094901024993501454",
+      "assets": [],
       "themes": [
-        "公司_财报",
-        "原油_能源"
+        "美债_固定收益"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "RT @WOLF_Financial: DELL $DELL JUST REPORTED Q2 EARNINGS\n\n- Revenue: $47.0B, beating est. of $44.92B 🟢\n- Adj EPS: $7.04, beating est. of $4…",
-      "likes": 0,
-      "reposts": 6,
-      "replies": 0,
-      "views": 6234,
-      "created_at": "2026-09-01T20:09:24+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2094880321158164559",
-      "assets": [
-        [
-          "DELL",
-          "DELL"
-        ]
-      ],
-      "themes": [
-        "公司_财报",
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     }
   ],
   "kol_summary": [
