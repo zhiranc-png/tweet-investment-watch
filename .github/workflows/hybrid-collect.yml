@@ -24,7 +24,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 60    # 留足余量：采集 + 健康检查
+    timeout-minutes: 120    # 全量窗口（首轮/过期回退）实测 ~86 分钟；增量轮 15-25 分钟（2026-09-01 v5）
     steps:
       - uses: actions/checkout@v4
 
