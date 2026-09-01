@@ -2,12 +2,7 @@ name: hybrid-collect
 
 on:
   schedule:
-    # 每天 4 次（北京时间）：00:30 / 06:30 / 12:30 / 18:30
-    # UTC 时间 = 北京时间 - 8 小时
-    - cron: "30 16 * * *"   # UTC 16:30 = 北京时间 00:30（深夜）
-    - cron: "30 22 * * *"   # UTC 22:30 = 北京时间 06:30（凌晨，起床前）
-    - cron: "30 4 * * *"    # UTC 04:30 = 北京时间 12:30（中午）
-    - cron: "30 10 * * *"   # UTC 10:30 = 北京时间 18:30（傍晚）
+    - cron: "0 */3 * * *"  # UTC 每 3 小时 = HKT 8/11/14/17/20/23/2/5 点，增量模式每轮 10-25 分钟（2026-09-01 v5）
   workflow_dispatch:
     inputs:
       seed_only:
@@ -18,6 +13,10 @@ on:
         description: "跳过健康检查（强制采集）"
         type: boolean
         default: false
+      max_kols:
+        description: "限制本轮最多采集的 KOL 数（ Limited 模式，不更新 state）"
+        type: string
+        default: ""
 
 permissions:
   contents: write
@@ -71,11 +70,25 @@ jobs:
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           CT0: ${{ secrets.CT0 }}
           SEED_ONLY: ${{ inputs.seed_only }}
+          MAX_KOLS: ${{ inputs.max_kols }}
+          INCREMENTAL: "1"
+
+      - name: Upload data artifact（即使 Collect 部分失败也抢救数据）
+        uses: actions/upload-artifact@v4
+        with:
+          name: hybrid-data
+          path: |
+            data/hybrid_tweets_*.json
+            data/hybrid_state.json
+            hybrid/user_ids.json
+          retention-days: 30
+        if: always()
 
       # ===== 预打标 =====
       - name: Pretag candidate signals
         if: steps.pre_check.outputs.skip != 'true'
         run: python hybrid/pretag.py
+        continue-on-error: true
 
       # ===== 生成信号简报 =====
       - name: 生成信号简报（主题分类 + 情绪聚合 + 共识度）

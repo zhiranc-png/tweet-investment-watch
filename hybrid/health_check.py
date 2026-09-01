@@ -27,7 +27,8 @@ from datetime import datetime, timedelta, timezone
 # ============================================================
 
 # 预期基准值（基于历史数据的合理下限）
-EXPECTED_TWEETS = 200          # 每次采集预期至少 200 条推文
+EXPECTED_TWEETS = 200          # 每次采集预期至少 200 条推文（全量模式）
+INCREMENTAL_EXPECTED_TWEETS = 20  # 增量模式（3h 窗口）单轮预期下限，低于此视为异常
 EXPECTED_KOL_RATIO = 0.75      # 至少 75% 的 KOL 成功采集（94 × 0.75 ≈ 70）
 MIN_DURATION_SEC = 300         # 采集耗时下限（秒），少于 5 分钟可能被限流
 MAX_DURATION_SEC = 3600        # 采集耗时上限（秒），超过 1 小时可能卡住
@@ -84,8 +85,13 @@ def add_history(state: dict, record: dict):
 # ============================================================
 
 def check_tweet_count(tweets_data: dict) -> tuple[bool, str]:
-    """检查推文数量"""
+    """检查推文数量（增量模式用独立低阈值，避免误触发冷却）"""
     total = len(tweets_data.get('tweets', []))
+    collect_mode = str(tweets_data.get('collect_mode', ''))
+    if collect_mode.startswith('incremental'):
+        if total < INCREMENTAL_EXPECTED_TWEETS:
+            return False, f"增量轮推文数异常偏少：{total} 条（预期 ≥ {INCREMENTAL_EXPECTED_TWEETS}，模式 {collect_mode}）"
+        return True, f"增量轮推文数正常：{total} 条（模式 {collect_mode}）"
     if total < EXPECTED_TWEETS * 0.6:
         return False, f"推文数严重不足：{total} 条（预期 ≥ {int(EXPECTED_TWEETS * 0.6)}）"
     if total < EXPECTED_TWEETS:
