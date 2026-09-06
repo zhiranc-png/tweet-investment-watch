@@ -46,6 +46,25 @@ FALLBACK_TWEETS_QIDS = [
 FALLBACK_USER_QID = FALLBACK_USER_QIDS[-1]
 FALLBACK_TWEETS_QID = FALLBACK_TWEETS_QIDS[0]
 
+# 命中来源标注（P1 可观测性：qid 过期是渐变的——第一候选命中率下降、第二候选顶上，
+# 靠日志提前预警而不是等全挂才发现；source 与上方候选注释一一对应）
+QID_SOURCE = {
+    "2qvSHpkWTMS9i0zJAwDNiA": "twitter-openapi-2026-07-16",
+    "681MIj51w00Aj6dY0GXnHw": "bird-rebuilt-2026-06-13",
+    "G3KGOASz96M-Qu0nwmGXNg": "legacy-verified",
+    "hr4gzZONlq23okjU8fIe_A": "twitter-openapi-2026-07-16",
+    "RyDU3I9VJtPF-Pnl6vrRlw": "bird-rebuilt-2026-06-13",
+    "H8OOoI-5ZE4NxgRr8lfyWg": "community-map-unknown",
+}
+
+
+def _log_qid_hit(op: str, index: int, qid: str, dynamic_qid: str = ""):
+    if dynamic_qid and qid == dynamic_qid:
+        origin = "dynamic-main.js"
+    else:
+        origin = QID_SOURCE.get(qid, "unknown")
+    print(f"[qid-hit] op={op} index={index} qid={qid} source={origin}", flush=True)
+
 
 class RateLimited(Exception):
     """429 限流"""
@@ -167,9 +186,10 @@ class XGraphQLClient:
         vars_ = {"screen_name": screen_name, "withSafetyModeUserFields": True}
         candidates = [self.query_ids.get("UserByScreenName", "")] + FALLBACK_USER_QIDS
         data, last = None, None
-        for qid in filter(None, dict.fromkeys(candidates)):
+        for idx, qid in enumerate(filter(None, dict.fromkeys(candidates))):
             try:
                 data = self._gql_get(qid, "UserByScreenName", vars_, f"UserByScreenName {screen_name}")
+                _log_qid_hit("UserByScreenName", idx, qid, self.query_ids.get("UserByScreenName", ""))
                 break
             except Exception as e:
                 last = e
@@ -199,9 +219,10 @@ class XGraphQLClient:
         # 动态 queryId 优先，失败逐个降级硬编码候选（2026-09-06：HTML 403 时 GraphQL API 仍可用）
         candidates = [self.query_ids.get("UserTweets", "")] + FALLBACK_TWEETS_QIDS
         data, last = None, None
-        for qid in filter(None, dict.fromkeys(candidates)):
+        for idx, qid in enumerate(filter(None, dict.fromkeys(candidates))):
             try:
                 data = self._gql_get(qid, "UserTweets", vars_, f"UserTweets {screen_name}")
+                _log_qid_hit("UserTweets", idx, qid, self.query_ids.get("UserTweets", ""))
                 break
             except Exception as e:
                 last = e
