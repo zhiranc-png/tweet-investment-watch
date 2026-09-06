@@ -31,6 +31,9 @@ FEATURES = {
 }
 
 FALLBACK_USER_QID = "G3KGOASz96M-Qu0nwmGXNg"
+# UserTweets 硬编码兜底：main.js 动态提取失败/解析不出时使用（双保险）。
+# TODO(2026-09-06): 暂为占位空值；首轮实跑成功后从日志 [queryId:*] OK 行的 UserTweets= 值回填。
+FALLBACK_TWEETS_QID = ""
 
 
 class RateLimited(Exception):
@@ -68,6 +71,8 @@ class XGraphQLClient:
         self.session = session
         self.query_ids = {}
         self._user_cache = {}
+        # 上次 queryId 提取失败的异常缓存：失败一次后，后续账号直接快速抛出，不再逐个重复请求
+        self._query_ids_failed = None
 
     _MAIN_JS_RE = re.compile(
         r'https://abs\.twimg\.com/responsive-web/client-web(?:-legacy)?/main\.[a-f0-9]+\.js')
@@ -79,7 +84,11 @@ class XGraphQLClient:
         含 main.*.js 的页面（疑似重定向登录页），导致全部 KOL 采集失败。
         修复：优先用已认证会话（auth_token+ct0）抓 /home，匿名会话降级兜底；
         全部失败时输出可区分诊断（重定向登录页=cookie 失效；200 无 main.js=前端变更）。
+        失败会缓存在 _query_ids_failed，同一 client 后续调用直接快速抛出（2026-09-06 故障教训：
+        94 个账号逐个完整重试白烧 17 分钟）。
         """
+        if self._query_ids_failed is not None:
+            raise self._query_ids_failed
         candidates = [
             ("auth-home", self.session, "https://x.com/home"),
             ("anon-home", None, "https://x.com/home"),
@@ -107,6 +116,8 @@ class XGraphQLClient:
                     qids[m.group(1)] = m.group(2)
                 if qids:
                     self.query_ids = qids
+                    self._query_ids_failed = None
+                    print(f"[queryId:{tag}] OK：解析出 {len(qids)} 个操作，UserTweets={qids.get('UserTweets', 'N/A')}", flush=True)
                     return qids
                 print(f"[queryId:{tag}] main.js 已取到但未解析出 queryId")
                 continue
@@ -116,7 +127,9 @@ class XGraphQLClient:
             elif resp.status_code == 200:
                 hint = "200 但页面无 main.js → X 前端结构可能变更"
             print(f"[queryId:{tag}] {url} -> HTTP {resp.status_code} final={resp.url} len={len(resp.text)} {hint}")
-        raise Exception("无法从 x.com 提取 main.js 地址（auth/anon 两路径均失败，见上方 [queryId:*] 诊断行）")
+        self._query_ids_failed = Exception(
+            "无法从 x.com 提取 main.js 地址（auth/anon 各路径均失败，见上方 [queryId:*] 诊断行）")
+        raise self._query_ids_failed
 
     def _gql_get(self, qid: str, op: str, variables: dict, ctx: str):
         url = f"https://x.com/i/api/graphql/{qid}/{op}"
@@ -153,8 +166,11 @@ class XGraphQLClient:
             self.fetch_query_ids()
         user_id = self.get_user_id(screen_name)
         qid = self.query_ids.get("UserTweets", "")
+        if not qid and FALLBACK_TWEETS_QID:
+            qid = FALLBACK_TWEETS_QID
+            print(f"UserTweets 动态 queryId 缺失，使用硬编码兜底 {qid}", flush=True)
         if not qid:
-            raise Exception("未找到 UserTweets queryId（main.js 结构可能已变）")
+            raise Exception("未找到 UserTweets queryId（main.js 结构可能已变；可在 x_client.py 回填 FALLBACK_TWEETS_QID 兜底）")
         vars_ = {
             "userId": user_id,
             "count": count,
@@ -163,7 +179,16 @@ class XGraphQLClient:
             "withVoice": False,
             "withV2Timeline": True,
         }
-        data = self._gql_get(qid, "UserTweets", vars_, f"UserTweets {screen_name}")
+        try:
+            data = self._gql_get(qid, "UserTweets", vars_, f"UserTweets {screen_name}")
+        except Exception:
+            # 双保险：动态 queryId 请求失败时，硬编码兜底再试一次（与 get_user_id 同模式）
+            if FALLBACK_TWEETS_QID and qid != FALLBACK_TWEETS_QID:
+                print("UserTweets 动态 queryId 请求失败，使用硬编码兜底重试", flush=True)
+                data = self._gql_get(FALLBACK_TWEETS_QID, "UserTweets", vars_,
+                                     f"UserTweets {screen_name} (fallback)")
+            else:
+                raise
 
         tweets, display_name = [], screen_name
         user_result = data["data"]["user"]["result"]

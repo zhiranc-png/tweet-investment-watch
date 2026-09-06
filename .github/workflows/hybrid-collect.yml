@@ -59,11 +59,16 @@ jobs:
         id: collect
         run: |
           START_TIME=$(date +%s)
+          set +e
           python hybrid/main.py
+          CODE=$?
+          set -e
           END_TIME=$(date +%s)
           DURATION=$((END_TIME - START_TIME))
           echo "duration=$DURATION" >> $GITHUB_OUTPUT
-          echo "采集耗时：${DURATION} 秒"
+          echo "exit_code=$CODE" >> $GITHUB_OUTPUT
+          echo "采集耗时：${DURATION} 秒，exit_code=$CODE"
+          exit $CODE
         env:
           X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
           X_CT0: ${{ secrets.X_CT0 }}
@@ -101,9 +106,9 @@ jobs:
             --output "data/brief_${TODAY}.json"
         continue-on-error: true
 
-      # ===== 采集后：健康检查 =====
+      # ===== 采集后：健康检查（exit 3 = queryId 提取整轮失败，day file 不可信，跳过评估） =====
       - name: Health check - post-collect
-        if: steps.pre_check.outputs.skip != 'true' && always()
+        if: steps.pre_check.outputs.skip != 'true' && always() && steps.collect.outputs.exit_code != '3'
         id: post_check
         run: |
           TODAY=$(date -u +%Y%m%d)
@@ -116,6 +121,20 @@ jobs:
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
         continue-on-error: true
+
+      # ===== 失败告警（P1-1）：Collect 步骤失败时直接调飞书 webhook，不依赖 Python 代码是否跑到 =====
+      # exit 3 = queryId 提取整轮失败（X 平台变更/cookie 失效）；其他非零 = 成功率不达标等
+      - name: Feishu alert on collect failure
+        if: failure() && steps.collect.outcome == 'failure'
+        run: |
+          MSG="[X采集告警] Collect 步骤失败 exit_code=${{ steps.collect.outputs.exit_code }}（3=queryId 提取整轮失败，1=成功率<80%，2=secrets 缺失）| run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [ -z "${{ secrets.FEISHU_WEBHOOK_URL }}" ]; then
+            echo "FEISHU_WEBHOOK_URL 未配置，仅打印告警: $MSG"
+          else
+            curl -s -m 10 -X POST -H "Content-Type: application/json" \
+              -d "{\"msg_type\":\"text\",\"content\":{\"text\":\"$MSG\"}}" \
+              "${{ secrets.FEISHU_WEBHOOK_URL }}" || echo "webhook 发送失败（不影响流程）"
+          fi
 
       # ===== 提交数据 =====
       - name: Commit data

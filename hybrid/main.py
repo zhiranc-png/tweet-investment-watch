@@ -195,6 +195,16 @@ def main():
         except Exception:
             pass
 
+    # fail-fast（2026-09-06 P0-3）：进入账号循环前单次探测 queryId 提取是否可用。
+    # 失败直接 exit 3 整轮跳过——X 平台策略变更时，避免 94 个账号逐个白烧 17 分钟
+    # （workflow 对 exit 3 做告警区分，且不进入依赖 day file 的健康检查步骤）。
+    try:
+        if not client.query_ids:
+            client.fetch_query_ids()
+    except Exception as e:
+        print(f"FATAL: queryId 提取失败，整轮跳过（避免逐账号白烧时间）: {e}", flush=True)
+        sys.exit(3)
+
     now_utc = dt.datetime.now(dt.timezone.utc)
     today = now_utc.strftime("%Y%m%d")
     incremental_on = os.environ.get("INCREMENTAL", "1").strip().lower() not in ("0", "false", "no")
