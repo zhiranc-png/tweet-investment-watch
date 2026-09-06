@@ -282,6 +282,11 @@ def main():
     if ok / total < 0.8:
         print("FAIL: 成功率低于 80%，检查 secrets / 账号状态（state 不更新，下轮自动回补窗口）", flush=True)
         sys.exit(1)
+    # 限量模式（MAX_KOLS）不更新 state，否则会把增量起点推进到不完整轮次、造成数据缺口
+    # （2026-09-06 修复：docstring 一直写明限量不更新 state，但代码无条件保存）
+    if collect_mode == "limited_full_window":
+        print("state: 限量模式，跳过 state 更新", flush=True)
+        return
     save_state(now_utc, len(merged), collect_mode == "incremental")
 
 
