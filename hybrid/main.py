@@ -195,15 +195,14 @@ def main():
         except Exception:
             pass
 
-    # fail-fast（2026-09-06 P0-3）：进入账号循环前单次探测 queryId 提取是否可用。
-    # 失败直接 exit 3 整轮跳过——X 平台策略变更时，避免 94 个账号逐个白烧 17 分钟
-    # （workflow 对 exit 3 做告警区分，且不进入依赖 day file 的健康检查步骤）。
+    # fail-fast 探测（2026-09-06 P0-3）：进入账号循环前单次探测 queryId 提取。
+    # 提取失败但有硬编码 fallback 时降级继续（HTML 被 403 但 GraphQL API 仍可用）；
+    # 循环内另有熔断：开头连续 5 个账号全失败且 0 产出则 exit 4 终止，避免白烧整轮。
     try:
         if not client.query_ids:
             client.fetch_query_ids()
     except Exception as e:
-        print(f"FATAL: queryId 提取失败，整轮跳过（避免逐账号白烧时间）: {e}", flush=True)
-        sys.exit(3)
+        print(f"WARN: queryId 动态提取失败，本轮降级使用硬编码 queryId 采集: {e}", flush=True)
 
     now_utc = dt.datetime.now(dt.timezone.utc)
     today = now_utc.strftime("%Y%m%d")
@@ -244,6 +243,11 @@ def main():
         except Exception as e:
             failures.append({"handle": handle, "error": str(e)[:200]})
             print(f"[{i}/{total}] {handle}: FAILED -> {str(e)[:200]}", flush=True)
+            # 熔断：开头连续 ≥5 个账号全失败且零产出 → 说明平台级故障（cookie 失效/全 qid 失效），
+            # 立即终止避免 92 个账号白烧（exit 4，workflow 告警区分）
+            if len(failures) >= 5 and not tweets_all:
+                print(f"FATAL: 前 {len(failures)} 个账号全部失败，判定平台级故障，熔断终止本轮: {failures[-1]['error']}", flush=True)
+                sys.exit(4)
         time.sleep(random.uniform(BASE_SLEEP_MIN, BASE_SLEEP_MAX) * _slowdown_factor)
 
     save_cache(client)

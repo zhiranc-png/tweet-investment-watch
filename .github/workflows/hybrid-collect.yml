@@ -106,9 +106,9 @@ jobs:
             --output "data/brief_${TODAY}.json"
         continue-on-error: true
 
-      # ===== 采集后：健康检查（exit 3 = queryId 提取整轮失败，day file 不可信，跳过评估） =====
+      # ===== 采集后：健康检查（exit 3 = queryId 提取整轮失败；exit 4 = 熔断，day file 不可信，均跳过评估） =====
       - name: Health check - post-collect
-        if: steps.pre_check.outputs.skip != 'true' && always() && steps.collect.outputs.exit_code != '3'
+        if: steps.pre_check.outputs.skip != 'true' && always() && steps.collect.outputs.exit_code != '3' && steps.collect.outputs.exit_code != '4'
         id: post_check
         run: |
           TODAY=$(date -u +%Y%m%d)
@@ -127,7 +127,7 @@ jobs:
       - name: Feishu alert on collect failure
         if: failure() && steps.collect.outcome == 'failure'
         run: |
-          MSG="[X采集告警] Collect 步骤失败 exit_code=${{ steps.collect.outputs.exit_code }}（3=queryId 提取整轮失败，1=成功率<80%，2=secrets 缺失）| run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          MSG="[X采集告警] Collect 步骤失败 exit_code=${{ steps.collect.outputs.exit_code }}（4=开头5账号全失败熔断/平台级故障，3=queryId 提取整轮失败，1=成功率<80%，2=secrets 缺失）| run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           if [ -z "${{ secrets.FEISHU_WEBHOOK_URL }}" ]; then
             echo "FEISHU_WEBHOOK_URL 未配置，仅打印告警: $MSG"
           else

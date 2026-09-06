@@ -30,10 +30,21 @@ FEATURES = {
     "view_counts_everywhere_api_enabled": True,
 }
 
-FALLBACK_USER_QID = "G3KGOASz96M-Qu0nwmGXNg"
-# UserTweets 硬编码兜底：main.js 动态提取失败/解析不出时使用（双保险）。
-# TODO(2026-09-06): 暂为占位空值；首轮实跑成功后从日志 [queryId:*] OK 行的 UserTweets= 值回填。
-FALLBACK_TWEETS_QID = ""
+FALLBACK_USER_QIDS = [
+    # UserByScreenName 硬编码兜底（按新近度排序，逐个尝试；多个历史版本常同时有效）
+    "2qvSHpkWTMS9i0zJAwDNiA",  # twitter-openapi 社区快照 2026-07-16
+    "681MIj51w00Aj6dY0GXnHw",  # bird-rebuilt 2026-06-13
+    "G3KGOASz96M-Qu0nwmGXNg",  # 旧采集器验证值（2025-2026 长期有效）
+]
+FALLBACK_TWEETS_QIDS = [
+    # UserTweets 硬编码兜底（按新近度排序，逐个尝试）
+    "hr4gzZONlq23okjU8fIe_A",  # twitter-openapi 社区快照 2026-07-16
+    "RyDU3I9VJtPF-Pnl6vrRlw",  # bird-rebuilt 2026-06-13
+    "H8OOoI-5ZE4NxgRr8lfyWg",  # 社区映射表（日期不明）
+]
+# 兼容旧引用
+FALLBACK_USER_QID = FALLBACK_USER_QIDS[-1]
+FALLBACK_TWEETS_QID = FALLBACK_TWEETS_QIDS[0]
 
 
 class RateLimited(Exception):
@@ -147,15 +158,24 @@ class XGraphQLClient:
         if screen_name in self._user_cache:
             return self._user_cache[screen_name]
         if not self.query_ids:
-            self.fetch_query_ids()
-        qid = self.query_ids.get("UserByScreenName", FALLBACK_USER_QID)
+            try:
+                self.fetch_query_ids()
+            except Exception as e:
+                # 2026-09-06：X 对 Actions 出口 IP 的 HTML 页面返回 403/401，
+                # 动态提取不可用时降级走硬编码 queryId 直连 GraphQL API
+                print(f"queryId 动态提取失败，UserByScreenName 降级硬编码 queryId: {str(e)[:120]}", flush=True)
         vars_ = {"screen_name": screen_name, "withSafetyModeUserFields": True}
-        try:
-            data = self._gql_get(qid, "UserByScreenName", vars_, f"UserByScreenName {screen_name}")
-        except Exception:
-            # 备用 queryId 再试一次
-            data = self._gql_get(FALLBACK_USER_QID, "UserByScreenName", vars_,
-                                 f"UserByScreenName {screen_name} (fallback)")
+        candidates = [self.query_ids.get("UserByScreenName", "")] + FALLBACK_USER_QIDS
+        data, last = None, None
+        for qid in filter(None, dict.fromkeys(candidates)):
+            try:
+                data = self._gql_get(qid, "UserByScreenName", vars_, f"UserByScreenName {screen_name}")
+                break
+            except Exception as e:
+                last = e
+                print(f"UserByScreenName qid {qid} 失败: {str(e)[:120]}", flush=True)
+        if data is None:
+            raise last if last else Exception("无可用 UserByScreenName queryId")
         uid = data["data"]["user"]["result"]["rest_id"]
         self._user_cache[screen_name] = uid
         return uid
@@ -163,14 +183,11 @@ class XGraphQLClient:
     def fetch_timeline(self, screen_name: str, count: int = 20):
         """拉取用户时间线。返回 (规范化推文列表, 显示名)。"""
         if not self.query_ids:
-            self.fetch_query_ids()
+            try:
+                self.fetch_query_ids()
+            except Exception as e:
+                print(f"queryId 动态提取失败，UserTweets 降级硬编码 queryId: {str(e)[:120]}", flush=True)
         user_id = self.get_user_id(screen_name)
-        qid = self.query_ids.get("UserTweets", "")
-        if not qid and FALLBACK_TWEETS_QID:
-            qid = FALLBACK_TWEETS_QID
-            print(f"UserTweets 动态 queryId 缺失，使用硬编码兜底 {qid}", flush=True)
-        if not qid:
-            raise Exception("未找到 UserTweets queryId（main.js 结构可能已变；可在 x_client.py 回填 FALLBACK_TWEETS_QID 兜底）")
         vars_ = {
             "userId": user_id,
             "count": count,
@@ -179,16 +196,18 @@ class XGraphQLClient:
             "withVoice": False,
             "withV2Timeline": True,
         }
-        try:
-            data = self._gql_get(qid, "UserTweets", vars_, f"UserTweets {screen_name}")
-        except Exception:
-            # 双保险：动态 queryId 请求失败时，硬编码兜底再试一次（与 get_user_id 同模式）
-            if FALLBACK_TWEETS_QID and qid != FALLBACK_TWEETS_QID:
-                print("UserTweets 动态 queryId 请求失败，使用硬编码兜底重试", flush=True)
-                data = self._gql_get(FALLBACK_TWEETS_QID, "UserTweets", vars_,
-                                     f"UserTweets {screen_name} (fallback)")
-            else:
-                raise
+        # 动态 queryId 优先，失败逐个降级硬编码候选（2026-09-06：HTML 403 时 GraphQL API 仍可用）
+        candidates = [self.query_ids.get("UserTweets", "")] + FALLBACK_TWEETS_QIDS
+        data, last = None, None
+        for qid in filter(None, dict.fromkeys(candidates)):
+            try:
+                data = self._gql_get(qid, "UserTweets", vars_, f"UserTweets {screen_name}")
+                break
+            except Exception as e:
+                last = e
+                print(f"UserTweets qid {qid} 失败: {str(e)[:120]}", flush=True)
+        if data is None:
+            raise last if last else Exception("无可用 UserTweets queryId")
 
         tweets, display_name = [], screen_name
         user_result = data["data"]["user"]["result"]
