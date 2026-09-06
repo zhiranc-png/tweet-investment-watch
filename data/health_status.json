@@ -1,11 +1,20 @@
 {
-  "current_level": "warning",
-  "consecutive_failures": 1,
-  "last_failure_reason": "采集耗时过短：32 秒（预期 ≥ 300 秒，可能被限流）",
-  "last_check_time": "2026-09-06T11:45:15.978595",
+  "current_level": "cooling",
+  "consecutive_failures": 2,
+  "last_failure_reason": "采集耗时过短：37 秒（预期 ≥ 300 秒，可能被限流）",
+  "last_check_time": "2026-09-06T11:48:12.885682",
   "last_check_result": "warning",
-  "skip_until": null,
+  "skip_until": "2026-09-06T17:48:12.885682",
   "history": [
+    {
+      "result": "warning",
+      "level": "cooling",
+      "failures": 2,
+      "reasons": [
+        "采集耗时过短：37 秒（预期 ≥ 300 秒，可能被限流）"
+      ],
+      "time": "2026-09-06T11:48:12.885694"
+    },
     {
       "result": "warning",
       "level": "warning",
@@ -143,13 +152,6 @@
       "failures": 0,
       "reasons": [],
       "time": "2026-09-02T03:46:49.832817"
-    },
-    {
-      "result": "normal",
-      "level": "normal",
-      "failures": 0,
-      "reasons": [],
-      "time": "2026-09-01T23:39:04.141507"
     }
   ]
 }
