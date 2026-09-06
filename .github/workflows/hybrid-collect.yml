@@ -120,6 +120,7 @@ jobs:
             --duration "${DURATION:-0}"
         env:
           FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+          MAX_KOLS: ${{ inputs.max_kols }}
         continue-on-error: true
 
       # ===== 失败告警（P1-1）：Collect 步骤失败时直接调飞书 webhook，不依赖 Python 代码是否跑到 =====
