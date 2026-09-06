@@ -133,7 +133,14 @@ def evaluate_health(tweets_file: str, brief_file: str, duration_sec: float = Non
     """
     checks = []
     failure_reasons = []
-    
+
+    # 限量模式（MAX_KOLS）下推文数与采集耗时的绝对阈值无意义（2026-09-06 教训：
+    # 两轮 MAX_KOLS=3 内测各 30 余秒即完成，被「耗时<300s」规则连续 2 次误判，
+    # 把健康状态推到 cooling、险些跳过 12:00Z 排程轮）——只保留 KOL 成功率检查
+    limited_mode = bool((os.environ.get('MAX_KOLS') or '').strip())
+    if limited_mode:
+        print("限量模式（MAX_KOLS）：跳过推文数/采集耗时阈值检查，仅保留 KOL 成功率")
+
     # 读取推文数据
     tweets_data = {}
     if os.path.exists(tweets_file):
@@ -144,11 +151,12 @@ def evaluate_health(tweets_file: str, brief_file: str, duration_sec: float = Non
         failure_reasons.append('推文文件不存在')
         return {'overall': 'warning', 'checks': checks, 'failure_reasons': failure_reasons}
     
-    # 检查 1：推文数量
-    passed, msg = check_tweet_count(tweets_data)
-    checks.append({'name': '推文数量', 'passed': passed, 'message': msg})
-    if not passed:
-        failure_reasons.append(msg)
+    # 检查 1：推文数量（限量模式跳过）
+    if not limited_mode:
+        passed, msg = check_tweet_count(tweets_data)
+        checks.append({'name': '推文数量', 'passed': passed, 'message': msg})
+        if not passed:
+            failure_reasons.append(msg)
     
     # 检查 2：KOL 成功率
     passed, msg = check_kol_success(tweets_data)
@@ -156,8 +164,8 @@ def evaluate_health(tweets_file: str, brief_file: str, duration_sec: float = Non
     if not passed:
         failure_reasons.append(msg)
     
-    # 检查 3：采集耗时（如果提供了的话）
-    if duration_sec is not None:
+    # 检查 3：采集耗时（如果提供了的话；限量模式跳过）
+    if duration_sec is not None and not limited_mode:
         passed, msg = check_duration(duration_sec)
         checks.append({'name': '采集耗时', 'passed': passed, 'message': msg})
         if not passed:
