@@ -69,29 +69,54 @@ class XGraphQLClient:
         self.query_ids = {}
         self._user_cache = {}
 
+    _MAIN_JS_RE = re.compile(
+        r'https://abs\.twimg\.com/responsive-web/client-web(?:-legacy)?/main\.[a-f0-9]+\.js')
+
     def fetch_query_ids(self):
-        """从 x.com 主页 main.js 提取最新 queryId（免疫 hash 漂移）"""
-        s = requests.Session()
-        s.headers.update({"User-Agent": UA})
-        resp = s.get("https://x.com/home", timeout=20)
-        js_urls = re.findall(
-            r'https://abs\.twimg\.com/responsive-web/client-web(?:-legacy)?/main\.[a-f0-9]+\.js',
-            resp.text)
-        if not js_urls:
-            js_urls = re.findall(r'src="([^"]*main\.[a-f0-9]+\.js)"', resp.text)
-        if not js_urls:
-            raise Exception("无法从 x.com/home 提取 main.js 地址")
-        main_url = js_urls[0]
-        if not main_url.startswith("http"):
-            main_url = "https://abs.twimg.com" + main_url
-        js_text = s.get(main_url, timeout=30).text
-        qids = {}
-        for m in re.finditer(r'queryId\s*:\s*"([^"]+)"[^}]*?operationName\s*:\s*"([^"]+)"', js_text):
-            qids[m.group(2)] = m.group(1)
-        for m in re.finditer(r'operationName\s*:\s*"([^"]+)"[^}]*?queryId\s*:\s*"([^"]+)"', js_text):
-            qids[m.group(1)] = m.group(2)
-        self.query_ids = qids
-        return qids
+        """从 x.com 主页 main.js 提取最新 queryId（免疫 hash 漂移）
+
+        2026-09-06 修复：X 约自 9/5 起对不带 cookie 的匿名 GET /home 不再返回
+        含 main.*.js 的页面（疑似重定向登录页），导致全部 KOL 采集失败。
+        修复：优先用已认证会话（auth_token+ct0）抓 /home，匿名会话降级兜底；
+        全部失败时输出可区分诊断（重定向登录页=cookie 失效；200 无 main.js=前端变更）。
+        """
+        candidates = [
+            ("auth-home", self.session, "https://x.com/home"),
+            ("anon-home", None, "https://x.com/home"),
+            ("auth-root", self.session, "https://x.com/"),
+        ]
+        for tag, sess, url in candidates:
+            s = sess if sess is not None else requests.Session()
+            s.headers.setdefault("User-Agent", UA)
+            try:
+                resp = s.get(url, timeout=20)
+            except Exception as e:
+                print(f"[queryId:{tag}] GET {url} 异常: {type(e).__name__}: {str(e)[:120]}")
+                continue
+            js_urls = self._MAIN_JS_RE.findall(resp.text) or \
+                re.findall(r'src="([^"]*main\.[a-f0-9]+\.js)"', resp.text)
+            if js_urls:
+                main_url = js_urls[0]
+                if not main_url.startswith("http"):
+                    main_url = "https://abs.twimg.com" + main_url
+                js_text = s.get(main_url, timeout=30).text
+                qids = {}
+                for m in re.finditer(r'queryId\s*:\s*"([^"]+)"[^}]*?operationName\s*:\s*"([^"]+)"', js_text):
+                    qids[m.group(2)] = m.group(1)
+                for m in re.finditer(r'operationName\s*:\s*"([^"]+)"[^}]*?queryId\s*:\s*"([^"]+)"', js_text):
+                    qids[m.group(1)] = m.group(2)
+                if qids:
+                    self.query_ids = qids
+                    return qids
+                print(f"[queryId:{tag}] main.js 已取到但未解析出 queryId")
+                continue
+            hint = ""
+            if resp.status_code in (302, 303) or "/login" in str(resp.url):
+                hint = "被重定向到登录页 → cookie/会话已失效（需换号或刷新 cookie）"
+            elif resp.status_code == 200:
+                hint = "200 但页面无 main.js → X 前端结构可能变更"
+            print(f"[queryId:{tag}] {url} -> HTTP {resp.status_code} final={resp.url} len={len(resp.text)} {hint}")
+        raise Exception("无法从 x.com 提取 main.js 地址（auth/anon 两路径均失败，见上方 [queryId:*] 诊断行）")
 
     def _gql_get(self, qid: str, op: str, variables: dict, ctx: str):
         url = f"https://x.com/i/api/graphql/{qid}/{op}"
