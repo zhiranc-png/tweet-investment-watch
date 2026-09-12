@@ -1,61 +1,64 @@
 {
-  "generated_at": "2026-09-12T04:45:56.655237",
+  "generated_at": "2026-09-12T10:45:56.945265",
   "stats": {
-    "total_tweets": 41,
-    "kol_tweets": 41,
-    "unique_authors": 20,
-    "kol_count": 20,
-    "total_likes": 3594,
-    "total_reposts": 8601,
-    "total_replies": 354,
-    "total_views": 732590,
-    "unique_assets": 9,
-    "unique_themes": 10
+    "total_tweets": 140,
+    "kol_tweets": 88,
+    "unique_authors": 29,
+    "kol_count": 29,
+    "total_likes": 10708,
+    "total_reposts": 9745,
+    "total_replies": 1154,
+    "total_views": 2224101,
+    "unique_assets": 11,
+    "unique_themes": 10,
+    "classified_tweets": 88,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.0,
-    "opinion_density": 0.244,
-    "kol_consensus": 0.0,
-    "bull_ratio": 0.122,
-    "bear_ratio": 0.122,
-    "neutral_ratio": 0.756,
-    "kol_weighted_sentiment": -0.006,
-    "engagement_weighted_sentiment": 0.067,
-    "bull_count": 5,
-    "bear_count": 5,
-    "neutral_count": 31,
-    "total_count": 41
+    "consensus_score": 0.217,
+    "opinion_density": 0.261,
+    "kol_consensus": 0.217,
+    "bull_ratio": 0.159,
+    "bear_ratio": 0.102,
+    "neutral_ratio": 0.739,
+    "kol_weighted_sentiment": 0.054,
+    "engagement_weighted_sentiment": 0.065,
+    "bull_count": 14,
+    "bear_count": 9,
+    "neutral_count": 65,
+    "total_count": 88
   },
   "top_assets": [
     {
       "symbol": "ETH",
       "name": "以太坊",
-      "mention_count": 4,
-      "engagement": 35,
-      "kol_mentions": 4,
-      "signal_strength": 60.0,
+      "mention_count": 5,
+      "engagement": 56,
+      "kol_mentions": 5,
+      "signal_strength": 92.7,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.25,
+        "opinion_density": 0.4,
         "kol_consensus": 1.0,
-        "bull_ratio": 0.25,
+        "bull_ratio": 0.4,
         "bear_ratio": 0.0,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": 0.318,
-        "engagement_weighted_sentiment": 0.427,
-        "bull_count": 1,
+        "neutral_ratio": 0.6,
+        "kol_weighted_sentiment": 0.455,
+        "engagement_weighted_sentiment": 0.715,
+        "bull_count": 2,
         "bear_count": 0,
         "neutral_count": 3,
-        "total_count": 4
+        "total_count": 5
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "sample_tweets": [
         {
           "author": "jackli727",
           "author_name": "jackli727",
           "content": "昨晚eth的起涨点是2433，快速拉了233点，低点不会一下快速上移170点到2600，一般都是几十个点一点点的上移，因此回测2520-2508附近是正常需求。",
-          "likes": 14,
+          "likes": 27,
           "url": "https://x.com/jackli727/status/2098602957596184664",
           "is_kol": true,
           "sentiment": "bullish"
@@ -68,6 +71,15 @@
           "url": "https://x.com/jackli727/status/2098598164941201408",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "BobEUnlimited",
+          "author_name": "BobEUnlimited",
+          "content": "Another great MacroTalk this week as @AahanPrometheus and I get in to the flow of a weekly read on the data, markets, and look ahead.  This week, how too much growth might be bad for stocks and what t",
+          "likes": 8,
+          "url": "https://x.com/BobEUnlimited/status/2098714737236492604",
+          "is_kol": true,
+          "sentiment": "bullish"
         },
         {
           "author": "TechBuzzChina",
@@ -95,7 +107,7 @@
       "mention_count": 4,
       "engagement": 1190,
       "kol_mentions": 4,
-      "signal_strength": 45.0,
+      "signal_strength": 37.9,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -154,10 +166,10 @@
     {
       "symbol": "SOL",
       "name": "Solana",
-      "mention_count": 2,
-      "engagement": 68,
-      "kol_mentions": 2,
-      "signal_strength": 32.7,
+      "mention_count": 3,
+      "engagement": 192,
+      "kol_mentions": 3,
+      "signal_strength": 32.2,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -169,12 +181,21 @@
         "engagement_weighted_sentiment": 0.0,
         "bull_count": 0,
         "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 2
+        "neutral_count": 3,
+        "total_count": 3
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Trump on Iran: everything will resolve smoothly",
+          "likes": 115,
+          "url": "https://x.com/financialjuice/status/2098698128123728183",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "financialjuice",
           "author_name": "financialjuice",
@@ -196,12 +217,100 @@
       ]
     },
     {
+      "symbol": "META",
+      "name": "Meta",
+      "mention_count": 2,
+      "engagement": 207,
+      "kol_mentions": 2,
+      "signal_strength": 26.5,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 2,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "CathieDWood",
+          "author_name": "CathieDWood",
+          "content": "A public service, from the AI team @ARKInvest ! $META’s Muse can help you find unclaimed money, fast.",
+          "likes": 183,
+          "url": "https://x.com/CathieDWood/status/2098624139225657431",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Russian Defence Ministry: Russian forces also strike metallurgical plant in Ukraine's Zaporizhzhia region - RIA",
+          "likes": 9,
+          "url": "https://x.com/financialjuice/status/2098663854968328601",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "name": "比特币",
+      "mention_count": 2,
+      "engagement": 37,
+      "kol_mentions": 2,
+      "signal_strength": 41.5,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.5,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.5,
+        "engagement_weighted_sentiment": 0.907,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "牛末要提前走，同理，熊末，也要提前一点进。那些在上半年一心想抄底5w、48000、35000的人，可能在加息的阶段还会继续心存幻想。时间倒退到4月下旬，当时我说btc",
+          "likes": 35,
+          "url": "https://x.com/jackli727/status/2098633943805526024",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "donnelly_brent",
+          "author_name": "donnelly_brent",
+          "content": "RT @fejau_inc: Omg, Brent backtested the Bitcoin bart pattern. So good https://t.co/02lTERfj5H",
+          "likes": 0,
+          "url": "https://x.com/donnelly_brent/status/2098533812279894496",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "symbol": "Brent",
       "name": "布伦特原油",
       "mention_count": 2,
       "engagement": 12,
       "kol_mentions": 2,
-      "signal_strength": 30.5,
+      "signal_strength": 24.3,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -240,12 +349,47 @@
       ]
     },
     {
+      "symbol": "XAU",
+      "name": "黄金",
+      "mention_count": 1,
+      "engagement": 68,
+      "kol_mentions": 1,
+      "signal_strength": 20.7,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "RT @goldseek: Donald Trump preparing to handout $5,000 in hyperinflation checks. https://t.co/y8kOHcLpkf",
+          "likes": 0,
+          "url": "https://x.com/goldseek/status/2098683008454709757",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "symbol": "TSLA",
       "name": "特斯拉",
       "mention_count": 1,
-      "engagement": 1036,
+      "engagement": 4512,
       "kol_mentions": 1,
-      "signal_strength": 23.9,
+      "signal_strength": 20.7,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -267,7 +411,7 @@
           "author": "SawyerMerritt",
           "author_name": "SawyerMerritt",
           "content": "I think people are significantly underestimating just how much FSD has become a major driver of Tesla sales in North America.\n\nWhen I ask most people buying their first Tesla why they’re getting it, t",
-          "likes": 971,
+          "likes": 4227,
           "url": "https://x.com/SawyerMerritt/status/2098603783819325742",
           "is_kol": true,
           "sentiment": "neutral"
@@ -278,9 +422,9 @@
       "symbol": "TLT",
       "name": "美债20年+ETF",
       "mention_count": 1,
-      "engagement": 13,
+      "engagement": 31,
       "kol_mentions": 1,
-      "signal_strength": 22.0,
+      "signal_strength": 20.7,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -302,7 +446,7 @@
           "author": "qinbafrank",
           "author_name": "qinbafrank",
           "content": "路透社报道英伟达正在谈判成为 Anthropic的IPO锚定投资者，英伟达可能投100亿美金，Anthropic计划IPO目标募集高达1000亿美金，估值约为2万亿。看起来Authropic的IPO还是在近期推进中，就看9月下旬是不是按照之前报道的时间节奏公布IPO文件了。之前这里聊过对市场的可能影响：https://t.co/H6ar1oUpUD https://t.co/edSyTLTGG4",
-          "likes": 12,
+          "likes": 28,
           "url": "https://x.com/qinbafrank/status/2098601382760857779",
           "is_kol": true,
           "sentiment": "neutral"
@@ -315,7 +459,7 @@
       "mention_count": 1,
       "engagement": 1072,
       "kol_mentions": 1,
-      "signal_strength": 23.9,
+      "signal_strength": 20.7,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -345,47 +489,12 @@
       ]
     },
     {
-      "symbol": "BTC",
-      "name": "比特币",
-      "mention_count": 1,
-      "engagement": 2,
-      "kol_mentions": 1,
-      "signal_strength": 14.3,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "donnelly_brent",
-          "author_name": "donnelly_brent",
-          "content": "RT @fejau_inc: Omg, Brent backtested the Bitcoin bart pattern. So good https://t.co/02lTERfj5H",
-          "likes": 0,
-          "url": "https://x.com/donnelly_brent/status/2098533812279894496",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "symbol": "XAG",
       "name": "白银",
       "mention_count": 1,
       "engagement": 75,
       "kol_mentions": 1,
-      "signal_strength": 23.9,
+      "signal_strength": 20.7,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -418,23 +527,23 @@
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 15,
-      "engagement": 8905,
-      "kol_mentions": 15,
-      "signal_strength": 83.3,
+      "tweet_count": 30,
+      "engagement": 14494,
+      "kol_mentions": 30,
+      "signal_strength": 91.7,
       "consensus": {
-        "consensus_score": 0.333,
+        "consensus_score": 0.667,
         "opinion_density": 0.2,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.133,
-        "bear_ratio": 0.067,
+        "kol_consensus": 0.667,
+        "bull_ratio": 0.167,
+        "bear_ratio": 0.033,
         "neutral_ratio": 0.8,
-        "kol_weighted_sentiment": 0.032,
-        "engagement_weighted_sentiment": 0.123,
-        "bull_count": 2,
+        "kol_weighted_sentiment": 0.094,
+        "engagement_weighted_sentiment": 0.106,
+        "bull_count": 5,
         "bear_count": 1,
-        "neutral_count": 12,
-        "total_count": 15
+        "neutral_count": 24,
+        "total_count": 30
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -443,8 +552,17 @@
           "author": "SawyerMerritt",
           "author_name": "SawyerMerritt",
           "content": "I think people are significantly underestimating just how much FSD has become a major driver of Tesla sales in North America.\n\nWhen I ask most people ",
-          "likes": 971,
+          "likes": 4227,
           "url": "https://x.com/SawyerMerritt/status/2098603783819325742",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "I think there’s a gap to fill… \n\nSince I believe retail deserves the same research and early thematic ideas that institutions access first.\n\nI feel li",
+          "likes": 521,
+          "url": "https://x.com/aleabitoreddit/status/2098697148103631117",
           "is_kol": true,
           "sentiment": "neutral"
         },
@@ -456,37 +574,132 @@
           "url": "https://x.com/KobeissiLetter/status/2098547785230422058",
           "is_kol": true,
           "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "theme": "地缘政治",
+      "tweet_count": 20,
+      "engagement": 2468,
+      "kol_mentions": 20,
+      "signal_strength": 75.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.3,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.15,
+        "bear_ratio": 0.15,
+        "neutral_ratio": 0.7,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.08,
+        "bull_count": 3,
+        "bear_count": 3,
+        "neutral_count": 14,
+        "total_count": 20
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "IRAN RULES OUT U.S. TALKS WITHOUT CONDITIONS\n\nIranian lawmaker Ebrahim Azizi says Tehran will not negotiate with Washington until Iran’s conditions ar",
+          "likes": 474,
+          "url": "https://x.com/DeItAone/status/2098678480963608919",
+          "is_kol": true,
+          "sentiment": "neutral"
         },
         {
-          "author": "NickTimiraos",
-          "author_name": "NickTimiraos",
-          "content": "Core PCE projections for August are centered around 0.25%-0.28%, which would be the same as July and slightly below the 0.29% rise in core CPI.\n\nNote:",
-          "likes": 143,
-          "url": "https://x.com/NickTimiraos/status/2098577189310521805",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "TRUMP ON IRAN: EVERYTHING WILL WORK OUT FINE",
+          "likes": 313,
+          "url": "https://x.com/DeItAone/status/2098700133680480500",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "TRUMP ON IRAN: WAR WILL END VERY SOON",
+          "likes": 258,
+          "url": "https://x.com/DeItAone/status/2098712545938796794",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "加密货币",
+      "tweet_count": 18,
+      "engagement": 550,
+      "kol_mentions": 18,
+      "signal_strength": 100.0,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.278,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.278,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.722,
+        "kol_weighted_sentiment": 0.293,
+        "engagement_weighted_sentiment": 0.128,
+        "bull_count": 5,
+        "bear_count": 0,
+        "neutral_count": 13,
+        "total_count": 18
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Trump on Iran: everything will resolve smoothly",
+          "likes": 115,
+          "url": "https://x.com/financialjuice/status/2098698128123728183",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "TRUMP ON CANADA: PROBABLY SEE DEAL FAIRLY SOON",
+          "likes": 92,
+          "url": "https://x.com/DeItAone/status/2098713574847766929",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "U.S. connects Chinese satellite images to July Iranian attack that killed three soldiers - WSJ",
+          "likes": 48,
+          "url": "https://x.com/financialjuice/status/2098577973628567957",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "公司_财报",
-      "tweet_count": 14,
-      "engagement": 1618,
-      "kol_mentions": 14,
-      "signal_strength": 87.5,
+      "tweet_count": 16,
+      "engagement": 1832,
+      "kol_mentions": 16,
+      "signal_strength": 90.0,
       "consensus": {
-        "consensus_score": 0.5,
-        "opinion_density": 0.286,
-        "kol_consensus": 0.5,
-        "bull_ratio": 0.071,
-        "bear_ratio": 0.214,
-        "neutral_ratio": 0.714,
-        "kol_weighted_sentiment": -0.143,
-        "engagement_weighted_sentiment": -0.054,
+        "consensus_score": 0.6,
+        "opinion_density": 0.312,
+        "kol_consensus": 0.6,
+        "bull_ratio": 0.062,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.688,
+        "kol_weighted_sentiment": -0.188,
+        "engagement_weighted_sentiment": -0.115,
         "bull_count": 1,
-        "bear_count": 3,
-        "neutral_count": 10,
-        "total_count": 14
+        "bear_count": 4,
+        "neutral_count": 11,
+        "total_count": 16
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -522,23 +735,23 @@
     },
     {
       "theme": "宏观_利率政策",
-      "tweet_count": 6,
-      "engagement": 414,
-      "kol_mentions": 6,
-      "signal_strength": 83.3,
+      "tweet_count": 13,
+      "engagement": 999,
+      "kol_mentions": 13,
+      "signal_strength": 91.7,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.167,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.056,
-        "engagement_weighted_sentiment": 0.219,
-        "bull_count": 2,
+        "consensus_score": 0.667,
+        "opinion_density": 0.462,
+        "kol_consensus": 0.667,
+        "bull_ratio": 0.385,
+        "bear_ratio": 0.077,
+        "neutral_ratio": 0.538,
+        "kol_weighted_sentiment": 0.256,
+        "engagement_weighted_sentiment": 0.367,
+        "bull_count": 5,
         "bear_count": 1,
-        "neutral_count": 3,
-        "total_count": 6
+        "neutral_count": 7,
+        "total_count": 13
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -553,82 +766,30 @@
           "sentiment": "bullish"
         },
         {
-          "author": "donnelly_brent",
-          "author_name": "donnelly_brent",
-          "content": "A lot of people on here seem to think the Fed targets the rate of change of YoY Core CPI.",
-          "likes": 26,
-          "url": "https://x.com/donnelly_brent/status/2098534129541280099",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "LAGARDE STEPS INTO FRANCE’S PRESIDENTIAL SPOTLIGHT\n\nECB President Christine Lagarde is set to speak at a political gathering in Normandy Saturday, fue",
+          "likes": 84,
+          "url": "https://x.com/DeItAone/status/2098701884458410047",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "charliebilello",
-          "author_name": "charliebilello",
-          "content": "RT @charliebilello: In the first 11 months of the 2026 Fiscal Year the US Federal Government took in $4.8 trillion and spent $6.8 trillion.…",
-          "likes": 0,
-          "url": "https://x.com/charliebilello/status/2098611022462419355",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "加密货币",
-      "tweet_count": 6,
-      "engagement": 99,
-      "kol_mentions": 6,
-      "signal_strength": 100.0,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.167,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.167,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.833,
-        "kol_weighted_sentiment": 0.212,
-        "engagement_weighted_sentiment": 0.06,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 5,
-        "total_count": 6
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "U.S. connects Chinese satellite images to July Iranian attack that killed three soldiers - WSJ",
-          "likes": 48,
-          "url": "https://x.com/financialjuice/status/2098577973628567957",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "昨晚eth的起涨点是2433，快速拉了233点，低点不会一下快速上移170点到2600，一般都是几十个点一点点的上移，因此回测2520-2508附近是正常需求。",
-          "likes": 14,
-          "url": "https://x.com/jackli727/status/2098602957596184664",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "BANKS RAISE CORE PCE FORECASTS AFTER CPI\n\nWall Street economists have raised their August core PCE estimates following the latest CPI data, with forec",
+          "likes": 73,
+          "url": "https://x.com/DeItAone/status/2098703749380198683",
           "is_kol": true,
           "sentiment": "bullish"
-        },
-        {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "eth加速突破2600是周三晚上预感这周内将发生，因为当天看到周线macd快线已触及零轴，周三晚上没拉我还感到有点失望。这点在前两周多次提及这个知识点：当快线先触及零轴，会产生一个加速的动作。开口往上，就是加速拉升；开口往下，就是加速下跌。三龙头周线级别的快慢线开口都是往上，且上涨动能满格 http",
-          "likes": 14,
-          "url": "https://x.com/jackli727/status/2098598164941201408",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "AI_科技",
-      "tweet_count": 6,
-      "engagement": 2268,
-      "kol_mentions": 6,
+      "tweet_count": 10,
+      "engagement": 2553,
+      "kol_mentions": 10,
       "signal_strength": 75.0,
       "consensus": {
         "consensus_score": 0.0,
@@ -641,8 +802,8 @@
         "engagement_weighted_sentiment": 0.0,
         "bull_count": 0,
         "bear_count": 0,
-        "neutral_count": 6,
-        "total_count": 6
+        "neutral_count": 10,
+        "total_count": 10
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -657,6 +818,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "CathieDWood",
+          "author_name": "CathieDWood",
+          "content": "A public service, from the AI team @ARKInvest ! $META’s Muse can help you find unclaimed money, fast.",
+          "likes": 183,
+          "url": "https://x.com/CathieDWood/status/2098624139225657431",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "StockMKTNewz",
           "author_name": "StockMKTNewz",
           "content": "Nvidia $NVDA is reportedly considering investing up to $10 Billion into the Anthropic IPO",
@@ -664,65 +834,151 @@
           "url": "https://x.com/StockMKTNewz/status/2098548293533929670",
           "is_kol": true,
           "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "外汇_汇率",
+      "tweet_count": 8,
+      "engagement": 1078,
+      "kol_mentions": 8,
+      "signal_strength": 83.3,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.375,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.125,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.625,
+        "kol_weighted_sentiment": -0.125,
+        "engagement_weighted_sentiment": 0.019,
+        "bull_count": 1,
+        "bear_count": 2,
+        "neutral_count": 5,
+        "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "BRICS AGREES JOINT DECLARATION AMID IRAN WAR\n\nBRICS members have agreed on a joint declaration condemning unilateral war by any country, four sources ",
+          "likes": 257,
+          "url": "https://x.com/DeItAone/status/2098700403831423310",
+          "is_kol": true,
+          "sentiment": "neutral"
         },
         {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Nvidia expected to lead Anthropic IPO, sources say",
-          "likes": 50,
-          "url": "https://x.com/financialjuice/status/2098546822146830577",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "CHINA'S XI, AT BRICS SUMMIT: WARNS AGAINST WAR IN MIDDLE EAST AND GULF REGION- CHINESE STATE MEDIA",
+          "likes": 105,
+          "url": "https://x.com/DeItAone/status/2098714403751288902",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "业绩再好也扛不住老板要卖5000万股股票，昨天甲骨文财报最后部分藏了一条让股价一路走低的信息：拉里·埃里森通过预先设立的Rule 10b5-1交易计划，准备在今年10月24日前最多出售5000万股甲骨文股票。按9月11日收盘价约150美元计算，规模约75亿美元；\n\n1、为什么这次特别罕见？ http",
+          "likes": 101,
+          "url": "https://x.com/qinbafrank/status/2098650922708783508",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "美股_大盘",
+      "tweet_count": 6,
+      "engagement": 737,
+      "kol_mentions": 6,
+      "signal_strength": 80.6,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.5,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.333,
+        "bear_ratio": 0.167,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.278,
+        "engagement_weighted_sentiment": 0.175,
+        "bull_count": 2,
+        "bear_count": 1,
+        "neutral_count": 3,
+        "total_count": 6
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "I think there’s a gap to fill… \n\nSince I believe retail deserves the same research and early thematic ideas that institutions access first.\n\nI feel li",
+          "likes": 521,
+          "url": "https://x.com/aleabitoreddit/status/2098697148103631117",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "tj_research",
+          "author_name": "tj_research",
+          "content": "标普估值（前瞻市盈率）接近3月份的低位，但指数却从3月份的低位涨了20%。\n空头的逻辑，前瞻EPS有问题，所以看似估值低，实际不低\n多头的逻辑，我认为未来1年的EPS确定性挺高的，市场低估了 https://t.co/Dg2FmrFalm",
+          "likes": 105,
+          "url": "https://x.com/tj_research/status/2098539279945199974",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "SemiAnalysis收购Citrini，全球AI两大独立投研机构合体。这两家都是从博客起步、一步步发展成对全球资本市场有巨大影响力的独立研究机构，之前还写过SemiAnalysis的发展历程。\n\nSemiAnalysis擅长半导体产业链和AI基础设施的深度研究；\nCitrini更擅长主题投资、跨",
+          "likes": 57,
+          "url": "https://x.com/qinbafrank/status/2098660952514363859",
           "is_kol": true,
           "sentiment": "neutral"
         }
       ]
     },
     {
-      "theme": "地缘政治",
-      "tweet_count": 4,
-      "engagement": 265,
-      "kol_mentions": 4,
-      "signal_strength": 60.0,
+      "theme": "黄金_贵金属",
+      "tweet_count": 2,
+      "engagement": 143,
+      "kol_mentions": 2,
+      "signal_strength": 26.5,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.25,
-        "kol_consensus": 1.0,
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": -0.25,
-        "engagement_weighted_sentiment": -0.191,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
         "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 3,
-        "total_count": 4
+        "bear_count": 0,
+        "neutral_count": 2,
+        "total_count": 2
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "top_tweets": [
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "Israel CONTINUES to bomb civilian areas of Lebanon.\n\nSince March 2nd, Lebanon reports that at least 4,383 Lebanese, including 395 women and 259 childr",
-          "likes": 83,
-          "url": "https://x.com/steve_hanke/status/2098580854893330603",
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "RT @goldseek: Donald Trump preparing to handout $5,000 in hyperinflation checks. https://t.co/y8kOHcLpkf",
+          "likes": 0,
+          "url": "https://x.com/goldseek/status/2098683008454709757",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "#PAKWatch🇵🇰: Since June, the Pakistani Military Government has interfered with elections and KILLED AT LEAST 100 PEOPLE IN KASHMIR. Today, THOUSANDS p",
-          "likes": 56,
-          "url": "https://x.com/steve_hanke/status/2098570033932669417",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "U.S. connects Chinese satellite images to July Iranian attack that killed three soldiers - WSJ",
-          "likes": 48,
-          "url": "https://x.com/financialjuice/status/2098577973628567957",
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "RT @TaviCosta: A reminder:\n\nSilver miners are now producing four times more free cash flow than they did at their last peak. \n\nhttps://t.co…",
+          "likes": 0,
+          "url": "https://x.com/Hedgeye/status/2098532461030346981",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -731,9 +987,9 @@
     {
       "theme": "美债_固定收益",
       "tweet_count": 2,
-      "engagement": 89,
+      "engagement": 107,
       "kol_mentions": 2,
-      "signal_strength": 47.7,
+      "signal_strength": 41.5,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -742,7 +998,7 @@
         "bear_ratio": 0.0,
         "neutral_ratio": 0.5,
         "kol_weighted_sentiment": 0.5,
-        "engagement_weighted_sentiment": 0.45,
+        "engagement_weighted_sentiment": 0.214,
         "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 1,
@@ -755,7 +1011,7 @@
           "author": "qinbafrank",
           "author_name": "qinbafrank",
           "content": "路透社报道英伟达正在谈判成为 Anthropic的IPO锚定投资者，英伟达可能投100亿美金，Anthropic计划IPO目标募集高达1000亿美金，估值约为2万亿。看起来Authropic的IPO还是在近期推进中，就看9月下旬是不是按照之前报道的时间节奏公布IPO文件了。之前这里聊过对市场的可能影",
-          "likes": 12,
+          "likes": 28,
           "url": "https://x.com/qinbafrank/status/2098601382760857779",
           "is_kol": true,
           "sentiment": "neutral"
@@ -770,207 +1026,19 @@
           "sentiment": "bullish"
         }
       ]
-    },
-    {
-      "theme": "外汇_汇率",
-      "tweet_count": 1,
-      "engagement": 198,
-      "kol_mentions": 1,
-      "signal_strength": 23.9,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "BillAckman",
-          "author_name": "BillAckman",
-          "content": "RT @kevinnbass: The Coxon psyop was a decade and more than a billion dollars in the making.\n\nHere's the story.\n\nCoefficient Giving (formerl…",
-          "likes": 0,
-          "url": "https://x.com/BillAckman/status/2098609288356794382",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "美股_大盘",
-      "tweet_count": 1,
-      "engagement": 112,
-      "kol_mentions": 1,
-      "signal_strength": 38.9,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 1.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 1.0,
-        "engagement_weighted_sentiment": 1.0,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "tj_research",
-          "author_name": "tj_research",
-          "content": "标普估值（前瞻市盈率）接近3月份的低位，但指数却从3月份的低位涨了20%。\n空头的逻辑，前瞻EPS有问题，所以看似估值低，实际不低\n多头的逻辑，我认为未来1年的EPS确定性挺高的，市场低估了 https://t.co/Dg2FmrFalm",
-          "likes": 105,
-          "url": "https://x.com/tj_research/status/2098539279945199974",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "theme": "黄金_贵金属",
-      "tweet_count": 1,
-      "engagement": 75,
-      "kol_mentions": 1,
-      "signal_strength": 23.9,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "Hedgeye",
-          "author_name": "Hedgeye",
-          "content": "RT @TaviCosta: A reminder:\n\nSilver miners are now producing four times more free cash flow than they did at their last peak. \n\nhttps://t.co…",
-          "likes": 0,
-          "url": "https://x.com/Hedgeye/status/2098532461030346981",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_tweets": [
     {
-      "author": "charliebilello",
-      "author_name": "charliebilello",
-      "content": "RT @charliebilello: In the first 11 months of the 2026 Fiscal Year the US Federal Government took in $4.8 trillion and spent $6.8 trillion.…",
-      "likes": 0,
-      "reposts": 41,
-      "replies": 0,
-      "views": 0,
-      "created_at": "2026-09-12T03:13:52+00:00",
-      "url": "https://x.com/charliebilello/status/2098611022462419355",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "charliebilello",
-      "author_name": "charliebilello",
-      "content": "RT @charliebilello: Consumer Prices in the US rose 3.4% over the last year and 4.1% per year over the last 5 years.\n\n2% inflation has becom…",
-      "likes": 0,
-      "reposts": 43,
-      "replies": 0,
-      "views": 0,
-      "created_at": "2026-09-12T03:13:46+00:00",
-      "url": "https://x.com/charliebilello/status/2098610998131265932",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "BillAckman",
-      "author_name": "BillAckman",
-      "content": "RT @kevinnbass: The Coxon psyop was a decade and more than a billion dollars in the making.\n\nHere's the story.\n\nCoefficient Giving (formerl…",
-      "likes": 0,
-      "reposts": 198,
-      "replies": 0,
-      "views": 6182,
-      "created_at": "2026-09-12T03:06:59+00:00",
-      "url": "https://x.com/BillAckman/status/2098609288356794382",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "外汇_汇率"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "I think people are significantly underestimating just how much FSD has become a major driver of Tesla sales in North America.\n\nWhen I ask most people buying their first Tesla why they’re getting it, they now say: FSD.\n\nThis wasn't the case even early this year. There has been a https://t.co/kM5tkgdhkg",
-      "likes": 971,
-      "reposts": 65,
-      "replies": 106,
-      "views": 28413,
-      "created_at": "2026-09-12T02:45:06+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2098603783819325742",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "昨晚eth的起涨点是2433，快速拉了233点，低点不会一下快速上移170点到2600，一般都是几十个点一点点的上移，因此回测2520-2508附近是正常需求。",
-      "likes": 14,
+      "author": "BobEUnlimited",
+      "author_name": "BobEUnlimited",
+      "content": "Another great MacroTalk this week as @AahanPrometheus and I get in to the flow of a weekly read on the data, markets, and look ahead.  This week, how too much growth might be bad for stocks and what the tightening cycle means for the economy and assets.\n\nhttps://t.co/zlljH5S8vE",
+      "likes": 8,
       "reposts": 0,
-      "replies": 4,
-      "views": 1850,
-      "created_at": "2026-09-12T02:41:49+00:00",
-      "url": "https://x.com/jackli727/status/2098602957596184664",
+      "replies": 2,
+      "views": 3671,
+      "created_at": "2026-09-12T10:06:00+00:00",
+      "url": "https://x.com/BobEUnlimited/status/2098714737236492604",
       "assets": [
         [
           "ETH",
@@ -984,292 +1052,43 @@
       "is_kol": true,
       "sentiment": "bullish",
       "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "qinbafrank",
-      "author_name": "qinbafrank",
-      "content": "路透社报道英伟达正在谈判成为 Anthropic的IPO锚定投资者，英伟达可能投100亿美金，Anthropic计划IPO目标募集高达1000亿美金，估值约为2万亿。看起来Authropic的IPO还是在近期推进中，就看9月下旬是不是按照之前报道的时间节奏公布IPO文件了。之前这里聊过对市场的可能影响：https://t.co/H6ar1oUpUD https://t.co/edSyTLTGG4",
-      "likes": 12,
-      "reposts": 1,
-      "replies": 2,
-      "views": 7984,
-      "created_at": "2026-09-12T02:35:34+00:00",
-      "url": "https://x.com/qinbafrank/status/2098601382760857779",
-      "assets": [
-        [
-          "TLT",
-          "美债20年+ETF"
-        ]
-      ],
-      "themes": [
-        "公司_财报",
-        "美债_固定收益",
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "eth加速突破2600是周三晚上预感这周内将发生，因为当天看到周线macd快线已触及零轴，周三晚上没拉我还感到有点失望。这点在前两周多次提及这个知识点：当快线先触及零轴，会产生一个加速的动作。开口往上，就是加速拉升；开口往下，就是加速下跌。三龙头周线级别的快慢线开口都是往上，且上涨动能满格 https://t.co/baQm2a8oDP",
-      "likes": 14,
-      "reposts": 0,
-      "replies": 6,
-      "views": 2409,
-      "created_at": "2026-09-12T02:22:47+00:00",
-      "url": "https://x.com/jackli727/status/2098598164941201408",
-      "assets": [
-        [
-          "ETH",
-          "以太坊"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.273,
-      "sentiment_intensity": 1.0
-    },
-    {
-      "author": "caixin",
-      "author_name": "caixin",
-      "content": "Weekend Long Read: Mulan, a Beijing nonprofit serving migrant women and children, lost a longtime foundation partner and faced a fundraising reset. Its experience shows a glimpse of the pressures reshaping China’s local charity sector. https://t.co/hXoj6as31s",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 0,
-      "views": 386,
-      "created_at": "2026-09-12T02:12:33+00:00",
-      "url": "https://x.com/caixin/status/2098595592134087035",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
       "sentiment_intensity": 0.167
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "YOU CAN FORGET THE US PROPAGANDA THAT OIL HAS RESUMED FLOWING OUT OF THE GCC COUNTRIES.\nhttps://t.co/UT296N4A9T",
-      "likes": 45,
-      "reposts": 6,
-      "replies": 1,
-      "views": 6884,
-      "created_at": "2026-09-12T01:59:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2098592179564298580",
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "CHINA'S XI, AT BRICS SUMMIT: WARNS AGAINST WAR IN MIDDLE EAST AND GULF REGION- CHINESE STATE MEDIA",
+      "likes": 105,
+      "reposts": 15,
+      "replies": 15,
+      "views": 46548,
+      "created_at": "2026-09-12T10:04:40+00:00",
+      "url": "https://x.com/DeItAone/status/2098714403751288902",
       "assets": [],
       "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "RT @prometheuus0: I am Bloomberg Terminal Bro https://t.co/1oD9ODdUmO",
-      "likes": 0,
-      "reposts": 1,
-      "replies": 0,
-      "views": 967,
-      "created_at": "2026-09-12T01:35:07+00:00",
-      "url": "https://x.com/TheStalwart/status/2098586171886457198",
-      "assets": [
-        [
-          "ETH",
-          "以太坊"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "Chinese AI firms shunned US delegation over sanctions fears, commission says\n\nhttps://t.co/vn5LFjjxHA",
-      "likes": 5,
-      "reposts": 1,
-      "replies": 2,
-      "views": 6358,
-      "created_at": "2026-09-12T01:32:09+00:00",
-      "url": "https://x.com/SCMPNews/status/2098585424503407040",
-      "assets": [],
-      "themes": [
-        "公司_财报",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: Nvidia in talks to invest in Anthropic’s mega IPO, per Reuters",
-      "likes": 878,
-      "reposts": 41,
-      "replies": 73,
-      "views": 113508,
-      "created_at": "2026-09-12T01:16:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2098581358469611549",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Israel CONTINUES to bomb civilian areas of Lebanon.\n\nSince March 2nd, Lebanon reports that at least 4,383 Lebanese, including 395 women and 259 children, have been killed by Israeli forces.\n\nISRAEL CONTINUES TO DAMAGE WHAT'S LEFT OF ITS REPUTATION.\nhttps://t.co/33zxZJEovG",
-      "likes": 83,
-      "reposts": 42,
-      "replies": 3,
-      "views": 8370,
-      "created_at": "2026-09-12T01:14:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2098580854893330603",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "qinbafrank",
-      "author_name": "qinbafrank",
-      "content": "当油价高位、长债收益率接近5% ，风险资产走势就跟长债收益率成了一个跷跷板：\n长债收益率回落资产走强；\n长债收益率走高资产回落。\n之前这里",
-      "likes": 27,
-      "reposts": 2,
-      "replies": 9,
-      "views": 11871,
-      "created_at": "2026-09-12T01:10:45+00:00",
-      "url": "https://x.com/qinbafrank/status/2098580037608116399",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.143,
-      "sentiment_intensity": 1.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "U.S. connects Chinese satellite images to July Iranian attack that killed three soldiers - WSJ",
-      "likes": 48,
-      "reposts": 7,
-      "replies": 0,
-      "views": 28602,
-      "created_at": "2026-09-12T01:02:33+00:00",
-      "url": "https://x.com/financialjuice/status/2098577973628567957",
-      "assets": [
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "Mainland Chinese food and beverage chains have aggressively expanded into Hong Kong in recent years, but some are now hitting major roadblocks. https://t.co/V5oSPNDhoo",
-      "likes": 15,
-      "reposts": 2,
-      "replies": 2,
-      "views": 7632,
-      "created_at": "2026-09-12T01:00:02+00:00",
-      "url": "https://x.com/SCMPNews/status/2098577341270098274",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "NickTimiraos",
-      "author_name": "NickTimiraos",
-      "content": "Core PCE projections for August are centered around 0.25%-0.28%, which would be the same as July and slightly below the 0.29% rise in core CPI.\n\nNote: these have bigger uncertainty bands than they normally do given the upcoming NIPA revisions https://t.co/PlIpmtFvWa",
-      "likes": 143,
-      "reposts": 23,
-      "replies": 14,
-      "views": 30150,
-      "created_at": "2026-09-12T00:59:26+00:00",
-      "url": "https://x.com/NickTimiraos/status/2098577189310521805",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "原油_能源"
+        "地缘政治",
+        "外汇_汇率"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "bullish",
-      "sentiment_score": 0.333,
-      "sentiment_intensity": 0.5
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "#PAKWatch🇵🇰: Since June, the Pakistani Military Government has interfered with elections and KILLED AT LEAST 100 PEOPLE IN KASHMIR. Today, THOUSANDS protested in Rawalakot. \n\nWELCOME TO FIELD MARSHAL ASIM MUNIR'S PAKISTAN, WHERE THE MILITARY RUNS THE SHOW. \n\nFREE IMRAN KHAN.",
-      "likes": 56,
-      "reposts": 23,
-      "replies": 3,
-      "views": 6749,
-      "created_at": "2026-09-12T00:31:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2098570033932669417",
+      "author": "SCMPNews",
+      "author_name": "SCMPNews",
+      "content": "“Separatists” and the United States are putting Taiwan in greater danger, state broadcaster CCTV warned after Washington’s de facto ambassador said the island could convince a potential adversary that landing forces would be very difficult. Read more: https://t.co/MizmfXnUjE https://t.co/ezSTTI7zD5",
+      "likes": 3,
+      "reposts": 1,
+      "replies": 4,
+      "views": 1542,
+      "created_at": "2026-09-12T10:04:24+00:00",
+      "url": "https://x.com/SCMPNews/status/2098714337699398035",
       "assets": [],
       "themes": [
-        "地缘政治"
+        "地缘政治",
+        "外汇_汇率"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1278,15 +1097,298 @@
       "sentiment_intensity": 0.167
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Following coordinated drone attacks, which were launched from Iraq, on the Saudi's East-West crude oil pipeline, Saudi Arabia announced a full shutdown of the vital 7 MILLION barrel/day pipeline.\n\nWITH THE SHUTDOWN SAUDI OIL PRODUCTION WILL BE CUT BACK TO A TRICKLE. https://t.co/FtlUt07DwP",
-      "likes": 116,
-      "reposts": 37,
-      "replies": 9,
-      "views": 8544,
-      "created_at": "2026-09-11T23:52:25+00:00",
-      "url": "https://x.com/steve_hanke/status/2098560325020737594",
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "CHINA'S XI AT BRICS SUMMIT: BRICS COUNTRIES SHOULD FIRMLY STAND ON RIGHT SIDE OF HISTORY-XINHUA",
+      "likes": 67,
+      "reposts": 6,
+      "replies": 6,
+      "views": 38566,
+      "created_at": "2026-09-12T10:04:14+00:00",
+      "url": "https://x.com/DeItAone/status/2098714295777288666",
+      "assets": [],
+      "themes": [
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON CANADA: PROBABLY SEE DEAL FAIRLY SOON",
+      "likes": 92,
+      "reposts": 12,
+      "replies": 18,
+      "views": 43361,
+      "created_at": "2026-09-12T10:01:23+00:00",
+      "url": "https://x.com/DeItAone/status/2098713574847766929",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON CANADA: DEAL COULD HAPPEN AT THE RIGHT TIME",
+      "likes": 33,
+      "reposts": 2,
+      "replies": 6,
+      "views": 36926,
+      "created_at": "2026-09-12T10:00:45+00:00",
+      "url": "https://x.com/DeItAone/status/2098713419067068506",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON MCA TRADE DEAL: CANADA WANTS TO MAKE A DEAL VERY BADLY",
+      "likes": 40,
+      "reposts": 3,
+      "replies": 11,
+      "views": 37799,
+      "created_at": "2026-09-12T10:00:21+00:00",
+      "url": "https://x.com/DeItAone/status/2098713314465341478",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON IRISH UNIFICATION: IT WILL HAPPEN EVENTUALLY",
+      "likes": 64,
+      "reposts": 7,
+      "replies": 6,
+      "views": 38519,
+      "created_at": "2026-09-12T09:59:51+00:00",
+      "url": "https://x.com/DeItAone/status/2098713190326583401",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON SAUDI PIPELINE ATTACK: WE CONTROL HORMUZ STRAIT",
+      "likes": 51,
+      "reposts": 5,
+      "replies": 15,
+      "views": 38020,
+      "created_at": "2026-09-12T09:59:17+00:00",
+      "url": "https://x.com/DeItAone/status/2098713047170797609",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON SAUDIA PIPELINE ATTACK: CROWN PRINCE IS A GOOD FRIEND OF MINE, EVERYTHING WILL WORK OUT FINE",
+      "likes": 108,
+      "reposts": 7,
+      "replies": 10,
+      "views": 40598,
+      "created_at": "2026-09-12T09:57:57+00:00",
+      "url": "https://x.com/DeItAone/status/2098712711206994170",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON IRAN: OIL PRICES WILL TUMBLE WHEN WAR ENDS",
+      "likes": 86,
+      "reposts": 11,
+      "replies": 12,
+      "views": 40123,
+      "created_at": "2026-09-12T09:57:36+00:00",
+      "url": "https://x.com/DeItAone/status/2098712626020708764",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Canada: likely to reach agreement fairly soon",
+      "likes": 18,
+      "reposts": 2,
+      "replies": 4,
+      "views": 19170,
+      "created_at": "2026-09-12T09:57:31+00:00",
+      "url": "https://x.com/financialjuice/status/2098712601903480993",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Canada: Canada must improve treatment of U.S. farmers",
+      "likes": 10,
+      "reposts": 0,
+      "replies": 0,
+      "views": 16832,
+      "created_at": "2026-09-12T09:57:18+00:00",
+      "url": "https://x.com/financialjuice/status/2098712547826258403",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON IRAN: WAR WILL END VERY SOON",
+      "likes": 258,
+      "reposts": 27,
+      "replies": 30,
+      "views": 48156,
+      "created_at": "2026-09-12T09:57:17+00:00",
+      "url": "https://x.com/DeItAone/status/2098712545938796794",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Canada: agreement might occur at right time",
+      "likes": 10,
+      "reposts": 1,
+      "replies": 0,
+      "views": 17020,
+      "created_at": "2026-09-12T09:57:05+00:00",
+      "url": "https://x.com/financialjuice/status/2098712493962961345",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on MCA trade pact: Canada eager to strike deal",
+      "likes": 5,
+      "reposts": 1,
+      "replies": 1,
+      "views": 17819,
+      "created_at": "2026-09-12T09:56:41+00:00",
+      "url": "https://x.com/financialjuice/status/2098712395283570775",
+      "assets": [],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Saudi pipeline attack: We control Hormuz Strait",
+      "likes": 14,
+      "reposts": 1,
+      "replies": 2,
+      "views": 20903,
+      "created_at": "2026-09-12T09:51:29+00:00",
+      "url": "https://x.com/financialjuice/status/2098711083301146952",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Saudi pipeline attack: Crown prince is a close ally, everything will work out fine",
+      "likes": 17,
+      "reposts": 0,
+      "replies": 1,
+      "views": 21013,
+      "created_at": "2026-09-12T09:46:12+00:00",
+      "url": "https://x.com/financialjuice/status/2098709755883630735",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -1300,22 +1402,43 @@
     {
       "author": "financialjuice",
       "author_name": "financialjuice",
-      "content": "North Korea's short-range ballistic missiles detected flew about 250 km: South Korea's JCS",
-      "likes": 13,
+      "content": "Trump on Iran: oil prices to plunge when conflict ends",
+      "likes": 38,
       "reposts": 2,
-      "replies": 0,
-      "views": 28518,
-      "created_at": "2026-09-11T23:49:20+00:00",
-      "url": "https://x.com/financialjuice/status/2098559549326147923",
+      "replies": 7,
+      "views": 20692,
+      "created_at": "2026-09-12T09:45:49+00:00",
+      "url": "https://x.com/financialjuice/status/2098709659318198633",
       "assets": [],
       "themes": [
-        "公司_财报"
+        "地缘政治",
+        "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.5
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Iran: war will conclude very soon",
+      "likes": 116,
+      "reposts": 13,
+      "replies": 8,
+      "views": 25378,
+      "created_at": "2026-09-12T09:45:05+00:00",
+      "url": "https://x.com/financialjuice/status/2098709475435631007",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     }
   ],
   "kol_summary": [
@@ -1323,7 +1446,7 @@
       "author": "SawyerMerritt",
       "author_name": "SawyerMerritt",
       "content": "I think people are significantly underestimating just how much FSD has become a major driver of Tesla sales in North America.\n\nWhen I ask most people buying their first Tesla why they’re getting it, they now say: FSD.\n\nThis wasn't the case even early this year. There has been a https://t.co/kM5tkgdhkg",
-      "likes": 971,
+      "likes": 4227,
       "url": "https://x.com/SawyerMerritt/status/2098603783819325742",
       "assets": [
         [
@@ -1352,6 +1475,33 @@
       "themes": [
         "AI_科技",
         "公司_财报"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "aleabitoreddit",
+      "author_name": "aleabitoreddit",
+      "content": "I think there’s a gap to fill… \n\nSince I believe retail deserves the same research and early thematic ideas that institutions access first.\n\nI feel like everyone understandably gravitates institutional as they grow.\n\nBut helping retail has always been my priority. And that",
+      "likes": 521,
+      "url": "https://x.com/aleabitoreddit/status/2098697148103631117",
+      "assets": [],
+      "themes": [
+        "美股_大盘",
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "IRAN RULES OUT U.S. TALKS WITHOUT CONDITIONS\n\nIranian lawmaker Ebrahim Azizi says Tehran will not negotiate with Washington until Iran’s conditions are met, declaring that talks would otherwise be “futile.”\n\nThe statement comes amid reports that the U.S. and EU are pushing for",
+      "likes": 474,
+      "url": "https://x.com/DeItAone/status/2098678480963608919",
+      "assets": [],
+      "themes": [
+        "地缘政治"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
@@ -1370,6 +1520,47 @@
       "sentiment_score": 1.0
     },
     {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON IRAN: EVERYTHING WILL WORK OUT FINE",
+      "likes": 313,
+      "url": "https://x.com/DeItAone/status/2098700133680480500",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "TRUMP ON IRAN: WAR WILL END VERY SOON",
+      "likes": 258,
+      "url": "https://x.com/DeItAone/status/2098712545938796794",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "BRICS AGREES JOINT DECLARATION AMID IRAN WAR\n\nBRICS members have agreed on a joint declaration condemning unilateral war by any country, four sources told Reuters, though the statement is unlikely to name specific nations.\n\nThe agreement follows efforts to bridge divisions",
+      "likes": 257,
+      "url": "https://x.com/DeItAone/status/2098700403831423310",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "外汇_汇率"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "StockMKTNewz",
       "author_name": "StockMKTNewz",
       "content": "Anthropic is looking to go public at a valuation of $2 Trillion",
@@ -1378,6 +1569,39 @@
       "assets": [],
       "themes": [
         "公司_财报"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "The cost of shipping a supertanker of oil from the Middle East to China has SURGED to $800,000 A DAY. That's up from $200,000 a day before the US-Israeli war on Iran.\n\nTRUMP'S WAR OF CHOICE ON IRAN = HUGE COLLATERAL DAMAGE. https://t.co/de6l4KiKfU",
+      "likes": 187,
+      "url": "https://x.com/steve_hanke/status/2098618603662721212",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "原油_能源",
+        "宏观_利率政策"
+      ],
+      "sentiment": "bullish",
+      "sentiment_score": 1.0
+    },
+    {
+      "author": "CathieDWood",
+      "author_name": "CathieDWood",
+      "content": "A public service, from the AI team @ARKInvest ! $META’s Muse can help you find unclaimed money, fast.",
+      "likes": 183,
+      "url": "https://x.com/CathieDWood/status/2098624139225657431",
+      "assets": [
+        [
+          "META",
+          "Meta"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
@@ -1416,6 +1640,19 @@
       "sentiment_score": 0.333
     },
     {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Trump on Iran: war will conclude very soon",
+      "likes": 116,
+      "url": "https://x.com/financialjuice/status/2098709475435631007",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "steve_hanke",
       "author_name": "steve_hanke",
       "content": "Following coordinated drone attacks, which were launched from Iraq, on the Saudi's East-West crude oil pipeline, Saudi Arabia announced a full shutdown of the vital 7 MILLION barrel/day pipeline.\n\nWITH THE SHUTDOWN SAUDI OIL PRODUCTION WILL BE CUT BACK TO A TRICKLE. https://t.co/FtlUt07DwP",
@@ -1427,123 +1664,8 @@
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
-    },
-    {
-      "author": "tj_research",
-      "author_name": "tj_research",
-      "content": "标普估值（前瞻市盈率）接近3月份的低位，但指数却从3月份的低位涨了20%。\n空头的逻辑，前瞻EPS有问题，所以看似估值低，实际不低\n多头的逻辑，我认为未来1年的EPS确定性挺高的，市场低估了 https://t.co/Dg2FmrFalm",
-      "likes": 105,
-      "url": "https://x.com/tj_research/status/2098539279945199974",
-      "assets": [],
-      "themes": [
-        "公司_财报",
-        "美股_大盘"
-      ],
-      "sentiment": "bullish",
-      "sentiment_score": 1.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Israel CONTINUES to bomb civilian areas of Lebanon.\n\nSince March 2nd, Lebanon reports that at least 4,383 Lebanese, including 395 women and 259 children, have been killed by Israeli forces.\n\nISRAEL CONTINUES TO DAMAGE WHAT'S LEFT OF ITS REPUTATION.\nhttps://t.co/33zxZJEovG",
-      "likes": 83,
-      "url": "https://x.com/steve_hanke/status/2098580854893330603",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "convertbond",
-      "author_name": "convertbond",
-      "content": "Never - ever forget.",
-      "likes": 59,
-      "url": "https://x.com/convertbond/status/2098533207008321597",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "#PAKWatch🇵🇰: Since June, the Pakistani Military Government has interfered with elections and KILLED AT LEAST 100 PEOPLE IN KASHMIR. Today, THOUSANDS protested in Rawalakot. \n\nWELCOME TO FIELD MARSHAL ASIM MUNIR'S PAKISTAN, WHERE THE MILITARY RUNS THE SHOW. \n\nFREE IMRAN KHAN.",
-      "likes": 56,
-      "url": "https://x.com/steve_hanke/status/2098570033932669417",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "sentiment": "bearish",
-      "sentiment_score": -1.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Nvidia expected to lead Anthropic IPO, sources say",
-      "likes": 50,
-      "url": "https://x.com/financialjuice/status/2098546822146830577",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "公司_财报"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "U.S. connects Chinese satellite images to July Iranian attack that killed three soldiers - WSJ",
-      "likes": 48,
-      "url": "https://x.com/financialjuice/status/2098577973628567957",
-      "assets": [
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币",
-        "地缘政治"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "YOU CAN FORGET THE US PROPAGANDA THAT OIL HAS RESUMED FLOWING OUT OF THE GCC COUNTRIES.\nhttps://t.co/UT296N4A9T",
-      "likes": 45,
-      "url": "https://x.com/steve_hanke/status/2098592179564298580",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "qinbafrank",
-      "author_name": "qinbafrank",
-      "content": "当油价高位、长债收益率接近5% ，风险资产走势就跟长债收益率成了一个跷跷板：\n长债收益率回落资产走强；\n长债收益率走高资产回落。\n之前这里",
-      "likes": 27,
-      "url": "https://x.com/qinbafrank/status/2098580037608116399",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.143
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
