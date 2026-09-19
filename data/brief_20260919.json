@@ -1,55 +1,200 @@
 {
-  "generated_at": "2026-09-19T04:46:30.868713",
+  "generated_at": "2026-09-19T10:59:30.202678",
   "stats": {
-    "total_tweets": 43,
-    "kol_tweets": 43,
-    "unique_authors": 21,
-    "kol_count": 21,
-    "total_likes": 26863,
-    "total_reposts": 2273,
-    "total_replies": 1560,
-    "total_views": 3045550,
-    "unique_assets": 7,
-    "unique_themes": 10
+    "total_tweets": 133,
+    "kol_tweets": 75,
+    "unique_authors": 29,
+    "kol_count": 29,
+    "total_likes": 29602,
+    "total_reposts": 3089,
+    "total_replies": 1754,
+    "total_views": 3578330,
+    "unique_assets": 9,
+    "unique_themes": 11,
+    "classified_tweets": 75,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.167,
-    "opinion_density": 0.279,
-    "kol_consensus": 0.167,
-    "bull_ratio": 0.163,
-    "bear_ratio": 0.116,
-    "neutral_ratio": 0.721,
-    "kol_weighted_sentiment": 0.031,
-    "engagement_weighted_sentiment": 0.251,
-    "bull_count": 7,
-    "bear_count": 5,
-    "neutral_count": 31,
-    "total_count": 43
+    "consensus_score": 0.091,
+    "opinion_density": 0.293,
+    "kol_consensus": 0.091,
+    "bull_ratio": 0.16,
+    "bear_ratio": 0.133,
+    "neutral_ratio": 0.707,
+    "kol_weighted_sentiment": 0.015,
+    "engagement_weighted_sentiment": 0.207,
+    "bull_count": 12,
+    "bear_count": 10,
+    "neutral_count": 53,
+    "total_count": 75
   },
   "top_assets": [
     {
+      "symbol": "ETH",
+      "name": "以太坊",
+      "mention_count": 5,
+      "engagement": 163,
+      "kol_mentions": 5,
+      "signal_strength": 96.7,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.4,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.4,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.6,
+        "kol_weighted_sentiment": 0.4,
+        "engagement_weighted_sentiment": 0.205,
+        "bull_count": 2,
+        "bear_count": 0,
+        "neutral_count": 3,
+        "total_count": 5
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "michaelxpettis",
+          "author_name": "michaelxpettis",
+          "content": "Caixin: \"China’s surveyed urban youth unemployment rate rose to 18.9% in August, matching the highest level since the current methodology was adopted in 2024.\"\nhttps://t.co/bY8RgPFyZg",
+          "likes": 34,
+          "url": "https://x.com/michaelxpettis/status/2101230794089873496",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "多头的春天即将到来。4周前预判了这轮反弹将是反转，很多人不信。尤其是eth，下一步站稳2666，巨大的泵你无法想象。拭目以待。短线上你要空eth，2796-2822这里空一下最佳。其它位置已经到过的以及下一步要到的2688、2736等位置都是中间小阻力点，没必要空。",
+          "likes": 19,
+          "url": "https://x.com/jackli727/status/2101128304850059379",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "7月底聊到代币化、RWA、资产融合会比我们想象的更快速度快速发展，最近几天大家好像都开始感受到这块在加速的状态。当然最终也只是一部分在这个方向上的资产会受益。当时聊到我的视野里受益于代币化RWA趋势下的资产： $coin $hood $crcl\n$eth $bnb $sol $okb $hype $aave $sky https://t.co/Ynx1roSlrH",
+          "likes": 17,
+          "url": "https://x.com/qinbafrank/status/2101118733423174043",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "BobEUnlimited",
+          "author_name": "BobEUnlimited",
+          "content": "Another lively MacroTalk discussion this week with @AahanPrometheus covering:\n- Whether equities are a good buy in rising growth &amp; inflation periods.\n- Central bank future inflation optimism given",
+          "likes": 4,
+          "url": "https://x.com/BobEUnlimited/status/2101253112572883314",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "LynAldenContact",
+          "author_name": "LynAldenContact",
+          "content": "RT @buccocapital: A few months ago that student asked Christopher Nolan whether he was “the bard for a civilization at dusk” and I haven’t…",
+          "likes": 0,
+          "url": "https://x.com/LynAldenContact/status/2101070470875676919",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "谷歌",
+      "mention_count": 5,
+      "engagement": 11536,
+      "kol_mentions": 5,
+      "signal_strength": 96.7,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.2,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.8,
+        "kol_weighted_sentiment": 0.2,
+        "engagement_weighted_sentiment": 0.752,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 4,
+        "total_count": 5
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Google's Gemini accessed the internet and hacked 3 other companies in the first known breakout of the company's AI model, per WSJ.\n\nGoogle said it the hacks did not warrant public disclosure",
+          "likes": 7276,
+          "url": "https://x.com/KobeissiLetter/status/2101094166038269995",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Google’s Gemini model accessed the internet and hacked other companies during a test of its cybersecurity capabilities, per WSJ",
+          "likes": 3096,
+          "url": "https://x.com/unusual_whales/status/2101085357886292316",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Google’s $GOOGL Gemini AI model inadvertently hacked into three protected company systems in May while researchers were testing its cybersecurity capabilities - Bloomberg https://t.co/8RlbUvzri5",
+          "likes": 102,
+          "url": "https://x.com/StockMKTNewz/status/2101082770688877054",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Anthropic, OpenAI, Spacexai, Google sued over call to ‘pace’ AI development - Politico",
+          "likes": 3,
+          "url": "https://x.com/financialjuice/status/2101241872198898017",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "convertbond",
+          "author_name": "convertbond",
+          "content": "RT @Sam_Badawi: $GOOGL Google confirmed its Gemini model accessed the internet and hacked three companies during a May cybersecurity test,…",
+          "likes": 0,
+          "url": "https://x.com/convertbond/status/2101073016352383164",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "symbol": "BTC",
       "name": "比特币",
-      "mention_count": 4,
-      "engagement": 1688,
-      "kol_mentions": 4,
-      "signal_strength": 45.0,
+      "mention_count": 5,
+      "engagement": 1753,
+      "kol_mentions": 5,
+      "signal_strength": 71.7,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.5,
+        "opinion_density": 0.4,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.25,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.5,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.2,
+        "neutral_ratio": 0.6,
         "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.128,
+        "engagement_weighted_sentiment": -0.096,
         "bull_count": 1,
         "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 4
+        "neutral_count": 3,
+        "total_count": 5
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "sample_tweets": [
         {
           "author": "CathieDWood",
@@ -82,72 +227,72 @@
           "author": "jackli727",
           "author_name": "jackli727",
           "content": "btc短中线上的操作思路：82000未破前，支撑就是78850，做多就等这里（77777-76455都属于补仓范围，74000以下的空间不考虑）。突破82000不追，突破83300就可以加仓追，表示80000准备站稳。",
-          "likes": 0,
+          "likes": 38,
           "url": "https://x.com/jackli727/status/2101151934287622524",
           "is_kol": true,
           "sentiment": "bullish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "mstr是btc的影子股，下一阶段看179、196，对标btc价格95000、97700。所以，今年下半年多军就开荤了。",
+          "likes": 20,
+          "url": "https://x.com/jackli727/status/2101155983204741181",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "name": "谷歌",
-      "mention_count": 4,
-      "engagement": 11533,
-      "kol_mentions": 4,
-      "signal_strength": 60.0,
+      "symbol": "SOL",
+      "name": "Solana",
+      "mention_count": 3,
+      "engagement": 1800,
+      "kol_mentions": 3,
+      "signal_strength": 48.6,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.25,
+        "opinion_density": 0.333,
         "kol_consensus": 1.0,
-        "bull_ratio": 0.25,
+        "bull_ratio": 0.333,
         "bear_ratio": 0.0,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": 0.25,
-        "engagement_weighted_sentiment": 0.758,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": 0.333,
+        "engagement_weighted_sentiment": 0.013,
         "bull_count": 1,
         "bear_count": 0,
-        "neutral_count": 3,
-        "total_count": 4
+        "neutral_count": 2,
+        "total_count": 3
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Google's Gemini accessed the internet and hacked 3 other companies in the first known breakout of the company's AI model, per WSJ.\n\nGoogle said it the hacks did not warrant public disclosure",
-          "likes": 7276,
-          "url": "https://x.com/KobeissiLetter/status/2101094166038269995",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#PAKWatch🇵🇰: Former British PM @BorisJohnson on THE ILLEGAL 3-YEAR INCARCERATION OF IMRAN KHAN IN ADIALA JAIL.:\n\n\"Imran Khan is not in jail, in solitary confinement for more than three years now becau",
+          "likes": 1237,
+          "url": "https://x.com/steve_hanke/status/2101155067336216967",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "7月底聊到代币化、RWA、资产融合会比我们想象的更快速度快速发展，最近几天大家好像都开始感受到这块在加速的状态。当然最终也只是一部分在这个方向上的资产会受益。当时聊到我的视野里受益于代币化RWA趋势下的资产： $coin $hood $crcl\n$eth $bnb $sol $okb $hype $aave $sky https://t.co/Ynx1roSlrH",
+          "likes": 17,
+          "url": "https://x.com/qinbafrank/status/2101118733423174043",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "上周讲到sol周线级别的快线即将触及零轴，会产生一个加速的动作。所以昨天的反弹都在我的预期中。价格到114，这是100关口的屏障，就表示准备要正式站稳100。我们要专注的一步步往上打，而不是三步两回头一下多一下空，产生不必要的损耗。对于老韭菜而言，宁可短线过错，也不允许错过。9月初就宣布抠掉 https://t.co/NSz9lsAUiZ",
+          "likes": 6,
+          "url": "https://x.com/jackli727/status/2101239384339321296",
           "is_kol": true,
           "sentiment": "bullish"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: Google’s Gemini model accessed the internet and hacked other companies during a test of its cybersecurity capabilities, per WSJ",
-          "likes": 3096,
-          "url": "https://x.com/unusual_whales/status/2101085357886292316",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Google’s $GOOGL Gemini AI model inadvertently hacked into three protected company systems in May while researchers were testing its cybersecurity capabilities - Bloomberg https://t.co/8RlbUvzri5",
-          "likes": 102,
-          "url": "https://x.com/StockMKTNewz/status/2101082770688877054",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "convertbond",
-          "author_name": "convertbond",
-          "content": "RT @Sam_Badawi: $GOOGL Google confirmed its Gemini model accessed the internet and hacked three companies during a May cybersecurity test,…",
-          "likes": 0,
-          "url": "https://x.com/convertbond/status/2101073016352383164",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
@@ -157,7 +302,7 @@
       "mention_count": 3,
       "engagement": 4696,
       "kol_mentions": 3,
-      "signal_strength": 40.7,
+      "signal_strength": 33.6,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -205,55 +350,46 @@
       ]
     },
     {
-      "symbol": "ETH",
-      "name": "以太坊",
-      "mention_count": 3,
-      "engagement": 120,
-      "kol_mentions": 3,
-      "signal_strength": 55.7,
+      "symbol": "META",
+      "name": "Meta",
+      "mention_count": 2,
+      "engagement": 126,
+      "kol_mentions": 2,
+      "signal_strength": 42.4,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.333,
+        "opinion_density": 0.5,
         "kol_consensus": 1.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": 0.333,
-        "engagement_weighted_sentiment": 0.15,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 3
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.036,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 1,
+        "total_count": 2
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "多头的春天即将到来。4周前预判了这轮反弹将是反转，很多人不信。尤其是eth，下一步站稳2666，巨大的泵你无法想象。拭目以待。短线上你要空eth，2796-2822这里空一下最佳。其它位置已经到过的以及下一步要到的2688、2736等位置都是中间小阻力点，没必要空。",
-          "likes": 19,
-          "url": "https://x.com/jackli727/status/2101128304850059379",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "qinbafrank",
-          "author_name": "qinbafrank",
-          "content": "7月底聊到代币化、RWA、资产融合会比我们想象的更快速度快速发展，最近几天大家好像都开始感受到这块在加速的状态。当然最终也只是一部分在这个方向上的资产会受益。当时聊到我的视野里受益于代币化RWA趋势下的资产： $coin $hood $crcl\n$eth $bnb $sol $okb $hype $aave $sky https://t.co/Ynx1roSlrH",
-          "likes": 17,
-          "url": "https://x.com/qinbafrank/status/2101118733423174043",
+          "author": "michaeljburry",
+          "author_name": "michaeljburry",
+          "content": "Obituary. The AC/DC of Death Metal. \nhttps://t.co/pK2bZRsdla  @obituarytheband",
+          "likes": 113,
+          "url": "https://x.com/michaeljburry/status/2101101467679801480",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "LynAldenContact",
-          "author_name": "LynAldenContact",
-          "content": "RT @buccocapital: A few months ago that student asked Christopher Nolan whether he was “the bard for a civilization at dusk” and I haven’t…",
-          "likes": 0,
-          "url": "https://x.com/LynAldenContact/status/2101070470875676919",
+          "author": "UrbanKaoboy",
+          "author_name": "UrbanKaoboy",
+          "content": "I am thrilled and honored to be followed by one of my heroes and metal OG’s!\n\n@BruceDMaiden coming to see you guys in LA on 9/25/26! 🤘🤘🤘 https://t.co/rtEgj96bhS",
+          "likes": 6,
+          "url": "https://x.com/UrbanKaoboy/status/2101180561062555884",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bearish"
         }
       ]
     },
@@ -263,7 +399,7 @@
       "mention_count": 2,
       "engagement": 277,
       "kol_mentions": 2,
-      "signal_strength": 32.2,
+      "signal_strength": 27.4,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -302,12 +438,12 @@
       ]
     },
     {
-      "symbol": "SOL",
-      "name": "Solana",
+      "symbol": "MMTLP",
+      "name": "MMTLP",
       "mention_count": 1,
-      "engagement": 18,
+      "engagement": 6,
       "kol_mentions": 1,
-      "signal_strength": 23.3,
+      "signal_strength": 15.9,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -326,23 +462,23 @@
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "qinbafrank",
-          "author_name": "qinbafrank",
-          "content": "7月底聊到代币化、RWA、资产融合会比我们想象的更快速度快速发展，最近几天大家好像都开始感受到这块在加速的状态。当然最终也只是一部分在这个方向上的资产会受益。当时聊到我的视野里受益于代币化RWA趋势下的资产： $coin $hood $crcl\n$eth $bnb $sol $okb $hype $aave $sky https://t.co/Ynx1roSlrH",
-          "likes": 17,
-          "url": "https://x.com/qinbafrank/status/2101118733423174043",
+          "author": "John_Hempton",
+          "author_name": "John_Hempton",
+          "content": "All the money that will ever be received by people who held $MMTLP to the ex date.",
+          "likes": 6,
+          "url": "https://x.com/John_Hempton/status/2101244314596630813",
           "is_kol": true,
           "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "META",
-      "name": "Meta",
+      "symbol": "XAU",
+      "name": "黄金",
       "mention_count": 1,
-      "engagement": 120,
+      "engagement": 106,
       "kol_mentions": 1,
-      "signal_strength": 23.6,
+      "signal_strength": 21.2,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -361,11 +497,11 @@
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "michaeljburry",
-          "author_name": "michaeljburry",
-          "content": "Obituary. The AC/DC of Death Metal. \nhttps://t.co/pK2bZRsdla  @obituarytheband",
-          "likes": 113,
-          "url": "https://x.com/michaeljburry/status/2101101467679801480",
+          "author": "michaelxpettis",
+          "author_name": "michaelxpettis",
+          "content": "For those wondering why Setser strips gold imports out of China’s trade data, the reason is that gold can be purchased for two very different purposes. You can buy it for jewelry or manufacturing, or ",
+          "likes": 91,
+          "url": "https://x.com/michaelxpettis/status/2101178140164796613",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -375,23 +511,23 @@
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 13,
-      "engagement": 12402,
-      "kol_mentions": 13,
-      "signal_strength": 83.3,
+      "tweet_count": 23,
+      "engagement": 12923,
+      "kol_mentions": 23,
+      "signal_strength": 90.0,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.231,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.154,
-        "bear_ratio": 0.077,
-        "neutral_ratio": 0.769,
-        "kol_weighted_sentiment": 0.077,
-        "engagement_weighted_sentiment": -0.025,
-        "bull_count": 2,
+        "consensus_score": 0.6,
+        "opinion_density": 0.217,
+        "kol_consensus": 0.6,
+        "bull_ratio": 0.174,
+        "bear_ratio": 0.043,
+        "neutral_ratio": 0.783,
+        "kol_weighted_sentiment": 0.13,
+        "engagement_weighted_sentiment": 0.016,
+        "bull_count": 4,
         "bear_count": 1,
-        "neutral_count": 10,
-        "total_count": 13
+        "neutral_count": 18,
+        "total_count": 23
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -427,23 +563,23 @@
     },
     {
       "theme": "AI_科技",
-      "tweet_count": 12,
-      "engagement": 13515,
-      "kol_mentions": 12,
-      "signal_strength": 83.3,
+      "tweet_count": 18,
+      "engagement": 14112,
+      "kol_mentions": 18,
+      "signal_strength": 75.0,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.25,
-        "kol_consensus": 0.333,
+        "consensus_score": 0.0,
+        "opinion_density": 0.333,
+        "kol_consensus": 0.0,
         "bull_ratio": 0.167,
-        "bear_ratio": 0.083,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": 0.083,
-        "engagement_weighted_sentiment": 0.527,
-        "bull_count": 2,
-        "bear_count": 1,
-        "neutral_count": 9,
-        "total_count": 12
+        "bear_ratio": 0.167,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.454,
+        "bull_count": 3,
+        "bear_count": 3,
+        "neutral_count": 12,
+        "total_count": 18
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -478,76 +614,24 @@
       ]
     },
     {
-      "theme": "加密货币",
-      "tweet_count": 7,
-      "engagement": 1560,
-      "kol_mentions": 7,
-      "signal_strength": 100.0,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.286,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.286,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.714,
-        "kol_weighted_sentiment": 0.286,
-        "engagement_weighted_sentiment": 0.014,
-        "bull_count": 2,
-        "bear_count": 0,
-        "neutral_count": 5,
-        "total_count": 7
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "CathieDWood",
-          "author_name": "CathieDWood",
-          "content": "Bitcoin is not a dead cat, @Jason ! It has many lives ahead.                                            \n\nCheck out our latest Bitcoin Brainstorm with",
-          "likes": 1254,
-          "url": "https://x.com/CathieDWood/status/2101107549814620659",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "CathieDWood",
-          "author_name": "CathieDWood",
-          "content": "Focused on the convergence between #AI and #Bitcoin, this episode of Bitcoin Brainstorm is one of our best yet with @bitcoinpark_  and @rodroudi.",
-          "likes": 79,
-          "url": "https://x.com/CathieDWood/status/2101102149874626662",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "多头的春天即将到来。4周前预判了这轮反弹将是反转，很多人不信。尤其是eth，下一步站稳2666，巨大的泵你无法想象。拭目以待。短线上你要空eth，2796-2822这里空一下最佳。其它位置已经到过的以及下一步要到的2688、2736等位置都是中间小阻力点，没必要空。",
-          "likes": 19,
-          "url": "https://x.com/jackli727/status/2101128304850059379",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
       "theme": "地缘政治",
-      "tweet_count": 6,
-      "engagement": 8265,
-      "kol_mentions": 6,
+      "tweet_count": 14,
+      "engagement": 9400,
+      "kol_mentions": 14,
       "signal_strength": 83.3,
       "consensus": {
         "consensus_score": 0.333,
-        "opinion_density": 0.5,
+        "opinion_density": 0.429,
         "kol_consensus": 0.333,
-        "bull_ratio": 0.167,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.167,
-        "engagement_weighted_sentiment": 0.944,
-        "bull_count": 1,
-        "bear_count": 2,
-        "neutral_count": 3,
-        "total_count": 6
+        "bull_ratio": 0.143,
+        "bear_ratio": 0.286,
+        "neutral_ratio": 0.571,
+        "kol_weighted_sentiment": -0.143,
+        "engagement_weighted_sentiment": 0.745,
+        "bull_count": 2,
+        "bear_count": 4,
+        "neutral_count": 8,
+        "total_count": 14
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -562,30 +646,82 @@
           "sentiment": "bullish"
         },
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "A new Fox News poll finds that 63% of voters say the Trump administration has made the economy WORSE.\n\nTRUMP, THE TARIFF MAN + WARMONGER = TANKING. ht",
-          "likes": 68,
-          "url": "https://x.com/steve_hanke/status/2101084854976671829",
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Geoffrey Hinton, the Nobel Prize winner known as the 'Godfather of AI,' whose work made modern artificial intelligence possible, is now warning Congre",
+          "likes": 480,
+          "url": "https://x.com/unusual_whales/status/2101173941599613403",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "#PAKWatch🇵🇰: Today, a CAR SUICIDE BOMBING and subsequent ATTACK occurred at a Mosque in Peshawar, Pakistan. At least 21 people were killed and over 80",
-          "likes": 52,
-          "url": "https://x.com/steve_hanke/status/2101121064004727185",
+          "content": "Today, a Russian drone struck a business center in Odesa, Ukraine.\n\nRUSSIA CONTINUES MASSIVE COUNTERATTACKS AND THE DESTRUCTION OF UKRAINE.\n\nDESTRUCTI",
+          "likes": 212,
+          "url": "https://x.com/steve_hanke/status/2101158590249832548",
           "is_kol": true,
-          "sentiment": "bearish"
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "加密货币",
+      "tweet_count": 12,
+      "engagement": 3450,
+      "kol_mentions": 12,
+      "signal_strength": 100.0,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.333,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.333,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": 0.333,
+        "engagement_weighted_sentiment": 0.039,
+        "bull_count": 4,
+        "bear_count": 0,
+        "neutral_count": 8,
+        "total_count": 12
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "CathieDWood",
+          "author_name": "CathieDWood",
+          "content": "Bitcoin is not a dead cat, @Jason ! It has many lives ahead.                                            \n\nCheck out our latest Bitcoin Brainstorm with",
+          "likes": 1254,
+          "url": "https://x.com/CathieDWood/status/2101107549814620659",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#PAKWatch🇵🇰: Former British PM @BorisJohnson on THE ILLEGAL 3-YEAR INCARCERATION OF IMRAN KHAN IN ADIALA JAIL.:\n\n\"Imran Khan is not in jail, in solita",
+          "likes": 1237,
+          "url": "https://x.com/steve_hanke/status/2101155067336216967",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "CathieDWood",
+          "author_name": "CathieDWood",
+          "content": "Focused on the convergence between #AI and #Bitcoin, this episode of Bitcoin Brainstorm is one of our best yet with @bitcoinpark_  and @rodroudi.",
+          "likes": 79,
+          "url": "https://x.com/CathieDWood/status/2101102149874626662",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "宏观_利率政策",
-      "tweet_count": 5,
-      "engagement": 404,
-      "kol_mentions": 5,
+      "tweet_count": 10,
+      "engagement": 443,
+      "kol_mentions": 10,
       "signal_strength": 75.0,
       "consensus": {
         "consensus_score": 0.0,
@@ -594,12 +730,12 @@
         "bull_ratio": 0.2,
         "bear_ratio": 0.2,
         "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.333,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 3,
-        "total_count": 5
+        "kol_weighted_sentiment": -0.02,
+        "engagement_weighted_sentiment": -0.294,
+        "bull_count": 2,
+        "bear_count": 2,
+        "neutral_count": 6,
+        "total_count": 10
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -623,11 +759,115 @@
           "sentiment": "bullish"
         },
         {
-          "author": "bespokeinvest",
-          "author_name": "bespokeinvest",
-          "content": "When Powell became Fed Chair in 2018, market plunges in the final two hours of the day became the norm for awhile.\n\nWarsh has taken it to another leve",
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "China's central bank advisor: AI may exacerbate strong supply, weak demand in economy",
           "likes": 16,
-          "url": "https://x.com/bespokeinvest/status/2101096809846169633",
+          "url": "https://x.com/financialjuice/status/2101216407404888363",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "外汇_汇率",
+      "tweet_count": 6,
+      "engagement": 117,
+      "kol_mentions": 6,
+      "signal_strength": 75.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 6,
+        "total_count": 6
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Russian forces strike Ukrainian cargo ship and tanker in Black Sea and Ukraine port: IFX",
+          "likes": 29,
+          "url": "https://x.com/financialjuice/status/2101216349846413426",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Moscow electoral system hit by severe attack overnight during voting period: situation under control, IFX cites central election commission head",
+          "likes": 24,
+          "url": "https://x.com/financialjuice/status/2101227407730422235",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "The nationwide average reached $6.31 on Wednesday, per AAA data, and certain parts of California are seeing the fuel close in or surpass $10 per gallo",
+          "likes": 19,
+          "url": "https://x.com/unusual_whales/status/2101121848465559704",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "公司_财报",
+      "tweet_count": 4,
+      "engagement": 197,
+      "kol_mentions": 4,
+      "signal_strength": 39.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 4,
+        "total_count": 4
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "top_tweets": [
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Anthropic is now targeting November for its IPO, later than the October debut many investors had expected - WSJ",
+          "likes": 74,
+          "url": "https://x.com/StockMKTNewz/status/2101071397002818040",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Iran executes man convicted of sharing missile site details with Israel during war: judiciary site",
+          "likes": 70,
+          "url": "https://x.com/financialjuice/status/2101193249071235332",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "Anthropic的IPO又推迟了，这次是11月。看华尔街日报报道，Anthropic 现在计划 11 月做这场超级 IPO，比很多投资者预期的 10 月更晚。顾问给出的业务理由是：多等几周，就能带上Q3财报，用来证明即使OpenAI9月发布了新模型 Astra，Anthropic的竞争位置仍然强\n",
+          "likes": 24,
+          "url": "https://x.com/qinbafrank/status/2101232869494460908",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -638,7 +878,7 @@
       "tweet_count": 3,
       "engagement": 95,
       "kol_mentions": 3,
-      "signal_strength": 55.7,
+      "signal_strength": 48.6,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.667,
@@ -686,101 +926,24 @@
       ]
     },
     {
-      "theme": "公司_财报",
-      "tweet_count": 2,
-      "engagement": 93,
-      "kol_mentions": 2,
-      "signal_strength": 32.2,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 2
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Anthropic is now targeting November for its IPO, later than the October debut many investors had expected - WSJ",
-          "likes": 74,
-          "url": "https://x.com/StockMKTNewz/status/2101071397002818040",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Anthropic mulls debut of new AI model before IPO, sources say",
-          "likes": 10,
-          "url": "https://x.com/financialjuice/status/2101099906563752020",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "外汇_汇率",
-      "tweet_count": 1,
-      "engagement": 20,
-      "kol_mentions": 1,
-      "signal_strength": 23.6,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "The nationwide average reached $6.31 on Wednesday, per AAA data, and certain parts of California are seeing the fuel close in or surpass $10 per gallo",
-          "likes": 19,
-          "url": "https://x.com/unusual_whales/status/2101121848465559704",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "theme": "美股_大盘",
-      "tweet_count": 1,
-      "engagement": 915,
-      "kol_mentions": 1,
-      "signal_strength": 23.6,
+      "tweet_count": 2,
+      "engagement": 916,
+      "kol_mentions": 2,
+      "signal_strength": 42.4,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.009,
         "bull_count": 0,
-        "bear_count": 0,
+        "bear_count": 1,
         "neutral_count": 1,
-        "total_count": 1
+        "total_count": 2
       },
       "reliability": "数据不足",
       "sample_reliable": false,
@@ -793,28 +956,37 @@
           "url": "https://x.com/KobeissiLetter/status/2101079285586907512",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "判定不再有大回调、主跌浪的依据。",
+          "likes": 1,
+          "url": "https://x.com/jackli727/status/2101243279312581025",
+          "is_kol": true,
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "黄金_贵金属",
-      "tweet_count": 1,
-      "engagement": 260,
-      "kol_mentions": 1,
-      "signal_strength": 38.6,
+      "tweet_count": 2,
+      "engagement": 366,
+      "kol_mentions": 2,
+      "signal_strength": 42.4,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 1.0,
+        "opinion_density": 0.5,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 1.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": -1.0,
-        "engagement_weighted_sentiment": -1.0,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.689,
         "bull_count": 0,
         "bear_count": 1,
-        "neutral_count": 0,
-        "total_count": 1
+        "neutral_count": 1,
+        "total_count": 2
       },
       "reliability": "数据不足",
       "sample_reliable": false,
@@ -827,49 +999,33 @@
           "url": "https://x.com/tj_research/status/2101074765960106067",
           "is_kol": true,
           "sentiment": "bearish"
+        },
+        {
+          "author": "michaelxpettis",
+          "author_name": "michaelxpettis",
+          "content": "For those wondering why Setser strips gold imports out of China’s trade data, the reason is that gold can be purchased for two very different purposes",
+          "likes": 91,
+          "url": "https://x.com/michaelxpettis/status/2101178140164796613",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     }
   ],
   "top_tweets": [
     {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "btc短中线上的操作思路：82000未破前，支撑就是78850，做多就等这里（77777-76455都属于补仓范围，74000以下的空间不考虑）。突破82000不追，突破83300就可以加仓追，表示80000准备站稳。",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 0,
-      "views": 207,
-      "created_at": "2026-09-19T03:30:33+00:00",
-      "url": "https://x.com/jackli727/status/2101151934287622524",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 1.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Hanke and Walker writing in @FortuneMagazine on the FISCAL MISMANAGEMENT BY THE U.S. CONGRESS:\n\n\"The U.S. Congress has become dysfunctional, and it does not make one bit of difference which party is in power. Exhibit A: The federal budget and appropriations process is broken. For https://t.co/MRmYp2MGKP",
-      "likes": 7,
+      "author": "WallStreet0Name",
+      "author_name": "WallStreet0Name",
+      "content": "avax这个币正在尝试收回长达1800天的箱体下沿，很好的走出底部的结构，以后可以密切观察。\n\n（看到不要第一时间去买，结构很好所以想发出来记录） https://t.co/KaJHHEvNDq",
+      "likes": 18,
       "reposts": 2,
-      "replies": 1,
-      "views": 4382,
-      "created_at": "2026-09-19T03:02:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2101144750015603012",
+      "replies": 8,
+      "views": 1247,
+      "created_at": "2026-09-19T10:25:53+00:00",
+      "url": "https://x.com/WallStreet0Name/status/2101256455391469696",
       "assets": [],
       "themes": [
-        "宏观_利率政策"
+        "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -878,15 +1034,15 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "TechBuzzChina",
-      "author_name": "TechBuzzChina",
-      "content": "Humanoid robots may understand speech by 2027\n\nQianxun Intelligence co-founder Gao Yang expects robots to reach a GPT-3.0-level milestone by mid-2027. Users could then give natural language commands for physical tasks. The company uses about 1,000 contract workers to collect https://t.co/EaPZcW33iW",
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Pakistan foreign affairs ministry: the two discussed recent regional developments",
       "likes": 1,
       "reposts": 0,
       "replies": 0,
-      "views": 149,
-      "created_at": "2026-09-19T03:00:05+00:00",
-      "url": "https://x.com/TechBuzzChina/status/2101144267171225899",
+      "views": 13497,
+      "created_at": "2026-09-19T10:22:52+00:00",
+      "url": "https://x.com/financialjuice/status/2101255696083751306",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -898,43 +1054,24 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla FSD V14.3.10 has just started rolling out. Same release notes.",
-      "likes": 634,
-      "reposts": 20,
-      "replies": 42,
-      "views": 32745,
-      "created_at": "2026-09-19T02:15:14+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2101132982916424137",
+      "author": "BobEUnlimited",
+      "author_name": "BobEUnlimited",
+      "content": "Another lively MacroTalk discussion this week with @AahanPrometheus covering:\n- Whether equities are a good buy in rising growth &amp; inflation periods.\n- Central bank future inflation optimism given policy efforts.\n- My $10 elixir for a youthful appearance.\nhttps://t.co/VRwsNvqq9d",
+      "likes": 4,
+      "reposts": 0,
+      "replies": 4,
+      "views": 4308,
+      "created_at": "2026-09-19T10:12:36+00:00",
+      "url": "https://x.com/BobEUnlimited/status/2101253112572883314",
       "assets": [
         [
-          "TSLA",
-          "特斯拉"
+          "ETH",
+          "以太坊"
         ]
       ],
       "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "ripster47",
-      "author_name": "ripster47",
-      "content": "The best drink at the end of the week is the one you have after helping those who look up to you and guiding them to success❤️\n\nCheers to green portfolios and lifetime success\n\nTake time to recharge and enjoy the weekend with your loved ones. What are you sipping on tonight? 🥃 https://t.co/GmdU6X86pk",
-      "likes": 68,
-      "reposts": 2,
-      "replies": 15,
-      "views": 13278,
-      "created_at": "2026-09-19T02:08:28+00:00",
-      "url": "https://x.com/ripster47/status/2101131276249894984",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策"
+        "宏观_利率政策",
+        "加密货币"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -943,19 +1080,150 @@
       "sentiment_intensity": 0.167
     },
     {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "多头的春天即将到来。4周前预判了这轮反弹将是反转，很多人不信。尤其是eth，下一步站稳2666，巨大的泵你无法想象。拭目以待。短线上你要空eth，2796-2822这里空一下最佳。其它位置已经到过的以及下一步要到的2688、2736等位置都是中间小阻力点，没必要空。",
-      "likes": 19,
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Russia’s digital ministry reports attempt to sabotage communication lines in far east to disrupt election",
+      "likes": 12,
       "reposts": 2,
-      "replies": 5,
-      "views": 3136,
-      "created_at": "2026-09-19T01:56:39+00:00",
-      "url": "https://x.com/jackli727/status/2101128304850059379",
+      "replies": 1,
+      "views": 24559,
+      "created_at": "2026-09-19T09:40:12+00:00",
+      "url": "https://x.com/financialjuice/status/2101244962310328390",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "John_Hempton",
+      "author_name": "John_Hempton",
+      "content": "All the money that will ever be received by people who held $MMTLP to the ex date.",
+      "likes": 6,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1433,
+      "created_at": "2026-09-19T09:37:38+00:00",
+      "url": "https://x.com/John_Hempton/status/2101244314596630813",
       "assets": [
         [
-          "ETH",
-          "以太坊"
+          "MMTLP",
+          "MMTLP"
+        ]
+      ],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "判定不再有大回调、主跌浪的依据。",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 1962,
+      "created_at": "2026-09-19T09:33:31+00:00",
+      "url": "https://x.com/jackli727/status/2101243279312581025",
+      "assets": [],
+      "themes": [
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.667
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "认定趋势，就勇往直前，不东张西望，不犹豫不决，坚定的往上走。不要过多的迷信于消息面，我知这次凡是以加息消息面作为判断利空依据的，这两天已经死得差不多了或者深套中。只认k线技术层面，顺势而为。之前我将7-9月的反弹跟4-5月的反弹在盘面上做了很详细的对比，两者有本质的区别，这就是坚定看即",
+      "likes": 4,
+      "reposts": 0,
+      "replies": 1,
+      "views": 1327,
+      "created_at": "2026-09-19T09:32:01+00:00",
+      "url": "https://x.com/jackli727/status/2101242902882218449",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": -0.2,
+      "sentiment_intensity": 0.833
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Anthropic, OpenAI, Spacexai, Google sued over call to ‘pace’ AI development - Politico",
+      "likes": 3,
+      "reposts": 0,
+      "replies": 1,
+      "views": 21177,
+      "created_at": "2026-09-19T09:27:56+00:00",
+      "url": "https://x.com/financialjuice/status/2101241872198898017",
+      "assets": [
+        [
+          "GOOGL",
+          "谷歌"
+        ]
+      ],
+      "themes": [
+        "AI_科技",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "goldseek",
+      "author_name": "goldseek",
+      "content": "Who is a bigger threat to Europeans?",
+      "likes": 11,
+      "reposts": 2,
+      "replies": 2,
+      "views": 1736,
+      "created_at": "2026-09-19T09:26:10+00:00",
+      "url": "https://x.com/goldseek/status/2101241427623559458",
+      "assets": [],
+      "themes": [
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "上周讲到sol周线级别的快线即将触及零轴，会产生一个加速的动作。所以昨天的反弹都在我的预期中。价格到114，这是100关口的屏障，就表示准备要正式站稳100。我们要专注的一步步往上打，而不是三步两回头一下多一下空，产生不必要的损耗。对于老韭菜而言，宁可短线过错，也不允许错过。9月初就宣布抠掉 https://t.co/NSz9lsAUiZ",
+      "likes": 6,
+      "reposts": 0,
+      "replies": 6,
+      "views": 2110,
+      "created_at": "2026-09-19T09:18:03+00:00",
+      "url": "https://x.com/jackli727/status/2101239384339321296",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
         ]
       ],
       "themes": [
@@ -968,42 +1236,38 @@
       "sentiment_intensity": 0.333
     },
     {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "Nvidia CEO Jensen Huang said he thinks there is a 0% chance that the world will end in 2030  https://t.co/ZXlVYSJSoC",
-      "likes": 230,
-      "reposts": 13,
-      "replies": 22,
-      "views": 25590,
-      "created_at": "2026-09-19T01:32:36+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2101122252225888441",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Illegal migrants continue to TRASH the streets of Ceuta, Spain and tensions are rising. Today, Police used batons and fired warning shots into the air.\n\nLOTS OF ILLEGAL MIGRANTS = LOTS OF PROBLEMS.\nhttps://t.co/9omTxXriIs",
+      "likes": 10,
+      "reposts": 0,
+      "replies": 1,
+      "views": 6997,
+      "created_at": "2026-09-19T09:13:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2101238114492596414",
+      "assets": [],
       "themes": [
-        "AI_科技"
+        "地缘政治"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.333
     },
     {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "The nationwide average reached $6.31 on Wednesday, per AAA data, and certain parts of California are seeing the fuel close in or surpass $10 per gallon.\n\nRead more: https://t.co/aPgp1XvVFx",
-      "likes": 19,
+      "author": "168X_Fortune",
+      "author_name": "168X_Fortune",
+      "content": "RT @168MrZ: OpenAI 預計 2030 年前燒掉 2,780 億美元\n\nFT 9 月 19 日報導，引述 OpenAI 7 月一份內部公司簡報。\n\nOpenAI 預計 2026 至 2030 年累計負自由現金流將達 2,780 億美元，主要原因是持續大規模投入算力…",
+      "likes": 0,
       "reposts": 1,
-      "replies": 6,
-      "views": 32208,
-      "created_at": "2026-09-19T01:31:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2101121848465559704",
+      "replies": 0,
+      "views": 149,
+      "created_at": "2026-09-19T09:05:52+00:00",
+      "url": "https://x.com/168X_Fortune/status/2101236320903606361",
       "assets": [],
       "themes": [
+        "AI_科技",
         "外汇_汇率"
       ],
       "quality_score": 0.0,
@@ -1013,195 +1277,83 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "#PAKWatch🇵🇰: Today, a CAR SUICIDE BOMBING and subsequent ATTACK occurred at a Mosque in Peshawar, Pakistan. At least 21 people were killed and over 80 people were wounded.\n\nIN PAK, THE MILITARY CAN ILLEGALLY INCARCERATE IMRAN KHAN, BUT CAN'T PROTECT ITS OWN CITIZENS.",
-      "likes": 52,
-      "reposts": 12,
-      "replies": 6,
-      "views": 7081,
-      "created_at": "2026-09-19T01:27:53+00:00",
-      "url": "https://x.com/steve_hanke/status/2101121064004727185",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
       "author": "qinbafrank",
       "author_name": "qinbafrank",
-      "content": "7月底聊到代币化、RWA、资产融合会比我们想象的更快速度快速发展，最近几天大家好像都开始感受到这块在加速的状态。当然最终也只是一部分在这个方向上的资产会受益。当时聊到我的视野里受益于代币化RWA趋势下的资产： $coin $hood $crcl\n$eth $bnb $sol $okb $hype $aave $sky https://t.co/Ynx1roSlrH",
-      "likes": 17,
-      "reposts": 1,
-      "replies": 5,
-      "views": 10004,
-      "created_at": "2026-09-19T01:18:37+00:00",
-      "url": "https://x.com/qinbafrank/status/2101118733423174043",
-      "assets": [
-        [
-          "ETH",
-          "以太坊"
-        ],
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Over call for accelerated AI development: Politico",
-      "likes": 10,
-      "reposts": 0,
-      "replies": 0,
-      "views": 23155,
-      "created_at": "2026-09-19T01:14:45+00:00",
-      "url": "https://x.com/financialjuice/status/2101117761166422063",
+      "content": "Anthropic的IPO又推迟了，这次是11月。看华尔街日报报道，Anthropic 现在计划 11 月做这场超级 IPO，比很多投资者预期的 10 月更晚。顾问给出的业务理由是：多等几周，就能带上Q3财报，用来证明即使OpenAI9月发布了新模型 Astra，Anthropic的竞争位置仍然强\n\n9月初的传出来的是：公开招股书拖到 9 https://t.co/Cb8LZPZDz7",
+      "likes": 24,
+      "reposts": 5,
+      "replies": 6,
+      "views": 10997,
+      "created_at": "2026-09-19T08:52:09+00:00",
+      "url": "https://x.com/qinbafrank/status/2101232869494460908",
       "assets": [],
       "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "State Dept: approves possible $2.68 billion foreign military sale to Ukraine for air defense upgrade development",
-      "likes": 15,
-      "reposts": 2,
-      "replies": 1,
-      "views": 25760,
-      "created_at": "2026-09-19T01:03:00+00:00",
-      "url": "https://x.com/financialjuice/status/2101114802362065354",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Just reserved a Tesla Roadster. Used my 𝕏 Money card to get 3% off the initial deposit. Now let's see what the final price will be lol.\n\nYOLO 🚀 https://t.co/VAW9fO2XTg",
-      "likes": 2787,
-      "reposts": 58,
-      "replies": 245,
-      "views": 112232,
-      "created_at": "2026-09-19T00:51:29+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2101111904252874882",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "Trump says son told him he’ll repay Russian oligarch for wedding parties \n\nhttps://t.co/z3bqw8VZlI",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 0,
-      "views": 7691,
-      "created_at": "2026-09-19T00:34:43+00:00",
-      "url": "https://x.com/SCMPNews/status/2101107685508747393",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "CathieDWood",
-      "author_name": "CathieDWood",
-      "content": "Bitcoin is not a dead cat, @Jason ! It has many lives ahead.                                            \n\nCheck out our latest Bitcoin Brainstorm with @bitcoinpark_ focused on the convergence between AI and Bitcoin.",
-      "likes": 1254,
-      "reposts": 83,
-      "replies": 116,
-      "views": 161943,
-      "created_at": "2026-09-19T00:34:11+00:00",
-      "url": "https://x.com/CathieDWood/status/2101107549814620659",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: OpenAI expects to burn $280 billion by 2030, and have deeply negative cash flows, per FT",
-      "likes": 1405,
-      "reposts": 133,
-      "replies": 118,
-      "views": 151453,
-      "created_at": "2026-09-19T00:26:58+00:00",
-      "url": "https://x.com/unusual_whales/status/2101105733161128428",
-      "assets": [],
-      "themes": [
+        "公司_财报",
         "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "The FBI believes women pretending to be tradwives are targeting Immigration and Customs Enforcement officers in order to dox them, per The Guardian",
-      "likes": 7105,
-      "reposts": 402,
-      "replies": 198,
-      "views": 312696,
-      "created_at": "2026-09-19T00:17:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2101103225592291474",
+      "author": "michaelxpettis",
+      "author_name": "michaelxpettis",
+      "content": "Caixin: \"China’s surveyed urban youth unemployment rate rose to 18.9% in August, matching the highest level since the current methodology was adopted in 2024.\"\nhttps://t.co/bY8RgPFyZg",
+      "likes": 34,
+      "reposts": 5,
+      "replies": 4,
+      "views": 5103,
+      "created_at": "2026-09-19T08:43:54+00:00",
+      "url": "https://x.com/michaelxpettis/status/2101230794089873496",
+      "assets": [
+        [
+          "ETH",
+          "以太坊"
+        ]
+      ],
+      "themes": [
+        "加密货币",
+        "原油_能源",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Russia unaware of hints from US on possible deal signing before Ukraine conflict ends: RIA",
+      "likes": 26,
+      "reposts": 2,
+      "replies": 5,
+      "views": 31950,
+      "created_at": "2026-09-19T08:42:27+00:00",
+      "url": "https://x.com/financialjuice/status/2101230429244178693",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "michaelxpettis",
+      "author_name": "michaelxpettis",
+      "content": "Interesting piece by Steven Randy Waldman on the costs to the global economy of persistently unbalanced trade, and why the best way of balancing it would be through capital account restrictions rather than trade account restrictions.\nhttps://t.co/TKcqAu3RPj",
+      "likes": 33,
+      "reposts": 10,
+      "replies": 3,
+      "views": 4309,
+      "created_at": "2026-09-19T08:38:51+00:00",
+      "url": "https://x.com/michaelxpettis/status/2101229520816595442",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -1213,43 +1365,43 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Freddie Mac reports that the 30-year mortgage rate has jumped to 6.95%. That's the HIGHEST in 19 months.\n\nHOUSING AFFORDABILITY = TRUMP'S ACHILLES HEEL. https://t.co/bcHQdERMDk",
-      "likes": 25,
-      "reposts": 8,
-      "replies": 1,
-      "views": 6592,
-      "created_at": "2026-09-19T00:16:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2101102973871075821",
+      "author": "168X_Fortune",
+      "author_name": "168X_Fortune",
+      "content": "“半导体到年底还要涨，逻辑应该是：存储把 margin 搞太高很难再给估值之后，前面被它压着的补涨\n\n光、GPU、CPU、功率⋯光的逻辑最确定，算力 scale 靠通信，光的比率提高是必然\n\n功率半导体跟着交付节奏来，需求时间还没到，买早了要等\n\n现在是 token 需求带动的半导体大缺货周期，谁手上有产能谁赚钱",
+      "likes": 6,
+      "reposts": 0,
+      "replies": 0,
+      "views": 3416,
+      "created_at": "2026-09-19T08:36:40+00:00",
+      "url": "https://x.com/168X_Fortune/status/2101228971333730479",
       "assets": [],
       "themes": [
-        "美债_固定收益"
+        "AI_科技",
+        "A股_港股",
+        "公司_财报"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "bullish",
-      "sentiment_score": 0.333,
-      "sentiment_intensity": 0.5
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
     },
     {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla has just added another 9 Cybercabs to its Robotaxi fleet, bringing the total up to 58, according to the Texas DMV. https://t.co/aGPwSCiw3q",
-      "likes": 1120,
-      "reposts": 77,
-      "replies": 59,
-      "views": 41728,
-      "created_at": "2026-09-19T00:14:12+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2101102522890866763",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Moscow electoral system hit by severe attack overnight during voting period: situation under control, IFX cites central election commission head",
+      "likes": 24,
+      "reposts": 3,
+      "replies": 2,
+      "views": 29063,
+      "created_at": "2026-09-19T08:30:27+00:00",
+      "url": "https://x.com/financialjuice/status/2101227407730422235",
+      "assets": [],
       "themes": [
-        "原油_能源"
+        "原油_能源",
+        "外汇_汇率",
+        "公司_财报",
+        "地缘政治"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1258,23 +1410,38 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "CathieDWood",
-      "author_name": "CathieDWood",
-      "content": "Focused on the convergence between #AI and #Bitcoin, this episode of Bitcoin Brainstorm is one of our best yet with @bitcoinpark_  and @rodroudi.",
-      "likes": 79,
-      "reposts": 12,
-      "replies": 14,
-      "views": 52835,
-      "created_at": "2026-09-19T00:12:43+00:00",
-      "url": "https://x.com/CathieDWood/status/2101102149874626662",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "China's central bank advisor: stimulating demand is key to rebalancing economy",
+      "likes": 8,
+      "reposts": 0,
+      "replies": 2,
+      "views": 32284,
+      "created_at": "2026-09-19T07:49:59+00:00",
+      "url": "https://x.com/financialjuice/status/2101217221812842735",
+      "assets": [],
       "themes": [
-        "加密货币"
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "China's central bank advisor: China has rebalanced its economy, but progress is insufficient",
+      "likes": 5,
+      "reposts": 0,
+      "replies": 0,
+      "views": 28078,
+      "created_at": "2026-09-19T07:48:04+00:00",
+      "url": "https://x.com/financialjuice/status/2101216740734607455",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1384,6 +1551,24 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "#PAKWatch🇵🇰: Former British PM @BorisJohnson on THE ILLEGAL 3-YEAR INCARCERATION OF IMRAN KHAN IN ADIALA JAIL.:\n\n\"Imran Khan is not in jail, in solitary confinement for more than three years now because of any corruption or crime. It is because the Pakistani Generals know that in",
+      "likes": 1237,
+      "url": "https://x.com/steve_hanke/status/2101155067336216967",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "加密货币"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "SawyerMerritt",
       "author_name": "SawyerMerritt",
       "content": "Tesla has just added another 9 Cybercabs to its Robotaxi fleet, bringing the total up to 58, according to the Texas DMV. https://t.co/aGPwSCiw3q",
@@ -1433,6 +1618,20 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "Geoffrey Hinton, the Nobel Prize winner known as the 'Godfather of AI,' whose work made modern artificial intelligence possible, is now warning Congress that it doesn't have much time if members want to be able to control AI, per ABC",
+      "likes": 480,
+      "url": "https://x.com/unusual_whales/status/2101173941599613403",
+      "assets": [],
+      "themes": [
+        "AI_科技",
+        "地缘政治"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
+    },
+    {
       "author": "tj_research",
       "author_name": "tj_research",
       "content": "过去一周我们经历了：\n1. 上周末AI放缓的恐慌\n2. 清晰法案过山车，最后失败\n3. 美联储会议\n4. 日本加息\n5. 三巫日\n最后，所有资产回报：\n标普-0.1%\n纳指+0.7%\n黄金+0.7%\nIGV+2.8%\nBTC+4.9%\n芯片+1.1%\nRSP-1.2%",
@@ -1473,71 +1672,32 @@
       "sentiment_score": 0.0
     },
     {
-      "author": "michaeljburry",
-      "author_name": "michaeljburry",
-      "content": "Obituary. The AC/DC of Death Metal. \nhttps://t.co/pK2bZRsdla  @obituarytheband",
-      "likes": 113,
-      "url": "https://x.com/michaeljburry/status/2101101467679801480",
-      "assets": [
-        [
-          "META",
-          "Meta"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "Google’s $GOOGL Gemini AI model inadvertently hacked into three protected company systems in May while researchers were testing its cybersecurity capabilities - Bloomberg https://t.co/8RlbUvzri5",
-      "likes": 102,
-      "url": "https://x.com/StockMKTNewz/status/2101082770688877054",
-      "assets": [
-        [
-          "GOOGL",
-          "谷歌"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "CathieDWood",
-      "author_name": "CathieDWood",
-      "content": "Focused on the convergence between #AI and #Bitcoin, this episode of Bitcoin Brainstorm is one of our best yet with @bitcoinpark_  and @rodroudi.",
-      "likes": 79,
-      "url": "https://x.com/CathieDWood/status/2101102149874626662",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "Anthropic is now targeting November for its IPO, later than the October debut many investors had expected - WSJ",
-      "likes": 74,
-      "url": "https://x.com/StockMKTNewz/status/2101071397002818040",
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Today, a Russian drone struck a business center in Odesa, Ukraine.\n\nRUSSIA CONTINUES MASSIVE COUNTERATTACKS AND THE DESTRUCTION OF UKRAINE.\n\nDESTRUCTIVE COUNTERATTACKS ARE EXACTLY WHAT I'VE ANTICIPATED.\nhttps://t.co/fLyTwXCLBS",
+      "likes": 212,
+      "url": "https://x.com/steve_hanke/status/2101158590249832548",
       "assets": [],
       "themes": [
-        "公司_财报"
+        "地缘政治"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
+    },
+    {
+      "author": "RayDalio",
+      "author_name": "RayDalio",
+      "content": "Our uniquely human ability to look down from a higher level doesn't apply just to understanding reality and the cause-effect relationships underlying it; it also applies to looking down on yourself and those around you. \n\nI call this ability to rise above your own and others' https://t.co/IiLHSVcDr4",
+      "likes": 186,
+      "url": "https://x.com/RayDalio/status/2101184179429908768",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "sentiment": "bullish",
+      "sentiment_score": 1.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
