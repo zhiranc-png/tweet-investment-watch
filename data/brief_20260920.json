@@ -1,39 +1,42 @@
 {
-  "generated_at": "2026-09-20T05:04:08.291297",
+  "generated_at": "2026-09-20T11:19:38.118399",
   "stats": {
-    "total_tweets": 30,
-    "kol_tweets": 30,
-    "unique_authors": 17,
-    "kol_count": 17,
-    "total_likes": 10641,
-    "total_reposts": 1499,
-    "total_replies": 784,
-    "total_views": 1508729,
-    "unique_assets": 5,
-    "unique_themes": 9
+    "total_tweets": 98,
+    "kol_tweets": 53,
+    "unique_authors": 22,
+    "kol_count": 22,
+    "total_likes": 13004,
+    "total_reposts": 3337,
+    "total_replies": 976,
+    "total_views": 1912869,
+    "unique_assets": 9,
+    "unique_themes": 10,
+    "classified_tweets": 53,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
     "consensus_score": 0.0,
-    "opinion_density": 0.467,
+    "opinion_density": 0.415,
     "kol_consensus": 0.0,
-    "bull_ratio": 0.233,
-    "bear_ratio": 0.233,
-    "neutral_ratio": 0.533,
-    "kol_weighted_sentiment": 0.007,
-    "engagement_weighted_sentiment": -0.095,
-    "bull_count": 7,
-    "bear_count": 7,
-    "neutral_count": 16,
-    "total_count": 30
+    "bull_ratio": 0.208,
+    "bear_ratio": 0.208,
+    "neutral_ratio": 0.585,
+    "kol_weighted_sentiment": -0.002,
+    "engagement_weighted_sentiment": -0.101,
+    "bull_count": 11,
+    "bear_count": 11,
+    "neutral_count": 31,
+    "total_count": 53
   },
   "top_assets": [
     {
       "symbol": "SOL",
       "name": "Solana",
-      "mention_count": 2,
-      "engagement": 74,
-      "kol_mentions": 2,
-      "signal_strength": 37.0,
+      "mention_count": 4,
+      "engagement": 119,
+      "kol_mentions": 4,
+      "signal_strength": 45.0,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 1.0,
@@ -41,12 +44,12 @@
         "bull_ratio": 0.5,
         "bear_ratio": 0.5,
         "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.956,
-        "bull_count": 1,
-        "bear_count": 1,
+        "kol_weighted_sentiment": 0.095,
+        "engagement_weighted_sentiment": -0.221,
+        "bull_count": 2,
+        "bear_count": 2,
         "neutral_count": 0,
-        "total_count": 2
+        "total_count": 4
       },
       "reliability": "数据不足",
       "sample_reliable": false,
@@ -63,8 +66,26 @@
         {
           "author": "jackli727",
           "author_name": "jackli727",
+          "content": "下一步，eth站稳2666，sol突破站稳128就是单边上涨行情了。这时就开始走月线级别的反弹（当前处于20日超跌反弹周期中）。7月到现在，我们可以看到，反弹在逐步升级，这就是中长线趋势为多头占主导的大基调。到时做多就需要激进点，每天基本就是进10退2/4，每天不会严格按照斐波列契回撤的，每天回踩一",
+          "likes": 18,
+          "url": "https://x.com/jackli727/status/2101523605012217877",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "刚回踩下来，至少可以打个头仓进去。\n\n补仓依然有两套策略双管齐下：\n\nA、sol 支撑点105.25，低位补仓只在104.25/103.85、102.65补，不到不动。这里只有105跌破才有补仓机会。这里的补仓概率较低。",
+          "likes": 13,
+          "url": "https://x.com/jackli727/status/2101519603260080514",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
           "content": "刚回踩下来，至少可以打个头仓进去。sol 105.25支撑点。 https://t.co/Ls4vI06Ncm",
-          "likes": 0,
+          "likes": 9,
           "url": "https://x.com/jackli727/status/2101517988440773068",
           "is_kol": true,
           "sentiment": "bullish"
@@ -72,10 +93,168 @@
       ]
     },
     {
-      "symbol": "NVDA",
-      "name": "英伟达",
+      "symbol": "AAPL",
+      "name": "苹果",
+      "mention_count": 2,
+      "engagement": 312,
+      "kol_mentions": 2,
+      "signal_strength": 30.1,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 2,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "GM is bringing Apple CarPlay and Android Auto back to its vehicles after getting rid of it a couple years ago.\n\n\"As we evolve our UI systems, we want customers to feel like they're interacting with a ",
+          "likes": 229,
+          "url": "https://x.com/SawyerMerritt/status/2101525108636463591",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "If you had just taken over as the new CEO of Apple $AAPL … what is the first company you would acquire?",
+          "likes": 68,
+          "url": "https://x.com/StockMKTNewz/status/2101447924395782219",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "name": "以太坊",
+      "mention_count": 2,
+      "engagement": 258,
+      "kol_mentions": 2,
+      "signal_strength": 45.1,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.5,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.357,
+        "engagement_weighted_sentiment": 0.03,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "chamath",
+          "author_name": "chamath",
+          "content": "Also for those who wonder why I charge for these - it’s the simplest way I’ve found to gauge the quality of the content. \n\nWhen subscribers go up, the content is clearly excellent and I can trust it. ",
+          "likes": 230,
+          "url": "https://x.com/chamath/status/2101426744586801215",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "下一步，eth站稳2666，sol突破站稳128就是单边上涨行情了。这时就开始走月线级别的反弹（当前处于20日超跌反弹周期中）。7月到现在，我们可以看到，反弹在逐步升级，这就是中长线趋势为多头占主导的大基调。到时做多就需要激进点，每天基本就是进10退2/4，每天不会严格按照斐波列契回撤的，每天回踩一",
+          "likes": 18,
+          "url": "https://x.com/jackli727/status/2101523605012217877",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "IEF",
+      "name": "美债7-10年ETF",
       "mention_count": 1,
-      "engagement": 0,
+      "engagement": 25,
+      "kol_mentions": 1,
+      "signal_strength": 37.5,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 1.0,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 1.0,
+        "neutral_ratio": 0.0,
+        "kol_weighted_sentiment": -1.0,
+        "engagement_weighted_sentiment": -1.0,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 0,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "SCMPNews",
+          "author_name": "SCMPNews",
+          "content": "Hong Kong’s first post-colonial chief executive, Tung Chee-hwa, was honoured with a state funeral. #hk #hongkong #TungCheehwa https://t.co/0D9Jy7dF1v",
+          "likes": 21,
+          "url": "https://x.com/SCMPNews/status/2101581829962924322",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "name": "比特币",
+      "mention_count": 1,
+      "engagement": 25,
+      "kol_mentions": 1,
+      "signal_strength": 37.5,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 1.0,
+        "kol_consensus": 1.0,
+        "bull_ratio": 1.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.0,
+        "kol_weighted_sentiment": 1.0,
+        "engagement_weighted_sentiment": 1.0,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 0,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "btc若突破83300就确认反转，虽然暂未反转，但已在路上。82000-83300一磨破，就会加速冲87000。短线上每天收盘后回踩都是进多机会，回踩的幅度非常小，短空是可以不做的，有时你想多拿一下都可能被套，得不偿失。高空可以挂单，比如86850、87777、88850这些位置都是容易获利的。",
+          "likes": 24,
+          "url": "https://x.com/jackli727/status/2101528277638844776",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "name": "AMD",
+      "mention_count": 1,
+      "engagement": 1,
       "kol_mentions": 1,
       "signal_strength": 11.0,
       "consensus": {
@@ -98,8 +277,78 @@
         {
           "author": "168X_Fortune",
           "author_name": "168X_Fortune",
-          "content": "“整条 AI 产业链哪个点增值最大？我其实不知道\n\n后面那些不一定缺货就都能获得 PE 估值\n最近（注：当时受访为五月）很多人炒 Wolfspeed、炒电站、炒变压器，这是传统的缺货逻辑\n\n但做变电站的门槛和做 NVIDIA 的门槛能比吗？NVIDIA 的 moat 更高\n\n当时给 NVIDIA 12 倍 PE，现在那些东西要给类似的",
+          "content": "RT @168MrZ: 有 CPU 專家要來 168X @168X_Fortune 聊聊嗎？ $AMD $INTC",
           "likes": 0,
+          "url": "https://x.com/168X_Fortune/status/2101526210765586581",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "INTC",
+      "name": "INTC",
+      "mention_count": 1,
+      "engagement": 1,
+      "kol_mentions": 1,
+      "signal_strength": 11.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "168X_Fortune",
+          "author_name": "168X_Fortune",
+          "content": "RT @168MrZ: 有 CPU 專家要來 168X @168X_Fortune 聊聊嗎？ $AMD $INTC",
+          "likes": 0,
+          "url": "https://x.com/168X_Fortune/status/2101526210765586581",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "英伟达",
+      "mention_count": 1,
+      "engagement": 7,
+      "kol_mentions": 1,
+      "signal_strength": 17.9,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "168X_Fortune",
+          "author_name": "168X_Fortune",
+          "content": "“整条 AI 产业链哪个点增值最大？我其实不知道\n\n后面那些不一定缺货就都能获得 PE 估值\n最近（注：当时受访为五月）很多人炒 Wolfspeed、炒电站、炒变压器，这是传统的缺货逻辑\n\n但做变电站的门槛和做 NVIDIA 的门槛能比吗？NVIDIA 的 moat 更高\n\n当时给 NVIDIA 12 倍 PE，现在那些东西要给类似的",
+          "likes": 7,
           "url": "https://x.com/168X_Fortune/status/2101512178247639200",
           "is_kol": true,
           "sentiment": "neutral"
@@ -112,7 +361,7 @@
       "mention_count": 1,
       "engagement": 134,
       "kol_mentions": 1,
-      "signal_strength": 26.0,
+      "signal_strength": 22.5,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -140,98 +389,28 @@
           "sentiment": "neutral"
         }
       ]
-    },
-    {
-      "symbol": "AAPL",
-      "name": "苹果",
-      "mention_count": 1,
-      "engagement": 68,
-      "kol_mentions": 1,
-      "signal_strength": 26.0,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "If you had just taken over as the new CEO of Apple $AAPL … what is the first company you would acquire?",
-          "likes": 68,
-          "url": "https://x.com/StockMKTNewz/status/2101447924395782219",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "ETH",
-      "name": "以太坊",
-      "mention_count": 1,
-      "engagement": 237,
-      "kol_mentions": 1,
-      "signal_strength": 26.0,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "chamath",
-          "author_name": "chamath",
-          "content": "Also for those who wonder why I charge for these - it’s the simplest way I’ve found to gauge the quality of the content. \n\nWhen subscribers go up, the content is clearly excellent and I can trust it. ",
-          "likes": 230,
-          "url": "https://x.com/chamath/status/2101426744586801215",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 10,
-      "engagement": 4177,
-      "kol_mentions": 10,
-      "signal_strength": 78.6,
+      "tweet_count": 20,
+      "engagement": 4779,
+      "kol_mentions": 20,
+      "signal_strength": 77.8,
       "consensus": {
-        "consensus_score": 0.143,
-        "opinion_density": 0.7,
-        "kol_consensus": 0.143,
-        "bull_ratio": 0.4,
-        "bear_ratio": 0.3,
-        "neutral_ratio": 0.3,
-        "kol_weighted_sentiment": 0.1,
-        "engagement_weighted_sentiment": -0.081,
-        "bull_count": 4,
-        "bear_count": 3,
-        "neutral_count": 3,
-        "total_count": 10
+        "consensus_score": 0.111,
+        "opinion_density": 0.45,
+        "kol_consensus": 0.111,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.2,
+        "neutral_ratio": 0.55,
+        "kol_weighted_sentiment": 0.05,
+        "engagement_weighted_sentiment": -0.061,
+        "bull_count": 5,
+        "bear_count": 4,
+        "neutral_count": 11,
+        "total_count": 20
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -266,76 +445,24 @@
       ]
     },
     {
-      "theme": "公司_财报",
-      "tweet_count": 8,
-      "engagement": 1985,
-      "kol_mentions": 8,
-      "signal_strength": 75.0,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.25,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.688,
-        "bull_count": 2,
-        "bear_count": 2,
-        "neutral_count": 4,
-        "total_count": 8
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Foreign holdings of US Treasuries fell -$50 billion in July, to $9.25 trillion, the lowest total since October 2025.\n\nForeign holdings refle",
-          "likes": 649,
-          "url": "https://x.com/KobeissiLetter/status/2101463268661305452",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "\"There's a good chance we're in an earnings bubble because this [AI] build-out is going to end at some point, and let's face it, banks are also on the",
-          "likes": 586,
-          "url": "https://x.com/unusual_whales/status/2101476686609219815",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "TheStalwart",
-          "author_name": "TheStalwart",
-          "content": "Ole Miss is a really great name for a college. You have to admit that.",
-          "likes": 352,
-          "url": "https://x.com/TheStalwart/status/2101474925005394199",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "theme": "地缘政治",
-      "tweet_count": 7,
-      "engagement": 6427,
-      "kol_mentions": 7,
+      "tweet_count": 12,
+      "engagement": 7371,
+      "kol_mentions": 12,
       "signal_strength": 87.5,
       "consensus": {
         "consensus_score": 0.5,
-        "opinion_density": 0.571,
+        "opinion_density": 0.333,
         "kol_consensus": 0.5,
-        "bull_ratio": 0.143,
-        "bear_ratio": 0.429,
-        "neutral_ratio": 0.429,
-        "kol_weighted_sentiment": -0.286,
-        "engagement_weighted_sentiment": -0.185,
+        "bull_ratio": 0.083,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": -0.167,
+        "engagement_weighted_sentiment": -0.131,
         "bull_count": 1,
         "bear_count": 3,
-        "neutral_count": 3,
-        "total_count": 7
+        "neutral_count": 8,
+        "total_count": 12
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -371,23 +498,23 @@
     },
     {
       "theme": "加密货币",
-      "tweet_count": 6,
-      "engagement": 394,
-      "kol_mentions": 6,
-      "signal_strength": 83.3,
+      "tweet_count": 10,
+      "engagement": 474,
+      "kol_mentions": 10,
+      "signal_strength": 75.0,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.167,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.133,
-        "engagement_weighted_sentiment": -0.077,
-        "bull_count": 1,
-        "bear_count": 2,
-        "neutral_count": 3,
-        "total_count": 6
+        "consensus_score": 0.0,
+        "opinion_density": 0.6,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.3,
+        "bear_ratio": 0.3,
+        "neutral_ratio": 0.4,
+        "kol_weighted_sentiment": 0.058,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 3,
+        "bear_count": 3,
+        "neutral_count": 4,
+        "total_count": 10
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -422,10 +549,62 @@
       ]
     },
     {
+      "theme": "公司_财报",
+      "tweet_count": 9,
+      "engagement": 2027,
+      "kol_mentions": 9,
+      "signal_strength": 75.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.444,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.222,
+        "bear_ratio": 0.222,
+        "neutral_ratio": 0.556,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": -0.637,
+        "bull_count": 2,
+        "bear_count": 2,
+        "neutral_count": 5,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Foreign holdings of US Treasuries fell -$50 billion in July, to $9.25 trillion, the lowest total since October 2025.\n\nForeign holdings refle",
+          "likes": 649,
+          "url": "https://x.com/KobeissiLetter/status/2101463268661305452",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "\"There's a good chance we're in an earnings bubble because this [AI] build-out is going to end at some point, and let's face it, banks are also on the",
+          "likes": 586,
+          "url": "https://x.com/unusual_whales/status/2101476686609219815",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "TheStalwart",
+          "author_name": "TheStalwart",
+          "content": "Ole Miss is a really great name for a college. You have to admit that.",
+          "likes": 352,
+          "url": "https://x.com/TheStalwart/status/2101474925005394199",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "theme": "AI_科技",
-      "tweet_count": 5,
-      "engagement": 755,
-      "kol_mentions": 5,
+      "tweet_count": 8,
+      "engagement": 1029,
+      "kol_mentions": 8,
       "signal_strength": 75.0,
       "consensus": {
         "consensus_score": 0.0,
@@ -434,12 +613,12 @@
         "bull_ratio": 0.0,
         "bear_ratio": 0.0,
         "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.04,
-        "engagement_weighted_sentiment": 0.005,
+        "kol_weighted_sentiment": 0.025,
+        "engagement_weighted_sentiment": 0.004,
         "bull_count": 0,
         "bear_count": 0,
-        "neutral_count": 5,
-        "total_count": 5
+        "neutral_count": 8,
+        "total_count": 8
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -454,6 +633,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "GM is bringing Apple CarPlay and Android Auto back to its vehicles after getting rid of it a couple years ago.\n\n\"As we evolve our UI systems, we want ",
+          "likes": 229,
+          "url": "https://x.com/SawyerMerritt/status/2101525108636463591",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "StockMKTNewz",
           "author_name": "StockMKTNewz",
           "content": "VOO vs QQQ\n\nHere are the largest holdings in the S&amp;P 500 vs the largest holdings in the Nasdaq 100 https://t.co/w8xNss2ZMj",
@@ -461,13 +649,56 @@
           "url": "https://x.com/StockMKTNewz/status/2101471532484551112",
           "is_kol": true,
           "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "宏观_利率政策",
+      "tweet_count": 7,
+      "engagement": 1341,
+      "kol_mentions": 7,
+      "signal_strength": 75.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.571,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.286,
+        "bear_ratio": 0.286,
+        "neutral_ratio": 0.429,
+        "kol_weighted_sentiment": -0.095,
+        "engagement_weighted_sentiment": -0.672,
+        "bull_count": 2,
+        "bear_count": 2,
+        "neutral_count": 3,
+        "total_count": 7
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#TurkeyWatch🇹🇷: Turkey's $18.3 billion fund scandal is a result of TURKEY'S RUNAWAY INFLATION. It lured retail investors into the stock market to seek",
+          "likes": 1023,
+          "url": "https://x.com/steve_hanke/status/2101573323222364414",
+          "is_kol": true,
+          "sentiment": "bearish"
         },
         {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "If you had just taken over as the new CEO of Apple $AAPL … what is the first company you would acquire?",
-          "likes": 68,
-          "url": "https://x.com/StockMKTNewz/status/2101447924395782219",
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "China central bank injects 32 billion yuan via 7-day reverse repos at 1.40% vs prior 1.40%: statement",
+          "likes": 28,
+          "url": "https://x.com/financialjuice/status/2101481818973241698",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#VNZWatch🇻🇪: Today, as Special Adviser on Economic, Monetary, and Energy Affairs in the office of Congressman Antonio Ecarri at the National Assembly ",
+          "likes": 21,
+          "url": "https://x.com/steve_hanke/status/2101522991586922969",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -475,26 +706,26 @@
     },
     {
       "theme": "外汇_汇率",
-      "tweet_count": 4,
-      "engagement": 786,
-      "kol_mentions": 4,
-      "signal_strength": 60.0,
+      "tweet_count": 7,
+      "engagement": 2216,
+      "kol_mentions": 7,
+      "signal_strength": 87.5,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.75,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.75,
-        "neutral_ratio": 0.25,
-        "kol_weighted_sentiment": -0.75,
-        "engagement_weighted_sentiment": -0.838,
-        "bull_count": 0,
+        "consensus_score": 0.5,
+        "opinion_density": 0.571,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.143,
+        "bear_ratio": 0.429,
+        "neutral_ratio": 0.429,
+        "kol_weighted_sentiment": -0.381,
+        "engagement_weighted_sentiment": -0.473,
+        "bull_count": 1,
         "bear_count": 3,
-        "neutral_count": 1,
-        "total_count": 4
+        "neutral_count": 3,
+        "total_count": 7
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "top_tweets": [
         {
           "author": "unusual_whales",
@@ -515,39 +746,48 @@
           "sentiment": "neutral"
         },
         {
-          "author": "SCMPNews",
-          "author_name": "SCMPNews",
-          "content": "Donald Trump has repeatedly downplayed concerns about AI and argued that additional regulation is unnecessary. Read more: https://t.co/ltaAeaUTBd\n\n#tr",
-          "likes": 2,
-          "url": "https://x.com/SCMPNews/status/2101494905407168704",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#VNZWatch🇻🇪: Today, as Special Adviser on Economic, Monetary, and Energy Affairs in the office of Congressman Antonio Ecarri at the National Assembly ",
+          "likes": 21,
+          "url": "https://x.com/steve_hanke/status/2101522991586922969",
           "is_kol": true,
-          "sentiment": "bearish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "美股_大盘",
-      "tweet_count": 2,
-      "engagement": 147,
-      "kol_mentions": 2,
-      "signal_strength": 52.0,
+      "tweet_count": 3,
+      "engagement": 1439,
+      "kol_mentions": 3,
+      "signal_strength": 37.6,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.5,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.5,
-        "engagement_weighted_sentiment": 0.08,
+        "consensus_score": 0.0,
+        "opinion_density": 0.667,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.333,
+        "bear_ratio": 0.333,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": -0.585,
         "bull_count": 1,
-        "bear_count": 0,
+        "bear_count": 1,
         "neutral_count": 1,
-        "total_count": 2
+        "total_count": 3
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "top_tweets": [
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#TurkeyWatch🇹🇷: Turkey's $18.3 billion fund scandal is a result of TURKEY'S RUNAWAY INFLATION. It lured retail investors into the stock market to seek",
+          "likes": 1023,
+          "url": "https://x.com/steve_hanke/status/2101573323222364414",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
         {
           "author": "StockMKTNewz",
           "author_name": "StockMKTNewz",
@@ -561,7 +801,7 @@
           "author": "jackli727",
           "author_name": "jackli727",
           "content": "提前打下鸡血：离十一黄金周越来越近了。每年的十一黄金周基本都是暴拉，因为大A休市，部分热钱涌入美股和币市。今年也不例外，盘面的反弹趋势已经指明了方向。一般10.1-10.4涨，10.5退潮。前几年每次十一大涨，我都是10.4就跑。",
-          "likes": 11,
+          "likes": 79,
           "url": "https://x.com/jackli727/status/2101509625334190532",
           "is_kol": true,
           "sentiment": "bullish"
@@ -569,54 +809,45 @@
       ]
     },
     {
-      "theme": "宏观_利率政策",
-      "tweet_count": 2,
-      "engagement": 58,
-      "kol_mentions": 2,
-      "signal_strength": 52.0,
+      "theme": "美债_固定收益",
+      "tweet_count": 1,
+      "engagement": 25,
+      "kol_mentions": 1,
+      "signal_strength": 37.5,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.5,
+        "opinion_density": 1.0,
         "kol_consensus": 1.0,
-        "bull_ratio": 0.5,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.5,
-        "engagement_weighted_sentiment": 0.211,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 2
+        "bull_ratio": 0.0,
+        "bear_ratio": 1.0,
+        "neutral_ratio": 0.0,
+        "kol_weighted_sentiment": -1.0,
+        "engagement_weighted_sentiment": -1.0,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 0,
+        "total_count": 1
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "top_tweets": [
         {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "China central bank injects 32 billion yuan via 7-day reverse repos at 1.40% vs prior 1.40%: statement",
-          "likes": 28,
-          "url": "https://x.com/financialjuice/status/2101481818973241698",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "\"Federal Reserve Chair Kevin Warsh has revealed himself as a monetarist. This represents a dramatic change at the Fed, where the past Chairman Powell ",
+          "author": "SCMPNews",
+          "author_name": "SCMPNews",
+          "content": "Hong Kong’s first post-colonial chief executive, Tung Chee-hwa, was honoured with a state funeral. #hk #hongkong #TungCheehwa https://t.co/0D9Jy7dF1v",
           "likes": 21,
-          "url": "https://x.com/steve_hanke/status/2101485494391472536",
+          "url": "https://x.com/SCMPNews/status/2101581829962924322",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "黄金_贵金属",
       "tweet_count": 1,
-      "engagement": 13,
+      "engagement": 89,
       "kol_mentions": 1,
-      "signal_strength": 39.2,
+      "signal_strength": 37.5,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 1.0,
@@ -638,7 +869,7 @@
           "author": "jackli727",
           "author_name": "jackli727",
           "content": "提前打下鸡血：离十一黄金周越来越近了。每年的十一黄金周基本都是暴拉，因为大A休市，部分热钱涌入美股和币市。今年也不例外，盘面的反弹趋势已经指明了方向。一般10.1-10.4涨，10.5退潮。前几年每次十一大涨，我都是10.4就跑。",
-          "likes": 11,
+          "likes": 79,
           "url": "https://x.com/jackli727/status/2101509625334190532",
           "is_kol": true,
           "sentiment": "bullish"
@@ -648,16 +879,436 @@
   ],
   "top_tweets": [
     {
+      "author": "qinbafrank",
+      "author_name": "qinbafrank",
+      "content": "油价是决定加息路径的关键变量，能源冲击是核心扰动。这是高盛GBM系列播客 《The Breaks of the Game》的最新一集核心观点。这期是高盛对冲基金业务全球主管Tony Pasquariello主持，高盛研究部高级顾问Dominic Wilson与全球风险主管Josh https://t.co/MMEfCxW9g3",
+      "likes": 10,
+      "reposts": 1,
+      "replies": 1,
+      "views": 3758,
+      "created_at": "2026-09-20T10:44:13+00:00",
+      "url": "https://x.com/qinbafrank/status/2101623460615102871",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "宏观_利率政策",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Iran's military central command warns of US plans to attack Iran with approval from regional countries: state media",
+      "likes": 29,
+      "reposts": 6,
+      "replies": 1,
+      "views": 18961,
+      "created_at": "2026-09-20T10:30:59+00:00",
+      "url": "https://x.com/financialjuice/status/2101620128362250255",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "BobEUnlimited",
+      "author_name": "BobEUnlimited",
+      "content": "The BoJ and BoE moves this week continued the trend of developed world central banks remaining cautious despite the ongoing global inflation shock.  Free on the blog app this week:\n\nhttps://t.co/vPoLqhVO7k",
+      "likes": 6,
+      "reposts": 0,
+      "replies": 7,
+      "views": 4349,
+      "created_at": "2026-09-20T10:15:02+00:00",
+      "url": "https://x.com/BobEUnlimited/status/2101616113918345624",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "My take in @FortuneMagazine with John Greenwood on monetarism:\n\n\"Monetarism is a doctrine which holds that money has a major influence on both the level of asset prices, economic activity, and the price level. Any discussion of national income determination must, therefore, https://t.co/HWg3pdikkr",
+      "likes": 6,
+      "reposts": 1,
+      "replies": 2,
+      "views": 5825,
+      "created_at": "2026-09-20T10:08:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2101614343678787968",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Japan defense ministry: no confirmation if second missile landed inside Japan's EEZ",
+      "likes": 33,
+      "reposts": 2,
+      "replies": 3,
+      "views": 32018,
+      "created_at": "2026-09-20T09:32:52+00:00",
+      "url": "https://x.com/financialjuice/status/2101605504120147989",
+      "assets": [],
+      "themes": [
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "\"Everyone wants to live at the expense of the State. They forget that the State lives at the expense of everyone.\" – Frédéric Bastiat https://t.co/jIlVMVaIOl",
+      "likes": 35,
+      "reposts": 3,
+      "replies": 1,
+      "views": 7118,
+      "created_at": "2026-09-20T08:50:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2101594713983730085",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "SCMPNews",
+      "author_name": "SCMPNews",
+      "content": "Hong Kong’s first post-colonial chief executive, Tung Chee-hwa, was honoured with a state funeral. #hk #hongkong #TungCheehwa https://t.co/0D9Jy7dF1v",
+      "likes": 21,
+      "reposts": 4,
+      "replies": 1,
+      "views": 8437,
+      "created_at": "2026-09-20T07:58:48+00:00",
+      "url": "https://x.com/SCMPNews/status/2101581829962924322",
+      "assets": [
+        [
+          "IEF",
+          "美债7-10年ETF"
+        ]
+      ],
+      "themes": [
+        "美债_固定收益"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Iran's parliament speaker Galibaf: strait of Hormuz will stay closed until Tehran's conditions are met - Fars",
+      "likes": 136,
+      "reposts": 12,
+      "replies": 6,
+      "views": 41629,
+      "created_at": "2026-09-20T07:39:46+00:00",
+      "url": "https://x.com/financialjuice/status/2101577039576801372",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Ukraine's military hit an oil refinery in Russia's Moscow region: Zelenskiy",
+      "likes": 56,
+      "reposts": 1,
+      "replies": 3,
+      "views": 33051,
+      "created_at": "2026-09-20T07:39:37+00:00",
+      "url": "https://x.com/financialjuice/status/2101577004369825818",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "michaelxpettis",
+      "author_name": "michaelxpettis",
+      "content": "Caixin: \"The onshore Chinese yuan strengthened past 6.7 per U.S. dollar on Friday to touch its highest level in more than three years, defying expectations of depreciation following the Federal Reserve’s latest interest rate hike. The rally was steered in part by the People’s",
+      "likes": 16,
+      "reposts": 4,
+      "replies": 2,
+      "views": 6091,
+      "created_at": "2026-09-20T07:25:17+00:00",
+      "url": "https://x.com/michaelxpettis/status/2101573396576235774",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "外汇_汇率",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 0.333,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "#TurkeyWatch🇹🇷: Turkey's $18.3 billion fund scandal is a result of TURKEY'S RUNAWAY INFLATION. It lured retail investors into the stock market to seek an INFLATION REFUGE.\n\nFin. Min. Şimşek: \"No systemic risk.\"\n\nGET REAL.\n\nTURKEY'S ENDEMIC INFLATION = ONE CRISIS AFTER ANOTHER. https://t.co/1rK4WlC0oh",
+      "likes": 1023,
+      "reposts": 193,
+      "replies": 40,
+      "views": 52872,
+      "created_at": "2026-09-20T07:25:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2101573323222364414",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.667
+    },
+    {
+      "author": "168X_Fortune",
+      "author_name": "168X_Fortune",
+      "content": "“DDR5 叠起来就是 HBM，HBM 涨价把 DDR 的价格一起带上去，存储公司四分之三的盈利来自 DDR 涨价，不是 HBM\n\n所以存储应该当成卖油来估值：油价明天涨到 300 你能按 PE 吗？跌到 30 你怎么办？\n\n但现在进来的是完全不懂半导体的人，看到美光 6 倍 PE 就直接买，这批钱还有很多",
+      "likes": 21,
+      "reposts": 1,
+      "replies": 4,
+      "views": 6502,
+      "created_at": "2026-09-20T06:43:18+00:00",
+      "url": "https://x.com/168X_Fortune/status/2101562830495629493",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "AI_科技",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.667
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Trump said: “There is very little happening right now in Gaza.”\n\nREALLY?\n\nGaza’s Health Ministry reports that FOUR Palestinians have been killed, including a CHILD and the son of a senior Health Ministry official in the past 24 hours by Israeli forces.\n https://t.co/dTBIXnv2Fr",
+      "likes": 166,
+      "reposts": 83,
+      "replies": 9,
+      "views": 10983,
+      "created_at": "2026-09-20T06:35:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2101560740104605756",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "qinbafrank",
+      "author_name": "qinbafrank",
+      "content": "这应该是股票业务布局最广的加密交易所了，在GateEvent上看到@Gate分享的这张图印象深刻：美港韩日四大股票市场都覆盖。\n\n26年加密交易所普遍在做的事情——把 TradFi搬进加密平台，做成“一个账户打通加密资产和传统资产”的超级 App。覆盖广度上，Gate无疑是最积极的。 https://t.co/o61X6OnIJ2",
+      "likes": 10,
+      "reposts": 0,
+      "replies": 9,
+      "views": 13095,
+      "created_at": "2026-09-20T06:20:58+00:00",
+      "url": "https://x.com/qinbafrank/status/2101557211252330892",
+      "assets": [],
+      "themes": [
+        "加密货币",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "goldseek",
+      "author_name": "goldseek",
+      "content": "RT @Nostre_damus: U.S. has agreed to militarily protect Saudi Arabia in exchange for maintaining the petrodollar \n\nFew understand this",
+      "likes": 0,
+      "reposts": 1380,
+      "replies": 0,
+      "views": 941,
+      "created_at": "2026-09-20T06:06:10+00:00",
+      "url": "https://x.com/goldseek/status/2101553484839403724",
+      "assets": [],
+      "themes": [
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "TRUMP'S WAR OF CHOICE ON IRAN = A COSTLY DISASTER.",
+      "likes": 130,
+      "reposts": 24,
+      "replies": 4,
+      "views": 17572,
+      "created_at": "2026-09-20T05:45:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2101548157306032269",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
       "author": "jackli727",
       "author_name": "jackli727",
-      "content": "刚回踩下来，至少可以打个头仓进去。sol 105.25支撑点。 https://t.co/Ls4vI06Ncm",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 0,
-      "views": 421,
-      "created_at": "2026-09-20T03:45:07+00:00",
-      "url": "https://x.com/jackli727/status/2101517988440773068",
+      "content": "btc若突破83300就确认反转，虽然暂未反转，但已在路上。82000-83300一磨破，就会加速冲87000。短线上每天收盘后回踩都是进多机会，回踩的幅度非常小，短空是可以不做的，有时你想多拿一下都可能被套，得不偿失。高空可以挂单，比如86850、87777、88850这些位置都是容易获利的。",
+      "likes": 24,
+      "reposts": 1,
+      "replies": 2,
+      "views": 6423,
+      "created_at": "2026-09-20T04:26:00+00:00",
+      "url": "https://x.com/jackli727/status/2101528277638844776",
       "assets": [
+        [
+          "BTC",
+          "比特币"
+        ]
+      ],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "168X_Fortune",
+      "author_name": "168X_Fortune",
+      "content": "RT @168MrZ: 有 CPU 專家要來 168X @168X_Fortune 聊聊嗎？ $AMD $INTC",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 250,
+      "created_at": "2026-09-20T04:17:47+00:00",
+      "url": "https://x.com/168X_Fortune/status/2101526210765586581",
+      "assets": [
+        [
+          "AMD",
+          "AMD"
+        ],
+        [
+          "INTC",
+          "INTC"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "GM is bringing Apple CarPlay and Android Auto back to its vehicles after getting rid of it a couple years ago.\n\n\"As we evolve our UI systems, we want customers to feel like they're interacting with a single experience rather than moving from room to room inside a house,\" Mike",
+      "likes": 229,
+      "reposts": 15,
+      "replies": 48,
+      "views": 33124,
+      "created_at": "2026-09-20T04:13:25+00:00",
+      "url": "https://x.com/SawyerMerritt/status/2101525108636463591",
+      "assets": [
+        [
+          "AAPL",
+          "苹果"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "下一步，eth站稳2666，sol突破站稳128就是单边上涨行情了。这时就开始走月线级别的反弹（当前处于20日超跌反弹周期中）。7月到现在，我们可以看到，反弹在逐步升级，这就是中长线趋势为多头占主导的大基调。到时做多就需要激进点，每天基本就是进10退2/4，每天不会严格按照斐波列契回撤的，每天回踩一",
+      "likes": 18,
+      "reposts": 3,
+      "replies": 5,
+      "views": 6022,
+      "created_at": "2026-09-20T04:07:26+00:00",
+      "url": "https://x.com/jackli727/status/2101523605012217877",
+      "assets": [
+        [
+          "ETH",
+          "以太坊"
+        ],
         [
           "SOL",
           "Solana"
@@ -669,412 +1320,8 @@
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "168X_Fortune",
-      "author_name": "168X_Fortune",
-      "content": "“整条 AI 产业链哪个点增值最大？我其实不知道\n\n后面那些不一定缺货就都能获得 PE 估值\n最近（注：当时受访为五月）很多人炒 Wolfspeed、炒电站、炒变压器，这是传统的缺货逻辑\n\n但做变电站的门槛和做 NVIDIA 的门槛能比吗？NVIDIA 的 moat 更高\n\n当时给 NVIDIA 12 倍 PE，现在那些东西要给类似的",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 1,
-      "views": 1219,
-      "created_at": "2026-09-20T03:22:02+00:00",
-      "url": "https://x.com/168X_Fortune/status/2101512178247639200",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "ISRAEL BROKE THE CEASEFIRE WITH LEBANON ONCE AGAIN.\n\nToday, Israeli forces DECIMATED numerous buildings in Mays Al-Jabal, Lebanon.\n\nISRAEL CONTINUES TO SHOW THAT IT HAS ZERO RESPECT FOR CEASEFIRE DEALS.\n https://t.co/0N2IJgRXbW",
-      "likes": 16,
-      "reposts": 8,
-      "replies": 3,
-      "views": 4293,
-      "created_at": "2026-09-20T03:20:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2101511666689323330",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "提前打下鸡血：离十一黄金周越来越近了。每年的十一黄金周基本都是暴拉，因为大A休市，部分热钱涌入美股和币市。今年也不例外，盘面的反弹趋势已经指明了方向。一般10.1-10.4涨，10.5退潮。前几年每次十一大涨，我都是10.4就跑。",
-      "likes": 11,
-      "reposts": 2,
-      "replies": 4,
-      "views": 3112,
-      "created_at": "2026-09-20T03:11:53+00:00",
-      "url": "https://x.com/jackli727/status/2101509625334190532",
-      "assets": [],
-      "themes": [
-        "黄金_贵金属",
-        "美股_大盘"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.667
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: US imports of crude oil from Venezuela surged +183,000 barrels per day last week, to 782,000 barrels per day, the largest weekly total since August 2017.\n\nOver the last 6 months, imports from Venezuela have surged +550,000 barrels per day, or +237%.\n\nAs a result, US https://t.co/xygurTfNX5",
-      "likes": 1666,
-      "reposts": 227,
-      "replies": 84,
-      "views": 129724,
-      "created_at": "2026-09-20T02:29:38+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2101498994396442870",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "RaoulGMI",
-      "author_name": "RaoulGMI",
-      "content": "All children are a function of the society they grow up in. The rules around them, their parents, their friends, the stories and memories handed down... plus their genes (software) and the variations in them (which themselves carry the experiences of the generations before).\n\nAll",
-      "likes": 115,
-      "reposts": 9,
-      "replies": 24,
-      "views": 27386,
-      "created_at": "2026-09-20T02:16:55+00:00",
-      "url": "https://x.com/RaoulGMI/status/2101495790568919431",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "Donald Trump has repeatedly downplayed concerns about AI and argued that additional regulation is unnecessary. Read more: https://t.co/ltaAeaUTBd\n\n#trump #donaldtrump #ai #artificialintelligence https://t.co/kH6CAaCnYU",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 3,
-      "views": 2871,
-      "created_at": "2026-09-20T02:13:23+00:00",
-      "url": "https://x.com/SCMPNews/status/2101494905407168704",
-      "assets": [],
-      "themes": [
-        "外汇_汇率"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "John_Hempton",
-      "author_name": "John_Hempton",
-      "content": "Observing just how different various people see the world I had three uber drivers in a row in Perth Australia that had never heard of The Beatles.\n\nThe first one genuinely surprised me. So I asked the next two.",
-      "likes": 26,
-      "reposts": 1,
-      "replies": 6,
-      "views": 4442,
-      "created_at": "2026-09-20T01:58:03+00:00",
-      "url": "https://x.com/John_Hempton/status/2101491043313270801",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.833
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: US urges Americans to exercise caution in Iraq, Bahrain, Oman, Saudi Arabia, Iran, Qatar, Lebanon, Kuwait and Jordan, warns Saudi-Houthi fighting could ‘escalate rapidly’",
-      "likes": 3577,
-      "reposts": 227,
-      "replies": 84,
-      "views": 223838,
-      "created_at": "2026-09-20T01:42:43+00:00",
-      "url": "https://x.com/unusual_whales/status/2101487184478105890",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "\"Federal Reserve Chair Kevin Warsh has revealed himself as a monetarist. This represents a dramatic change at the Fed, where the past Chairman Powell repeatedly rejected the basic tenets of monetarism.\"\n\nRead more in my @FortuneMagazine with John Greenwood. https://t.co/wOvrrTfhM9",
-      "likes": 21,
-      "reposts": 7,
-      "replies": 4,
-      "views": 6252,
-      "created_at": "2026-09-20T01:36:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2101485494391472536",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "原油_能源",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "China central bank injects 32 billion yuan via 7-day reverse repos at 1.40% vs prior 1.40%: statement",
-      "likes": 28,
-      "reposts": 2,
-      "replies": 2,
-      "views": 30916,
-      "created_at": "2026-09-20T01:21:23+00:00",
-      "url": "https://x.com/financialjuice/status/2101481818973241698",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "宏观_利率政策",
-        "外汇_汇率"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "\"There's a good chance we're in an earnings bubble because this [AI] build-out is going to end at some point, and let's face it, banks are also on the AI trade... I mean these guys are making billions of dollars when they bring these companies public,\" per Stanley Druckenmiller",
-      "likes": 586,
-      "reposts": 31,
-      "replies": 64,
-      "views": 115794,
-      "created_at": "2026-09-20T01:01:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2101476686609219815",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "WallStreet0Name",
-      "author_name": "WallStreet0Name",
-      "content": "avax长达1800天的底部下沿拉回，8.6-9.4这个价格从阻力变成支撑，如果未来接近这个价格或者回到这个价格是不错的上车区间，相当于是回踩买入。\n\n最终还要观察比特币的情况，山寨只能在比特币稳住或者震荡的时候玩，比特币在出现下跌的时候山寨就不要碰了。 https://t.co/Os8b3qAv3X",
-      "likes": 66,
-      "reposts": 5,
-      "replies": 17,
-      "views": 16432,
-      "created_at": "2026-09-20T00:59:27+00:00",
-      "url": "https://x.com/WallStreet0Name/status/2101476298535379351",
-      "assets": [],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
+      "sentiment_score": 0.714,
       "sentiment_intensity": 1.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "RT @CharlesDardaman: @TheStalwart My family is Mississippi state but even I want ole miss to beat Kiffen today",
-      "likes": 0,
-      "reposts": 1,
-      "replies": 0,
-      "views": 1104,
-      "created_at": "2026-09-20T00:56:05+00:00",
-      "url": "https://x.com/TheStalwart/status/2101475448509091989",
-      "assets": [],
-      "themes": [
-        "公司_财报",
-        "原油_能源",
-        "宏观_利率政策",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "Ole Miss is a really great name for a college. You have to admit that.",
-      "likes": 352,
-      "reposts": 9,
-      "replies": 24,
-      "views": 22101,
-      "created_at": "2026-09-20T00:54:00+00:00",
-      "url": "https://x.com/TheStalwart/status/2101474925005394199",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "Sorry. This was about Ole Miss.",
-      "likes": 132,
-      "reposts": 3,
-      "replies": 3,
-      "views": 22046,
-      "created_at": "2026-09-20T00:51:14+00:00",
-      "url": "https://x.com/TheStalwart/status/2101474228792893656",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "RT @alz_zyd_: I was ok with gamestop, crypto, even prediction markets. but this is really taking things too far",
-      "likes": 0,
-      "reposts": 1,
-      "replies": 0,
-      "views": 1123,
-      "created_at": "2026-09-20T00:42:17+00:00",
-      "url": "https://x.com/TheStalwart/status/2101471976581665170",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "VOO vs QQQ\n\nHere are the largest holdings in the S&amp;P 500 vs the largest holdings in the Nasdaq 100 https://t.co/w8xNss2ZMj",
-      "likes": 122,
-      "reposts": 12,
-      "replies": 13,
-      "views": 37175,
-      "created_at": "2026-09-20T00:40:31+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2101471532484551112",
-      "assets": [
-        [
-          "QQQ",
-          "纳指100ETF"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "美股_大盘"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "What’s the deal with watching YouTube TV. Just a totally silent shot of the stadium (instead of commercials) during breaks of the LSU - Ole Miss game?",
-      "likes": 111,
-      "reposts": 0,
-      "replies": 31,
-      "views": 36349,
-      "created_at": "2026-09-20T00:34:41+00:00",
-      "url": "https://x.com/TheStalwart/status/2101470066172670314",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Foreign holdings of US Treasuries fell -$50 billion in July, to $9.25 trillion, the lowest total since October 2025.\n\nForeign holdings reflect net purchases or sales as well as bond valuation changes.\n\nThis marks the 4th monthly decline over the last 5 months, totaling https://t.co/2V3UWeceVi",
-      "likes": 649,
-      "reposts": 84,
-      "replies": 69,
-      "views": 108260,
-      "created_at": "2026-09-20T00:07:41+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2101463268661305452",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.333
     }
   ],
   "kol_summary": [
@@ -1116,6 +1363,20 @@
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "#TurkeyWatch🇹🇷: Turkey's $18.3 billion fund scandal is a result of TURKEY'S RUNAWAY INFLATION. It lured retail investors into the stock market to seek an INFLATION REFUGE.\n\nFin. Min. Şimşek: \"No systemic risk.\"\n\nGET REAL.\n\nTURKEY'S ENDEMIC INFLATION = ONE CRISIS AFTER ANOTHER. https://t.co/1rK4WlC0oh",
+      "likes": 1023,
+      "url": "https://x.com/steve_hanke/status/2101573323222364414",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "美股_大盘"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
     },
     {
       "author": "michaeljburry",
@@ -1186,6 +1447,19 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "ISRAEL BROKE THE CEASEFIRE WITH LEBANON ONCE AGAIN.\n\nToday, Israeli forces DECIMATED numerous buildings in Mays Al-Jabal, Lebanon.\n\nISRAEL CONTINUES TO SHOW THAT IT HAS ZERO RESPECT FOR CEASEFIRE DEALS.\n https://t.co/0N2IJgRXbW",
+      "likes": 237,
+      "url": "https://x.com/steve_hanke/status/2101511666689323330",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "sentiment": "bullish",
+      "sentiment_score": 1.0
+    },
+    {
       "author": "chamath",
       "author_name": "chamath",
       "content": "Also for those who wonder why I charge for these - it’s the simplest way I’ve found to gauge the quality of the content. \n\nWhen subscribers go up, the content is clearly excellent and I can trust it. \n\nWhen subscribers go down, there is something wrong in the content and the",
@@ -1204,6 +1478,52 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "GM is bringing Apple CarPlay and Android Auto back to its vehicles after getting rid of it a couple years ago.\n\n\"As we evolve our UI systems, we want customers to feel like they're interacting with a single experience rather than moving from room to room inside a house,\" Mike",
+      "likes": 229,
+      "url": "https://x.com/SawyerMerritt/status/2101525108636463591",
+      "assets": [
+        [
+          "AAPL",
+          "苹果"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Trump said: “There is very little happening right now in Gaza.”\n\nREALLY?\n\nGaza’s Health Ministry reports that FOUR Palestinians have been killed, including a CHILD and the son of a senior Health Ministry official in the past 24 hours by Israeli forces.\n https://t.co/dTBIXnv2Fr",
+      "likes": 166,
+      "url": "https://x.com/steve_hanke/status/2101560740104605756",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Iran's parliament speaker Galibaf: strait of Hormuz will stay closed until Tehran's conditions are met - Fars",
+      "likes": 136,
+      "url": "https://x.com/financialjuice/status/2101577039576801372",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "TheStalwart",
       "author_name": "TheStalwart",
       "content": "Sorry. This was about Ole Miss.",
@@ -1215,83 +1535,8 @@
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
-    },
-    {
-      "author": "elerianm",
-      "author_name": "elerianm",
-      "content": "This chart on Europe from the Financial Times is a general reminder that, in exhibiting impressive resilience to the energy shock, the global economy has run down its physical inventory.\n#economy #oil #energy #markets @ft https://t.co/7EYl1wSiwM",
-      "likes": 125,
-      "url": "https://x.com/elerianm/status/2101439715375247626",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "VOO vs QQQ\n\nHere are the largest holdings in the S&amp;P 500 vs the largest holdings in the Nasdaq 100 https://t.co/w8xNss2ZMj",
-      "likes": 122,
-      "url": "https://x.com/StockMKTNewz/status/2101471532484551112",
-      "assets": [
-        [
-          "QQQ",
-          "纳指100ETF"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "美股_大盘"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "RaoulGMI",
-      "author_name": "RaoulGMI",
-      "content": "All children are a function of the society they grow up in. The rules around them, their parents, their friends, the stories and memories handed down... plus their genes (software) and the variations in them (which themselves carry the experiences of the generations before).\n\nAll",
-      "likes": 115,
-      "url": "https://x.com/RaoulGMI/status/2101495790568919431",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "What’s the deal with watching YouTube TV. Just a totally silent shot of the stadium (instead of commercials) during breaks of the LSU - Ole Miss game?",
-      "likes": 111,
-      "url": "https://x.com/TheStalwart/status/2101470066172670314",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "If you had just taken over as the new CEO of Apple $AAPL … what is the first company you would acquire?",
-      "likes": 68,
-      "url": "https://x.com/StockMKTNewz/status/2101447924395782219",
-      "assets": [
-        [
-          "AAPL",
-          "苹果"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
