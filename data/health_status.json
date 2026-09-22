@@ -1,11 +1,20 @@
 {
-  "current_level": "normal",
-  "consecutive_failures": 0,
-  "last_failure_reason": "",
-  "last_check_time": "2026-09-21T20:26:54.797191",
-  "last_check_result": "normal",
+  "current_level": "warning",
+  "consecutive_failures": 1,
+  "last_failure_reason": "推文文件不存在",
+  "last_check_time": "2026-09-22T00:25:49.893811",
+  "last_check_result": "warning",
   "skip_until": null,
   "history": [
+    {
+      "result": "warning",
+      "level": "warning",
+      "failures": 1,
+      "reasons": [
+        "推文文件不存在"
+      ],
+      "time": "2026-09-22T00:25:49.893818"
+    },
     {
       "result": "normal",
       "level": "normal",
@@ -140,13 +149,6 @@
       "failures": 0,
       "reasons": [],
       "time": "2026-09-17T16:56:06.382072"
-    },
-    {
-      "result": "normal",
-      "level": "normal",
-      "failures": 0,
-      "reasons": [],
-      "time": "2026-09-17T11:39:53.243021"
     }
   ]
 }
