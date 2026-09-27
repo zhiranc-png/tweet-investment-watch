@@ -1,11 +1,18 @@
 {
-  "current_level": "warning",
-  "consecutive_failures": 1,
-  "last_failure_reason": "增量轮推文数异常偏少：17 条（预期 ≥ 20，模式 incremental）",
-  "last_check_time": "2026-09-27T01:04:15.353011",
-  "last_check_result": "warning",
+  "current_level": "normal",
+  "consecutive_failures": 0,
+  "last_failure_reason": "",
+  "last_check_time": "2026-09-27T04:33:29.929075",
+  "last_check_result": "normal",
   "skip_until": null,
   "history": [
+    {
+      "result": "normal",
+      "level": "normal",
+      "failures": 0,
+      "reasons": [],
+      "time": "2026-09-27T04:33:29.929083"
+    },
     {
       "result": "warning",
       "level": "warning",
@@ -140,15 +147,6 @@
       "failures": 0,
       "reasons": [],
       "time": "2026-09-23T04:10:43.639537"
-    },
-    {
-      "result": "warning",
-      "level": "warning",
-      "failures": 1,
-      "reasons": [
-        "推文文件不存在"
-      ],
-      "time": "2026-09-23T00:06:27.566632"
     }
   ]
 }
