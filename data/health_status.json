@@ -1,11 +1,20 @@
 {
-  "current_level": "normal",
-  "consecutive_failures": 0,
-  "last_failure_reason": "",
-  "last_check_time": "2026-09-28T04:33:32.274298",
-  "last_check_result": "normal",
+  "current_level": "warning",
+  "consecutive_failures": 1,
+  "last_failure_reason": "采集耗时过长：4585 秒（预期 ≤ 3600 秒，可能卡住）",
+  "last_check_time": "2026-09-28T14:20:33.511610",
+  "last_check_result": "warning",
   "skip_until": null,
   "history": [
+    {
+      "result": "warning",
+      "level": "warning",
+      "failures": 1,
+      "reasons": [
+        "采集耗时过长：4585 秒（预期 ≤ 3600 秒，可能卡住）"
+      ],
+      "time": "2026-09-28T14:20:33.511617"
+    },
     {
       "result": "normal",
       "level": "normal",
@@ -142,13 +151,6 @@
       "failures": 0,
       "reasons": [],
       "time": "2026-09-24T17:11:52.639846"
-    },
-    {
-      "result": "normal",
-      "level": "normal",
-      "failures": 0,
-      "reasons": [],
-      "time": "2026-09-24T11:46:29.147863"
     }
   ]
 }
