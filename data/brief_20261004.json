@@ -1,39 +1,139 @@
 {
-  "generated_at": "2026-10-04T06:04:08.494595",
+  "generated_at": "2026-10-04T12:25:25.729824",
   "stats": {
-    "total_tweets": 24,
-    "kol_tweets": 24,
-    "unique_authors": 14,
-    "kol_count": 14,
-    "total_likes": 16362,
-    "total_reposts": 2489,
-    "total_replies": 1219,
-    "total_views": 988285,
-    "unique_assets": 5,
-    "unique_themes": 9
+    "total_tweets": 101,
+    "kol_tweets": 61,
+    "unique_authors": 23,
+    "kol_count": 23,
+    "total_likes": 19369,
+    "total_reposts": 2893,
+    "total_replies": 1517,
+    "total_views": 1694279,
+    "unique_assets": 8,
+    "unique_themes": 10,
+    "classified_tweets": 61,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.2,
-    "opinion_density": 0.208,
-    "kol_consensus": 0.2,
-    "bull_ratio": 0.083,
-    "bear_ratio": 0.125,
-    "neutral_ratio": 0.792,
-    "kol_weighted_sentiment": -0.042,
-    "engagement_weighted_sentiment": -0.346,
-    "bull_count": 2,
-    "bear_count": 3,
-    "neutral_count": 19,
-    "total_count": 24
+    "consensus_score": 0.091,
+    "opinion_density": 0.18,
+    "kol_consensus": 0.091,
+    "bull_ratio": 0.082,
+    "bear_ratio": 0.098,
+    "neutral_ratio": 0.82,
+    "kol_weighted_sentiment": -0.016,
+    "engagement_weighted_sentiment": -0.255,
+    "bull_count": 5,
+    "bear_count": 6,
+    "neutral_count": 50,
+    "total_count": 61
   },
   "top_assets": [
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "mention_count": 3,
+      "engagement": 57,
+      "kol_mentions": 3,
+      "signal_strength": 50.8,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.333,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.333,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": -0.333,
+        "engagement_weighted_sentiment": -0.253,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 2,
+        "total_count": 3
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "Ole_S_Hansen",
+          "author_name": "Ole_S_Hansen",
+          "content": "COT on #commodities: Managed money remained firmly on the defensive in the week to 29 September as a stronger dollar and surging US Treasury yields helped drive the Bloomberg Commodity Index down 2.1%",
+          "likes": 31,
+          "url": "https://x.com/Ole_S_Hansen/status/2106690837333610874",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "BobEUnlimited",
+          "author_name": "BobEUnlimited",
+          "content": "As we discussed on MacroTalk this week, the crude market has solved a lot of the supply problem with high surcharges. How its working in detail free on the blog app this week:\nhttps://t.co/G2YelbKO66",
+          "likes": 11,
+          "url": "https://x.com/BobEUnlimited/status/2106689535107080346",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "SCMPNews",
+          "author_name": "SCMPNews",
+          "content": "Mars shelter problem can be solved with engineered yeast: paper https://t.co/TzXViDDt2B",
+          "likes": 1,
+          "url": "https://x.com/SCMPNews/status/2106622666874491193",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "英伟达",
+      "mention_count": 2,
+      "engagement": 17,
+      "kol_mentions": 2,
+      "signal_strength": 28.3,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 2,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "ArtofSpecuycky",
+          "author_name": "ArtofSpecuycky",
+          "content": "摩根士丹利：重申 $NVDA 为半导体板块首选标的。随着 AI 基础设施瓶颈从芯片供应逐步转向土地、电力和数据中心容量，英伟达更高的算力密度和全栈优势将进一步受益。摩根士丹利预计其 FY28 营收约 6900 亿美元、EPS 15.01 美元，目标价 300 美元。",
+          "likes": 16,
+          "url": "https://x.com/ArtofSpecuycky/status/2106519580231553428",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$NVDA very busy industry conference circuit in the next month and a half @wallsthorizon https://t.co/wvgimQO3zH",
+          "likes": 0,
+          "url": "https://x.com/MikeZaccardi/status/2106700256284934207",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
     {
       "symbol": "TSLA",
       "name": "特斯拉",
       "mention_count": 2,
       "engagement": 1505,
       "kol_mentions": 2,
-      "signal_strength": 39.0,
+      "signal_strength": 28.9,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -72,12 +172,82 @@
       ]
     },
     {
+      "symbol": "USO",
+      "name": "原油ETF",
+      "mention_count": 1,
+      "engagement": 3,
+      "kol_mentions": 1,
+      "signal_strength": 13.9,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Today's oil price is extremely normal when scanning the last 20 years JPMAM $USO $CL_F https://t.co/YPDQxKD9Qa",
+          "likes": 2,
+          "url": "https://x.com/MikeZaccardi/status/2106714199304945928",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "XAG",
+      "name": "白银",
+      "mention_count": 1,
+      "engagement": 53,
+      "kol_mentions": 1,
+      "signal_strength": 21.9,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "PeterLBrandt",
+          "author_name": "PeterLBrandt",
+          "content": "This is one of similar X tweets I posted in late Jan on Silver. https://t.co/w7wxV1s3jc",
+          "likes": 53,
+          "url": "https://x.com/PeterLBrandt/status/2106696529738436694",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "symbol": "PONS",
       "name": "PONS",
       "mention_count": 1,
       "engagement": 1,
       "kol_mentions": 1,
-      "signal_strength": 16.5,
+      "signal_strength": 10.4,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -112,7 +282,7 @@
       "mention_count": 1,
       "engagement": 364,
       "kol_mentions": 1,
-      "signal_strength": 43.0,
+      "signal_strength": 36.9,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 1.0,
@@ -147,7 +317,7 @@
       "mention_count": 1,
       "engagement": 930,
       "kol_mentions": 1,
-      "signal_strength": 28.0,
+      "signal_strength": 21.9,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -175,63 +345,28 @@
           "sentiment": "neutral"
         }
       ]
-    },
-    {
-      "symbol": "NVDA",
-      "name": "英伟达",
-      "mention_count": 1,
-      "engagement": 16,
-      "kol_mentions": 1,
-      "signal_strength": 27.2,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "ArtofSpecuycky",
-          "author_name": "ArtofSpecuycky",
-          "content": "摩根士丹利：重申 $NVDA 为半导体板块首选标的。随着 AI 基础设施瓶颈从芯片供应逐步转向土地、电力和数据中心容量，英伟达更高的算力密度和全栈优势将进一步受益。摩根士丹利预计其 FY28 营收约 6900 亿美元、EPS 15.01 美元，目标价 300 美元。",
-          "likes": 16,
-          "url": "https://x.com/ArtofSpecuycky/status/2106519580231553428",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 13,
-      "engagement": 3517,
-      "kol_mentions": 13,
-      "signal_strength": 100.0,
+      "tweet_count": 27,
+      "engagement": 5836,
+      "kol_mentions": 27,
+      "signal_strength": 83.3,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.154,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.154,
-        "neutral_ratio": 0.846,
-        "kol_weighted_sentiment": -0.154,
-        "engagement_weighted_sentiment": -0.018,
-        "bull_count": 0,
+        "consensus_score": 0.333,
+        "opinion_density": 0.111,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.037,
+        "bear_ratio": 0.074,
+        "neutral_ratio": 0.889,
+        "kol_weighted_sentiment": -0.037,
+        "engagement_weighted_sentiment": -0.008,
+        "bull_count": 1,
         "bear_count": 2,
-        "neutral_count": 11,
-        "total_count": 13
+        "neutral_count": 24,
+        "total_count": 27
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -255,11 +390,11 @@
           "sentiment": "neutral"
         },
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "Today, Ukrainian drones struck an oil depot in Crimea.\n\nThese strikes will certainly invite MASSIVE RUSSIAN COUNTERATTACKS that will continue to destr",
-          "likes": 185,
-          "url": "https://x.com/steve_hanke/status/2106513877458719090",
+          "author": "chamath",
+          "author_name": "chamath",
+          "content": "The case for giving everyone GLPs…",
+          "likes": 601,
+          "url": "https://x.com/chamath/status/2106600791784194251",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -267,23 +402,179 @@
     },
     {
       "theme": "地缘政治",
-      "tweet_count": 8,
-      "engagement": 4870,
-      "kol_mentions": 8,
+      "tweet_count": 21,
+      "engagement": 6453,
+      "kol_mentions": 21,
       "signal_strength": 75.0,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.25,
+        "opinion_density": 0.095,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.125,
-        "bear_ratio": 0.125,
-        "neutral_ratio": 0.75,
+        "bull_ratio": 0.048,
+        "bear_ratio": 0.048,
+        "neutral_ratio": 0.905,
         "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.002,
+        "engagement_weighted_sentiment": 0.001,
         "bull_count": 1,
         "bear_count": 1,
+        "neutral_count": 19,
+        "total_count": 21
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: A federal judge has ruled that a Tulsa, Oklahoma sheriff’s deputy violated a woman’s Fourth Amendment rights when using Flock Safety to sear",
+          "likes": 4043,
+          "url": "https://x.com/unusual_whales/status/2106522516827386131",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "IRAN REFUSES TO REOPEN STRAIT OF HORMUZ\n\nIran says the Strait of Hormuz will remain closed until the U.S. meets seven conditions established under the",
+          "likes": 447,
+          "url": "https://x.com/DeItAone/status/2106706053790409198",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "RUSSIA WILL INTENSIFY STRIKES ON KYIV AND OTHER REGIONS OF UKRAINE FOLLOWING LATEST ZELENSKIY REMARKS - TASS CITES RUSSIA DEFENCE MINISTRY",
+          "likes": 364,
+          "url": "https://x.com/DeItAone/status/2106684501300560088",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "公司_财报",
+      "tweet_count": 11,
+      "engagement": 964,
+      "kol_mentions": 11,
+      "signal_strength": 100.0,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.182,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.182,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.818,
+        "kol_weighted_sentiment": 0.182,
+        "engagement_weighted_sentiment": 0.502,
+        "bull_count": 2,
+        "bear_count": 0,
+        "neutral_count": 9,
+        "total_count": 11
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Wow.\n\nMicron, $MU, is up more than 480% in a year.\n\nIt has added roughly $1 trillion in market cap.\n\nIt now trades above $1,000 a share.\n\nIf you inves",
+          "likes": 347,
+          "url": "https://x.com/unusual_whales/status/2106535017430003734",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#TurkeyWatch🇹🇷: Pres. Erdoğan at TEKNOFEST:\n\n\"Those who lay hands on the people's assets will never get away with it.\" \n\nTHE NUMBER OF HANDS KEEPS ON ",
+          "likes": 301,
+          "url": "https://x.com/steve_hanke/status/2106640209978995168",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Iran’s army spokesperson: After war with US, Tehran plans to enhance missile range - Fars News",
+          "likes": 72,
+          "url": "https://x.com/financialjuice/status/2106687656478269932",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "美债_固定收益",
+      "tweet_count": 8,
+      "engagement": 1110,
+      "kol_mentions": 8,
+      "signal_strength": 100.0,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.25,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.75,
+        "kol_weighted_sentiment": -0.25,
+        "engagement_weighted_sentiment": -0.032,
+        "bull_count": 0,
+        "bear_count": 2,
         "neutral_count": 6,
         "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "Retail investors are rushing into Treasury ETFs:\n\nRetail investors bought +$61 million of the 20+ Year Treasury Bond ETF, $TLT, on Wednesday, their la",
+          "likes": 810,
+          "url": "https://x.com/KobeissiLetter/status/2106524135547355592",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "当被问到：你后悔说过“我现在就是庄家”吗？\n贝森特说：“不后悔，因为你看，庄家也不是每一把都赢，庄家玩的是概率长期下来你会赢。我无法控制债券市场。我能做的是让人们慢下来思考，而非控制市场。”\n\n对美债收益率上升，贝森特认为与全球趋势一致，并非美国特有现象：“如果出现 https://t.co/XP3",
+          "likes": 62,
+          "url": "https://x.com/qinbafrank/status/2106625489578480051",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "Ole_S_Hansen",
+          "author_name": "Ole_S_Hansen",
+          "content": "COT on #commodities: Managed money remained firmly on the defensive in the week to 29 September as a stronger dollar and surging US Treasury yields he",
+          "likes": 31,
+          "url": "https://x.com/Ole_S_Hansen/status/2106690837333610874",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "宏观_利率政策",
+      "tweet_count": 6,
+      "engagement": 4505,
+      "kol_mentions": 6,
+      "signal_strength": 83.3,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.5,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.333,
+        "bear_ratio": 0.167,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.167,
+        "engagement_weighted_sentiment": 0.007,
+        "bull_count": 2,
+        "bear_count": 1,
+        "neutral_count": 3,
+        "total_count": 6
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -300,122 +591,18 @@
         {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "Today, Ukrainian drones struck an oil depot in Crimea.\n\nThese strikes will certainly invite MASSIVE RUSSIAN COUNTERATTACKS that will continue to destr",
-          "likes": 185,
-          "url": "https://x.com/steve_hanke/status/2106513877458719090",
+          "content": "#IDNWatch🇮🇩: Indonesia’s inflation came in at 3.3%/yr in September. That’s within Bank Indonesia's target range of 1.5%-3.5%/yr.\n\nThis is the first pr",
+          "likes": 48,
+          "url": "https://x.com/steve_hanke/status/2106610514667110480",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "TRUMP'S WAR OF CHOICE IN IRAN HAS BROKEN UNCLE SAM'S BANK.\n https://t.co/MxUDbsH3hO",
-          "likes": 113,
-          "url": "https://x.com/steve_hanke/status/2106538385732932072",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "美债_固定收益",
-      "tweet_count": 3,
-      "engagement": 954,
-      "kol_mentions": 3,
-      "signal_strength": 57.0,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.004,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "Retail investors are rushing into Treasury ETFs:\n\nRetail investors bought +$61 million of the 20+ Year Treasury Bond ETF, $TLT, on Wednesday, their la",
-          "likes": 810,
-          "url": "https://x.com/KobeissiLetter/status/2106524135547355592",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "UrbanKaoboy",
-          "author_name": "UrbanKaoboy",
-          "content": "RT @Polomvp888: This 👇\n\" The AI Buildout is increasingly being financed with Debt (High Yield Bonds, Leveraged Loans and Private Credit, th…",
-          "likes": 0,
-          "url": "https://x.com/UrbanKaoboy/status/2106592819808973190",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "biancoresearch",
-          "author_name": "biancoresearch",
-          "content": "RT @biancoresearch: Color-coded real yields. \n\nEven with the recent spike, 10-year TIPS (2.91%) are only back to the pre-QE average (2.74%)…",
-          "likes": 0,
-          "url": "https://x.com/biancoresearch/status/2106519927448633413",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "公司_财报",
-      "tweet_count": 3,
-      "engagement": 441,
-      "kol_mentions": 3,
-      "signal_strength": 57.0,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": 0.333,
-        "engagement_weighted_sentiment": 0.832,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Wow.\n\nMicron, $MU, is up more than 480% in a year.\n\nIt has added roughly $1 trillion in market cap.\n\nIt now trades above $1,000 a share.\n\nIf you inves",
-          "likes": 347,
-          "url": "https://x.com/unusual_whales/status/2106535017430003734",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "qinbafrank",
-          "author_name": "qinbafrank",
-          "content": "感觉小火箭RKLB又值得好好看看，这次核心逻辑有几个：\n1、首先最重要的为了收购Iridium铱星通信筹集资金进行ATM增发股票融资在9月中已经结束了。",
-          "likes": 49,
-          "url": "https://x.com/qinbafrank/status/2106561635217551560",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "ArtofSpecuycky",
-          "author_name": "ArtofSpecuycky",
-          "content": "摩根士丹利：重申 $NVDA 为半导体板块首选标的。随着 AI 基础设施瓶颈从芯片供应逐步转向土地、电力和数据中心容量，英伟达更高的算力密度和全栈优势将进一步受益。摩根士丹利预计其 FY28 营收约 6900 亿美元、EPS 15.01 美元，目标价 300 美元。",
-          "likes": 16,
-          "url": "https://x.com/ArtofSpecuycky/status/2106519580231553428",
+          "content": "Real gross domestic product grew only 2.2% in the second quarter. Gross output (GO) grew 5%, driven by a 13.8% surge in business-to-business spending.",
+          "likes": 19,
+          "url": "https://x.com/steve_hanke/status/2106678462186705196",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -423,27 +610,36 @@
     },
     {
       "theme": "加密货币",
-      "tweet_count": 2,
-      "engagement": 12,
-      "kol_mentions": 2,
-      "signal_strength": 36.8,
+      "tweet_count": 5,
+      "engagement": 30,
+      "kol_mentions": 5,
+      "signal_strength": 75.0,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.0,
+        "opinion_density": 0.4,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.2,
+        "neutral_ratio": 0.6,
         "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 2
+        "engagement_weighted_sentiment": -0.082,
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 3,
+        "total_count": 5
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "BobEUnlimited",
+          "author_name": "BobEUnlimited",
+          "content": "As we discussed on MacroTalk this week, the crude market has solved a lot of the supply problem with high surcharges. How its working in detail free o",
+          "likes": 11,
+          "url": "https://x.com/BobEUnlimited/status/2106689535107080346",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "financialjuice",
           "author_name": "financialjuice",
@@ -454,35 +650,35 @@
           "sentiment": "neutral"
         },
         {
-          "author": "168X_Fortune",
-          "author_name": "168X_Fortune",
-          "content": "RT @robinhoodeco_zh: . $PONS 回購爭議時間線 🎯\n\n收入掉了約八成， $PONS 的回購還有力嗎？\n我們整理了 @y_cryptoanalyst 以及 @MEADGod 對線經過\n\n1️⃣ 10/2。連續 4 天沒把資金補進分配器。託管未領 $1.2…",
-          "likes": 0,
-          "url": "https://x.com/168X_Fortune/status/2106598918876463292",
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Push may soon come to shove... Federal net debt (accumulated deficits to reach 120% of GDP by 2036 JPMAM\n\n(Social Security's primary retirement trust ",
+          "likes": 2,
+          "url": "https://x.com/MikeZaccardi/status/2106710424620020222",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bullish"
         }
       ]
     },
     {
       "theme": "美股_大盘",
-      "tweet_count": 2,
-      "engagement": 10262,
-      "kol_mentions": 2,
-      "signal_strength": 54.0,
+      "tweet_count": 3,
+      "engagement": 10268,
+      "kol_mentions": 3,
+      "signal_strength": 35.8,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.5,
-        "engagement_weighted_sentiment": -0.818,
-        "bull_count": 0,
+        "consensus_score": 0.0,
+        "opinion_density": 0.667,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.333,
+        "bear_ratio": 0.333,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": -0.815,
+        "bull_count": 1,
         "bear_count": 1,
         "neutral_count": 1,
-        "total_count": 2
+        "total_count": 3
       },
       "reliability": "数据不足",
       "sample_reliable": false,
@@ -504,6 +700,101 @@
           "url": "https://x.com/KobeissiLetter/status/2106524135547355592",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "GS: AI ROI this earnings season:\n\n• Cloud rev growth to accelerate from 48% (Q2) to 55% (Q3) YoY\n• 50% of S&amp;P 500 firms discussed AI productivity ",
+          "likes": 6,
+          "url": "https://x.com/MikeZaccardi/status/2106704888079995322",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "theme": "AI_科技",
+      "tweet_count": 3,
+      "engagement": 23,
+      "kol_mentions": 3,
+      "signal_strength": 35.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 3,
+        "total_count": 3
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "top_tweets": [
+        {
+          "author": "ArtofSpecuycky",
+          "author_name": "ArtofSpecuycky",
+          "content": "摩根士丹利：重申 $NVDA 为半导体板块首选标的。随着 AI 基础设施瓶颈从芯片供应逐步转向土地、电力和数据中心容量，英伟达更高的算力密度和全栈优势将进一步受益。摩根士丹利预计其 FY28 营收约 6900 亿美元、EPS 15.01 美元，目标价 300 美元。",
+          "likes": 16,
+          "url": "https://x.com/ArtofSpecuycky/status/2106519580231553428",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "168X_Fortune",
+          "author_name": "168X_Fortune",
+          "content": "五月 @ShanghaoJin Herman 在节目里讲的：\n\n“现在市场相对安全，因为 Anthropic 和 OpenAI 没上市，你没办法联动它们的财务数据去质疑「左脚踩右脚」\n 万一两家各两万亿都上市，模型没收敛好或算力不足没达到预期，所有东西会一起崩\n 这些 deal 跟半公开 IPO",
+          "likes": 6,
+          "url": "https://x.com/168X_Fortune/status/2106650943551058045",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$NVDA very busy industry conference circuit in the next month and a half @wallsthorizon https://t.co/wvgimQO3zH",
+          "likes": 0,
+          "url": "https://x.com/MikeZaccardi/status/2106700256284934207",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "黄金_贵金属",
+      "tweet_count": 1,
+      "engagement": 53,
+      "kol_mentions": 1,
+      "signal_strength": 21.9,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "top_tweets": [
+        {
+          "author": "PeterLBrandt",
+          "author_name": "PeterLBrandt",
+          "content": "This is one of similar X tweets I posted in late Jan on Silver. https://t.co/w7wxV1s3jc",
+          "likes": 53,
+          "url": "https://x.com/PeterLBrandt/status/2106696529738436694",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
@@ -512,7 +803,7 @@
       "tweet_count": 1,
       "engagement": 31,
       "kol_mentions": 1,
-      "signal_strength": 28.0,
+      "signal_strength": 21.9,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -540,87 +831,19 @@
           "sentiment": "neutral"
         }
       ]
-    },
-    {
-      "theme": "宏观_利率政策",
-      "tweet_count": 1,
-      "engagement": 4408,
-      "kol_mentions": 1,
-      "signal_strength": 28.0,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: A federal judge has ruled that a Tulsa, Oklahoma sheriff’s deputy violated a woman’s Fourth Amendment rights when using Flock Safety to sear",
-          "likes": 4043,
-          "url": "https://x.com/unusual_whales/status/2106522516827386131",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "AI_科技",
-      "tweet_count": 1,
-      "engagement": 16,
-      "kol_mentions": 1,
-      "signal_strength": 27.2,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "ArtofSpecuycky",
-          "author_name": "ArtofSpecuycky",
-          "content": "摩根士丹利：重申 $NVDA 为半导体板块首选标的。随着 AI 基础设施瓶颈从芯片供应逐步转向土地、电力和数据中心容量，英伟达更高的算力密度和全栈优势将进一步受益。摩根士丹利预计其 FY28 营收约 6900 亿美元、EPS 15.01 美元，目标价 300 美元。",
-          "likes": 16,
-          "url": "https://x.com/ArtofSpecuycky/status/2106519580231553428",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_tweets": [
     {
-      "author": "chamath",
-      "author_name": "chamath",
-      "content": "The case for giving everyone GLPs…",
-      "likes": 75,
-      "reposts": 8,
-      "replies": 13,
-      "views": 15505,
-      "created_at": "2026-10-04T04:22:22+00:00",
-      "url": "https://x.com/chamath/status/2106600791784194251",
+      "author": "charliebilello",
+      "author_name": "charliebilello",
+      "content": "RT @charliebilello: Want to understand what’s really happening in markets?\n\nEvery week I share the charts, trends, and themes that matter m…",
+      "likes": 0,
+      "reposts": 10,
+      "replies": 0,
+      "views": 0,
+      "created_at": "2026-10-04T12:12:47+00:00",
+      "url": "https://x.com/charliebilello/status/2106719176593183212",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -632,43 +855,212 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "168X_Fortune",
-      "author_name": "168X_Fortune",
-      "content": "RT @robinhoodeco_zh: . $PONS 回購爭議時間線 🎯\n\n收入掉了約八成， $PONS 的回購還有力嗎？\n我們整理了 @y_cryptoanalyst 以及 @MEADGod 對線經過\n\n1️⃣ 10/2。連續 4 天沒把資金補進分配器。託管未領 $1.2…",
-      "likes": 0,
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Today's oil price is extremely normal when scanning the last 20 years JPMAM $USO $CL_F https://t.co/YPDQxKD9Qa",
+      "likes": 2,
       "reposts": 1,
       "replies": 0,
-      "views": 140,
-      "created_at": "2026-10-04T04:14:55+00:00",
-      "url": "https://x.com/168X_Fortune/status/2106598918876463292",
+      "views": 601,
+      "created_at": "2026-10-04T11:53:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106714199304945928",
       "assets": [
         [
-          "PONS",
-          "PONS"
+          "USO",
+          "原油ETF"
         ]
       ],
       "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "GS: Tariff refunds will give a modest boost to earnings this quarter:\n\n• US Treasury issued ~$69B in Q3 (~6% of corporate pre-tax profits)\n• Most firms plan to hold the cash for R&amp;D and capital investments 💵📊 https://t.co/ikZNDrXTvk",
+      "likes": 3,
+      "reposts": 1,
+      "replies": 0,
+      "views": 934,
+      "created_at": "2026-10-04T11:46:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106712437684609028",
+      "assets": [],
+      "themes": [
+        "公司_财报",
+        "美债_固定收益",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Push may soon come to shove... Federal net debt (accumulated deficits to reach 120% of GDP by 2036 JPMAM\n\n(Social Security's primary retirement trust fund is projected to be depleted in late 2032) https://t.co/2ydvFmydmd",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1244,
+      "created_at": "2026-10-04T11:38:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106710424620020222",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
         "加密货币"
       ],
       "quality_score": 0.0,
       "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "GS: SPX earnings distortion from private investment gains to fade in Q3:\n\n• Mega-cap tech got a Q2 $150B profit boost due to Other Income\n• Little to no distortion expected this Q3 due to slower equity appreciation\n• Underlying operational results will take center stage. 📊📉 https://t.co/SpMgAeq8Ea",
+      "likes": 3,
+      "reposts": 1,
+      "replies": 1,
+      "views": 1310,
+      "created_at": "2026-10-04T11:31:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106708662400004342",
+      "assets": [],
+      "themes": [
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.667
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Consumer balance sheets are in great shape at the aggregate level... \n\ntotal assets:total liabilities is 10x JPMAM https://t.co/vk6DyHq49s",
+      "likes": 10,
+      "reposts": 1,
+      "replies": 0,
+      "views": 1443,
+      "created_at": "2026-10-04T11:23:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106706649343742293",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
       "sentiment": "neutral",
       "sentiment_score": 0.0,
       "sentiment_intensity": 0.0
     },
     {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "At night one of the first-ever Republican midterm convention in Dallas, Texas, Trump unveiled his rebrand of the Democrats: the \"Dumocrats.\"\n\nRead more: https://t.co/XRaX8aJt2T",
-      "likes": 5,
-      "reposts": 1,
-      "replies": 4,
-      "views": 17406,
-      "created_at": "2026-10-04T04:01:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2106595415022047563",
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "IRAN REFUSES TO REOPEN STRAIT OF HORMUZ\n\nIran says the Strait of Hormuz will remain closed until the U.S. meets seven conditions established under the June Islamabad agreement.\n\nTehran says its immediate focus is restoring security in the strait, not nuclear negotiations, denying",
+      "likes": 447,
+      "reposts": 66,
+      "replies": 70,
+      "views": 78318,
+      "created_at": "2026-10-04T11:20:38+00:00",
+      "url": "https://x.com/DeItAone/status/2106706053790409198",
       "assets": [],
       "themes": [
-        "原油_能源"
+        "原油_能源",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "OPEC+ MAKES NO CHANGE TO OIL OUTPUT QUOTAS FOR NOVEMBER AT SUNDAY MEETING, STATEMENT SAYS",
+      "likes": 113,
+      "reposts": 9,
+      "replies": 20,
+      "views": 54544,
+      "created_at": "2026-10-04T11:19:39+00:00",
+      "url": "https://x.com/DeItAone/status/2106705804023693518",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "GS: AI ROI this earnings season:\n\n• Cloud rev growth to accelerate from 48% (Q2) to 55% (Q3) YoY\n• 50% of S&amp;P 500 firms discussed AI productivity last quarter, but only 2% quantified the earnings impact\n• Proof of monetization remains key for sustaining capex trends. ☁️🤖 https://t.co/RuFKWgDHW2",
+      "likes": 6,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1546,
+      "created_at": "2026-10-04T11:16:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106704888079995322",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "美股_大盘",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "OPEC+ keeps oil output quotas unchanged for November at Sunday meeting: statement",
+      "likes": 16,
+      "reposts": 2,
+      "replies": 0,
+      "views": 25251,
+      "created_at": "2026-10-04T11:14:40+00:00",
+      "url": "https://x.com/financialjuice/status/2106704550237536673",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "This K is alive and well!\n\nLabor compensation vs. corporate profits JPMAM https://t.co/wpzjsMQhCg",
+      "likes": 18,
+      "reposts": 5,
+      "replies": 2,
+      "views": 2239,
+      "created_at": "2026-10-04T11:09:25+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106703229392171048",
+      "assets": [],
+      "themes": [
+        "公司_财报"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -679,13 +1071,13 @@
     {
       "author": "steve_hanke",
       "author_name": "steve_hanke",
-      "content": "Chinese oil refineries are running at 75% of capacity, vs. US refineries at 97%. China has the power to BAIL OUT the US diesel market.\n\nAt last week's Washington Summit, Trump BEGGED Xi to boost exports. China responded by SIGNIFICANTLY CUTTING diesel fuel exports.\n\nLARGELY https://t.co/tEJyD8ra4L",
-      "likes": 36,
-      "reposts": 11,
-      "replies": 0,
-      "views": 5340,
-      "created_at": "2026-10-04T03:55:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2106593905080730096",
+      "content": "My take in @TomSwitzerMedia on continued oil price volatility:\n\n“You get oil from oil wells or you get it from storage. Now we're essentially out of storage. So I anticipate these oil prices are going to stay very elevated and very volatile.” https://t.co/5hARSw2UXz",
+      "likes": 18,
+      "reposts": 2,
+      "replies": 2,
+      "views": 6427,
+      "created_at": "2026-10-04T11:01:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2106701111847694618",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -697,87 +1089,84 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "UrbanKaoboy",
-      "author_name": "UrbanKaoboy",
-      "content": "RT @Polomvp888: This 👇\n\" The AI Buildout is increasingly being financed with Debt (High Yield Bonds, Leveraged Loans and Private Credit, th…",
-      "likes": 0,
-      "reposts": 3,
-      "replies": 0,
-      "views": 682,
-      "created_at": "2026-10-04T03:50:41+00:00",
-      "url": "https://x.com/UrbanKaoboy/status/2106592819808973190",
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "The \"Higher Rates, Higher Rent Doom Loop\" is a major trap for the Fed:\n\n1. High rates mean builders build less\n2. Fewer homes mean rents go up\n3. Higher rents push inflation higher (shelter is ~25% of CPI)\n4. Sticky inflation keeps rates high\n\nA vicious cycle. 📉🏠 T at Apollo https://t.co/hVvEceF7zf",
+      "likes": 8,
+      "reposts": 2,
+      "replies": 4,
+      "views": 2134,
+      "created_at": "2026-10-04T11:00:08+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106700893877907814",
       "assets": [],
       "themes": [
-        "美债_固定收益",
-        "原油_能源"
+        "宏观_利率政策",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "marcmakingsense",
+      "author_name": "marcmakingsense",
+      "content": "RT @marcmakingsense: The third quarter closed with the world economy looking more resilient than it has any right to look. The wars in Iran…",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 0,
+      "created_at": "2026-10-04T10:59:34+00:00",
+      "url": "https://x.com/marcmakingsense/status/2106700753456742428",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "marcmakingsense",
+      "author_name": "marcmakingsense",
+      "content": "RT @marcmakingsense: October monthly drops--economic resilience, monetary policy, AI, and more.  \nSee https://t.co/DnXJ4d3t01 https://t.co/…",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 0,
+      "created_at": "2026-10-04T10:59:28+00:00",
+      "url": "https://x.com/marcmakingsense/status/2106700727305359768",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "bearish",
       "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
+      "sentiment_intensity": 0.333
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "UBS warns that European natural gas storage facilities are sitting at just 71.5% full. That is WELL BELOW the 15-year average of 88% for this time of year.\n\nEUROPE REMAINS TOO ENGAGED IN FIGHTING A WAR WITH RUSSIA. \n\nSTAY LONG NATURAL GAS. https://t.co/EDZqOJwWnP",
-      "likes": 25,
-      "reposts": 6,
-      "replies": 6,
-      "views": 5812,
-      "created_at": "2026-10-04T02:43:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2106575785402241518",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
-        "地缘政治",
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "A must-watch video about Tesla FSD",
-      "likes": 745,
-      "reposts": 39,
-      "replies": 23,
-      "views": 34966,
-      "created_at": "2026-10-04T02:40:40+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2106575198720008464",
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "$NVDA very busy industry conference circuit in the next month and a half @wallsthorizon https://t.co/wvgimQO3zH",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 1627,
+      "created_at": "2026-10-04T10:57:36+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2106700256284934207",
       "assets": [
         [
-          "TSLA",
-          "特斯拉"
+          "NVDA",
+          "英伟达"
         ]
       ],
       "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Grenada’s government schedules general election for November 5: official gazette",
-      "likes": 10,
-      "reposts": 1,
-      "replies": 1,
-      "views": 28926,
-      "created_at": "2026-10-04T01:54:45+00:00",
-      "url": "https://x.com/financialjuice/status/2106563645589131563",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "地缘政治"
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -788,232 +1177,13 @@
     {
       "author": "qinbafrank",
       "author_name": "qinbafrank",
-      "content": "感觉小火箭RKLB又值得好好看看，这次核心逻辑有几个：\n1、首先最重要的为了收购Iridium铱星通信筹集资金进行ATM增发股票融资在9月中已经结束了。",
-      "likes": 49,
-      "reposts": 12,
-      "replies": 13,
-      "views": 14795,
-      "created_at": "2026-10-04T01:46:46+00:00",
-      "url": "https://x.com/qinbafrank/status/2106561635217551560",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "RT @elonmusk: Tesla FSD feels like magic",
-      "likes": 0,
-      "reposts": 721,
-      "replies": 0,
-      "views": 2593,
-      "created_at": "2026-10-04T01:28:14+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2106556972569153656",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "Indonesia is grappling with its most severe wildfire season in over a decade. https://t.co/DiU0JOGpyF",
-      "likes": 3,
-      "reposts": 3,
-      "replies": 0,
-      "views": 6631,
-      "created_at": "2026-10-04T01:00:01+00:00",
-      "url": "https://x.com/SCMPNews/status/2106549871142436864",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "#IranWatch🇮🇷: The rial's VICOUS slide continues. It just hit ANOTHER NEW ALL-TIME LOW.\n\nToday, it DEPRECIATED 4.0% against the USD overnight.\n\nOver the past week, the rial has DEPRECIATED a STAGGERING 13.7% against the USD. https://t.co/JahnUiCCg5",
-      "likes": 23,
-      "reposts": 3,
-      "replies": 5,
-      "views": 9126,
-      "created_at": "2026-10-04T00:31:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2106542566833311866",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "TRUMP'S WAR OF CHOICE IN IRAN HAS BROKEN UNCLE SAM'S BANK.\n https://t.co/MxUDbsH3hO",
-      "likes": 113,
-      "reposts": 41,
-      "replies": 8,
-      "views": 10078,
-      "created_at": "2026-10-04T00:14:23+00:00",
-      "url": "https://x.com/steve_hanke/status/2106538385732932072",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "RyanDetrick",
-      "author_name": "RyanDetrick",
-      "content": "RT @sonusvarghese: Oil flows across the Strait of Hormuz have increased\n\nBUT, that’s happening at a very high cost\n\nThe one and only @Rory_…",
-      "likes": 0,
-      "reposts": 2,
-      "replies": 0,
-      "views": 2938,
-      "created_at": "2026-10-04T00:12:33+00:00",
-      "url": "https://x.com/RyanDetrick/status/2106537926414803379",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "Wow.\n\nMicron, $MU, is up more than 480% in a year.\n\nIt has added roughly $1 trillion in market cap.\n\nIt now trades above $1,000 a share.\n\nIf you invested $1 in $MU 5 years ago, it would now be worth about $15.\n\nThis week, it beat earnings estimates and guided above Wall Street. https://t.co/HZ2QbkC1tA",
-      "likes": 347,
-      "reposts": 17,
-      "replies": 60,
-      "views": 105414,
-      "created_at": "2026-10-04T00:01:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2106535017430003734",
-      "assets": [
-        [
-          "MU",
-          "MU"
-        ]
-      ],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "For the 125th day, protesters of the FLAMINGO REVOLUTION took to the streets of Tirana. Albanians continue to protest PM Rama's CORRUPT GOV'T and Trump's son-in-law Jared Kushner's luxury resort project.\n\nTHE FLAMINGO REVOLUTION IS IN FULL FLIGHT.\n\nPM RAMA’S EXIT SIGN IS https://t.co/6mgTZdLTBp",
-      "likes": 15,
-      "reposts": 5,
-      "replies": 0,
-      "views": 8493,
-      "created_at": "2026-10-03T23:37:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2106528977104126277",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "Retail investors are rushing into Treasury ETFs:\n\nRetail investors bought +$61 million of the 20+ Year Treasury Bond ETF, $TLT, on Wednesday, their largest daily purchase in at least 12 months.\n\nThis follows +$59 million on Tuesday and +$50 million on Monday, bringing the 3-day https://t.co/TVc5j54JQN",
-      "likes": 810,
-      "reposts": 120,
-      "replies": 97,
-      "views": 159301,
-      "created_at": "2026-10-03T23:17:45+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2106524135547355592",
-      "assets": [
-        [
-          "TLT",
-          "美债20年+ETF"
-        ]
-      ],
-      "themes": [
-        "美债_固定收益",
-        "美股_大盘"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: A federal judge has ruled that a Tulsa, Oklahoma sheriff’s deputy violated a woman’s Fourth Amendment rights when using Flock Safety to search for her license plate without a warrant.",
-      "likes": 4043,
-      "reposts": 365,
-      "replies": 48,
-      "views": 157010,
-      "created_at": "2026-10-03T23:11:19+00:00",
-      "url": "https://x.com/unusual_whales/status/2106522516827386131",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "biancoresearch",
-      "author_name": "biancoresearch",
-      "content": "RT @biancoresearch: Color-coded real yields. \n\nEven with the recent spike, 10-year TIPS (2.91%) are only back to the pre-QE average (2.74%)…",
-      "likes": 0,
-      "reposts": 21,
-      "replies": 0,
-      "views": 0,
-      "created_at": "2026-10-03T23:01:02+00:00",
-      "url": "https://x.com/biancoresearch/status/2106519927448633413",
+      "content": "油价与美债联动相关性升至 35 年来最高 https://t.co/BY34TwZD7B",
+      "likes": 16,
+      "reposts": 0,
+      "replies": 7,
+      "views": 5842,
+      "created_at": "2026-10-04T10:48:36+00:00",
+      "url": "https://x.com/qinbafrank/status/2106697991000400267",
       "assets": [],
       "themes": [
         "美债_固定收益",
@@ -1026,18 +1196,76 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "Trump: \"Everyone thinks that the prices are high because of me, but they're not\"",
-      "likes": 1489,
-      "reposts": 106,
-      "replies": 219,
-      "views": 182823,
-      "created_at": "2026-10-03T23:01:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2106519917583561136",
-      "assets": [],
+      "author": "PeterLBrandt",
+      "author_name": "PeterLBrandt",
+      "content": "This is one of similar X tweets I posted in late Jan on Silver. https://t.co/w7wxV1s3jc",
+      "likes": 53,
+      "reposts": 0,
+      "replies": 7,
+      "views": 23018,
+      "created_at": "2026-10-04T10:42:47+00:00",
+      "url": "https://x.com/PeterLBrandt/status/2106696529738436694",
+      "assets": [
+        [
+          "XAG",
+          "白银"
+        ]
+      ],
       "themes": [
-        "原油_能源"
+        "黄金_贵金属"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "Ole_S_Hansen",
+      "author_name": "Ole_S_Hansen",
+      "content": "COT on #commodities: Managed money remained firmly on the defensive in the week to 29 September as a stronger dollar and surging US Treasury yields helped drive the Bloomberg Commodity Index down 2.1%.\nFunds sold 18 of 25 major commodity futures, led by crude oil, natural gas, https://t.co/Dau2fAYNha",
+      "likes": 31,
+      "reposts": 10,
+      "replies": 4,
+      "views": 3473,
+      "created_at": "2026-10-04T10:20:10+00:00",
+      "url": "https://x.com/Ole_S_Hansen/status/2106690837333610874",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "美债_固定收益",
+        "加密货币",
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "BobEUnlimited",
+      "author_name": "BobEUnlimited",
+      "content": "As we discussed on MacroTalk this week, the crude market has solved a lot of the supply problem with high surcharges. How its working in detail free on the blog app this week:\nhttps://t.co/G2YelbKO66",
+      "likes": 11,
+      "reposts": 3,
+      "replies": 3,
+      "views": 6025,
+      "created_at": "2026-10-04T10:15:00+00:00",
+      "url": "https://x.com/BobEUnlimited/status/2106689535107080346",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "加密货币"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1125,6 +1353,59 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "chamath",
+      "author_name": "chamath",
+      "content": "The case for giving everyone GLPs…",
+      "likes": 601,
+      "url": "https://x.com/chamath/status/2106600791784194251",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "IRAN REFUSES TO REOPEN STRAIT OF HORMUZ\n\nIran says the Strait of Hormuz will remain closed until the U.S. meets seven conditions established under the June Islamabad agreement.\n\nTehran says its immediate focus is restoring security in the strait, not nuclear negotiations, denying",
+      "likes": 447,
+      "url": "https://x.com/DeItAone/status/2106706053790409198",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Chinese oil refineries are running at 75% of capacity, vs. US refineries at 97%. China has the power to BAIL OUT the US diesel market.\n\nAt last week's Washington Summit, Trump BEGGED Xi to boost exports. China responded by SIGNIFICANTLY CUTTING diesel fuel exports.\n\nLARGELY https://t.co/tEJyD8ra4L",
+      "likes": 406,
+      "url": "https://x.com/steve_hanke/status/2106593905080730096",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "RUSSIA WILL INTENSIFY STRIKES ON KYIV AND OTHER REGIONS OF UKRAINE FOLLOWING LATEST ZELENSKIY REMARKS - TASS CITES RUSSIA DEFENCE MINISTRY",
+      "likes": 364,
+      "url": "https://x.com/DeItAone/status/2106684501300560088",
+      "assets": [],
+      "themes": [
+        "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
       "content": "Wow.\n\nMicron, $MU, is up more than 480% in a year.\n\nIt has added roughly $1 trillion in market cap.\n\nIt now trades above $1,000 a share.\n\nIf you invested $1 in $MU 5 years ago, it would now be worth about $15.\n\nThis week, it beat earnings estimates and guided above Wall Street. https://t.co/HZ2QbkC1tA",
@@ -1145,6 +1426,20 @@
     {
       "author": "steve_hanke",
       "author_name": "steve_hanke",
+      "content": "#TurkeyWatch🇹🇷: Pres. Erdoğan at TEKNOFEST:\n\n\"Those who lay hands on the people's assets will never get away with it.\" \n\nTHE NUMBER OF HANDS KEEPS ON GROWING, 20 more people were arrested today in Turkey's EVER-GROWING fund scandal. https://t.co/4LY9YT24tW",
+      "likes": 301,
+      "url": "https://x.com/steve_hanke/status/2106640209978995168",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "公司_财报"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
       "content": "Today, Ukrainian drones struck an oil depot in Crimea.\n\nThese strikes will certainly invite MASSIVE RUSSIAN COUNTERATTACKS that will continue to destroy Ukraine. https://t.co/vnItEk1WAu",
       "likes": 185,
       "url": "https://x.com/steve_hanke/status/2106513877458719090",
@@ -1157,66 +1452,13 @@
       "sentiment_score": 0.0
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "TRUMP'S WAR OF CHOICE IN IRAN HAS BROKEN UNCLE SAM'S BANK.\n https://t.co/MxUDbsH3hO",
-      "likes": 113,
-      "url": "https://x.com/steve_hanke/status/2106538385732932072",
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Iran's parliament speaker Qalibaf: Strait of Hormuz won't reopen until Tehran's conditions met, US can no longer delay – Nournews",
+      "likes": 134,
+      "url": "https://x.com/financialjuice/status/2106630611620245932",
       "assets": [],
       "themes": [
-        "地缘政治"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "chamath",
-      "author_name": "chamath",
-      "content": "The case for giving everyone GLPs…",
-      "likes": 75,
-      "url": "https://x.com/chamath/status/2106600791784194251",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "qinbafrank",
-      "author_name": "qinbafrank",
-      "content": "感觉小火箭RKLB又值得好好看看，这次核心逻辑有几个：\n1、首先最重要的为了收购Iridium铱星通信筹集资金进行ATM增发股票融资在9月中已经结束了。",
-      "likes": 49,
-      "url": "https://x.com/qinbafrank/status/2106561635217551560",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Chinese oil refineries are running at 75% of capacity, vs. US refineries at 97%. China has the power to BAIL OUT the US diesel market.\n\nAt last week's Washington Summit, Trump BEGGED Xi to boost exports. China responded by SIGNIFICANTLY CUTTING diesel fuel exports.\n\nLARGELY https://t.co/tEJyD8ra4L",
-      "likes": 36,
-      "url": "https://x.com/steve_hanke/status/2106593905080730096",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "UBS warns that European natural gas storage facilities are sitting at just 71.5% full. That is WELL BELOW the 15-year average of 88% for this time of year.\n\nEUROPE REMAINS TOO ENGAGED IN FIGHTING A WAR WITH RUSSIA. \n\nSTAY LONG NATURAL GAS. https://t.co/EDZqOJwWnP",
-      "likes": 25,
-      "url": "https://x.com/steve_hanke/status/2106575785402241518",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
         "地缘政治",
         "原油_能源"
       ],
@@ -1226,49 +1468,31 @@
     {
       "author": "steve_hanke",
       "author_name": "steve_hanke",
-      "content": "#IranWatch🇮🇷: The rial's VICOUS slide continues. It just hit ANOTHER NEW ALL-TIME LOW.\n\nToday, it DEPRECIATED 4.0% against the USD overnight.\n\nOver the past week, the rial has DEPRECIATED a STAGGERING 13.7% against the USD. https://t.co/JahnUiCCg5",
-      "likes": 23,
-      "url": "https://x.com/steve_hanke/status/2106542566833311866",
+      "content": "My take in @TomSwitzerMedia on the Iran war:\n\n“People are realizing that the war in Iran is a huge strategic loss. If you look at what existed before the war and what exists now, we're worse off now than we were before we started the war.” https://t.co/9AnbrYFj2X",
+      "likes": 128,
+      "url": "https://x.com/steve_hanke/status/2106632157024198820",
       "assets": [],
       "themes": [
         "地缘政治"
-      ],
-      "sentiment": "bullish",
-      "sentiment_score": 1.0
-    },
-    {
-      "author": "ArtofSpecuycky",
-      "author_name": "ArtofSpecuycky",
-      "content": "摩根士丹利：重申 $NVDA 为半导体板块首选标的。随着 AI 基础设施瓶颈从芯片供应逐步转向土地、电力和数据中心容量，英伟达更高的算力密度和全栈优势将进一步受益。摩根士丹利预计其 FY28 营收约 6900 亿美元、EPS 15.01 美元，目标价 300 美元。",
-      "likes": 16,
-      "url": "https://x.com/ArtofSpecuycky/status/2106519580231553428",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "公司_财报",
-        "外汇_汇率"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "For the 125th day, protesters of the FLAMINGO REVOLUTION took to the streets of Tirana. Albanians continue to protest PM Rama's CORRUPT GOV'T and Trump's son-in-law Jared Kushner's luxury resort project.\n\nTHE FLAMINGO REVOLUTION IS IN FULL FLIGHT.\n\nPM RAMA’S EXIT SIGN IS https://t.co/6mgTZdLTBp",
-      "likes": 15,
-      "url": "https://x.com/steve_hanke/status/2106528977104126277",
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "OPEC+ MAKES NO CHANGE TO OIL OUTPUT QUOTAS FOR NOVEMBER AT SUNDAY MEETING, STATEMENT SAYS",
+      "likes": 113,
+      "url": "https://x.com/DeItAone/status/2106705804023693518",
       "assets": [],
       "themes": [
         "原油_能源",
         "地缘政治"
       ],
-      "sentiment": "bearish",
-      "sentiment_score": -1.0
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
