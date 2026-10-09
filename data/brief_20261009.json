@@ -1,52 +1,55 @@
 {
-  "generated_at": "2026-10-09T06:22:29.678292",
+  "generated_at": "2026-10-09T10:42:56.170061",
   "stats": {
-    "total_tweets": 132,
-    "kol_tweets": 132,
-    "unique_authors": 36,
-    "kol_count": 36,
-    "total_likes": 70894,
-    "total_reposts": 11468,
-    "total_replies": 4987,
-    "total_views": 7287582,
-    "unique_assets": 32,
-    "unique_themes": 11
+    "total_tweets": 364,
+    "kol_tweets": 217,
+    "unique_authors": 45,
+    "kol_count": 45,
+    "total_likes": 85967,
+    "total_reposts": 19126,
+    "total_replies": 6164,
+    "total_views": 9585714,
+    "unique_assets": 45,
+    "unique_themes": 11,
+    "classified_tweets": 217,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.087,
-    "opinion_density": 0.348,
-    "kol_consensus": 0.087,
-    "bull_ratio": 0.159,
-    "bear_ratio": 0.189,
-    "neutral_ratio": 0.652,
-    "kol_weighted_sentiment": -0.036,
-    "engagement_weighted_sentiment": -0.045,
-    "bull_count": 21,
-    "bear_count": 25,
-    "neutral_count": 86,
-    "total_count": 132
+    "consensus_score": 0.152,
+    "opinion_density": 0.304,
+    "kol_consensus": 0.152,
+    "bull_ratio": 0.129,
+    "bear_ratio": 0.175,
+    "neutral_ratio": 0.696,
+    "kol_weighted_sentiment": -0.059,
+    "engagement_weighted_sentiment": -0.078,
+    "bull_count": 28,
+    "bear_count": 38,
+    "neutral_count": 151,
+    "total_count": 217
   },
   "top_assets": [
     {
       "symbol": "ETH",
       "name": "以太坊",
-      "mention_count": 8,
-      "engagement": 14707,
-      "kol_mentions": 8,
-      "signal_strength": 81.7,
+      "mention_count": 11,
+      "engagement": 15363,
+      "kol_mentions": 11,
+      "signal_strength": 80.3,
       "consensus": {
-        "consensus_score": 0.5,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.5,
-        "bull_ratio": 0.125,
-        "bear_ratio": 0.375,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.214,
-        "engagement_weighted_sentiment": 0.004,
+        "consensus_score": 0.6,
+        "opinion_density": 0.455,
+        "kol_consensus": 0.6,
+        "bull_ratio": 0.091,
+        "bear_ratio": 0.364,
+        "neutral_ratio": 0.545,
+        "kol_weighted_sentiment": -0.247,
+        "engagement_weighted_sentiment": 0.0,
         "bull_count": 1,
-        "bear_count": 3,
-        "neutral_count": 4,
-        "total_count": 8
+        "bear_count": 4,
+        "neutral_count": 6,
+        "total_count": 11
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -88,11 +91,11 @@
           "sentiment": "bearish"
         },
         {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "ETH vs BTC rolling over.. bit of a risk-off indicator in crypto https://t.co/3H9vp1oqw3",
-          "likes": 10,
-          "url": "https://x.com/MikeZaccardi/status/2108282772284416289",
+          "author": "diaomao2023",
+          "author_name": "diaomao2023",
+          "content": "散户看到机构披露的持仓就想抄作业，\n但机构的 10% 和散户的 10%，根本不是同一个东西。\n\n昨晚 BTC 跌到 8 万附近，Citrini 披露了一份加密投资组合。DRV、LIT、ETHFI 各 10%，AAVE 和 ENA 各 9%，SOL、HYPE、AERO 都在里面。\n\n很多人立刻把这份清单截图收藏，准备跌出来的时候照着抄。 https://t.co/qTvXjVSL2G",
+          "likes": 28,
+          "url": "https://x.com/diaomao2023/status/2108404847930491261",
           "is_kol": true,
           "sentiment": "bearish"
         }
@@ -101,27 +104,45 @@
     {
       "symbol": "TSLA",
       "name": "特斯拉",
-      "mention_count": 7,
-      "engagement": 9423,
-      "kol_mentions": 7,
-      "signal_strength": 91.2,
+      "mention_count": 9,
+      "engagement": 17578,
+      "kol_mentions": 9,
+      "signal_strength": 86.6,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.286,
+        "opinion_density": 0.222,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.286,
-        "neutral_ratio": 0.714,
-        "kol_weighted_sentiment": -0.286,
-        "engagement_weighted_sentiment": -0.229,
+        "bear_ratio": 0.222,
+        "neutral_ratio": 0.778,
+        "kol_weighted_sentiment": -0.222,
+        "engagement_weighted_sentiment": -0.396,
         "bull_count": 0,
         "bear_count": 2,
-        "neutral_count": 5,
-        "total_count": 7
+        "neutral_count": 7,
+        "total_count": 9
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Woah! Tesla just registered a record 150 Cybercabs for its Robotaxi fleet, bringing the total number of Cybercabs registered to date to 319 (up from 169), according to the Texas DMV.\n\nTesla just nearl",
+          "likes": 5070,
+          "url": "https://x.com/SawyerMerritt/status/2108358152005783749",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tesla AI has officially been renamed to Tesla SI (Super Intelligence).\n\n@TeslaSI https://t.co/3QInkXotg9",
+          "likes": 3914,
+          "url": "https://x.com/SawyerMerritt/status/2108349969874719054",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "SawyerMerritt",
           "author_name": "SawyerMerritt",
@@ -143,27 +164,479 @@
         {
           "author": "SawyerMerritt",
           "author_name": "SawyerMerritt",
-          "content": "Woah! Tesla just registered a record 150 Cybercabs for its Robotaxi fleet, bringing the total number of Cybercabs registered to date to 319 (up from 169), according to the Texas DMV.\n\nTesla just nearl",
-          "likes": 1682,
-          "url": "https://x.com/SawyerMerritt/status/2108358152005783749",
+          "content": "Cybercabs now make up 43% of all registered vehicles in @Tesla’s Robotaxi fleet in Texas, up from 28% yesterday.",
+          "likes": 1613,
+          "url": "https://x.com/SawyerMerritt/status/2108361646465003814",
           "is_kol": true,
           "sentiment": "bearish"
-        },
+        }
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "mention_count": 9,
+      "engagement": 3417,
+      "kol_mentions": 9,
+      "signal_strength": 69.9,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.333,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.111,
+        "bear_ratio": 0.222,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": -0.111,
+        "engagement_weighted_sentiment": -0.003,
+        "bull_count": 1,
+        "bear_count": 2,
+        "neutral_count": 6,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
         {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Tesla AI has officially been renamed to Tesla SI (Super Intelligence).\n\n@TeslaSI https://t.co/3QInkXotg9",
-          "likes": 1443,
-          "url": "https://x.com/SawyerMerritt/status/2108349969874719054",
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: The U.S. Treasury sold $22 billion in 30-year bonds at a high yield of 5.618%, marking the highest clearing yield for a 30-year auction since August 10, 2000",
+          "likes": 1464,
+          "url": "https://x.com/unusual_whales/status/2108277881466196021",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "JUST IN: Elon Musk will be speaking live (virtually) at the @theXtakeover event this Saturday for an interview!\n\nThe event will be live-streamed and available for everyone to watch directly on 𝕏 on @t",
-          "likes": 735,
-          "url": "https://x.com/SawyerMerritt/status/2108343302626128039",
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "Woooow... $LITE CEO went out on Bloomberg today and stated:\n\nLumentum is \"effectively sold out through nearly 2029\".\n\nFrom our perspective, \"Completely Sold Out, there's no end in sight\".  With demand",
+          "likes": 1346,
+          "url": "https://x.com/aleabitoreddit/status/2108412203514925165",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "elerianm",
+          "author_name": "elerianm",
+          "content": "Good morning.\nAs reported below by the WSJ, the US budget deficit climbed to nearly $2 trillion ($1.993 trillion) for the fiscal year ending September 30.\nWhat remains historically notable is that the",
+          "likes": 211,
+          "url": "https://x.com/elerianm/status/2108445964881088785",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "diaomao2023",
+          "author_name": "diaomao2023",
+          "content": "散户看到机构披露的持仓就想抄作业，\n但机构的 10% 和散户的 10%，根本不是同一个东西。\n\n昨晚 BTC 跌到 8 万附近，Citrini 披露了一份加密投资组合。DRV、LIT、ETHFI 各 10%，AAVE 和 ENA 各 9%，SOL、HYPE、AERO 都在里面。\n\n很多人立刻把这份清单截图收藏，准备跌出来的时候照着抄。 https://t.co/qTvXjVSL2G",
+          "likes": 28,
+          "url": "https://x.com/diaomao2023/status/2108404847930491261",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "Sino_Market",
+          "author_name": "Sino_Market",
+          "content": "🇭🇰📈China A-share's three major indices have moved into positive territory; the Sci-Tech Innovation Board 50 (STAR 50) index's loss narrowed to 0.06%. \n#CHINA $SHCOMP $SSEC $ASHR solana:3aSu9uuDLiWkBQG",
+          "likes": 11,
+          "url": "https://x.com/Sino_Market/status/2108445479814287778",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "XAU",
+      "name": "黄金",
+      "mention_count": 8,
+      "engagement": 657,
+      "kol_mentions": 8,
+      "signal_strength": 59.7,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.062,
+        "engagement_weighted_sentiment": -0.32,
+        "bull_count": 2,
+        "bear_count": 2,
+        "neutral_count": 4,
+        "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "Pension funds are DUMPING BONDS FOR GOLD.\n\nGoldman Sachs says gold can reduce portfolio risk and recommend replacing part of traditional bond exposure with gold.\n\nBUY GOLD, WEAR DIAMONDS. https://t.co",
+          "likes": 294,
+          "url": "https://x.com/steve_hanke/status/2108365327549505736",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Gold prices hit its highs for the week as US Treasury yields back off from the 5.35% resistance area. https://t.co/xAA2liJzCt",
+          "likes": 106,
+          "url": "https://x.com/goldseek/status/2108461452386329077",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "Ole_S_Hansen",
+          "author_name": "Ole_S_Hansen",
+          "content": "#Commodities: \n\n#Gold trades near USD 4,200, recovering from a challenging week that saw prices fall to a two-month low as bond yields surged to fresh multi-year highs. The rebound has been supported ",
+          "likes": 66,
+          "url": "https://x.com/Ole_S_Hansen/status/2108438222539788669",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "KitcoNewsNOW",
+          "author_name": "KitcoNewsNOW",
+          "content": "Gold gains ground as central banks retreat from dollar assets and inflation undermines bonds – Sprott’s Zhu\n\n(Kitco News) – #Gold’s ability to maintain its trading range and attract fresh ETF inflows ",
+          "likes": 26,
+          "url": "https://x.com/KitcoNewsNOW/status/2108272205658198295",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "India withdraws bank tax benefit on gold, silver, platinum imports (Reuters) \n\nThe Indian government did not extend ​a tax benefit for ‌banks on imports of gold and other precious metals ​and they hav",
+          "likes": 24,
+          "url": "https://x.com/goldseek/status/2108480965928509760",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "name": "Meta",
+      "mention_count": 5,
+      "engagement": 230,
+      "kol_mentions": 5,
+      "signal_strength": 54.2,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 5,
+        "total_count": 5
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Meta Platforms $META banned advertisements from ByteDance and TikTok on its platform in the US and other countries - Bloomberg",
+          "likes": 116,
+          "url": "https://x.com/StockMKTNewz/status/2108333646205669484",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Meta, $META, has banned TikTok from advertising on its apps.",
+          "likes": 47,
+          "url": "https://x.com/unusual_whales/status/2108501977852248393",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "India withdraws bank tax benefit on gold, silver, platinum imports (Reuters) \n\nThe Indian government did not extend ​a tax benefit for ‌banks on imports of gold and other precious metals ​and they hav",
+          "likes": 24,
+          "url": "https://x.com/goldseek/status/2108480965928509760",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Meta platforms bar advertisements from ByteDance, former TikTok owner, in the US",
+          "likes": 13,
+          "url": "https://x.com/financialjuice/status/2108334937887920367",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Meta confirms it blocked ads from Bytedance: spokesperson",
+          "likes": 9,
+          "url": "https://x.com/financialjuice/status/2108342056028659826",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "name": "比特币",
+      "mention_count": 5,
+      "engagement": 123,
+      "kol_mentions": 5,
+      "signal_strength": 62.5,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.6,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.4,
+        "neutral_ratio": 0.4,
+        "kol_weighted_sentiment": -0.2,
+        "engagement_weighted_sentiment": -0.276,
+        "bull_count": 1,
+        "bear_count": 2,
+        "neutral_count": 2,
+        "total_count": 5
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "WallStreet0Name",
+          "author_name": "WallStreet0Name",
+          "content": "Anthropic IPO预计一个月-一个半月上线\n\n监控Anthropic IPO的提示词，复制下来粘贴到claude/chatgpt/grok，只要有每日自动任务的都行。\n\nAnthropic上市会对美股/btc有些许影响，具体可以复盘spaceX上市美股的btc的走势。\n\nhttps://t.co/oIIdl3n9cF\n打开网站导航栏里的分享打开就是。 https://t.co/X1o4db",
+          "likes": 62,
+          "url": "https://x.com/WallStreet0Name/status/2108419785080062240",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "diaomao2023",
+          "author_name": "diaomao2023",
+          "content": "散户看到机构披露的持仓就想抄作业，\n但机构的 10% 和散户的 10%，根本不是同一个东西。\n\n昨晚 BTC 跌到 8 万附近，Citrini 披露了一份加密投资组合。DRV、LIT、ETHFI 各 10%，AAVE 和 ENA 各 9%，SOL、HYPE、AERO 都在里面。\n\n很多人立刻把这份清单截图收藏，准备跌出来的时候照着抄。 https://t.co/qTvXjVSL2G",
+          "likes": 28,
+          "url": "https://x.com/diaomao2023/status/2108404847930491261",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "BITCOIN = A HIGHLY SPECULATIVE ASSET WITH ZERO FUNDAMENTAL VALUE. https://t.co/bx2loia4Th",
+          "likes": 17,
+          "url": "https://x.com/steve_hanke/status/2108454665989865517",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "ETH vs BTC rolling over.. bit of a risk-off indicator in crypto https://t.co/3H9vp1oqw3",
+          "likes": 10,
+          "url": "https://x.com/MikeZaccardi/status/2108282772284416289",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "168X_Fortune",
+          "author_name": "168X_Fortune",
+          "content": "RT @168MrZ: 深夜復盤，過去兩週最大的感悟就是：觀望是寶貴的權力，不要 FOMO，要懂得等待\n\n過去兩週做得不好，8/19 在川普宣布歡迎 Hyperliquid 登陸美國，看到 $BTC 聞訊大漲，開啟牛市，那時錯過第一波漲幅，仍然選擇觀望\n\n好在聽了 @marke…",
+          "likes": 0,
+          "url": "https://x.com/168X_Fortune/status/2108296607695560993",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "IEF",
+      "name": "美债7-10年ETF",
+      "mention_count": 4,
+      "engagement": 382,
+      "kol_mentions": 4,
+      "signal_strength": 46.4,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.5,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.5,
+        "engagement_weighted_sentiment": 0.054,
+        "bull_count": 2,
+        "bear_count": 0,
+        "neutral_count": 2,
+        "total_count": 4
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "*HASSETT: REFINERIES ARE 'TURNING BACK ON', RELIEF COMING SOON",
+          "likes": 340,
+          "url": "https://x.com/DeItAone/status/2108250876054036702",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "The Iran war has cut available fertilizer capacity by nearly 40%.\n\nThe International Chamber of Commerce Chief says that, if the Strait of Hormuz stays blocked, grain prices could SOAR by up to 80%.\n\n",
+          "likes": 7,
+          "url": "https://x.com/steve_hanke/status/2108498203213799889",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "LiveSquawk",
+          "author_name": "LiveSquawk",
+          "content": "RT @GFXFTs: 🚨 GGMA Markets Briefing: Oil Eases After Trump Rules Out Iran Strikes Before Midterms as Stock Futures Rise\n🛢️ Oil fell after P…",
+          "likes": 0,
+          "url": "https://x.com/LiveSquawk/status/2108475625044320588",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "caixin",
+          "author_name": "caixin",
+          "content": "Zhang Shuofu, a vice chairman of the Guangdong provincial legislature and a former Communist Party chief of Guangzhou, is under investigation for suspected corruption. https://t.co/MtVmpNdfJ8",
+          "likes": 0,
+          "url": "https://x.com/caixin/status/2108435539904856162",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "name": "苹果",
+      "mention_count": 4,
+      "engagement": 3125,
+      "kol_mentions": 4,
+      "signal_strength": 46.4,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.25,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.75,
+        "kol_weighted_sentiment": -0.25,
+        "engagement_weighted_sentiment": -0.679,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 3,
+        "total_count": 4
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Apple $AAPL is planning a SECOND new product launch later this month on or around October 27th\n\n\"The end-of-month announcements will also include versions of the 14-inch MacBook Pro and iMac with M6 c",
+          "likes": 98,
+          "url": "https://x.com/StockMKTNewz/status/2108289900735070387",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Apple $AAPL confirmed it will be having a product release event in October 13th\n\nThe event is called “Welcome Home”  https://t.co/fwpWsHuBJW",
+          "likes": 92,
+          "url": "https://x.com/StockMKTNewz/status/2108270457166430529",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Apple asks for parts output cuts for iPhone 18 Pro and Max - Nikkei $AAPL",
+          "likes": 48,
+          "url": "https://x.com/financialjuice/status/2108439910285824405",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "EricBalchunas",
+          "author_name": "EricBalchunas",
+          "content": "RT @scottew: Just got fired from Apple. I was the guy who designed the AirPods to shoot out of the case at high speeds whenever you drop it.",
+          "likes": 0,
+          "url": "https://x.com/EricBalchunas/status/2108339654814753215",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "英伟达",
+      "mention_count": 4,
+      "engagement": 29,
+      "kol_mentions": 4,
+      "signal_strength": 46.4,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.25,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.75,
+        "kol_weighted_sentiment": 0.25,
+        "engagement_weighted_sentiment": 0.099,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 3,
+        "total_count": 4
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$NVDA false breakout?? Like a year ago? https://t.co/0XmKx29Upo",
+          "likes": 10,
+          "url": "https://x.com/MikeZaccardi/status/2108282504083849559",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Nvidia to invest in chip competitor D-Matrix: The Information",
+          "likes": 7,
+          "url": "https://x.com/financialjuice/status/2108338323521413128",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "168X_Fortune",
+          "author_name": "168X_Fortune",
+          "content": "“很多人买半导体，并不是真的信仰半导体，而是因为 Public Market 里它是目前 AI Pure Play 最直接的一批资产 \n你想 Own AI，但 OpenAI、Anthropic 没上市，只能去 $NVDA、Memory、Networking、Data Center 找 Beta \n一旦 Anthropic 上市，市场会问：我为什么还要绕一圈买卖铲子的公司？我可以直接",
+          "likes": 5,
+          "url": "https://x.com/168X_Fortune/status/2108428555789255121",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "LiveSquawk",
+          "author_name": "LiveSquawk",
+          "content": "Nvidia To Invest In Chip Rival D-Matrix As Its Challengers Choose Partnership – TIF \n\nhttps://t.co/L35OIk5Gl7",
+          "likes": 5,
+          "url": "https://x.com/LiveSquawk/status/2108338651809652871",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -175,7 +648,7 @@
       "mention_count": 4,
       "engagement": 1273,
       "kol_mentions": 4,
-      "signal_strength": 34.3,
+      "signal_strength": 31.4,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -232,65 +705,12 @@
       ]
     },
     {
-      "symbol": "XAU",
-      "name": "黄金",
-      "mention_count": 3,
-      "engagement": 46,
-      "kol_mentions": 3,
-      "signal_strength": 44.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": 0.333,
-        "engagement_weighted_sentiment": 0.103,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Gold gains ground as central banks retreat from dollar assets and inflation undermines bonds – Sprott’s Zhu\n\n(Kitco News) – #Gold’s ability to maintain its trading range and attract fresh ETF inflows ",
-          "likes": 26,
-          "url": "https://x.com/KitcoNewsNOW/status/2108272205658198295",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "GrantsPub",
-          "author_name": "GrantsPub",
-          "content": "Register today to hear Tony Pasquariello of Goldman Sachs &amp; Co. lead a panel discussion featuring a trio of next generation hedge fund managers.\n\n“Creative opportunities across asset classes and t",
-          "likes": 8,
-          "url": "https://x.com/GrantsPub/status/2108253124498538503",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "LiveSquawk",
-          "author_name": "LiveSquawk",
-          "content": "Gold Steadies As Traders Assess US-Iran Tensions, Fed Rate Path - BBG \n\nhttps://t.co/XlQP2OzEOw",
-          "likes": 4,
-          "url": "https://x.com/LiveSquawk/status/2108351729981141384",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "name": "Meta",
-      "mention_count": 3,
-      "engagement": 154,
-      "kol_mentions": 3,
-      "signal_strength": 29.5,
+      "symbol": "DAL",
+      "name": "DAL",
+      "mention_count": 2,
+      "engagement": 12,
+      "kol_mentions": 2,
+      "signal_strength": 21.0,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -302,197 +722,29 @@
         "engagement_weighted_sentiment": 0.0,
         "bull_count": 0,
         "bear_count": 0,
-        "neutral_count": 3,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Meta Platforms $META banned advertisements from ByteDance and TikTok on its platform in the US and other countries - Bloomberg",
-          "likes": 116,
-          "url": "https://x.com/StockMKTNewz/status/2108333646205669484",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Meta platforms bar advertisements from ByteDance, former TikTok owner, in the US",
-          "likes": 13,
-          "url": "https://x.com/financialjuice/status/2108334937887920367",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Meta confirms it blocked ads from Bytedance: spokesperson",
-          "likes": 9,
-          "url": "https://x.com/financialjuice/status/2108342056028659826",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "AAPL",
-      "name": "苹果",
-      "mention_count": 3,
-      "engagement": 3069,
-      "kol_mentions": 3,
-      "signal_strength": 44.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.764,
-        "bull_count": 0,
-        "bear_count": 1,
         "neutral_count": 2,
-        "total_count": 3
+        "total_count": 2
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Apple $AAPL is planning a SECOND new product launch later this month on or around October 27th\n\n\"The end-of-month announcements will also include versions of the 14-inch MacBook Pro and iMac with M6 c",
-          "likes": 98,
-          "url": "https://x.com/StockMKTNewz/status/2108289900735070387",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Apple $AAPL confirmed it will be having a product release event in October 13th\n\nThe event is called “Welcome Home”  https://t.co/fwpWsHuBJW",
-          "likes": 92,
-          "url": "https://x.com/StockMKTNewz/status/2108270457166430529",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "EricBalchunas",
-          "author_name": "EricBalchunas",
-          "content": "RT @scottew: Just got fired from Apple. I was the guy who designed the AirPods to shoot out of the case at high speeds whenever you drop it.",
-          "likes": 0,
-          "url": "https://x.com/EricBalchunas/status/2108339654814753215",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "name": "英伟达",
-      "mention_count": 3,
-      "engagement": 24,
-      "kol_mentions": 3,
-      "signal_strength": 44.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": 0.333,
-        "engagement_weighted_sentiment": 0.108,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$NVDA false breakout?? Like a year ago? https://t.co/0XmKx29Upo",
-          "likes": 10,
-          "url": "https://x.com/MikeZaccardi/status/2108282504083849559",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Nvidia to invest in chip competitor D-Matrix: The Information",
+          "author": "bespokeinvest",
+          "author_name": "bespokeinvest",
+          "content": "Delta Air Lines $DAL reports tomorrow before the open, the only notable earnings release on the calendar. https://t.co/wyQ8z6Hfdy",
           "likes": 7,
-          "url": "https://x.com/financialjuice/status/2108338323521413128",
+          "url": "https://x.com/bespokeinvest/status/2108309081677046149",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
           "author": "LiveSquawk",
           "author_name": "LiveSquawk",
-          "content": "Nvidia To Invest In Chip Rival D-Matrix As Its Challengers Choose Partnership – TIF \n\nhttps://t.co/L35OIk5Gl7",
-          "likes": 5,
-          "url": "https://x.com/LiveSquawk/status/2108338651809652871",
+          "content": "$DAL | Delta Air Lines Q3 2026 Earnings\n- Adj EPS $1.72 (est $1.82)\n- Adj. Rev. $17.59B (est $11.66B)\n- Passenger Rev. $15.53B (est $15.63B)\n- Adj Fuel Expense Of $4.1 Billion\n- Sees FY Adj EPS $5.10 ",
+          "likes": 2,
+          "url": "https://x.com/LiveSquawk/status/2108506090354700505",
           "is_kol": true,
           "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "SOL",
-      "name": "Solana",
-      "mention_count": 3,
-      "engagement": 1656,
-      "kol_mentions": 3,
-      "signal_strength": 44.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.0,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: The U.S. Treasury sold $22 billion in 30-year bonds at a high yield of 5.618%, marking the highest clearing yield for a 30-year auction since August 10, 2000",
-          "likes": 1464,
-          "url": "https://x.com/unusual_whales/status/2108277881466196021",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "TheStalwart",
-          "author_name": "TheStalwart",
-          "content": "*to solving this problem, I mean",
-          "likes": 11,
-          "url": "https://x.com/TheStalwart/status/2108271039268745720",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "ripster47",
-          "author_name": "ripster47",
-          "content": "RT @ripster47: $ORCL $MDB \nLocking profits on these short term winners , preserving cash $MDB was solid trade from that dip\n$ORCL still hol…",
-          "likes": 0,
-          "url": "https://x.com/ripster47/status/2108328160622493838",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
@@ -502,7 +754,7 @@
       "mention_count": 2,
       "engagement": 3595,
       "kol_mentions": 2,
-      "signal_strength": 39.6,
+      "signal_strength": 38.2,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 1.0,
@@ -546,7 +798,7 @@
       "mention_count": 2,
       "engagement": 6,
       "kol_mentions": 2,
-      "signal_strength": 34.4,
+      "signal_strength": 32.9,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -585,56 +837,12 @@
       ]
     },
     {
-      "symbol": "BTC",
-      "name": "比特币",
-      "mention_count": 2,
-      "engagement": 12,
-      "kol_mentions": 2,
-      "signal_strength": 22.5,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.5,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.866,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 0,
-        "total_count": 2
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "ETH vs BTC rolling over.. bit of a risk-off indicator in crypto https://t.co/3H9vp1oqw3",
-          "likes": 10,
-          "url": "https://x.com/MikeZaccardi/status/2108282772284416289",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "168X_Fortune",
-          "author_name": "168X_Fortune",
-          "content": "RT @168MrZ: 深夜復盤，過去兩週最大的感悟就是：觀望是寶貴的權力，不要 FOMO，要懂得等待\n\n過去兩週做得不好，8/19 在川普宣布歡迎 Hyperliquid 登陸美國，看到 $BTC 聞訊大漲，開啟牛市，那時錯過第一波漲幅，仍然選擇觀望\n\n好在聽了 @marke…",
-          "likes": 0,
-          "url": "https://x.com/168X_Fortune/status/2108296607695560993",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
       "symbol": "TLT",
       "name": "美债20年+ETF",
       "mention_count": 2,
       "engagement": 44,
       "kol_mentions": 2,
-      "signal_strength": 39.6,
+      "signal_strength": 38.2,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -678,7 +886,7 @@
       "mention_count": 2,
       "engagement": 26,
       "kol_mentions": 2,
-      "signal_strength": 39.6,
+      "signal_strength": 38.2,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 1.0,
@@ -715,98 +923,28 @@
           "sentiment": "bearish"
         }
       ]
-    },
-    {
-      "symbol": "VGT",
-      "name": "VGT",
-      "mention_count": 1,
-      "engagement": 14,
-      "kol_mentions": 1,
-      "signal_strength": 33.4,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 1.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 1.0,
-        "engagement_weighted_sentiment": 1.0,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Here are the top 3 best performing Vanguard ETFs over the last decade\n\n🥇 $VGT \n🥈 $MGK \n🥉 $VONG \n\nVanguard only has 7 ETFs that beat its S&amp;P 500 ETF $VOO over the last decade",
-          "likes": 14,
-          "url": "https://x.com/StockMKTNewz/status/2108360620173070726",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "MGK",
-      "name": "MGK",
-      "mention_count": 1,
-      "engagement": 14,
-      "kol_mentions": 1,
-      "signal_strength": 33.4,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 1.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 1.0,
-        "engagement_weighted_sentiment": 1.0,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Here are the top 3 best performing Vanguard ETFs over the last decade\n\n🥇 $VGT \n🥈 $MGK \n🥉 $VONG \n\nVanguard only has 7 ETFs that beat its S&amp;P 500 ETF $VOO over the last decade",
-          "likes": 14,
-          "url": "https://x.com/StockMKTNewz/status/2108360620173070726",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
     }
   ],
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 43,
-      "engagement": 45847,
-      "kol_mentions": 43,
-      "signal_strength": 75.0,
+      "tweet_count": 68,
+      "engagement": 55557,
+      "kol_mentions": 68,
+      "signal_strength": 77.5,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.372,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.186,
-        "bear_ratio": 0.186,
-        "neutral_ratio": 0.628,
-        "kol_weighted_sentiment": -0.034,
-        "engagement_weighted_sentiment": -0.088,
-        "bull_count": 8,
-        "bear_count": 8,
-        "neutral_count": 27,
-        "total_count": 43
+        "consensus_score": 0.1,
+        "opinion_density": 0.294,
+        "kol_consensus": 0.1,
+        "bull_ratio": 0.162,
+        "bear_ratio": 0.132,
+        "neutral_ratio": 0.706,
+        "kol_weighted_sentiment": -0.002,
+        "engagement_weighted_sentiment": -0.146,
+        "bull_count": 11,
+        "bear_count": 9,
+        "neutral_count": 48,
+        "total_count": 68
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -821,20 +959,20 @@
           "sentiment": "neutral"
         },
         {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Oracle stock, $ORCL, falls over -5% after OpenAI tells investors that its annualized revenue is $20 billion less than expected. https://t.co",
-          "likes": 3215,
-          "url": "https://x.com/KobeissiLetter/status/2108254363525284081",
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Woah! Tesla just registered a record 150 Cybercabs for its Robotaxi fleet, bringing the total number of Cybercabs registered to date to 319 (up from 1",
+          "likes": 5070,
+          "url": "https://x.com/SawyerMerritt/status/2108358152005783749",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
           "author": "SawyerMerritt",
           "author_name": "SawyerMerritt",
-          "content": "Tesla has just officially renamed FSD (Supervised) to “Tesla Assisted Driving” across all of Europe.\n\nThe change came after discussions with Germany's",
-          "likes": 2336,
-          "url": "https://x.com/SawyerMerritt/status/2108272012514967787",
+          "content": "Tesla AI has officially been renamed to Tesla SI (Super Intelligence).\n\n@TeslaSI https://t.co/3QInkXotg9",
+          "likes": 3914,
+          "url": "https://x.com/SawyerMerritt/status/2108349969874719054",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -842,23 +980,23 @@
     },
     {
       "theme": "AI_科技",
-      "tweet_count": 37,
-      "engagement": 20390,
-      "kol_mentions": 37,
-      "signal_strength": 75.0,
+      "tweet_count": 47,
+      "engagement": 24270,
+      "kol_mentions": 47,
+      "signal_strength": 76.5,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.432,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.216,
-        "bear_ratio": 0.216,
-        "neutral_ratio": 0.568,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.096,
+        "consensus_score": 0.059,
+        "opinion_density": 0.362,
+        "kol_consensus": 0.059,
+        "bull_ratio": 0.17,
+        "bear_ratio": 0.191,
+        "neutral_ratio": 0.638,
+        "kol_weighted_sentiment": -0.021,
+        "engagement_weighted_sentiment": -0.076,
         "bull_count": 8,
-        "bear_count": 8,
-        "neutral_count": 21,
-        "total_count": 37
+        "bear_count": 9,
+        "neutral_count": 30,
+        "total_count": 47
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -884,33 +1022,33 @@
         {
           "author": "unusual_whales",
           "author_name": "unusual_whales",
-          "content": "BREAKING: Iranian operatives used OpenAI models and fake personas to help plant news articles critical of the US war against Iran in multiple US media",
-          "likes": 2418,
-          "url": "https://x.com/unusual_whales/status/2108317982082334862",
+          "content": "BREAKING: USA Today sues OpenAI for copyright infringement over AI training",
+          "likes": 2978,
+          "url": "https://x.com/unusual_whales/status/2108367686317289881",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "地缘政治",
-      "tweet_count": 22,
-      "engagement": 5601,
-      "kol_mentions": 22,
-      "signal_strength": 75.0,
+      "tweet_count": 39,
+      "engagement": 7968,
+      "kol_mentions": 39,
+      "signal_strength": 77.8,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.273,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.136,
-        "bear_ratio": 0.136,
-        "neutral_ratio": 0.727,
-        "kol_weighted_sentiment": -0.03,
-        "engagement_weighted_sentiment": 0.518,
-        "bull_count": 3,
-        "bear_count": 3,
-        "neutral_count": 16,
-        "total_count": 22
+        "consensus_score": 0.111,
+        "opinion_density": 0.231,
+        "kol_consensus": 0.111,
+        "bull_ratio": 0.103,
+        "bear_ratio": 0.128,
+        "neutral_ratio": 0.769,
+        "kol_weighted_sentiment": -0.048,
+        "engagement_weighted_sentiment": 0.31,
+        "bull_count": 4,
+        "bear_count": 5,
+        "neutral_count": 30,
+        "total_count": 39
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -936,33 +1074,33 @@
         {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "Today, Russian counterattacks struck multiple regions across Ukraine.\n\nUKRAINE'S PROVOCATIONS INVITE COUNTERATTACKS AND UKRAINE'S OWN DESTRUCTION. htt",
-          "likes": 57,
-          "url": "https://x.com/steve_hanke/status/2108268690378514650",
+          "content": "Russiaphobe PM Burnham is following in Russiaphobe Starmer’s footsteps.\n\nThe U.K. has introduced 38 new sanctions on Russia, targeting oil tankers, cr",
+          "likes": 89,
+          "url": "https://x.com/steve_hanke/status/2108406850777649241",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "加密货币",
-      "tweet_count": 22,
-      "engagement": 19681,
-      "kol_mentions": 22,
-      "signal_strength": 79.2,
+      "tweet_count": 38,
+      "engagement": 22424,
+      "kol_mentions": 38,
+      "signal_strength": 79.4,
       "consensus": {
-        "consensus_score": 0.167,
-        "opinion_density": 0.545,
-        "kol_consensus": 0.167,
-        "bull_ratio": 0.227,
-        "bear_ratio": 0.318,
-        "neutral_ratio": 0.455,
-        "kol_weighted_sentiment": -0.078,
-        "engagement_weighted_sentiment": 0.003,
-        "bull_count": 5,
-        "bear_count": 7,
-        "neutral_count": 10,
-        "total_count": 22
+        "consensus_score": 0.176,
+        "opinion_density": 0.447,
+        "kol_consensus": 0.176,
+        "bull_ratio": 0.184,
+        "bear_ratio": 0.263,
+        "neutral_ratio": 0.553,
+        "kol_weighted_sentiment": -0.089,
+        "engagement_weighted_sentiment": -0.015,
+        "bull_count": 7,
+        "bear_count": 10,
+        "neutral_count": 21,
+        "total_count": 38
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -997,76 +1135,24 @@
       ]
     },
     {
-      "theme": "公司_财报",
-      "tweet_count": 14,
-      "engagement": 823,
-      "kol_mentions": 14,
-      "signal_strength": 80.0,
-      "consensus": {
-        "consensus_score": 0.2,
-        "opinion_density": 0.357,
-        "kol_consensus": 0.2,
-        "bull_ratio": 0.214,
-        "bear_ratio": 0.143,
-        "neutral_ratio": 0.643,
-        "kol_weighted_sentiment": 0.057,
-        "engagement_weighted_sentiment": 0.174,
-        "bull_count": 3,
-        "bear_count": 2,
-        "neutral_count": 9,
-        "total_count": 14
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "RyanDetrick",
-          "author_name": "RyanDetrick",
-          "content": "Since 2019, the S&amp;P 500 is up 168%.\n\n137% of that has come from earnings growth  and 26% from dividends.  Virtually none (ok 5%) has come from mul",
-          "likes": 225,
-          "url": "https://x.com/RyanDetrick/status/2108283407302361119",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "jimcramer",
-          "author_name": "jimcramer",
-          "content": "Here's Starbucks' comment on Chipotle:\" As a matter of policy, we don't comment on rumors and speculation.\" They say they are \"laser focused on execut",
-          "likes": 125,
-          "url": "https://x.com/jimcramer/status/2108272214705353186",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "RyanDetrick",
-          "author_name": "RyanDetrick",
-          "content": "Simply incredible EPS and margin growth this year. https://t.co/sjoi2Kph4F",
-          "likes": 124,
-          "url": "https://x.com/RyanDetrick/status/2108280283984466425",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "theme": "宏观_利率政策",
-      "tweet_count": 12,
-      "engagement": 794,
-      "kol_mentions": 12,
-      "signal_strength": 75.0,
+      "tweet_count": 29,
+      "engagement": 1332,
+      "kol_mentions": 29,
+      "signal_strength": 79.2,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.667,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.333,
-        "kol_weighted_sentiment": -0.033,
-        "engagement_weighted_sentiment": -0.123,
-        "bull_count": 4,
-        "bear_count": 4,
-        "neutral_count": 4,
-        "total_count": 12
+        "consensus_score": 0.167,
+        "opinion_density": 0.414,
+        "kol_consensus": 0.167,
+        "bull_ratio": 0.172,
+        "bear_ratio": 0.241,
+        "neutral_ratio": 0.586,
+        "kol_weighted_sentiment": -0.106,
+        "engagement_weighted_sentiment": -0.093,
+        "bull_count": 5,
+        "bear_count": 7,
+        "neutral_count": 17,
+        "total_count": 29
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1081,20 +1167,20 @@
           "sentiment": "bullish"
         },
         {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "FED'S MUSALEM SIGNALS MORE RATE HIKES MAY BE NEEDED\n\nFed's Alberto Musalem says inflation remains elevated, driven by persistent demand pressures and ",
-          "likes": 123,
-          "url": "https://x.com/DeItAone/status/2108253662548021729",
+          "author": "elerianm",
+          "author_name": "elerianm",
+          "content": "Good morning.\nAs reported below by the WSJ, the US budget deficit climbed to nearly $2 trillion ($1.993 trillion) for the fiscal year ending September",
+          "likes": 211,
+          "url": "https://x.com/elerianm/status/2108445964881088785",
           "is_kol": true,
-          "sentiment": "bearish"
+          "sentiment": "neutral"
         },
         {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "There is currently an 84% chance that the Fed makes NO CHANGES to interest rates later this month https://t.co/n9nFUtcy8q",
-          "likes": 41,
-          "url": "https://x.com/StockMKTNewz/status/2108309217522373062",
+          "author": "RyanDetrick",
+          "author_name": "RyanDetrick",
+          "content": "It was nearly four year ago that all the economists told us there was a 100% chance of a recession. \n\nAll our economy did in 2023 was grow faster than",
+          "likes": 141,
+          "url": "https://x.com/RyanDetrick/status/2108377573885440261",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -1102,23 +1188,23 @@
     },
     {
       "theme": "美债_固定收益",
-      "tweet_count": 9,
-      "engagement": 4716,
-      "kol_mentions": 9,
-      "signal_strength": 80.6,
+      "tweet_count": 21,
+      "engagement": 5163,
+      "kol_mentions": 21,
+      "signal_strength": 75.0,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.333,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.111,
-        "bear_ratio": 0.222,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.111,
-        "engagement_weighted_sentiment": -0.009,
-        "bull_count": 1,
-        "bear_count": 2,
-        "neutral_count": 6,
-        "total_count": 9
+        "consensus_score": 0.0,
+        "opinion_density": 0.381,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.19,
+        "bear_ratio": 0.19,
+        "neutral_ratio": 0.619,
+        "kol_weighted_sentiment": -0.024,
+        "engagement_weighted_sentiment": -0.027,
+        "bull_count": 4,
+        "bear_count": 4,
+        "neutral_count": 13,
+        "total_count": 21
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1153,24 +1239,76 @@
       ]
     },
     {
+      "theme": "公司_财报",
+      "tweet_count": 20,
+      "engagement": 4541,
+      "kol_mentions": 20,
+      "signal_strength": 80.0,
+      "consensus": {
+        "consensus_score": 0.2,
+        "opinion_density": 0.25,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.15,
+        "bear_ratio": 0.1,
+        "neutral_ratio": 0.75,
+        "kol_weighted_sentiment": 0.04,
+        "engagement_weighted_sentiment": 0.112,
+        "bull_count": 3,
+        "bear_count": 2,
+        "neutral_count": 15,
+        "total_count": 20
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "RyanDetrick",
+          "author_name": "RyanDetrick",
+          "content": "Since 2019, the S&amp;P 500 is up 168%.\n\n137% of that has come from earnings growth  and 26% from dividends.  Virtually none (ok 5%) has come from mul",
+          "likes": 225,
+          "url": "https://x.com/RyanDetrick/status/2108283407302361119",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jimcramer",
+          "author_name": "jimcramer",
+          "content": "Here's Starbucks' comment on Chipotle:\" As a matter of policy, we don't comment on rumors and speculation.\" They say they are \"laser focused on execut",
+          "likes": 125,
+          "url": "https://x.com/jimcramer/status/2108272214705353186",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "RyanDetrick",
+          "author_name": "RyanDetrick",
+          "content": "Simply incredible EPS and margin growth this year. https://t.co/sjoi2Kph4F",
+          "likes": 124,
+          "url": "https://x.com/RyanDetrick/status/2108280283984466425",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
       "theme": "外汇_汇率",
-      "tweet_count": 7,
-      "engagement": 3422,
-      "kol_mentions": 7,
-      "signal_strength": 66.2,
+      "tweet_count": 14,
+      "engagement": 4123,
+      "kol_mentions": 14,
+      "signal_strength": 70.8,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.0,
+        "opinion_density": 0.143,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
+        "bull_ratio": 0.071,
+        "bear_ratio": 0.071,
+        "neutral_ratio": 0.857,
         "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 7,
-        "total_count": 7
+        "engagement_weighted_sentiment": -0.033,
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 12,
+        "total_count": 14
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1194,11 +1332,63 @@
           "sentiment": "neutral"
         },
         {
-          "author": "LiveSquawk",
-          "author_name": "LiveSquawk",
-          "content": "Ukraine’s Zelenskiy: Ukraine Team To Witkoff And Kushner In US Friday\n- Expects European Negotiators To Join Ukraine-US Talks",
-          "likes": 7,
-          "url": "https://x.com/LiveSquawk/status/2108254682879603155",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#TurkeyWatch🇹🇷: Following the split of Turkey's main opposition party, the CHP, it accuses the breakaway YENİ Party of stealing millions in vehicles, ",
+          "likes": 225,
+          "url": "https://x.com/steve_hanke/status/2108392255375741217",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "黄金_贵金属",
+      "tweet_count": 10,
+      "engagement": 857,
+      "kol_mentions": 10,
+      "signal_strength": 68.4,
+      "consensus": {
+        "consensus_score": 0.2,
+        "opinion_density": 0.5,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.3,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.083,
+        "engagement_weighted_sentiment": -0.307,
+        "bull_count": 2,
+        "bear_count": 3,
+        "neutral_count": 5,
+        "total_count": 10
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "Pension funds are DUMPING BONDS FOR GOLD.\n\nGoldman Sachs says gold can reduce portfolio risk and recommend replacing part of traditional bond exposure",
+          "likes": 294,
+          "url": "https://x.com/steve_hanke/status/2108365327549505736",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "tj_research",
+          "author_name": "tj_research",
+          "content": "过去2个月，AGENT都开始铺开了，微软，谷歌，ASTRA，MUSE，别被OAI的消息吓跑了，看到了利率下跌，IWM反弹，黄金反弹，但和OAI应该相关性没有那么强。根据自己的认知平衡一下仓位。价值股低迷一些，SET UP好",
+          "likes": 167,
+          "url": "https://x.com/tj_research/status/2108258842337579245",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Gold prices hit its highs for the week as US Treasury yields back off from the 5.35% resistance area. https://t.co/xAA2liJzCt",
+          "likes": 106,
+          "url": "https://x.com/goldseek/status/2108461452386329077",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -1206,23 +1396,23 @@
     },
     {
       "theme": "美股_大盘",
-      "tweet_count": 5,
-      "engagement": 72,
-      "kol_mentions": 5,
-      "signal_strength": 68.5,
+      "tweet_count": 6,
+      "engagement": 100,
+      "kol_mentions": 6,
+      "signal_strength": 68.6,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.6,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.2,
-        "bear_ratio": 0.4,
-        "neutral_ratio": 0.4,
-        "kol_weighted_sentiment": -0.2,
-        "engagement_weighted_sentiment": -0.104,
+        "consensus_score": 0.5,
+        "opinion_density": 0.667,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.167,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": -0.333,
+        "engagement_weighted_sentiment": -0.19,
         "bull_count": 1,
-        "bear_count": 2,
+        "bear_count": 3,
         "neutral_count": 2,
-        "total_count": 5
+        "total_count": 6
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1237,6 +1427,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "diaomao2023",
+          "author_name": "diaomao2023",
+          "content": "散户看到机构披露的持仓就想抄作业，\n但机构的 10% 和散户的 10%，根本不是同一个东西。\n\n昨晚 BTC 跌到 8 万附近，Citrini 披露了一份加密投资组合。DRV、LIT、ETHFI 各 10%，AAVE 和 ENA 各 9%，SOL、HYPE、AERO 都在里面。\n\n很多人立刻把这份清",
+          "likes": 28,
+          "url": "https://x.com/diaomao2023/status/2108404847930491261",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
           "author": "bespokeinvest",
           "author_name": "bespokeinvest",
           "content": "Rotation:\n\n$QQQ down 1.4%\n$RSP up 0.4%\n\nEqual Weight is finally catching a bid with AI stocks selling off.",
@@ -1244,83 +1443,75 @@
           "url": "https://x.com/bespokeinvest/status/2108251946733703205",
           "is_kol": true,
           "sentiment": "bearish"
-        },
-        {
-          "author": "GrantsPub",
-          "author_name": "GrantsPub",
-          "content": "Register today to hear Tony Pasquariello of Goldman Sachs &amp; Co. lead a panel discussion featuring a trio of next generation hedge fund managers.\n\n",
-          "likes": 8,
-          "url": "https://x.com/GrantsPub/status/2108253124498538503",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "黄金_贵金属",
-      "tweet_count": 4,
-      "engagement": 219,
-      "kol_mentions": 4,
-      "signal_strength": 34.3,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.25,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.167,
-        "engagement_weighted_sentiment": -0.079,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 4
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "tj_research",
-          "author_name": "tj_research",
-          "content": "过去2个月，AGENT都开始铺开了，微软，谷歌，ASTRA，MUSE，别被OAI的消息吓跑了，看到了利率下跌，IWM反弹，黄金反弹，但和OAI应该相关性没有那么强。根据自己的认知平衡一下仓位。价值股低迷一些，SET UP好",
-          "likes": 167,
-          "url": "https://x.com/tj_research/status/2108258842337579245",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Gold gains ground as central banks retreat from dollar assets and inflation undermines bonds – Sprott’s Zhu\n\n(Kitco News) – #Gold’s ability to maintai",
-          "likes": 26,
-          "url": "https://x.com/KitcoNewsNOW/status/2108272205658198295",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "GrantsPub",
-          "author_name": "GrantsPub",
-          "content": "Register today to hear Tony Pasquariello of Goldman Sachs &amp; Co. lead a panel discussion featuring a trio of next generation hedge fund managers.\n\n",
-          "likes": 8,
-          "url": "https://x.com/GrantsPub/status/2108253124498538503",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     }
   ],
   "top_tweets": [
     {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "$DAL | Delta Air Lines Q3 2026 Earnings\n- Adj EPS $1.72 (est $1.82)\n- Adj. Rev. $17.59B (est $11.66B)\n- Passenger Rev. $15.53B (est $15.63B)\n- Adj Fuel Expense Of $4.1 Billion\n- Sees FY Adj EPS $5.10 To $5.60, Saw $6.50 To $7.50\n- Sees FY Pre-Tax Profit Of About $4.5B After $6B",
+      "likes": 2,
+      "reposts": 1,
+      "replies": 0,
+      "views": 3634,
+      "created_at": "2026-10-09T10:33:20+00:00",
+      "url": "https://x.com/LiveSquawk/status/2108506090354700505",
+      "assets": [
+        [
+          "DAL",
+          "DAL"
+        ]
+      ],
+      "themes": [
+        "公司_财报",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "dimartinobooth",
+      "author_name": "dimartinobooth",
+      "content": "With wages having fully round-tripped as if the pandemic-era surge had never occurred, a question:\n\nShould wage inflation be factored into monetary policymaking? Does the size of a worker's paycheck affect what he/she can/cannot buy &amp; how much they can pay for things?\n\n@SoberLook https://t.co/1fXsHVf1LS",
+      "likes": 4,
+      "reposts": 0,
+      "replies": 2,
+      "views": 1227,
+      "created_at": "2026-10-09T10:32:32+00:00",
+      "url": "https://x.com/dimartinobooth/status/2108505887438409877",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "原油_能源",
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 0.333,
+      "sentiment_intensity": 0.5
+    },
+    {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
-      "content": "BREAKING: USA Today sues OpenAI for copyright infringement over AI training",
+      "content": "Meta, $META, has banned TikTok from advertising on its apps.",
       "likes": 47,
-      "reposts": 8,
-      "replies": 12,
-      "views": 21895,
-      "created_at": "2026-10-09T01:23:22+00:00",
-      "url": "https://x.com/unusual_whales/status/2108367686317289881",
-      "assets": [],
+      "reposts": 3,
+      "replies": 25,
+      "views": 32736,
+      "created_at": "2026-10-09T10:17:00+00:00",
+      "url": "https://x.com/unusual_whales/status/2108501977852248393",
+      "assets": [
+        [
+          "META",
+          "Meta"
+        ]
+      ],
       "themes": [
         "AI_科技"
       ],
@@ -1331,19 +1522,38 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "China sets yuan midpoint at strongest level since Feb. 2, 2023",
-      "likes": 0,
+      "author": "Sino_Market",
+      "author_name": "Sino_Market",
+      "content": "🇨🇳China Party-State to Elevate Eligible Corporate R&amp;D to National Projects\nThe Central Committee of the Communist Party of China and the State Council issued Opinions on developing new quality productive forces, directing policy to strengthen the enterprise role in tech https://t.co/B3ESpocjjQ",
+      "likes": 5,
       "reposts": 0,
       "replies": 0,
-      "views": 0,
-      "created_at": "2026-10-09T01:17:14+00:00",
-      "url": "https://x.com/financialjuice/status/2108366140217176358",
+      "views": 2524,
+      "created_at": "2026-10-09T10:15:00+00:00",
+      "url": "https://x.com/Sino_Market/status/2108501476121464955",
       "assets": [],
       "themes": [
-        "原油_能源",
-        "外汇_汇率"
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "Sino_Market",
+      "author_name": "Sino_Market",
+      "content": "🇨🇳China Central Committee, State Council order full implementation of \"AI+\" initiative\nChina's Central Committee and State Council issued guidance directing full implementation of an \"AI+\" action. The policy mandates accelerated AI-driven transformation of traditional industries https://t.co/G9KaUoqU75",
+      "likes": 11,
+      "reposts": 5,
+      "replies": 1,
+      "views": 2928,
+      "created_at": "2026-10-09T10:07:14+00:00",
+      "url": "https://x.com/Sino_Market/status/2108499522808864945",
+      "assets": [],
+      "themes": [
+        "公司_财报"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1352,15 +1562,132 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "How quickly is China learning from the Ukraine war’s latest drone tactics? https://t.co/6IZCOc6DUK",
-      "likes": 0,
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "$TSLA | China Auto Industry Body CPCA: Tesla Sold 95,366 China-Made Vehicles In Sept +5% Y/Y",
+      "likes": 2,
+      "reposts": 1,
+      "replies": 0,
+      "views": 5313,
+      "created_at": "2026-10-09T10:04:24+00:00",
+      "url": "https://x.com/LiveSquawk/status/2108498806572789917",
+      "assets": [
+        [
+          "TSLA",
+          "特斯拉"
+        ],
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "The Iran war has cut available fertilizer capacity by nearly 40%.\n\nThe International Chamber of Commerce Chief says that, if the Strait of Hormuz stays blocked, grain prices could SOAR by up to 80%.\n\nTRUMP'S WAR IN IRAN = HUGE COLLATERAL DAMAGE. https://t.co/tQ4hgLcqHB",
+      "likes": 7,
       "reposts": 0,
       "replies": 0,
-      "views": 515,
-      "created_at": "2026-10-09T01:06:45+00:00",
-      "url": "https://x.com/SCMPNews/status/2108363504583377322",
+      "views": 3693,
+      "created_at": "2026-10-09T10:02:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2108498203213799889",
+      "assets": [
+        [
+          "IEF",
+          "美债7-10年ETF"
+        ]
+      ],
+      "themes": [
+        "地缘政治",
+        "美债_固定收益",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "The Trump administration is crafting plans that would allow the temporary sale of some previously restricted peptides, per WaPo",
+      "likes": 57,
+      "reposts": 5,
+      "replies": 29,
+      "views": 42059,
+      "created_at": "2026-10-09T10:01:00+00:00",
+      "url": "https://x.com/unusual_whales/status/2108497951563935878",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "#Isaias forecast to reach major-hurricane status before landfall, eye popping out on satellite. https://t.co/CVIRHS7Qxc",
+      "likes": 4,
+      "reposts": 0,
+      "replies": 3,
+      "views": 1503,
+      "created_at": "2026-10-09T09:32:37+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2108490810387791903",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "Good morning to everyone:",
+      "likes": 28,
+      "reposts": 7,
+      "replies": 12,
+      "views": 45357,
+      "created_at": "2026-10-09T09:32:00+00:00",
+      "url": "https://x.com/unusual_whales/status/2108490653315498307",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "RT @bresreports: .@PunchbowlNews AM today\n- With just 25 days to go, Senate Dems are dreaming of a blue wave on Election Day\n- As Mike John…",
+      "likes": 0,
+      "reposts": 4,
+      "replies": 0,
+      "views": 3721,
+      "created_at": "2026-10-09T09:31:35+00:00",
+      "url": "https://x.com/LiveSquawk/status/2108490550995501317",
       "assets": [],
       "themes": [
         "地缘政治"
@@ -1374,193 +1701,20 @@
     {
       "author": "Sino_Market",
       "author_name": "Sino_Market",
-      "content": "🇨🇳China's main domestic futures contracts opened mostly lower: SHFE tin fell about 5%, lithium carbonate dropped over 3%, ethylene glycol (EG) and SHFE lead declined more than 2%, while SHFE zinc, international copper and aluminum alloy slipped nearly 2%. On the upside, methanol",
-      "likes": 6,
-      "reposts": 0,
-      "replies": 0,
-      "views": 2507,
-      "created_at": "2026-10-09T01:05:58+00:00",
-      "url": "https://x.com/Sino_Market/status/2108363308860690650",
-      "assets": [
-        [
-          "ETH",
-          "以太坊"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -0.714,
-      "sentiment_intensity": 1.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Cybercabs now make up 43% of all registered vehicles in @Tesla’s Robotaxi fleet in Texas, up from 28% yesterday.",
-      "likes": 451,
-      "reposts": 32,
-      "replies": 25,
-      "views": 15796,
-      "created_at": "2026-10-09T00:59:22+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2108361646465003814",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "Here are the top 3 best performing Vanguard ETFs over the last decade\n\n🥇 $VGT \n🥈 $MGK \n🥉 $VONG \n\nVanguard only has 7 ETFs that beat its S&amp;P 500 ETF $VOO over the last decade",
-      "likes": 14,
-      "reposts": 0,
-      "replies": 5,
-      "views": 6428,
-      "created_at": "2026-10-09T00:55:17+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2108360620173070726",
-      "assets": [
-        [
-          "VGT",
-          "VGT"
-        ],
-        [
-          "MGK",
-          "MGK"
-        ],
-        [
-          "VONG",
-          "VONG"
-        ],
-        [
-          "VOO",
-          "VOO"
-        ]
-      ],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Woah! Tesla just registered a record 150 Cybercabs for its Robotaxi fleet, bringing the total number of Cybercabs registered to date to 319 (up from 169), according to the Texas DMV.\n\nTesla just nearly doubled its registered Cybercabs overnight. https://t.co/Eghm9wWYml",
-      "likes": 1682,
-      "reposts": 210,
-      "replies": 120,
-      "views": 47444,
-      "created_at": "2026-10-09T00:45:29+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2108358152005783749",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Japan finmin katayama: Japan's doge initiative key for Takaichi administration to pursue budget promoting growth while maintaining fiscal sustainability",
+      "content": "🇨🇳 🚢The Shanghai Containerized Freight Index rose by 0.4% w/w, to 3,664.11.\n$SCFI #Shipping #Shanghai #China https://t.co/qsKPBkE0X5",
       "likes": 5,
-      "reposts": 0,
-      "replies": 2,
-      "views": 20001,
-      "created_at": "2026-10-09T00:42:46+00:00",
-      "url": "https://x.com/financialjuice/status/2108357468606939245",
-      "assets": [],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "RT @soncharm: Yes, math is an aesthetic pursuit! One might say artistic/literary, something like poetry. You need a rich and deep enough ‘c…",
-      "likes": 0,
-      "reposts": 30,
+      "reposts": 2,
       "replies": 0,
-      "views": 672,
-      "created_at": "2026-10-09T00:41:56+00:00",
-      "url": "https://x.com/TheStalwart/status/2108357260418404577",
+      "views": 3490,
+      "created_at": "2026-10-09T09:29:21+00:00",
+      "url": "https://x.com/Sino_Market/status/2108489987075563887",
       "assets": [
         [
-          "ETH",
-          "以太坊"
+          "SCFI",
+          "SCFI"
         ]
       ],
       "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Japan's government: to restart spending review, expand examination of public funds and subsidies",
-      "likes": 9,
-      "reposts": 0,
-      "replies": 1,
-      "views": 20974,
-      "created_at": "2026-10-09T00:31:36+00:00",
-      "url": "https://x.com/financialjuice/status/2108354656380285297",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "China PBOC likely to fix yuan midpoint at 6.6973 per dollar: estimate",
-      "likes": 5,
-      "reposts": 1,
-      "replies": 3,
-      "views": 21957,
-      "created_at": "2026-10-09T00:21:47+00:00",
-      "url": "https://x.com/financialjuice/status/2108352187856216165",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
         "宏观_利率政策"
       ],
       "quality_score": 0.0,
@@ -1570,45 +1724,23 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "LiveSquawk",
-      "author_name": "LiveSquawk",
-      "content": "Gold Steadies As Traders Assess US-Iran Tensions, Fed Rate Path - BBG \n\nhttps://t.co/XlQP2OzEOw",
-      "likes": 4,
-      "reposts": 0,
-      "replies": 5,
-      "views": 7091,
-      "created_at": "2026-10-09T00:19:58+00:00",
-      "url": "https://x.com/LiveSquawk/status/2108351729981141384",
+      "author": "Sino_Market",
+      "author_name": "Sino_Market",
+      "content": "🇨🇳🚢China Containerized Freight Index dropped by 0.6% w/w to 1,912.38.\n$CCFI #Shipping #China https://t.co/zBPyq6dcKb",
+      "likes": 5,
+      "reposts": 3,
+      "replies": 0,
+      "views": 3362,
+      "created_at": "2026-10-09T09:28:44+00:00",
+      "url": "https://x.com/Sino_Market/status/2108489832666407285",
       "assets": [
         [
-          "XAU",
-          "黄金"
+          "CCFI",
+          "CCFI"
         ]
       ],
       "themes": [
-        "黄金_贵金属",
-        "宏观_利率政策",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "qinbafrank",
-      "author_name": "qinbafrank",
-      "content": "关于大饼及加密的这一波调整原因是什么以及之后怎么看？个人应该是X比较早预警调整要来的，最早是9月28号聊到（引用的推文）：准备金已经回落，意味着流动性开始收紧9月中下特别是10月下旬需要谨慎、10月下旬可能是年内流动性的最低点，已经给这次一调整预警了。 https://t.co/jJpEaJwrYp",
-      "likes": 66,
-      "reposts": 3,
-      "replies": 13,
-      "views": 11062,
-      "created_at": "2026-10-09T00:19:33+00:00",
-      "url": "https://x.com/qinbafrank/status/2108351625220026861",
-      "assets": [],
-      "themes": [
-        "加密货币"
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1617,15 +1749,36 @@
       "sentiment_intensity": 0.333
     },
     {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "CONTRARY TO TRUMP'S MUSINGS, OIL IS NOT FREELY FLOWING OUT OF THE MIDDLE EAST.\nhttps://t.co/jinOJPVEnf",
-      "likes": 25,
-      "reposts": 5,
-      "replies": 2,
-      "views": 4709,
-      "created_at": "2026-10-09T00:13:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2108349977378333079",
+      "author": "dariusdale42",
+      "author_name": "dariusdale42",
+      "content": "RT @42Macro: Could a Fed-Treasury Accord 2.0 Be Taking Shape?\nhttps://t.co/jn0ctsEU8F\n\nOn October 1st hosted by @RiggsReport on @FoxBusines…",
+      "likes": 0,
+      "reposts": 3,
+      "replies": 0,
+      "views": 740,
+      "created_at": "2026-10-09T09:26:17+00:00",
+      "url": "https://x.com/dariusdale42/status/2108489215948603508",
+      "assets": [],
+      "themes": [
+        "美债_固定收益",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "SCMPNews",
+      "author_name": "SCMPNews",
+      "content": "Russia lifts plague lab-related quarantine measures. Should China be relieved? https://t.co/vB4SkBMUdF",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1958,
+      "created_at": "2026-10-09T09:03:49+00:00",
+      "url": "https://x.com/SCMPNews/status/2108483561380528491",
       "assets": [],
       "themes": [
         "原油_能源",
@@ -1638,107 +1791,16 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla AI has officially been renamed to Tesla SI (Super Intelligence).\n\n@TeslaSI https://t.co/3QInkXotg9",
-      "likes": 1443,
-      "reposts": 115,
-      "replies": 103,
-      "views": 35729,
-      "created_at": "2026-10-09T00:12:58+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2108349969874719054",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "I’m in downtown Austin right now (7 PM CT) and the Cybercab wait times are great. Also, there are A LOT of them. A notable increase from when I was here a month ago for the launch event. https://t.co/ylAbEWhDpp",
-      "likes": 566,
-      "reposts": 25,
-      "replies": 36,
-      "views": 24219,
-      "created_at": "2026-10-09T00:05:31+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2108348095834792269",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "dimartinobooth",
-      "author_name": "dimartinobooth",
-      "content": "RT @DavidBCollum: Here are @DiMartinoBooth and @KeithMcCullough talking Fed, Treasury, and the risk of big-assed mistakes...\n\nhttps://t.co/…",
+      "author": "dariusdale42",
+      "author_name": "dariusdale42",
+      "content": "RT @DariusDale42: MAKE WISE CHOICES: These same three words will prevent you from destroying your life savings in the likely pending secula…",
       "likes": 0,
-      "reposts": 3,
+      "reposts": 22,
       "replies": 0,
-      "views": 1058,
-      "created_at": "2026-10-09T00:01:01+00:00",
-      "url": "https://x.com/dimartinobooth/status/2108346963146289376",
+      "views": 0,
+      "created_at": "2026-10-09T09:02:02+00:00",
+      "url": "https://x.com/dariusdale42/status/2108483113017847957",
       "assets": [],
-      "themes": [
-        "美债_固定收益",
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "Firmus Grid decided to stop its plans to go public through an IPO in Australia 🇦🇺\n\nThe IPO would have been Australia’s largest IPO in almost 30 years\n\nFirmus reportedly cited market conditions as its reason for delaying the IPO - WSJ",
-      "likes": 12,
-      "reposts": 0,
-      "replies": 4,
-      "views": 15643,
-      "created_at": "2026-10-08T23:47:53+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2108343658365764001",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "JUST IN: Elon Musk will be speaking live (virtually) at the @theXtakeover event this Saturday for an interview!\n\nThe event will be live-streamed and available for everyone to watch directly on 𝕏 on @teslaownersSV's account. https://t.co/YTHagNVtwt",
-      "likes": 735,
-      "reposts": 63,
-      "replies": 55,
-      "views": 36921,
-      "created_at": "2026-10-08T23:46:29+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2108343302626128039",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
       "themes": [
         "原油_能源"
       ],
@@ -1751,16 +1813,92 @@
     {
       "author": "steve_hanke",
       "author_name": "steve_hanke",
-      "content": "Hurricane Isaias is headed for the Gulf Coast this weekend. As a result, 25% of US Gulf crude output and 16% of natural gas production have been shut down. Oil refineries might also end up in the path of Isaias.\n\nSTAY LONG REFINED PRODUCTS. https://t.co/OEPpV4zehZ",
-      "likes": 10,
-      "reposts": 5,
-      "replies": 0,
-      "views": 4373,
-      "created_at": "2026-10-08T23:45:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2108342930872099118",
+      "content": "MAYHEM continues in France.\n\nPRES. MACRON SHOULD STICK TO HIS KNITTING IN FRANCE, RATHER THAN WAGING WAR ON RUSSIA https://t.co/rg8fnC3dXk",
+      "likes": 71,
+      "reposts": 18,
+      "replies": 2,
+      "views": 7209,
+      "created_at": "2026-10-09T09:00:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2108482602923376731",
       "assets": [],
       "themes": [
-        "原油_能源"
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "goldseek",
+      "author_name": "goldseek",
+      "content": "India withdraws bank tax benefit on gold, silver, platinum imports (Reuters) \n\nThe Indian government did not extend ​a tax benefit for ‌banks on imports of gold and other precious metals ​and they have ​been paying a 3% integrated ⁠goods and services ​tax since April, local",
+      "likes": 24,
+      "reposts": 2,
+      "replies": 2,
+      "views": 3220,
+      "created_at": "2026-10-09T08:53:30+00:00",
+      "url": "https://x.com/goldseek/status/2108480965928509760",
+      "assets": [
+        [
+          "META",
+          "Meta"
+        ],
+        [
+          "XAU",
+          "黄金"
+        ],
+        [
+          "XAG",
+          "白银"
+        ]
+      ],
+      "themes": [
+        "黄金_贵金属",
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "RT @GFXFTs: Inside GGMA Squawk &amp; Chat in 30 seconds:\n\n1. Live squawk: LiveSquawk plus our macro desk\n2. Members' forum: talk the moves thro…",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 4095,
+      "created_at": "2026-10-09T08:49:52+00:00",
+      "url": "https://x.com/LiveSquawk/status/2108480051272470761",
+      "assets": [],
+      "themes": [
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "BoJ Yen Index Sep-09: 73.76 (prev 73.68)\nhttps://t.co/K62P8tdyvY https://t.co/1RCvZOT1EX",
+      "likes": 2,
+      "reposts": 0,
+      "replies": 0,
+      "views": 8745,
+      "created_at": "2026-10-09T08:41:07+00:00",
+      "url": "https://x.com/LiveSquawk/status/2108477849569288670",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "宏观_利率政策",
+        "外汇_汇率"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1802,6 +1940,42 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "Woah! Tesla just registered a record 150 Cybercabs for its Robotaxi fleet, bringing the total number of Cybercabs registered to date to 319 (up from 169), according to the Texas DMV.\n\nTesla just nearly doubled its registered Cybercabs overnight. https://t.co/Eghm9wWYml",
+      "likes": 5070,
+      "url": "https://x.com/SawyerMerritt/status/2108358152005783749",
+      "assets": [
+        [
+          "TSLA",
+          "特斯拉"
+        ]
+      ],
+      "themes": [
+        "原油_能源"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
+    },
+    {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "Tesla AI has officially been renamed to Tesla SI (Super Intelligence).\n\n@TeslaSI https://t.co/3QInkXotg9",
+      "likes": 3914,
+      "url": "https://x.com/SawyerMerritt/status/2108349969874719054",
+      "assets": [
+        [
+          "TSLA",
+          "特斯拉"
+        ]
+      ],
+      "themes": [
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
       "content": "Being mean to Claude can now get your account suspended under Anthropic's new TOS, per the decoder.",
@@ -1833,6 +2007,19 @@
       ],
       "sentiment": "bearish",
       "sentiment_score": -1.0
+    },
+    {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "BREAKING: USA Today sues OpenAI for copyright infringement over AI training",
+      "likes": 2978,
+      "url": "https://x.com/unusual_whales/status/2108367686317289881",
+      "assets": [],
+      "themes": [
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
     },
     {
       "author": "unusual_whales",
@@ -1951,9 +2138,9 @@
     {
       "author": "SawyerMerritt",
       "author_name": "SawyerMerritt",
-      "content": "Woah! Tesla just registered a record 150 Cybercabs for its Robotaxi fleet, bringing the total number of Cybercabs registered to date to 319 (up from 169), according to the Texas DMV.\n\nTesla just nearly doubled its registered Cybercabs overnight. https://t.co/Eghm9wWYml",
-      "likes": 1682,
-      "url": "https://x.com/SawyerMerritt/status/2108358152005783749",
+      "content": "Cybercabs now make up 43% of all registered vehicles in @Tesla’s Robotaxi fleet in Texas, up from 28% yesterday.",
+      "likes": 1613,
+      "url": "https://x.com/SawyerMerritt/status/2108361646465003814",
       "assets": [
         [
           "TSLA",
@@ -1965,56 +2152,8 @@
       ],
       "sentiment": "bearish",
       "sentiment_score": -1.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: The U.S. Treasury sold $22 billion in 30-year bonds at a high yield of 5.618%, marking the highest clearing yield for a 30-year auction since August 10, 2000",
-      "likes": 1464,
-      "url": "https://x.com/unusual_whales/status/2108277881466196021",
-      "assets": [
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "美债_固定收益",
-        "加密货币"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla AI has officially been renamed to Tesla SI (Super Intelligence).\n\n@TeslaSI https://t.co/3QInkXotg9",
-      "likes": 1443,
-      "url": "https://x.com/SawyerMerritt/status/2108349969874719054",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: The average 30-year mortgage rate has hit 7.6%, per MortgageNewsDaily.",
-      "likes": 1401,
-      "url": "https://x.com/unusual_whales/status/2108275736926884350",
-      "assets": [],
-      "themes": [
-        "美债_固定收益"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
