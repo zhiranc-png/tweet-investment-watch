@@ -1,65 +1,92 @@
 {
-  "generated_at": "2026-10-14T14:55:30.828197",
+  "generated_at": "2026-10-14T19:45:49.216337",
   "stats": {
-    "total_tweets": 609,
-    "kol_tweets": 376,
-    "unique_authors": 50,
-    "kol_count": 50,
-    "total_likes": 62162,
-    "total_reposts": 19931,
-    "total_replies": 6231,
-    "total_views": 10965998,
-    "unique_assets": 71,
+    "total_tweets": 873,
+    "kol_tweets": 560,
+    "unique_authors": 56,
+    "kol_count": 56,
+    "total_likes": 91352,
+    "total_reposts": 25887,
+    "total_replies": 9962,
+    "total_views": 15451031,
+    "unique_assets": 98,
     "unique_themes": 11,
-    "classified_tweets": 376,
+    "classified_tweets": 560,
     "kols_total": 92,
     "kols_ok": 92
   },
   "overall_market_sentiment": {
     "consensus_score": 0.014,
-    "opinion_density": 0.383,
+    "opinion_density": 0.38,
     "kol_consensus": 0.014,
-    "bull_ratio": 0.189,
-    "bear_ratio": 0.194,
-    "neutral_ratio": 0.617,
-    "kol_weighted_sentiment": -0.012,
-    "engagement_weighted_sentiment": 0.141,
-    "bull_count": 71,
-    "bear_count": 73,
-    "neutral_count": 232,
-    "total_count": 376
+    "bull_ratio": 0.188,
+    "bear_ratio": 0.193,
+    "neutral_ratio": 0.62,
+    "kol_weighted_sentiment": -0.01,
+    "engagement_weighted_sentiment": 0.085,
+    "bull_count": 105,
+    "bear_count": 108,
+    "neutral_count": 347,
+    "total_count": 560
   },
   "top_assets": [
     {
       "symbol": "SOL",
       "name": "Solana",
-      "mention_count": 19,
-      "engagement": 3015,
-      "kol_mentions": 19,
-      "signal_strength": 73.5,
+      "mention_count": 29,
+      "engagement": 6120,
+      "kol_mentions": 29,
+      "signal_strength": 81.6,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.316,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.211,
-        "bear_ratio": 0.105,
-        "neutral_ratio": 0.684,
-        "kol_weighted_sentiment": 0.07,
-        "engagement_weighted_sentiment": 0.14,
-        "bull_count": 4,
+        "consensus_score": 0.636,
+        "opinion_density": 0.379,
+        "kol_consensus": 0.636,
+        "bull_ratio": 0.31,
+        "bear_ratio": 0.069,
+        "neutral_ratio": 0.621,
+        "kol_weighted_sentiment": 0.195,
+        "engagement_weighted_sentiment": 0.392,
+        "bull_count": 9,
         "bear_count": 2,
-        "neutral_count": 13,
-        "total_count": 19
+        "neutral_count": 18,
+        "total_count": 29
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "SpaceX has just introduced Grok Voice 3.0\n\n\"It's the world’s most intelligent speech-to-speech model. It sets a new record for resolving customer support calls, has class-leading latency at under one ",
+          "likes": 1081,
+          "url": "https://x.com/SawyerMerritt/status/2110417482586423759",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "SpaceX says @Starlink call centers use Grok Voice to answer 20,000 customer calls per day. ~70% are resolved with no human in the loop, and one in four sales calls ends in a purchase before the caller",
+          "likes": 796,
+          "url": "https://x.com/SawyerMerritt/status/2110418329965854978",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
           "content": "Absolutely incredible.\n\nJust 10 stocks have driven 70% of the S&amp;P 500’s gain since March 30th.\n\nThese stocks have added +16 percentage points to the index’s +23% gain over this period.\n\nNvidia, $N",
           "likes": 763,
           "url": "https://x.com/KobeissiLetter/status/2110234262553117073",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Gas is driving America’s inflation surge.\n\nGasoline prices jumped 9.1% in September, and fuel oil, including diesel, surged 15.3%.\n\nEnergy accounted for more than half of the monthly rise in consumer ",
+          "likes": 581,
+          "url": "https://x.com/unusual_whales/status/2110384381428895750",
           "is_kol": true,
           "sentiment": "bullish"
         },
@@ -71,56 +98,29 @@
           "url": "https://x.com/chamath/status/2110068288705163637",
           "is_kol": true,
           "sentiment": "bearish"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "GASOLINE DRIVES MORE THAN HALF OF U.S. INFLATION SURGE\n\nGasoline prices jumped 9.1% in September, while fuel oil, including diesel, surged 15.3%.\n\nEnergy costs drove more than half of the monthly CPI ",
-          "likes": 469,
-          "url": "https://x.com/DeItAone/status/2110351379415908435",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "charliebilello",
-          "author_name": "charliebilello",
-          "content": "Price changes over last year (September CPI report)\nFuel Oil: +74.0%\nGasoline: +34.2%\nGas Utilities: +5.0%\nElectricity: +4.4%\nOverall CPI: +3.7%\nFood away from home: +3.5%\nApparel: +3.4%\nShelter: +3.2",
-          "likes": 341,
-          "url": "https://x.com/charliebilello/status/2110348069141086693",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "$ASML said it sold 17 EUV machines during Q3\n\nThe machines cost as much as $400 Million per unit and are critical for the making of the most advanced semiconductors https://t.co/CO0WPFw1S6",
-          "likes": 111,
-          "url": "https://x.com/StockMKTNewz/status/2110368786234675498",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
       "symbol": "XAU",
       "name": "黄金",
-      "mention_count": 17,
-      "engagement": 4739,
-      "kol_mentions": 17,
-      "signal_strength": 69.3,
+      "mention_count": 28,
+      "engagement": 6064,
+      "kol_mentions": 28,
+      "signal_strength": 66.9,
       "consensus": {
-        "consensus_score": 0.25,
-        "opinion_density": 0.471,
-        "kol_consensus": 0.25,
-        "bull_ratio": 0.176,
-        "bear_ratio": 0.294,
-        "neutral_ratio": 0.529,
-        "kol_weighted_sentiment": -0.139,
-        "engagement_weighted_sentiment": 0.012,
-        "bull_count": 3,
-        "bear_count": 5,
-        "neutral_count": 9,
-        "total_count": 17
+        "consensus_score": 0.077,
+        "opinion_density": 0.464,
+        "kol_consensus": 0.077,
+        "bull_ratio": 0.214,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.536,
+        "kol_weighted_sentiment": -0.02,
+        "engagement_weighted_sentiment": 0.02,
+        "bull_count": 6,
+        "bear_count": 7,
+        "neutral_count": 15,
+        "total_count": 28
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -144,6 +144,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Spot gold extends losses to nearly -$100/oz  today, now trading below $4,100/oz.\n\nThe US Dollar Index is now up to its highest level since April 2025. https://t.co/KgpsEfKKkF",
+          "likes": 866,
+          "url": "https://x.com/KobeissiLetter/status/2110412818793316429",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "jimcramer",
           "author_name": "jimcramer",
           "content": "I have to believe we get some upgraders of Goldmans Sachs and some nice price target boosts",
@@ -153,49 +162,76 @@
           "sentiment": "neutral"
         },
         {
-          "author": "Ole_S_Hansen",
-          "author_name": "Ole_S_Hansen",
-          "content": "Gold is once again under pressure, trading below USD 4,100 as US Treasury yields and the dollar find renewed support following stronger-than-expected inflation data, which has increased speculation th",
-          "likes": 87,
-          "url": "https://x.com/Ole_S_Hansen/status/2110353662841069718",
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "Over the past year: \n\nS&amp;P 500 +16.7%\nGold -2.7% \nBitcoin -26.1%\nSilver +6.2%\nOil +63.6% \nGasoline +41.0%",
+          "likes": 142,
+          "url": "https://x.com/Hedgeye/status/2110379414361903114",
           "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "goldseek",
-          "author_name": "goldseek",
-          "content": "More Gold for Dollar$$$ ....\n\nChina's September exports soar, putting $1 TRILLION trade surplus in sight...",
-          "likes": 38,
-          "url": "https://x.com/goldseek/status/2110301163480367183",
-          "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "symbol": "XAG",
       "name": "白银",
-      "mention_count": 9,
-      "engagement": 290,
-      "kol_mentions": 9,
-      "signal_strength": 69.6,
+      "mention_count": 15,
+      "engagement": 991,
+      "kol_mentions": 15,
+      "signal_strength": 59.3,
       "consensus": {
-        "consensus_score": 0.6,
-        "opinion_density": 0.556,
-        "kol_consensus": 0.6,
-        "bull_ratio": 0.111,
-        "bear_ratio": 0.444,
-        "neutral_ratio": 0.444,
-        "kol_weighted_sentiment": -0.34,
-        "engagement_weighted_sentiment": -0.72,
-        "bull_count": 1,
+        "consensus_score": 0.143,
+        "opinion_density": 0.467,
+        "kol_consensus": 0.143,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.267,
+        "neutral_ratio": 0.533,
+        "kol_weighted_sentiment": -0.07,
+        "engagement_weighted_sentiment": -0.22,
+        "bull_count": 3,
         "bear_count": 4,
-        "neutral_count": 4,
-        "total_count": 9
+        "neutral_count": 8,
+        "total_count": 15
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
+        {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "BREAKING: Silver futures plunge -4.7% to below $57/oz https://t.co/x0Od6P7hti",
+          "likes": 263,
+          "url": "https://x.com/Hedgeye/status/2110371755042738498",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Silver prices back to a very significant support area.\n\nThe weekly chart shows this well, Bollinger Bands coming into play.\n\nA break of the $55/ounce area would really tank the sector further. A real ",
+          "likes": 146,
+          "url": "https://x.com/goldseek/status/2110365530867618113",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "Over the past year: \n\nS&amp;P 500 +16.7%\nGold -2.7% \nBitcoin -26.1%\nSilver +6.2%\nOil +63.6% \nGasoline +41.0%",
+          "likes": 142,
+          "url": "https://x.com/Hedgeye/status/2110379414361903114",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Do or die time for Silver prices.\n\nMajor support around the $55-$56 area now coming into play. https://t.co/p9931j6DzP",
+          "likes": 142,
+          "url": "https://x.com/goldseek/status/2110378357749625006",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
         {
           "author": "DeItAone",
           "author_name": "DeItAone",
@@ -204,65 +240,29 @@
           "url": "https://x.com/DeItAone/status/2110350491276505438",
           "is_kol": true,
           "sentiment": "bearish"
-        },
-        {
-          "author": "goldseek",
-          "author_name": "goldseek",
-          "content": "Silver prices back to a very significant support area.\n\nThe weekly chart shows this well, Bollinger Bands coming into play.\n\nA break of the $55/ounce area would really tank the sector further. A real ",
-          "likes": 54,
-          "url": "https://x.com/goldseek/status/2110365530867618113",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "Ole_S_Hansen",
-          "author_name": "Ole_S_Hansen",
-          "content": "Silver continues to underperform gold, trading at a three-month relative low as the gold-silver ratio (XAUXAG) approaches the double top at 72.50, a potential key resistance. A sustained break higher ",
-          "likes": 31,
-          "url": "https://x.com/Ole_S_Hansen/status/2110359943421333518",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Hedgeye",
-          "author_name": "Hedgeye",
-          "content": "BREAKING: Silver futures plunge -4.7% to below $57/oz https://t.co/x0Od6P7hti",
-          "likes": 29,
-          "url": "https://x.com/Hedgeye/status/2110371755042738498",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Metals weaken as front-end yields, Hormuz risk offset softer dollar - Kitco\n\nSpot gold prices were lower and spot silver prices were sharply lower in late U.S. trading Tuesday, as traders cut exposure",
-          "likes": 20,
-          "url": "https://x.com/KitcoNewsNOW/status/2110188030250172482",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
     {
       "symbol": "ETH",
       "name": "以太坊",
-      "mention_count": 9,
-      "engagement": 2897,
-      "kol_mentions": 9,
-      "signal_strength": 59.6,
+      "mention_count": 13,
+      "engagement": 3286,
+      "kol_mentions": 13,
+      "signal_strength": 57.9,
       "consensus": {
-        "consensus_score": 0.2,
-        "opinion_density": 0.556,
-        "kol_consensus": 0.2,
-        "bull_ratio": 0.222,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.444,
-        "kol_weighted_sentiment": -0.083,
-        "engagement_weighted_sentiment": 0.584,
-        "bull_count": 2,
-        "bear_count": 3,
-        "neutral_count": 4,
-        "total_count": 9
+        "consensus_score": 0.143,
+        "opinion_density": 0.538,
+        "kol_consensus": 0.143,
+        "bull_ratio": 0.231,
+        "bear_ratio": 0.308,
+        "neutral_ratio": 0.462,
+        "kol_weighted_sentiment": -0.058,
+        "engagement_weighted_sentiment": 0.421,
+        "bull_count": 3,
+        "bear_count": 4,
+        "neutral_count": 6,
+        "total_count": 13
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -275,6 +275,15 @@
           "url": "https://x.com/steve_hanke/status/2110232883025809767",
           "is_kol": true,
           "sentiment": "bullish"
+        },
+        {
+          "author": "RayDalio",
+          "author_name": "RayDalio",
+          "content": "Everyone has his or her own principles and values, so all relationships entail a certain amount of negotiation or debate over how people should be with each other. What you learn about each other will",
+          "likes": 262,
+          "url": "https://x.com/RayDalio/status/2110386659820699760",
+          "is_kol": true,
+          "sentiment": "neutral"
         },
         {
           "author": "StockMKTNewz",
@@ -295,45 +304,36 @@
           "sentiment": "bearish"
         },
         {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "The fallout:\n\nMarch 24: The White House warned staff against trading on confidential information\nApril: The CFTC opened an investigation into the March 23 and April 7 trades\nSens. Elizabeth Warren and",
-          "likes": 68,
-          "url": "https://x.com/unusual_whales/status/2110102202006315280",
+          "author": "TheStalwart",
+          "author_name": "TheStalwart",
+          "content": "Is there something other than this tweet tanking the AI stocks today?",
+          "likes": 85,
+          "url": "https://x.com/TheStalwart/status/2110426035036594533",
           "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "#EthiopiaWatch🇪🇹: While Pres. Abiy wages war, the National Bank of Ethiopia fails to publish money supply data.\n\nThe last official money supply data was published OVER A YEAR AGO. https://t.co/9QSSk2S",
-          "likes": 33,
-          "url": "https://x.com/steve_hanke/status/2110254273967894787",
-          "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "symbol": "META",
       "name": "Meta",
-      "mention_count": 8,
-      "engagement": 477,
-      "kol_mentions": 8,
-      "signal_strength": 78.5,
+      "mention_count": 12,
+      "engagement": 504,
+      "kol_mentions": 12,
+      "signal_strength": 53.6,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.125,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.125,
-        "neutral_ratio": 0.875,
-        "kol_weighted_sentiment": -0.15,
-        "engagement_weighted_sentiment": -0.035,
-        "bull_count": 0,
+        "consensus_score": 0.0,
+        "opinion_density": 0.167,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.083,
+        "bear_ratio": 0.083,
+        "neutral_ratio": 0.833,
+        "kol_weighted_sentiment": -0.017,
+        "engagement_weighted_sentiment": -0.017,
+        "bull_count": 1,
         "bear_count": 1,
-        "neutral_count": 7,
-        "total_count": 8
+        "neutral_count": 10,
+        "total_count": 12
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -386,96 +386,25 @@
       ]
     },
     {
-      "symbol": "AAPL",
-      "name": "苹果",
-      "mention_count": 6,
-      "engagement": 419,
-      "kol_mentions": 6,
-      "signal_strength": 76.4,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.167,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.167,
-        "neutral_ratio": 0.833,
-        "kol_weighted_sentiment": -0.125,
-        "engagement_weighted_sentiment": -0.043,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 5,
-        "total_count": 6
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "charliebilello",
-          "author_name": "charliebilello",
-          "content": "Apple is now trading at nearly 11x sales, the highest valuation level in company history. $AAPL https://t.co/ITY7IXUnoZ",
-          "likes": 255,
-          "url": "https://x.com/charliebilello/status/2110125691228344331",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$AAPL right near $5 trillion https://t.co/jU5spUffT6",
-          "likes": 13,
-          "url": "https://x.com/MikeZaccardi/status/2110099218731831649",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "MorganHousel",
-          "author_name": "MorganHousel",
-          "content": "Craig and I talked to Matt Sonsini about philanthropy, raising capital, and how Silicon Valley has changed over the years.\n\nApple: https://t.co/pfIx2kJynT\n\nSpotify: https://t.co/Fxzu94lZpx https://t.c",
-          "likes": 4,
-          "url": "https://x.com/MorganHousel/status/2110379502107066391",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Sino_Market",
-          "author_name": "Sino_Market",
-          "content": "🇨🇳At the midday close, China’s main futures contracts were predominantly lower. Apple fell nearly 7%; Shanghai tin dropped about 5%. Jujube and lithium carbonate declined over 4%; eggs slipped nearly ",
-          "likes": 3,
-          "url": "https://x.com/Sino_Market/status/2110265167389106248",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Plenty of Energy-sector 52wk highs... $AAPL on the list too https://t.co/q4wJFurgwI",
-          "likes": 2,
-          "url": "https://x.com/MikeZaccardi/status/2110363471875305923",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "symbol": "BTC",
       "name": "比特币",
-      "mention_count": 6,
-      "engagement": 1608,
-      "kol_mentions": 6,
-      "signal_strength": 59.7,
+      "mention_count": 11,
+      "engagement": 1805,
+      "kol_mentions": 11,
+      "signal_strength": 57.9,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.167,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.133,
-        "engagement_weighted_sentiment": 0.033,
-        "bull_count": 1,
-        "bear_count": 2,
-        "neutral_count": 3,
-        "total_count": 6
+        "consensus_score": 0.2,
+        "opinion_density": 0.455,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.182,
+        "bear_ratio": 0.273,
+        "neutral_ratio": 0.545,
+        "kol_weighted_sentiment": -0.032,
+        "engagement_weighted_sentiment": 0.023,
+        "bull_count": 2,
+        "bear_count": 3,
+        "neutral_count": 6,
+        "total_count": 11
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -499,6 +428,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "Over the past year: \n\nS&amp;P 500 +16.7%\nGold -2.7% \nBitcoin -26.1%\nSilver +6.2%\nOil +63.6% \nGasoline +41.0%",
+          "likes": 142,
+          "url": "https://x.com/Hedgeye/status/2110379414361903114",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "unusual_whales",
           "author_name": "unusual_whales",
           "content": "JUST IN: Bitcoin is back around $83,000.\n\nIn the last month, it is up 6.53%.\n\nThere is a 28% chance of hitting $100,000 by December 31, 2026, per Polymarket⁠.com. https://t.co/UyB7eDmiGa",
@@ -515,38 +453,384 @@
           "url": "https://x.com/EricBalchunas/status/2110334513008021885",
           "is_kol": true,
           "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "name": "标普500ETF",
+      "mention_count": 10,
+      "engagement": 619,
+      "kol_mentions": 10,
+      "signal_strength": 58.4,
+      "consensus": {
+        "consensus_score": 0.25,
+        "opinion_density": 0.8,
+        "kol_consensus": 0.25,
+        "bull_ratio": 0.3,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.2,
+        "kol_weighted_sentiment": -0.2,
+        "engagement_weighted_sentiment": -0.797,
+        "bull_count": 3,
+        "bear_count": 5,
+        "neutral_count": 2,
+        "total_count": 10
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "OPENAI DISCOVERS HIDDEN SPYING DEVICE INSIDE ITS OFFICE\n\nOpenAI says it discovered a sophisticated recording device secretly planted inside one of its offices.\n\nThe company used its AI models to inves",
+          "likes": 423,
+          "url": "https://x.com/DeItAone/status/2110096732667474288",
+          "is_kol": true,
+          "sentiment": "bearish"
         },
         {
-          "author": "EricBalchunas",
-          "author_name": "EricBalchunas",
-          "content": "RT @BitcoinArchive: JUST IN: Bloomberg’s Eric Balchunas says Bitcoin wins if socialists tax unrealized stock gains, or if governments keep…",
-          "likes": 0,
-          "url": "https://x.com/EricBalchunas/status/2110110423311663325",
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "$SPY $QQQ \nBearish market now CPI, Iran big problems\nRate Hike odds increased \n\nMany AI Names getting flushed hard\nCautious today buying dips unless market shows curl over clouds\n$VIX 16 is big level ",
+          "likes": 38,
+          "url": "https://x.com/ripster47/status/2110370575940022600",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "$SPY $QQQ $SOXL \n\nMarket riding clouds\n$VIX testing 17 mentioned 16 breakout\n\nThere is no dip buying yet , Ripster Clouds riding down\n$QQQ coming to mTF magnet target https://t.co/BbQ6hDvh5z",
+          "likes": 33,
+          "url": "https://x.com/ripster47/status/2110422745574248770",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "$SPY $SPX $QQQ \nIf you follow my teachings you are safe from buying dips and making money on the shorts with Ripster Clouds\nVIX strategy is lifechanging, now over 16\n\nSwing Accounts hurt but make buck",
+          "likes": 21,
+          "url": "https://x.com/ripster47/status/2110396737156464898",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$SPY now beating $IWM by about 3ppts YTD\n\nSmalls were outperforming by 14ppt YTD on June 26th https://t.co/MnuGXGi1YE",
+          "likes": 7,
+          "url": "https://x.com/MikeZaccardi/status/2110359310672781391",
           "is_kol": true,
           "sentiment": "bullish"
         }
       ]
     },
     {
-      "symbol": "GOOGL",
-      "name": "谷歌",
-      "mention_count": 5,
-      "engagement": 212,
-      "kol_mentions": 5,
-      "signal_strength": 75.3,
+      "symbol": "TSLA",
+      "name": "特斯拉",
+      "mention_count": 9,
+      "engagement": 10520,
+      "kol_mentions": 9,
+      "signal_strength": 76.4,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.4,
+        "opinion_density": 0.111,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.111,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.889,
+        "kol_weighted_sentiment": 0.111,
+        "engagement_weighted_sentiment": 0.257,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 8,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tesla Roadster event will be live-streamed on 𝕏 at 8:55 PM ET on Thursday! 🚀 https://t.co/CjZaZtnVtZ",
+          "likes": 2868,
+          "url": "https://x.com/SawyerMerritt/status/2110165601905692727",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tomorrow Tesla will unveil their next-gen Roadster, and I’ll be there attending the event live.\n\nGoing to be interesting to see what the swan song of the manually driven car era looks like! https://t.",
+          "likes": 2105,
+          "url": "https://x.com/SawyerMerritt/status/2110400039436902696",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Someone just bought 3,999 Tesla $430 calls expiring April 2027, paying $27.40 each.\n\nThat’s $10.96 million in premium, bought at the ask.\n\nThe calls are about 15% out of the money, and open interest w",
+          "likes": 1590,
+          "url": "https://x.com/unusual_whales/status/2110110577158975778",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "A new @Tesla Megapack battery energy storage facility has been brought online in Texas by Nightpeak Energy.\n\nBocanova 2 is the second phase of Nightpeak's battery storage development in Brazoria Count",
+          "likes": 1097,
+          "url": "https://x.com/SawyerMerritt/status/2110387704810586285",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "SpaceX says @Starlink call centers use Grok Voice to answer 20,000 customer calls per day. ~70% are resolved with no human in the loop, and one in four sales calls ends in a purchase before the caller",
+          "likes": 796,
+          "url": "https://x.com/SawyerMerritt/status/2110418329965854978",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "Brent",
+      "name": "布伦特原油",
+      "mention_count": 8,
+      "engagement": 447,
+      "kol_mentions": 8,
+      "signal_strength": 75.7,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.125,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.125,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.875,
+        "kol_weighted_sentiment": 0.125,
+        "engagement_weighted_sentiment": 0.032,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 7,
+        "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "Morgan Stanley Raises 4Q26 Brent Price Forecast to $105 a Barrel From $100 a Barrel\n\nMorgan Stanley Raises 1Q27 Brent Price Forecast to $100 a Barrel From $95 a Barrel",
+          "likes": 162,
+          "url": "https://x.com/DeItAone/status/2110098019710578991",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "March 23:\n\nAbout $580 million in oil futures, roughly 6,200 Brent and WTI contracts, were sold in a single minute, between 6:49 and 6:50 a.m. ET.\n\n15 minutes later, Trump posted that he was delaying p",
+          "likes": 106,
+          "url": "https://x.com/unusual_whales/status/2110102196985762023",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "April 21:\n\nAbout $830 million in Brent and WTI futures were sold roughly 15 minutes before another major U.S.–Iran announcement.\n\nThe traders saved millions.",
+          "likes": 50,
+          "url": "https://x.com/unusual_whales/status/2110102200315998481",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "Physical Brent is trading nearly $45/barrel above futures https://t.co/WwHQ28U3Ji",
+          "likes": 19,
+          "url": "https://x.com/Hedgeye/status/2110437732837372126",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "Ole_S_Hansen",
+          "author_name": "Ole_S_Hansen",
+          "content": "Oil flows are recovering, but prices remain stubbornly high. Brent holds above $100 and diesel above $200 as depleted inventories, soaring freight costs and disrupted refining capacity keep markets ti",
+          "likes": 12,
+          "url": "https://x.com/Ole_S_Hansen/status/2110345332232003959",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "英伟达",
+      "mention_count": 8,
+      "engagement": 1670,
+      "kol_mentions": 8,
+      "signal_strength": 75.7,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.125,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.125,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.875,
+        "kol_weighted_sentiment": 0.042,
+        "engagement_weighted_sentiment": 0.148,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 7,
+        "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "Absolutely incredible.\n\nJust 10 stocks have driven 70% of the S&amp;P 500’s gain since March 30th.\n\nThese stocks have added +16 percentage points to the index’s +23% gain over this period.\n\nNvidia, $N",
+          "likes": 763,
+          "url": "https://x.com/KobeissiLetter/status/2110234262553117073",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Nvidia $NVDA CEO Jensen Huang just met with France 🇫🇷 President Emmanuel Macron https://t.co/KywErwiqBL",
+          "likes": 240,
+          "url": "https://x.com/StockMKTNewz/status/2110093131613970830",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Nvidia $NVDA CEO Jensen Huang said he would halt the supply of chips to a customer that was developing unsafe AI software - Bloomberg https://t.co/jOKVdVJyN5",
+          "likes": 154,
+          "url": "https://x.com/StockMKTNewz/status/2110430751791652949",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "NEW ETF ALERT\n\nMy sponsors over at Corgi Invest recently launched their new MANGOS ETF which trades under the ticker $MN \n\nThe ETF holds just 6 names:\n\nM is for Meta Platforms $META \nA is for Anthropi",
+          "likes": 149,
+          "url": "https://x.com/StockMKTNewz/status/2110162497982316731",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Nvidia $NVDA just announced today it's committing $250 Million worth of computing access over five years to UK research on AI agent safety and security. https://t.co/ZBkuYqAuYz",
+          "likes": 76,
+          "url": "https://x.com/StockMKTNewz/status/2110385197053006161",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "name": "纳指100ETF",
+      "mention_count": 7,
+      "engagement": 285,
+      "kol_mentions": 7,
+      "signal_strength": 65.0,
+      "consensus": {
+        "consensus_score": 0.6,
+        "opinion_density": 0.714,
+        "kol_consensus": 0.6,
+        "bull_ratio": 0.143,
+        "bear_ratio": 0.571,
+        "neutral_ratio": 0.286,
+        "kol_weighted_sentiment": -0.429,
+        "engagement_weighted_sentiment": -0.283,
+        "bull_count": 1,
+        "bear_count": 4,
+        "neutral_count": 2,
+        "total_count": 7
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "The NASDAQ 100 $QQQ is now down by more than 2% so far today \n\n🔴🔴 https://t.co/jlvdeZzFDc",
+          "likes": 131,
+          "url": "https://x.com/StockMKTNewz/status/2110429311463313640",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "$SPY $QQQ \nBearish market now CPI, Iran big problems\nRate Hike odds increased \n\nMany AI Names getting flushed hard\nCautious today buying dips unless market shows curl over clouds\n$VIX 16 is big level ",
+          "likes": 38,
+          "url": "https://x.com/ripster47/status/2110370575940022600",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "$SPY $QQQ $SOXL \n\nMarket riding clouds\n$VIX testing 17 mentioned 16 breakout\n\nThere is no dip buying yet , Ripster Clouds riding down\n$QQQ coming to mTF magnet target https://t.co/BbQ6hDvh5z",
+          "likes": 33,
+          "url": "https://x.com/ripster47/status/2110422745574248770",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "$SPY $SPX $QQQ \nIf you follow my teachings you are safe from buying dips and making money on the shorts with Ripster Clouds\nVIX strategy is lifechanging, now over 16\n\nSwing Accounts hurt but make buck",
+          "likes": 21,
+          "url": "https://x.com/ripster47/status/2110396737156464898",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$QQQ pennies from its worst day since June 23rd\n\n-2.0% https://t.co/crqkYF00vp",
+          "likes": 15,
+          "url": "https://x.com/MikeZaccardi/status/2110436972464410953",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "谷歌",
+      "mention_count": 6,
+      "engagement": 305,
+      "kol_mentions": 6,
+      "signal_strength": 74.3,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.4,
-        "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": -0.4,
-        "engagement_weighted_sentiment": -0.22,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.337,
         "bull_count": 0,
-        "bear_count": 2,
+        "bear_count": 3,
         "neutral_count": 3,
-        "total_count": 5
+        "total_count": 6
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -559,6 +843,15 @@
           "url": "https://x.com/StockMKTNewz/status/2110162497982316731",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Grok has a Strong Sell rating on SpaceX $SPCX \n😅\n\nGemini has a sell rating on Google $GOOGL 😅 https://t.co/zNMYcPrPJf",
+          "likes": 85,
+          "url": "https://x.com/StockMKTNewz/status/2110442815775772775",
+          "is_kol": true,
+          "sentiment": "bearish"
         },
         {
           "author": "StockMKTNewz",
@@ -586,59 +879,121 @@
           "url": "https://x.com/financialjuice/status/2110237128902746364",
           "is_kol": true,
           "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Ind and Google Cloud offer up to 200 European researchers access to advanced models, $3m compute credits",
-          "likes": 3,
-          "url": "https://x.com/financialjuice/status/2110282583766687831",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
     {
-      "symbol": "SPY",
-      "name": "标普500ETF",
+      "symbol": "AAPL",
+      "name": "苹果",
+      "mention_count": 6,
+      "engagement": 452,
+      "kol_mentions": 6,
+      "signal_strength": 74.3,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.167,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.167,
+        "neutral_ratio": 0.833,
+        "kol_weighted_sentiment": -0.125,
+        "engagement_weighted_sentiment": -0.036,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 5,
+        "total_count": 6
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "charliebilello",
+          "author_name": "charliebilello",
+          "content": "Apple is now trading at nearly 11x sales, the highest valuation level in company history. $AAPL https://t.co/ITY7IXUnoZ",
+          "likes": 255,
+          "url": "https://x.com/charliebilello/status/2110125691228344331",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "MorganHousel",
+          "author_name": "MorganHousel",
+          "content": "Craig and I talked to Matt Sonsini about philanthropy, raising capital, and how Silicon Valley has changed over the years.\n\nApple: https://t.co/pfIx2kJynT\n\nSpotify: https://t.co/Fxzu94lZpx https://t.c",
+          "likes": 34,
+          "url": "https://x.com/MorganHousel/status/2110379502107066391",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$AAPL right near $5 trillion https://t.co/jU5spUffT6",
+          "likes": 13,
+          "url": "https://x.com/MikeZaccardi/status/2110099218731831649",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "Sino_Market",
+          "author_name": "Sino_Market",
+          "content": "🇨🇳At the midday close, China’s main futures contracts were predominantly lower. Apple fell nearly 7%; Shanghai tin dropped about 5%. Jujube and lithium carbonate declined over 4%; eggs slipped nearly ",
+          "likes": 3,
+          "url": "https://x.com/Sino_Market/status/2110265167389106248",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Plenty of Energy-sector 52wk highs... $AAPL on the list too https://t.co/q4wJFurgwI",
+          "likes": 2,
+          "url": "https://x.com/MikeZaccardi/status/2110363471875305923",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "IWM",
+      "name": "IWM",
       "mention_count": 5,
-      "engagement": 512,
+      "engagement": 64,
       "kol_mentions": 5,
-      "signal_strength": 50.3,
+      "signal_strength": 48.6,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.8,
+        "opinion_density": 0.4,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.4,
-        "bear_ratio": 0.4,
-        "neutral_ratio": 0.2,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.2,
+        "neutral_ratio": 0.6,
         "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.938,
-        "bull_count": 2,
-        "bear_count": 2,
-        "neutral_count": 1,
+        "engagement_weighted_sentiment": -0.12,
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 3,
         "total_count": 5
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
         {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "OPENAI DISCOVERS HIDDEN SPYING DEVICE INSIDE ITS OFFICE\n\nOpenAI says it discovered a sophisticated recording device secretly planted inside one of its offices.\n\nThe company used its AI models to inves",
-          "likes": 423,
-          "url": "https://x.com/DeItAone/status/2110096732667474288",
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Russell 2000 correction-territory... a wild ride, as always @Koyfincharts $RTY $IWM https://t.co/1sO8cqtnJT",
+          "likes": 21,
+          "url": "https://x.com/MikeZaccardi/status/2110430074839163183",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "ripster47",
-          "author_name": "ripster47",
-          "content": "$SPY $QQQ \nBearish market now CPI, Iran big problems\nRate Hike odds increased \n\nMany AI Names getting flushed hard\nCautious today buying dips unless market shows curl over clouds\n$VIX 16 is big level ",
-          "likes": 18,
-          "url": "https://x.com/ripster47/status/2110370575940022600",
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$IWM -11% from its August 14th high\nSame drawdown as the January-March slide\n\nHey, it's almost Halloween... everyone's entitled to one good scare! https://t.co/nFQdeVtyFu",
+          "likes": 11,
+          "url": "https://x.com/MikeZaccardi/status/2110423674197098729",
           "is_kol": true,
-          "sentiment": "bearish"
+          "sentiment": "neutral"
         },
         {
           "author": "MikeZaccardi",
@@ -652,18 +1007,18 @@
         {
           "author": "MikeZaccardi",
           "author_name": "MikeZaccardi",
-          "content": "Strong dollar YTD, and $SPY now beats $VEU by 2.1ppt on the year\n\nMore from me on @stockcharts \nhttps://t.co/kgIdFoHyIa https://t.co/vMH30wY6PI",
-          "likes": 2,
-          "url": "https://x.com/MikeZaccardi/status/2110366814928564606",
+          "content": "Premarket:\n$IWM -1.2%\n$XHB -1.6%\n$KRE -1.6%\n$XME -1.4%\n$LQD -0.5%\n\nbut $SMH -1.9% too https://t.co/mj9CdLQPXv",
+          "likes": 6,
+          "url": "https://x.com/MikeZaccardi/status/2110359684561412554",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
         },
         {
-          "author": "SCMPNews",
-          "author_name": "SCMPNews",
-          "content": "Russia detains Japanese journalist on suspicion of spying https://t.co/WogWNzrZtP",
-          "likes": 2,
-          "url": "https://x.com/SCMPNews/status/2110145314652868755",
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$RTY $IWM not good, but not horrific... -0.9% https://t.co/nFtiPmTSxX",
+          "likes": 4,
+          "url": "https://x.com/MikeZaccardi/status/2110363712326390017",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -675,7 +1030,7 @@
       "mention_count": 5,
       "engagement": 39,
       "kol_mentions": 5,
-      "signal_strength": 50.3,
+      "signal_strength": 48.6,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.4,
@@ -739,356 +1094,80 @@
           "sentiment": "bearish"
         }
       ]
-    },
-    {
-      "symbol": "NVDA",
-      "name": "英伟达",
-      "mention_count": 5,
-      "engagement": 1413,
-      "kol_mentions": 5,
-      "signal_strength": 75.3,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.2,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.2,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.8,
-        "kol_weighted_sentiment": 0.067,
-        "engagement_weighted_sentiment": 0.182,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 4,
-        "total_count": 5
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "Absolutely incredible.\n\nJust 10 stocks have driven 70% of the S&amp;P 500’s gain since March 30th.\n\nThese stocks have added +16 percentage points to the index’s +23% gain over this period.\n\nNvidia, $N",
-          "likes": 763,
-          "url": "https://x.com/KobeissiLetter/status/2110234262553117073",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Nvidia $NVDA CEO Jensen Huang just met with France 🇫🇷 President Emmanuel Macron https://t.co/KywErwiqBL",
-          "likes": 240,
-          "url": "https://x.com/StockMKTNewz/status/2110093131613970830",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "NEW ETF ALERT\n\nMy sponsors over at Corgi Invest recently launched their new MANGOS ETF which trades under the ticker $MN \n\nThe ETF holds just 6 names:\n\nM is for Meta Platforms $META \nA is for Anthropi",
-          "likes": 149,
-          "url": "https://x.com/StockMKTNewz/status/2110162497982316731",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Honeywell $HON just announced the launch of Forge Cognition\n\n\"a self-contained agentic AI and simulation platform for facility operations\"\n\nHoneywell said it developed the technology with Nvidia $NVDA",
-          "likes": 48,
-          "url": "https://x.com/StockMKTNewz/status/2110355889358069932",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "LiveSquawk",
-          "author_name": "LiveSquawk",
-          "content": "RT @nvidia: .@JensenHuang wrapped up his Paris visit at the Élysée with President @EmmanuelMacron, discussing NVIDIA’s investments in Franc…",
-          "likes": 0,
-          "url": "https://x.com/LiveSquawk/status/2110093576663449678",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "Brent",
-      "name": "布伦特原油",
-      "mention_count": 5,
-      "engagement": 401,
-      "kol_mentions": 5,
-      "signal_strength": 75.3,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.2,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.2,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.8,
-        "kol_weighted_sentiment": 0.2,
-        "engagement_weighted_sentiment": 0.034,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 4,
-        "total_count": 5
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "Morgan Stanley Raises 4Q26 Brent Price Forecast to $105 a Barrel From $100 a Barrel\n\nMorgan Stanley Raises 1Q27 Brent Price Forecast to $100 a Barrel From $95 a Barrel",
-          "likes": 162,
-          "url": "https://x.com/DeItAone/status/2110098019710578991",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "March 23:\n\nAbout $580 million in oil futures, roughly 6,200 Brent and WTI contracts, were sold in a single minute, between 6:49 and 6:50 a.m. ET.\n\n15 minutes later, Trump posted that he was delaying p",
-          "likes": 106,
-          "url": "https://x.com/unusual_whales/status/2110102196985762023",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "April 21:\n\nAbout $830 million in Brent and WTI futures were sold roughly 15 minutes before another major U.S.–Iran announcement.\n\nThe traders saved millions.",
-          "likes": 50,
-          "url": "https://x.com/unusual_whales/status/2110102200315998481",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Ole_S_Hansen",
-          "author_name": "Ole_S_Hansen",
-          "content": "Oil flows are recovering, but prices remain stubbornly high. Brent holds above $100 and diesel above $200 as depleted inventories, soaring freight costs and disrupted refining capacity keep markets ti",
-          "likes": 12,
-          "url": "https://x.com/Ole_S_Hansen/status/2110345332232003959",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "Hedgeye",
-          "author_name": "Hedgeye",
-          "content": "RT @HedgeyeDJ: The oil spread nobody's watching: Brent's premium to WTI is $10.47, up from $3.26 at the end of July. Widest month-end gap s…",
-          "likes": 0,
-          "url": "https://x.com/Hedgeye/status/2110351572437713245",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "MSFT",
-      "name": "微软",
-      "mention_count": 5,
-      "engagement": 1750,
-      "kol_mentions": 5,
-      "signal_strength": 75.3,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.6,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.6,
-        "neutral_ratio": 0.4,
-        "kol_weighted_sentiment": -0.6,
-        "engagement_weighted_sentiment": -0.231,
-        "bull_count": 0,
-        "bear_count": 3,
-        "neutral_count": 2,
-        "total_count": 5
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Microsoft, $MSFT, XBOX is embracing fan-made game ports instead of fighting them.\n\nXbox CEO Asha Sharma addressed the recent wave of classic games, including community Halo mods, being decompiled and ",
-          "likes": 1413,
-          "url": "https://x.com/unusual_whales/status/2110323983463981293",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "jimcramer",
-          "author_name": "jimcramer",
-          "content": "dozens told us to sell Microsoft. Now they want in?",
-          "likes": 203,
-          "url": "https://x.com/jimcramer/status/2110127786748706843",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$MSFT first record in a year https://t.co/oBRpYJ4H2R",
-          "likes": 20,
-          "url": "https://x.com/MikeZaccardi/status/2110102230212706585",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "bespokeinvest",
-          "author_name": "bespokeinvest",
-          "content": "Visa $V, Procter $PG, and Microsoft $MSFT enter today as the 3 most \"overbought\" Dow stocks, while 8 of 30 are oversold.  Check out the 10% move lower for $CAT into oversold territory over the last we",
-          "likes": 12,
-          "url": "https://x.com/bespokeinvest/status/2110342606957740417",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Microsoft spokesperson: Azure leadership hasn’t instructed teams to create cost-reduction strategies",
-          "likes": 5,
-          "url": "https://x.com/financialjuice/status/2110157701950878165",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
-      "symbol": "TSLA",
-      "name": "特斯拉",
-      "mention_count": 4,
-      "engagement": 5246,
-      "kol_mentions": 4,
-      "signal_strength": 44.6,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.25,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.25,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": 0.25,
-        "engagement_weighted_sentiment": 0.465,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "total_count": 4
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Tesla Roadster event will be live-streamed on 𝕏 at 8:55 PM ET on Thursday! 🚀 https://t.co/CjZaZtnVtZ",
-          "likes": 2868,
-          "url": "https://x.com/SawyerMerritt/status/2110165601905692727",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Someone just bought 3,999 Tesla $430 calls expiring April 2027, paying $27.40 each.\n\nThat’s $10.96 million in premium, bought at the ask.\n\nThe calls are about 15% out of the money, and open interest w",
-          "likes": 1590,
-          "url": "https://x.com/unusual_whales/status/2110110577158975778",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "StockMKTNewz",
-          "author_name": "StockMKTNewz",
-          "content": "Tesla $TSLA just confirmed that its Roadster event will take place this Thursday at 8:55PM ET https://t.co/iufsFqcHNv",
-          "likes": 242,
-          "url": "https://x.com/StockMKTNewz/status/2110175017983943108",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "RT @TeslaSI: FSD Supervised v14 Lite now rolling out to Intel Model S&amp;X",
-          "likes": 0,
-          "url": "https://x.com/SawyerMerritt/status/2110191702996607256",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "NBIS",
-      "name": "NBIS",
-      "mention_count": 3,
-      "engagement": 190,
-      "kol_mentions": 3,
-      "signal_strength": 40.9,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.667,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.667,
-        "neutral_ratio": 0.333,
-        "kol_weighted_sentiment": -0.444,
-        "engagement_weighted_sentiment": -0.801,
-        "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 1,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "SHARES OF AI INFRASTRUCTURE FIRMS CORWEAVE AND NEBIUS DROP; STEEPEST DECLINERS ON NASDAQ 100 INDEX\n\n$CRWV  - COREWEAVE DOWN 14.9% \n$NBIS  - NEBIUS FALLS 9.7%",
-          "likes": 107,
-          "url": "https://x.com/DeItAone/status/2110373741712588949",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "ripster47",
-          "author_name": "ripster47",
-          "content": "💡 Went Shopping today at Tenet Research\n\n$SKHY(double size) $MU $AEHR $ASTS $NBIS \n\n$CRDO went too fast\n\nAll positions green now, if CPI dumps us back have some buffer\n\nHopefully CPI Gods will have me",
-          "likes": 63,
-          "url": "https://x.com/ripster47/status/2110103055173562756",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "ripster47",
-          "author_name": "ripster47",
-          "content": "RT @ripster47: $NBIS \nRipster Clouds helping with some nice late morning long curls\n$NBIS vs 200 solid so far\n\nAdded few names to swing acc…",
-          "likes": 0,
-          "url": "https://x.com/ripster47/status/2110172238439645582",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_themes": [
     {
-      "theme": "原油_能源",
-      "tweet_count": 127,
-      "engagement": 36700,
-      "kol_mentions": 127,
-      "signal_strength": 78.7,
+      "theme": "宏观_利率政策",
+      "tweet_count": 187,
+      "engagement": 34225,
+      "kol_mentions": 187,
+      "signal_strength": 82.0,
       "consensus": {
-        "consensus_score": 0.149,
-        "opinion_density": 0.37,
-        "kol_consensus": 0.149,
-        "bull_ratio": 0.157,
-        "bear_ratio": 0.213,
-        "neutral_ratio": 0.63,
-        "kol_weighted_sentiment": -0.05,
-        "engagement_weighted_sentiment": 0.09,
-        "bull_count": 20,
-        "bear_count": 27,
-        "neutral_count": 80,
-        "total_count": 127
+        "consensus_score": 0.281,
+        "opinion_density": 0.342,
+        "kol_consensus": 0.281,
+        "bull_ratio": 0.219,
+        "bear_ratio": 0.123,
+        "neutral_ratio": 0.658,
+        "kol_weighted_sentiment": 0.095,
+        "engagement_weighted_sentiment": 0.11,
+        "bull_count": 41,
+        "bear_count": 23,
+        "neutral_count": 123,
+        "total_count": 187
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: September CPI inflation rises to 3.7%, above expectations of 3.6%\n\nCore CPI inflation rises to 2.6%, also above expectations of 2.5%.\n\nThis ",
+          "likes": 3521,
+          "url": "https://x.com/KobeissiLetter/status/2110347809308455363",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "jimcramer",
+          "author_name": "jimcramer",
+          "content": "No stopping the bears right now...",
+          "likes": 2630,
+          "url": "https://x.com/jimcramer/status/2110433376507412936",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Gold prices fall toward $4,100/oz as US CPI inflation rises to 3.7%. https://t.co/KjzC3CuwWc",
+          "likes": 2620,
+          "url": "https://x.com/KobeissiLetter/status/2110352198336909442",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "原油_能源",
+      "tweet_count": 185,
+      "engagement": 50858,
+      "kol_mentions": 185,
+      "signal_strength": 76.9,
+      "consensus": {
+        "consensus_score": 0.077,
+        "opinion_density": 0.351,
+        "kol_consensus": 0.077,
+        "bull_ratio": 0.162,
+        "bear_ratio": 0.189,
+        "neutral_ratio": 0.649,
+        "kol_weighted_sentiment": -0.023,
+        "engagement_weighted_sentiment": 0.12,
+        "bull_count": 30,
+        "bear_count": 35,
+        "neutral_count": 120,
+        "total_count": 185
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1112,63 +1191,63 @@
           "sentiment": "neutral"
         },
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "#TurkeyWatch🇹🇷: Trump on whether Turkey would support a military operation against the Houthis:\n\n“Erdoğan is a very good friend of mine. I think he wi",
-          "likes": 1999,
-          "url": "https://x.com/steve_hanke/status/2110232883025809767",
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Tomorrow Tesla will unveil their next-gen Roadster, and I’ll be there attending the event live.\n\nGoing to be interesting to see what the swan song of ",
+          "likes": 2105,
+          "url": "https://x.com/SawyerMerritt/status/2110400039436902696",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
-      "theme": "宏观_利率政策",
-      "tweet_count": 121,
-      "engagement": 20314,
-      "kol_mentions": 121,
-      "signal_strength": 88.1,
+      "theme": "AI_科技",
+      "tweet_count": 82,
+      "engagement": 19254,
+      "kol_mentions": 82,
+      "signal_strength": 81.7,
       "consensus": {
-        "consensus_score": 0.524,
-        "opinion_density": 0.347,
-        "kol_consensus": 0.524,
-        "bull_ratio": 0.264,
-        "bear_ratio": 0.083,
-        "neutral_ratio": 0.653,
-        "kol_weighted_sentiment": 0.166,
-        "engagement_weighted_sentiment": 0.269,
-        "bull_count": 32,
-        "bear_count": 10,
-        "neutral_count": 79,
-        "total_count": 121
+        "consensus_score": 0.267,
+        "opinion_density": 0.366,
+        "kol_consensus": 0.267,
+        "bull_ratio": 0.134,
+        "bear_ratio": 0.232,
+        "neutral_ratio": 0.634,
+        "kol_weighted_sentiment": -0.111,
+        "engagement_weighted_sentiment": -0.035,
+        "bull_count": 11,
+        "bear_count": 19,
+        "neutral_count": 52,
+        "total_count": 82
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
         {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: September CPI inflation rises to 3.7%, above expectations of 3.6%\n\nCore CPI inflation rises to 2.6%, also above expectations of 2.5%.\n\nThis ",
-          "likes": 3521,
-          "url": "https://x.com/KobeissiLetter/status/2110347809308455363",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Gold prices fall toward $4,100/oz as US CPI inflation rises to 3.7%. https://t.co/KjzC3CuwWc",
-          "likes": 2620,
-          "url": "https://x.com/KobeissiLetter/status/2110352198336909442",
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: A Saudi employee of OpenAI has been arrested after planting an audio recording device in the company's executive conference room, per DOJ",
+          "likes": 6263,
+          "url": "https://x.com/unusual_whales/status/2110096597694706175",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
-          "content": "BREAKING: Bank of America stock, $BAC, falls over -8% after the bank was fined $1.2 billion over money laundering violations and US CPI inflation push",
-          "likes": 961,
-          "url": "https://x.com/KobeissiLetter/status/2110367801068101996",
+          "content": "BREAKING: The Nasdaq 100 extends losses to over -2% on the day as US inflation rises.\n\nThe S&amp;P 500 has erased -$1 trillion today. https://t.co/oRD",
+          "likes": 1511,
+          "url": "https://x.com/KobeissiLetter/status/2110430011044098358",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Microsoft, $MSFT, XBOX is embracing fan-made game ports instead of fighting them.\n\nXbox CEO Asha Sharma addressed the recent wave of classic games, in",
+          "likes": 1413,
+          "url": "https://x.com/unusual_whales/status/2110323983463981293",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -1176,23 +1255,23 @@
     },
     {
       "theme": "加密货币",
-      "tweet_count": 54,
-      "engagement": 9747,
-      "kol_mentions": 54,
-      "signal_strength": 76.2,
+      "tweet_count": 79,
+      "engagement": 13417,
+      "kol_mentions": 79,
+      "signal_strength": 78.8,
       "consensus": {
-        "consensus_score": 0.048,
-        "opinion_density": 0.389,
-        "kol_consensus": 0.048,
-        "bull_ratio": 0.185,
-        "bear_ratio": 0.204,
-        "neutral_ratio": 0.611,
-        "kol_weighted_sentiment": -0.047,
-        "engagement_weighted_sentiment": 0.066,
-        "bull_count": 10,
-        "bear_count": 11,
-        "neutral_count": 33,
-        "total_count": 54
+        "consensus_score": 0.152,
+        "opinion_density": 0.418,
+        "kol_consensus": 0.152,
+        "bull_ratio": 0.241,
+        "bear_ratio": 0.177,
+        "neutral_ratio": 0.582,
+        "kol_weighted_sentiment": 0.041,
+        "engagement_weighted_sentiment": 0.179,
+        "bull_count": 19,
+        "bear_count": 14,
+        "neutral_count": 46,
+        "total_count": 79
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1216,63 +1295,11 @@
           "sentiment": "neutral"
         },
         {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "BITCOIN WHALES RESUME ACCUMULATION AS MARKET ENTERS EARLY BULL PHASE\n\nLarge Bitcoin holders are buying again after more than a year of selling, accord",
-          "likes": 823,
-          "url": "https://x.com/DeItAone/status/2110073468024685004",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "AI_科技",
-      "tweet_count": 48,
-      "engagement": 14382,
-      "kol_mentions": 48,
-      "signal_strength": 92.8,
-      "consensus": {
-        "consensus_score": 0.714,
-        "opinion_density": 0.292,
-        "kol_consensus": 0.714,
-        "bull_ratio": 0.042,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.708,
-        "kol_weighted_sentiment": -0.226,
-        "engagement_weighted_sentiment": -0.115,
-        "bull_count": 2,
-        "bear_count": 12,
-        "neutral_count": 34,
-        "total_count": 48
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: A Saudi employee of OpenAI has been arrested after planting an audio recording device in the company's executive conference room, per DOJ",
-          "likes": 6263,
-          "url": "https://x.com/unusual_whales/status/2110096597694706175",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Microsoft, $MSFT, XBOX is embracing fan-made game ports instead of fighting them.\n\nXbox CEO Asha Sharma addressed the recent wave of classic games, in",
-          "likes": 1413,
-          "url": "https://x.com/unusual_whales/status/2110323983463981293",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "Absolutely incredible.\n\nJust 10 stocks have driven 70% of the S&amp;P 500’s gain since March 30th.\n\nThese stocks have added +16 percentage points to t",
-          "likes": 763,
-          "url": "https://x.com/KobeissiLetter/status/2110234262553117073",
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "SpaceX has just introduced Grok Voice 3.0\n\n\"It's the world’s most intelligent speech-to-speech model. It sets a new record for resolving customer supp",
+          "likes": 1081,
+          "url": "https://x.com/SawyerMerritt/status/2110417482586423759",
           "is_kol": true,
           "sentiment": "bullish"
         }
@@ -1280,27 +1307,36 @@
     },
     {
       "theme": "地缘政治",
-      "tweet_count": 44,
-      "engagement": 9941,
-      "kol_mentions": 44,
-      "signal_strength": 82.3,
+      "tweet_count": 60,
+      "engagement": 13192,
+      "kol_mentions": 60,
+      "signal_strength": 79.5,
       "consensus": {
-        "consensus_score": 0.294,
-        "opinion_density": 0.386,
-        "kol_consensus": 0.294,
-        "bull_ratio": 0.136,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.614,
-        "kol_weighted_sentiment": -0.114,
-        "engagement_weighted_sentiment": 0.326,
-        "bull_count": 6,
-        "bear_count": 11,
-        "neutral_count": 27,
-        "total_count": 44
+        "consensus_score": 0.182,
+        "opinion_density": 0.367,
+        "kol_consensus": 0.182,
+        "bull_ratio": 0.15,
+        "bear_ratio": 0.217,
+        "neutral_ratio": 0.633,
+        "kol_weighted_sentiment": -0.081,
+        "engagement_weighted_sentiment": 0.162,
+        "bull_count": 9,
+        "bear_count": 13,
+        "neutral_count": 38,
+        "total_count": 60
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: The U.S. may have intentionally withheld early warnings of Russian strikes on Ukraine this week, per CBS News.\n\nIt comes as President Trump ",
+          "likes": 1261,
+          "url": "https://x.com/unusual_whales/status/2110424898187514130",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
         {
           "author": "unusual_whales",
           "author_name": "unusual_whales",
@@ -1318,41 +1354,41 @@
           "url": "https://x.com/USTreasury/status/2110145093889896620",
           "is_kol": true,
           "sentiment": "bullish"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "U.S. DIESEL FUTURES SURGE 4.5% DESPITE TRUMP'S RUSSIAN FUEL DEAL\n\nU.S. diesel futures jumped 4.5% to a two-week high, despite President Trump's agreem",
-          "likes": 342,
-          "url": "https://x.com/DeItAone/status/2110084028917280912",
-          "is_kol": true,
-          "sentiment": "bullish"
         }
       ]
     },
     {
       "theme": "公司_财报",
-      "tweet_count": 39,
-      "engagement": 8446,
-      "kol_mentions": 39,
-      "signal_strength": 76.3,
+      "tweet_count": 53,
+      "engagement": 10379,
+      "kol_mentions": 53,
+      "signal_strength": 75.9,
       "consensus": {
-        "consensus_score": 0.053,
-        "opinion_density": 0.487,
-        "kol_consensus": 0.053,
-        "bull_ratio": 0.231,
-        "bear_ratio": 0.256,
-        "neutral_ratio": 0.513,
-        "kol_weighted_sentiment": -0.049,
-        "engagement_weighted_sentiment": 0.333,
-        "bull_count": 9,
-        "bear_count": 10,
-        "neutral_count": 20,
-        "total_count": 39
+        "consensus_score": 0.037,
+        "opinion_density": 0.509,
+        "kol_consensus": 0.037,
+        "bull_ratio": 0.245,
+        "bear_ratio": 0.264,
+        "neutral_ratio": 0.491,
+        "kol_weighted_sentiment": -0.044,
+        "engagement_weighted_sentiment": 0.132,
+        "bull_count": 13,
+        "bear_count": 14,
+        "neutral_count": 26,
+        "total_count": 53
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Anthropic is now down over 10% in the last month, wiping more than $200 billion from its implied valuation.  \n\nAnthropic’s pre-IPO perpetual",
+          "likes": 935,
+          "url": "https://x.com/unusual_whales/status/2110417089123250440",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
         {
           "author": "unusual_whales",
           "author_name": "unusual_whales",
@@ -1370,141 +1406,28 @@
           "url": "https://x.com/DeItAone/status/2110349054815174737",
           "is_kol": true,
           "sentiment": "bullish"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "ROSENBERG WARNS U.S. STOCK MARKET IS THE MOST STRETCHED IN 40 YEARS\n\nVeteran strategist David Rosenberg warns that U.S. stock valuations, leverage and",
-          "likes": 404,
-          "url": "https://x.com/DeItAone/status/2110068977133076907",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "外汇_汇率",
-      "tweet_count": 26,
-      "engagement": 889,
-      "kol_mentions": 26,
-      "signal_strength": 79.5,
-      "consensus": {
-        "consensus_score": 0.273,
-        "opinion_density": 0.423,
-        "kol_consensus": 0.273,
-        "bull_ratio": 0.269,
-        "bear_ratio": 0.154,
-        "neutral_ratio": 0.577,
-        "kol_weighted_sentiment": 0.106,
-        "engagement_weighted_sentiment": 0.343,
-        "bull_count": 7,
-        "bear_count": 4,
-        "neutral_count": 15,
-        "total_count": 26
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "*BLOOMBERG DOLLAR SPOT INDEX JUMPS TO HIGHEST SINCE NOVEMBER",
-          "likes": 155,
-          "url": "https://x.com/DeItAone/status/2110348955523645940",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "U.S. DOLLAR INDEX HITS NEW HIGH 18-MONTH HIGHS, LAST UP 0.57% AT 102.75",
-          "likes": 122,
-          "url": "https://x.com/DeItAone/status/2110355275463143569",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "EURO HITS LOWEST AGAINST DOLLAR SINCE MID-MAY 2025, LAST DOWN 0.7% AT $1.112",
-          "likes": 101,
-          "url": "https://x.com/DeItAone/status/2110355926511415762",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "theme": "美债_固定收益",
-      "tweet_count": 23,
-      "engagement": 11503,
-      "kol_mentions": 23,
-      "signal_strength": 74.5,
-      "consensus": {
-        "consensus_score": 0.2,
-        "opinion_density": 0.652,
-        "kol_consensus": 0.2,
-        "bull_ratio": 0.391,
-        "bear_ratio": 0.261,
-        "neutral_ratio": 0.348,
-        "kol_weighted_sentiment": 0.13,
-        "engagement_weighted_sentiment": 0.161,
-        "bull_count": 9,
-        "bear_count": 6,
-        "neutral_count": 8,
-        "total_count": 23
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: Bank of America has been fined $1.2 billion over money-laundering violations.\n\nBank of America admits willfully violating Bank Secrecy Act r",
-          "likes": 6806,
-          "url": "https://x.com/unusual_whales/status/2110115107124728278",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Hedgeye",
-          "author_name": "Hedgeye",
-          "content": "BREAKING: U.S. 10-year yield surges back above 5.30% https://t.co/2lgzjs7FNF",
-          "likes": 818,
-          "url": "https://x.com/Hedgeye/status/2110352347398287848",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "USTreasury",
-          "author_name": "USTreasury",
-          "content": "Today, the U.S. Department of the Treasury announced enforcement actions imposing more than $1.21 billion in penalties against Bank of America for vio",
-          "likes": 801,
-          "url": "https://x.com/USTreasury/status/2110145093889896620",
-          "is_kol": true,
-          "sentiment": "bullish"
         }
       ]
     },
     {
       "theme": "黄金_贵金属",
-      "tweet_count": 21,
-      "engagement": 4942,
-      "kol_mentions": 21,
-      "signal_strength": 72.3,
+      "tweet_count": 37,
+      "engagement": 6811,
+      "kol_mentions": 37,
+      "signal_strength": 72.9,
       "consensus": {
-        "consensus_score": 0.2,
-        "opinion_density": 0.476,
-        "kol_consensus": 0.2,
-        "bull_ratio": 0.19,
-        "bear_ratio": 0.286,
-        "neutral_ratio": 0.524,
-        "kol_weighted_sentiment": -0.122,
-        "engagement_weighted_sentiment": -0.067,
-        "bull_count": 4,
-        "bear_count": 6,
-        "neutral_count": 11,
-        "total_count": 21
+        "consensus_score": 0.059,
+        "opinion_density": 0.459,
+        "kol_consensus": 0.059,
+        "bull_ratio": 0.216,
+        "bear_ratio": 0.243,
+        "neutral_ratio": 0.541,
+        "kol_weighted_sentiment": -0.02,
+        "engagement_weighted_sentiment": -0.022,
+        "bull_count": 8,
+        "bear_count": 9,
+        "neutral_count": 20,
+        "total_count": 37
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1528,11 +1451,63 @@
           "sentiment": "neutral"
         },
         {
-          "author": "jimcramer",
-          "author_name": "jimcramer",
-          "content": "I have to believe we get some upgraders of Goldmans Sachs and some nice price target boosts",
-          "likes": 213,
-          "url": "https://x.com/jimcramer/status/2110076917877772660",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Spot gold extends losses to nearly -$100/oz  today, now trading below $4,100/oz.\n\nThe US Dollar Index is now up to its highest level since A",
+          "likes": 866,
+          "url": "https://x.com/KobeissiLetter/status/2110412818793316429",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "外汇_汇率",
+      "tweet_count": 34,
+      "engagement": 3933,
+      "kol_mentions": 34,
+      "signal_strength": 71.0,
+      "consensus": {
+        "consensus_score": 0.067,
+        "opinion_density": 0.441,
+        "kol_consensus": 0.067,
+        "bull_ratio": 0.235,
+        "bear_ratio": 0.206,
+        "neutral_ratio": 0.559,
+        "kol_weighted_sentiment": 0.002,
+        "engagement_weighted_sentiment": -0.298,
+        "bull_count": 8,
+        "bear_count": 7,
+        "neutral_count": 19,
+        "total_count": 34
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "It's official.\n\nUS CPI inflation has now been above the Fed's 2% target for 67 consecutive months.\n\nThe last time inflation was below 2% in the US was",
+          "likes": 2545,
+          "url": "https://x.com/KobeissiLetter/status/2110390846734377290",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "*BLOOMBERG DOLLAR SPOT INDEX JUMPS TO HIGHEST SINCE NOVEMBER",
+          "likes": 155,
+          "url": "https://x.com/DeItAone/status/2110348955523645940",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "U.S. DOLLAR INDEX HITS NEW HIGH 18-MONTH HIGHS, LAST UP 0.57% AT 102.75",
+          "likes": 122,
+          "url": "https://x.com/DeItAone/status/2110355275463143569",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -1540,27 +1515,45 @@
     },
     {
       "theme": "美股_大盘",
-      "tweet_count": 15,
-      "engagement": 623,
-      "kol_mentions": 15,
-      "signal_strength": 61.0,
+      "tweet_count": 30,
+      "engagement": 2595,
+      "kol_mentions": 30,
+      "signal_strength": 76.7,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.533,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.267,
-        "bear_ratio": 0.267,
-        "neutral_ratio": 0.467,
-        "kol_weighted_sentiment": -0.032,
-        "engagement_weighted_sentiment": -0.224,
-        "bull_count": 4,
-        "bear_count": 4,
-        "neutral_count": 7,
-        "total_count": 15
+        "consensus_score": 0.412,
+        "opinion_density": 0.567,
+        "kol_consensus": 0.412,
+        "bull_ratio": 0.167,
+        "bear_ratio": 0.4,
+        "neutral_ratio": 0.433,
+        "kol_weighted_sentiment": -0.233,
+        "engagement_weighted_sentiment": -0.485,
+        "bull_count": 5,
+        "bear_count": 12,
+        "neutral_count": 13,
+        "total_count": 30
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Anthropic is now down over 10% in the last month, wiping more than $200 billion from its implied valuation.  \n\nAnthropic’s pre-IPO perpetual",
+          "likes": 935,
+          "url": "https://x.com/unusual_whales/status/2110417089123250440",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jimcramer",
+          "author_name": "jimcramer",
+          "content": "which hedge funds blew up today?",
+          "likes": 491,
+          "url": "https://x.com/jimcramer/status/2110438638920339588",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "RyanDetrick",
           "author_name": "RyanDetrick",
@@ -1569,140 +1562,94 @@
           "url": "https://x.com/RyanDetrick/status/2110204687379050766",
           "is_kol": true,
           "sentiment": "bearish"
-        },
+        }
+      ]
+    },
+    {
+      "theme": "美债_固定收益",
+      "tweet_count": 29,
+      "engagement": 13577,
+      "kol_mentions": 29,
+      "signal_strength": 71.3,
+      "consensus": {
+        "consensus_score": 0.222,
+        "opinion_density": 0.621,
+        "kol_consensus": 0.222,
+        "bull_ratio": 0.379,
+        "bear_ratio": 0.241,
+        "neutral_ratio": 0.379,
+        "kol_weighted_sentiment": 0.138,
+        "engagement_weighted_sentiment": 0.295,
+        "bull_count": 11,
+        "bear_count": 7,
+        "neutral_count": 11,
+        "total_count": 29
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
         {
-          "author": "qinbafrank",
-          "author_name": "qinbafrank",
-          "content": "这个应该超越9月CPI数据成了今晚最重要的事件，看CNBC报道Anthropic今晚面向核心机构投资者召开闭门会议，首次公开披露公司第三季度完整财务数据，为其筹备中的史上规模最大IPO铺路，两名匿名知情人士也确认了此次会议安排。 https://t.co/7EJe5xrXz6",
-          "likes": 87,
-          "url": "https://x.com/qinbafrank/status/2110290556354269612",
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Bank of America has been fined $1.2 billion over money-laundering violations.\n\nBank of America admits willfully violating Bank Secrecy Act r",
+          "likes": 6806,
+          "url": "https://x.com/unusual_whales/status/2110115107124728278",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "tj_research",
-          "author_name": "tj_research",
-          "content": "是这样，对于资产配置的影响会很大\n美股的分歧也会更大",
-          "likes": 77,
-          "url": "https://x.com/tj_research/status/2110186081220010054",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: The Nasdaq 100 extends losses to -1.6% on the day as US oil prices top $96/barrel and Treasury Yields rise on hot inflation data. https://t.",
+          "likes": 1547,
+          "url": "https://x.com/KobeissiLetter/status/2110406023832015324",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bullish"
+        },
+        {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "BREAKING: U.S. 10-year yield surges back above 5.30% https://t.co/2lgzjs7FNF",
+          "likes": 818,
+          "url": "https://x.com/Hedgeye/status/2110352347398287848",
+          "is_kol": true,
+          "sentiment": "bullish"
         }
       ]
     }
   ],
   "top_tweets": [
     {
-      "author": "MorganHousel",
-      "author_name": "MorganHousel",
-      "content": "Craig and I talked to Matt Sonsini about philanthropy, raising capital, and how Silicon Valley has changed over the years.\n\nApple: https://t.co/pfIx2kJynT\n\nSpotify: https://t.co/Fxzu94lZpx https://t.co/UAnfaZqViI",
-      "likes": 4,
-      "reposts": 0,
-      "replies": 5,
-      "views": 3325,
-      "created_at": "2026-10-14T14:37:36+00:00",
-      "url": "https://x.com/MorganHousel/status/2110379502107066391",
-      "assets": [
-        [
-          "AAPL",
-          "苹果"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "外汇_汇率"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "UrbanKaoboy",
-      "author_name": "UrbanKaoboy",
-      "content": "Musings of the Day, 10/14/26\n\nEveryone is clamoring over the backup in yields recently.\n\nBe careful what you wish for:\n\nThe likeliest path back to 2-3% Fed Funds is through a brutal economic and market BUST.",
-      "likes": 7,
-      "reposts": 0,
-      "replies": 2,
-      "views": 1374,
-      "created_at": "2026-10-14T14:31:58+00:00",
-      "url": "https://x.com/UrbanKaoboy/status/2110378081001369775",
+      "author": "John_Hempton",
+      "author_name": "John_Hempton",
+      "content": "RT @johnarnold: When even the guy who once worked at Enron says WTF...",
+      "likes": 0,
+      "reposts": 183,
+      "replies": 0,
+      "views": 101,
+      "created_at": "2026-10-14T19:26:12+00:00",
+      "url": "https://x.com/John_Hempton/status/2110452130759012634",
       "assets": [],
       "themes": [
-        "原油_能源",
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Market expectations for an October rate hike surge to 43% after US CPI inflation hits its third highest level since September 2023.\n\nOctober rate hike expectations are up +25 percentage points today.\n\nAnother highly uncertain Fed decision is ahead. https://t.co/NJi0k1ICiK",
-      "likes": 75,
-      "reposts": 10,
-      "replies": 12,
-      "views": 27037,
-      "created_at": "2026-10-14T14:26:53+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2110376802019635572",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
         "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "KathyLienFX",
-      "author_name": "KathyLienFX",
-      "content": "New Video! The World's #2 Futures Trader shares her Nasdaq playbook 🏆📈\n\nHow @MarciSilfrain spots pullbacks and nails targets, and why she ditched competition-style trading for swing trades 👇\n\nLots of good sauce here\nhttps://t.co/8SxVyUXFha\nhttps://t.co/8SxVyUXFha",
-      "likes": 4,
-      "reposts": 0,
-      "replies": 1,
-      "views": 1378,
-      "created_at": "2026-10-14T14:26:26+00:00",
-      "url": "https://x.com/KathyLienFX/status/2110376690014638505",
-      "assets": [],
-      "themes": [
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "goldseek",
-      "author_name": "goldseek",
-      "content": "RT @SilverNorthRes: $SNAG | $TARSF\n📢 Silver North Intersects 4.41 metres of 1,669 g/t Silver, 0.34 g/t Gold, 3.33% Lead and 2.00% Zinc in S…",
+      "author": "KitcoNewsNOW",
+      "author_name": "KitcoNewsNOW",
+      "content": "RT @KitcoMining: AbraSilver Targets 19M Oz Silver in Peak Production Year | John Miniotis\n\nJohn Miniotis, President &amp; CEO of @AbraSilver, j…",
       "likes": 0,
-      "reposts": 2,
+      "reposts": 1,
       "replies": 0,
-      "views": 529,
-      "created_at": "2026-10-14T14:21:49+00:00",
-      "url": "https://x.com/goldseek/status/2110375530331869219",
+      "views": 609,
+      "created_at": "2026-10-14T19:23:48+00:00",
+      "url": "https://x.com/KitcoNewsNOW/status/2110451526959329306",
       "assets": [
-        [
-          "SNAG",
-          "SNAG"
-        ],
-        [
-          "TARSF",
-          "TARSF"
-        ],
-        [
-          "XAU",
-          "黄金"
-        ],
         [
           "XAG",
           "白银"
@@ -1718,18 +1665,19 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "LiveSquawk",
-      "author_name": "LiveSquawk",
-      "content": "RT @TradeFloorAudio: *Overnight Scheduled CB Speakers*\n\nALL TIMES BST\n\nBoJ Koeda 2.30am\n\nECB Pereira 2.35am\nECB Buch 3.45am\nECB Kocher/Simk…",
-      "likes": 0,
-      "reposts": 1,
-      "replies": 0,
-      "views": 3455,
-      "created_at": "2026-10-14T14:18:31+00:00",
-      "url": "https://x.com/LiveSquawk/status/2110374699385376829",
+      "author": "bespokeinvest",
+      "author_name": "bespokeinvest",
+      "content": "Today would be just the 2nd trading day this year where the Nasdaq 100, Philly SOX (semis), and S&amp;P 500 Software group all fell 2%+.  It happened 14 times last year and 34 times in 2022. https://t.co/bKv3BZMolG",
+      "likes": 4,
+      "reposts": 4,
+      "replies": 10,
+      "views": 2900,
+      "created_at": "2026-10-14T19:20:49+00:00",
+      "url": "https://x.com/bespokeinvest/status/2110450776061759927",
       "assets": [],
       "themes": [
-        "宏观_利率政策"
+        "AI_科技",
+        "地缘政治"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1740,21 +1688,17 @@
     {
       "author": "StockMKTNewz",
       "author_name": "StockMKTNewz",
-      "content": "UBS today raised its price target on Meta Platforms $META up to $884 from $715 while maintaining its Buy rating",
-      "likes": 21,
-      "reposts": 2,
-      "replies": 9,
-      "views": 11369,
-      "created_at": "2026-10-14T14:18:01+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2110374571551387949",
-      "assets": [
-        [
-          "META",
-          "Meta"
-        ]
-      ],
+      "content": "FED'S GOOLSBEE JUST SAID: \n\n- MORE BAD MONTHS OF INFLATION WOULD UNACCEPTABLE, IF CURRENT INFLATION LEVELS HOLD POLICY WOULD NEED TO ADDRESS THAT",
+      "likes": 12,
+      "reposts": 1,
+      "replies": 3,
+      "views": 5728,
+      "created_at": "2026-10-14T19:17:28+00:00",
+      "url": "https://x.com/StockMKTNewz/status/2110449929781141541",
+      "assets": [],
       "themes": [
-        "AI_科技"
+        "宏观_利率政策",
+        "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1765,18 +1709,23 @@
     {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
-      "content": "The 2-year Treasury yield just jumped to 4.92%, its highest level since Sept. 29.\n\nIt comes right after September’s hotter-than-expected inflation report, as traders bet the Fed may need to raise rates again.",
-      "likes": 90,
-      "reposts": 7,
-      "replies": 34,
-      "views": 40528,
-      "created_at": "2026-10-14T14:17:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2110374315380105673",
-      "assets": [],
+      "content": "Biggest increases over the past year, per the Bureau of Labor Statistics:\n\nFuel oil: +74.2%\nGasoline: +34.2%\nAirline fares: +22.4%\nTobacco: +6.4%\nCar maintenance and repair: +5.8%\nHospital services: +5.6%\nOverall inflation: +3.7%\n\nAnd what got cheaper:\nCar insurance: -5.0%",
+      "likes": 40,
+      "reposts": 13,
+      "replies": 19,
+      "views": 19959,
+      "created_at": "2026-10-14T19:17:00+00:00",
+      "url": "https://x.com/unusual_whales/status/2110449812705300957",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
       "themes": [
-        "美债_固定收益",
-        "宏观_利率政策",
-        "原油_能源"
+        "加密货币",
+        "原油_能源",
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1787,149 +1736,114 @@
     {
       "author": "DeItAone",
       "author_name": "DeItAone",
-      "content": "SHARES OF AI INFRASTRUCTURE FIRMS CORWEAVE AND NEBIUS DROP; STEEPEST DECLINERS ON NASDAQ 100 INDEX\n\n$CRWV  - COREWEAVE DOWN 14.9% \n$NBIS  - NEBIUS FALLS 9.7%",
-      "likes": 107,
-      "reposts": 11,
-      "replies": 36,
-      "views": 53688,
-      "created_at": "2026-10-14T14:14:43+00:00",
-      "url": "https://x.com/DeItAone/status/2110373741712588949",
-      "assets": [
-        [
-          "CRWV",
-          "CRWV"
-        ],
-        [
-          "NBIS",
-          "NBIS"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 1.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "This is what ChatGPT's stock portfolio looks like in the Rallies AI Arena\n\n$31,704 of Google $GOOGL\n$22,110 of Progressive $PGR\n$19,629 of Visa $V\n$18,632 of Leidos $LDOS\n$18,194 of Cigna $CI\n$17,784 of Amphenol $APH\n$17,328 of Exxon Mobil $XOM\n$14,236 of Credo $CRDO\n$10,060 of",
-      "likes": 21,
-      "reposts": 1,
+      "content": "FED'S GOOLSBEE: IF CURRENT INFLATION LEVELS HOLD POLICY WOULD NEED TO ADDRESS THAT",
+      "likes": 25,
+      "reposts": 4,
       "replies": 6,
-      "views": 12567,
-      "created_at": "2026-10-14T14:10:57+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2110372795456651489",
-      "assets": [
-        [
-          "GOOGL",
-          "谷歌"
-        ],
-        [
-          "PGR",
-          "PGR"
-        ],
-        [
-          "V",
-          "V"
-        ],
-        [
-          "LDOS",
-          "LDOS"
-        ],
-        [
-          "CI",
-          "CI"
-        ],
-        [
-          "APH",
-          "APH"
-        ],
-        [
-          "XOM",
-          "XOM"
-        ],
-        [
-          "CRDO",
-          "CRDO"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "KathyLienFX",
-      "author_name": "KathyLienFX",
-      "content": "HOT CPI 🔥 = THE EXCUSE STOCKS NEEDED TO FALL?\n\nStocks ⬇️ Gold ⬇️ Dollar ⬆️\n\nWhat I'm watching:\n\n📉 Nasdaq support near 30,300\n💴 USD/JPY nearing a key resistance breakout\n📊 Thurs US data dump: retail sales, Empire State, Philly Fed, and jobless claims https://t.co/2Sn1CZn9Rp",
-      "likes": 10,
-      "reposts": 3,
-      "replies": 3,
-      "views": 1826,
-      "created_at": "2026-10-14T14:08:45+00:00",
-      "url": "https://x.com/KathyLienFX/status/2110372239833014502",
-      "assets": [
-        [
-          "XAU",
-          "黄金"
-        ]
-      ],
+      "views": 24915,
+      "created_at": "2026-10-14T19:16:54+00:00",
+      "url": "https://x.com/DeItAone/status/2110449787569094965",
+      "assets": [],
       "themes": [
         "宏观_利率政策",
-        "外汇_汇率",
-        "黄金_贵金属",
-        "AI_科技",
-        "美股_大盘"
+        "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "neutral",
       "sentiment_score": 0.0,
-      "sentiment_intensity": 1.0
+      "sentiment_intensity": 0.0
     },
     {
       "author": "DeItAone",
       "author_name": "DeItAone",
-      "content": "🇺🇸 PRESIDENT TRUMP'S SCHEDULE — WEDNESDAY, OCTOBER 14, 2026 \n\nAll times Eastern (ET)\n\n🔸 11:00 AM — Executive Time, Las Vegas, Nevada\n🔸 11:30 AM — Travel pool call time, Las Vegas\n🔸 4:00 PM — Political rally in Bullhead City, Arizona\n🔸 8:15 PM — Political rally in Kalispell,",
-      "likes": 47,
-      "reposts": 4,
-      "replies": 14,
-      "views": 55991,
-      "created_at": "2026-10-14T14:07:53+00:00",
-      "url": "https://x.com/DeItAone/status/2110372022500958313",
+      "content": "FED'S GOOLSBEE: MORE BAD MONTHS OF INFLATION WOULD UNACCEPTABLE",
+      "likes": 19,
+      "reposts": 3,
+      "replies": 6,
+      "views": 22899,
+      "created_at": "2026-10-14T19:16:36+00:00",
+      "url": "https://x.com/DeItAone/status/2110449713287721407",
       "assets": [],
       "themes": [
-        "加密货币",
-        "原油_能源"
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "Hedgeye",
-      "author_name": "Hedgeye",
-      "content": "BREAKING: Silver futures plunge -4.7% to below $57/oz https://t.co/x0Od6P7hti",
-      "likes": 29,
-      "reposts": 3,
-      "replies": 9,
-      "views": 3067,
-      "created_at": "2026-10-14T14:06:49+00:00",
-      "url": "https://x.com/Hedgeye/status/2110371755042738498",
+      "author": "StockMKTNewz",
+      "author_name": "StockMKTNewz",
+      "content": "All these stocks hit new 52 WEEK LOWS at some point today\n\nSoFi $SOFI\nAppLovin $APP\nParamount Skydance $SKYD\nRocket Companies $RKT\nAST SpaceMobile $ASTS\nLumen $LUMN\nOklo $OKLO\nDraftKings $DKNG\nKinross Gold $KGC\nCopart $CPRT\nBrookfield $BN\nLennar $LEN\nCRH $CRH\nKratos $KTOS\nCarlyle",
+      "likes": 20,
+      "reposts": 6,
+      "replies": 10,
+      "views": 6227,
+      "created_at": "2026-10-14T19:16:21+00:00",
+      "url": "https://x.com/StockMKTNewz/status/2110449650788352511",
       "assets": [
         [
-          "XAG",
-          "白银"
+          "SOFI",
+          "SOFI"
+        ],
+        [
+          "APP",
+          "APP"
+        ],
+        [
+          "SKYD",
+          "SKYD"
+        ],
+        [
+          "RKT",
+          "RKT"
+        ],
+        [
+          "ASTS",
+          "ASTS"
+        ],
+        [
+          "LUMN",
+          "LUMN"
+        ],
+        [
+          "OKLO",
+          "OKLO"
+        ],
+        [
+          "DKNG",
+          "DKNG"
+        ],
+        [
+          "KGC",
+          "KGC"
+        ],
+        [
+          "CPRT",
+          "CPRT"
+        ],
+        [
+          "BN",
+          "BN"
+        ],
+        [
+          "LEN",
+          "LEN"
+        ],
+        [
+          "CRH",
+          "CRH"
+        ],
+        [
+          "KTOS",
+          "KTOS"
+        ],
+        [
+          "XAU",
+          "黄金"
         ]
       ],
       "themes": [
@@ -1942,52 +1856,171 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "ripster47",
-      "author_name": "ripster47",
-      "content": "$SPY $QQQ \nBearish market now CPI, Iran big problems\nRate Hike odds increased \n\nMany AI Names getting flushed hard\nCautious today buying dips unless market shows curl over clouds\n$VIX 16 is big level to watch https://t.co/y1L3EhaEsA",
-      "likes": 18,
-      "reposts": 7,
-      "replies": 7,
-      "views": 10549,
-      "created_at": "2026-10-14T14:02:08+00:00",
-      "url": "https://x.com/ripster47/status/2110370575940022600",
-      "assets": [
-        [
-          "SPY",
-          "标普500ETF"
-        ],
-        [
-          "QQQ",
-          "纳指100ETF"
-        ],
-        [
-          "VIX",
-          "恐慌指数"
-        ]
-      ],
+      "author": "RyanDetrick",
+      "author_name": "RyanDetrick",
+      "content": "Inflation has been running hot for most of this year, so today shouldn't be a big surprise\n\n@sonusvarghese has been saying this for many months",
+      "likes": 19,
+      "reposts": 1,
+      "replies": 8,
+      "views": 4289,
+      "created_at": "2026-10-14T19:16:07+00:00",
+      "url": "https://x.com/RyanDetrick/status/2110449591841706355",
+      "assets": [],
       "themes": [
-        "美股_大盘",
-        "宏观_利率政策",
-        "原油_能源",
-        "AI_科技",
-        "地缘政治"
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.667
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
     },
     {
-      "author": "dimartinobooth",
-      "author_name": "dimartinobooth",
-      "content": "Rates rising this coming Friday so sign up now: I will be speaking at the 52nd Annual NOIC — Register now to have a seat at the table!\nOctober 28-31 — \n\nhttps://t.co/zYOF4WqFeG\n\n#NOICconference #NewOrleansInvestmentConference\n\n#federalreserve #dimartinobooth #economy https://t.co/XI33tPcNpq",
-      "likes": 11,
+      "author": "SCMPNews",
+      "author_name": "SCMPNews",
+      "content": "ASML’s chip equipment sales to China soar 109% despite US export curb push \n\nhttps://t.co/HHiUbvSq0C",
+      "likes": 5,
       "reposts": 1,
+      "replies": 0,
+      "views": 988,
+      "created_at": "2026-10-14T19:15:06+00:00",
+      "url": "https://x.com/SCMPNews/status/2110449335485751648",
+      "assets": [],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "FED HOLDS OFF ON NEW BOND PURCHASES FOR THIRD STRAIGHT MONTH\n\nThe New York Fed will not inject additional money into the financial system through new Treasury bill purchases for a third consecutive month.\n\nIt will still buy $14.6 billion in Treasury bills, but only by reinvesting",
+      "likes": 28,
+      "reposts": 5,
       "replies": 4,
-      "views": 3370,
-      "created_at": "2026-10-14T14:00:11+00:00",
-      "url": "https://x.com/dimartinobooth/status/2110370084976038339",
+      "views": 29361,
+      "created_at": "2026-10-14T19:13:51+00:00",
+      "url": "https://x.com/DeItAone/status/2110449019931513101",
+      "assets": [],
+      "themes": [
+        "美债_固定收益",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Fed's Goolsbee: The Fed must prevent the buildup of overheating.",
+      "likes": 0,
+      "reposts": 1,
+      "replies": 0,
+      "views": 8753,
+      "created_at": "2026-10-14T19:13:33+00:00",
+      "url": "https://x.com/financialjuice/status/2110448946283765812",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "FED'S GOOLSBEE: FED MUST PREVENT THE BUILD UP OF OVERHEATING",
+      "likes": 18,
+      "reposts": 2,
+      "replies": 8,
+      "views": 30075,
+      "created_at": "2026-10-14T19:13:22+00:00",
+      "url": "https://x.com/DeItAone/status/2110448898510827606",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Fed's Goolsbee: There is no ambiguity for the Fed if the economy is solid and inflation is high",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 8275,
+      "created_at": "2026-10-14T19:13:20+00:00",
+      "url": "https://x.com/financialjuice/status/2110448891392881096",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "宏观_利率政策",
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "Fed's Goolsbee: Hopes Energy Will Fade Soon From Inflation Data\n- Economy Has Work To Do The Inflation Side\n- Must Prevent Buildup Of Overheating\n- ‘Not A Fan’ Of Telegraphing Fed Moves Ahead Of Meetings\n- No Ambiguity For Fed If Economy Is Solid And Inflation Is High",
+      "likes": 2,
+      "reposts": 1,
+      "replies": 1,
+      "views": 5038,
+      "created_at": "2026-10-14T19:13:04+00:00",
+      "url": "https://x.com/LiveSquawk/status/2110448823004999941",
+      "assets": [
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "宏观_利率政策",
+        "加密货币",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Fed's Goolsbee: Not a fan of telegraphing Fed moves ahead of meetings",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 0,
+      "views": 8921,
+      "created_at": "2026-10-14T19:13:02+00:00",
+      "url": "https://x.com/financialjuice/status/2110448816843604380",
       "assets": [],
       "themes": [
         "宏观_利率政策"
@@ -2001,63 +2034,53 @@
     {
       "author": "financialjuice",
       "author_name": "financialjuice",
-      "content": "Zambia: China to start paying for some copper shipments in yuan.",
-      "likes": 9,
-      "reposts": 0,
-      "replies": 3,
-      "views": 25132,
-      "created_at": "2026-10-14T13:58:45+00:00",
-      "url": "https://x.com/financialjuice/status/2110369723267653692",
-      "assets": [],
-      "themes": [
-        "外汇_汇率"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "$ASML said it sold 17 EUV machines during Q3\n\nThe machines cost as much as $400 Million per unit and are critical for the making of the most advanced semiconductors https://t.co/CO0WPFw1S6",
-      "likes": 111,
-      "reposts": 7,
-      "replies": 28,
-      "views": 17304,
-      "created_at": "2026-10-14T13:55:02+00:00",
-      "url": "https://x.com/StockMKTNewz/status/2110368786234675498",
-      "assets": [
-        [
-          "ASML",
-          "ASML"
-        ],
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币",
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "LiveSquawk",
-      "author_name": "LiveSquawk",
-      "content": "RT @CNBC: Fed may now have to hike twice or increase by a half point in December, traders bet https://t.co/KSAudm3ZTw",
+      "content": "Fed's Goolsbee: Prices and costs are clearly the worst side of the economy.",
       "likes": 0,
-      "reposts": 14,
+      "reposts": 0,
+      "replies": 1,
+      "views": 9528,
+      "created_at": "2026-10-14T19:12:44+00:00",
+      "url": "https://x.com/financialjuice/status/2110448739223773577",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "FED'S GOOLSBEE: IS NOT A FAN OF TELEGRAPHING FED MOVES AHEAD OF MEETINGS",
+      "likes": 20,
+      "reposts": 4,
+      "replies": 7,
+      "views": 30544,
+      "created_at": "2026-10-14T19:12:34+00:00",
+      "url": "https://x.com/DeItAone/status/2110448699365044665",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Fed's Goolsbee: The economy has work to do on the inflation side",
+      "likes": 1,
+      "reposts": 0,
       "replies": 0,
-      "views": 3830,
-      "created_at": "2026-10-14T13:53:04+00:00",
-      "url": "https://x.com/LiveSquawk/status/2110368293894709691",
+      "views": 10680,
+      "created_at": "2026-10-14T19:12:05+00:00",
+      "url": "https://x.com/financialjuice/status/2110448576320929922",
       "assets": [],
       "themes": [
         "宏观_利率政策"
@@ -2069,15 +2092,15 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "bespokeinvest",
-      "author_name": "bespokeinvest",
-      "content": "Periods when inflation was incessantly above 2% weren't exactly catastrophic for equities. https://t.co/HWcgrCgJZ9",
-      "likes": 11,
-      "reposts": 1,
-      "replies": 13,
-      "views": 3972,
-      "created_at": "2026-10-14T13:52:17+00:00",
-      "url": "https://x.com/bespokeinvest/status/2110368095864828177",
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "FED'S GOOLSBEE: THE ECONOMY HAS WORK TO DO THE INFLATION SIDE",
+      "likes": 21,
+      "reposts": 3,
+      "replies": 9,
+      "views": 30404,
+      "created_at": "2026-10-14T19:12:05+00:00",
+      "url": "https://x.com/DeItAone/status/2110448575671083114",
       "assets": [],
       "themes": [
         "宏观_利率政策"
@@ -2087,31 +2110,6 @@
       "sentiment": "neutral",
       "sentiment_score": 0.0,
       "sentiment_intensity": 0.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Bank of America stock, $BAC, falls over -8% after the bank was fined $1.2 billion over money laundering violations and US CPI inflation pushes rate hike expectations higher.\n\nThe stock has now erased -$30 billion of market cap today. https://t.co/Lq6TtQ3V88",
-      "likes": 961,
-      "reposts": 95,
-      "replies": 85,
-      "views": 92849,
-      "created_at": "2026-10-14T13:51:07+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2110367801068101996",
-      "assets": [
-        [
-          "BAC",
-          "BAC"
-        ]
-      ],
-      "themes": [
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.667
     }
   ],
   "kol_summary": [
@@ -2174,6 +2172,19 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "jimcramer",
+      "author_name": "jimcramer",
+      "content": "No stopping the bears right now...",
+      "likes": 2630,
+      "url": "https://x.com/jimcramer/status/2110433376507412936",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
+    },
+    {
       "author": "KobeissiLetter",
       "author_name": "KobeissiLetter",
       "content": "BREAKING: Gold prices fall toward $4,100/oz as US CPI inflation rises to 3.7%. https://t.co/KjzC3CuwWc",
@@ -2189,6 +2200,56 @@
         "宏观_利率政策",
         "黄金_贵金属",
         "地缘政治"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "It's official.\n\nUS CPI inflation has now been above the Fed's 2% target for 67 consecutive months.\n\nThe last time inflation was below 2% in the US was in January 2021, amid a global economic lockdown.\n\nOver this period, the value of the US Dollar has declined by -22.5%.\n\nIn other https://t.co/h8lCcs2QYB",
+      "likes": 2545,
+      "url": "https://x.com/KobeissiLetter/status/2110390846734377290",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "外汇_汇率"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: Bank of America stock, $BAC, falls over -8% after the bank was fined $1.2 billion over money laundering violations and US CPI inflation pushes rate hike expectations higher.\n\nThe stock has now erased -$30 billion of market cap today. https://t.co/Lq6TtQ3V88",
+      "likes": 2360,
+      "url": "https://x.com/KobeissiLetter/status/2110367801068101996",
+      "assets": [
+        [
+          "BAC",
+          "BAC"
+        ]
+      ],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "Tomorrow Tesla will unveil their next-gen Roadster, and I’ll be there attending the event live.\n\nGoing to be interesting to see what the swan song of the manually driven car era looks like! https://t.co/bUonlv7HCg",
+      "likes": 2105,
+      "url": "https://x.com/SawyerMerritt/status/2110400039436902696",
+      "assets": [
+        [
+          "TSLA",
+          "特斯拉"
+        ]
+      ],
+      "themes": [
+        "原油_能源"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
@@ -2231,6 +2292,36 @@
       "sentiment_score": 1.0
     },
     {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: The Nasdaq 100 extends losses to -1.6% on the day as US oil prices top $96/barrel and Treasury Yields rise on hot inflation data. https://t.co/ylm9dLIYWK",
+      "likes": 1547,
+      "url": "https://x.com/KobeissiLetter/status/2110406023832015324",
+      "assets": [],
+      "themes": [
+        "美债_固定收益",
+        "原油_能源",
+        "宏观_利率政策",
+        "AI_科技"
+      ],
+      "sentiment": "bullish",
+      "sentiment_score": 1.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: The Nasdaq 100 extends losses to over -2% on the day as US inflation rises.\n\nThe S&amp;P 500 has erased -$1 trillion today. https://t.co/oRDkWTCb4i",
+      "likes": 1511,
+      "url": "https://x.com/KobeissiLetter/status/2110430011044098358",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "AI_科技"
+      ],
+      "sentiment": "bullish",
+      "sentiment_score": 1.0
+    },
+    {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
       "content": "Microsoft, $MSFT, XBOX is embracing fan-made game ports instead of fighting them.\n\nXbox CEO Asha Sharma addressed the recent wave of classic games, including community Halo mods, being decompiled and rebuilt to run on hardware they were never designed for.\n\nRather than cracking",
@@ -2253,111 +2344,15 @@
     {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
-      "content": "This is unusual.\n\nCFTC staff have reportedly been told to retract their analysis of suspicious oil trades.\n\nUnusual Whales caught many of them.\n\nLet's take a look at billions of dollars in well-timed bets on oil futures, placed before major Trump announcements on the Iran war.",
-      "likes": 1240,
-      "url": "https://x.com/unusual_whales/status/2110102195404460215",
+      "content": "BREAKING: The U.S. may have intentionally withheld early warnings of Russian strikes on Ukraine this week, per CBS News.\n\nIt comes as President Trump pushes an “energy ceasefire” between Russia &amp; Ukraine and has called for Ukrainian President Volodymyr Zelenskyy to be replaced.",
+      "likes": 1261,
+      "url": "https://x.com/unusual_whales/status/2110424898187514130",
       "assets": [],
       "themes": [
-        "地缘政治",
-        "原油_能源",
-        "外汇_汇率"
+        "地缘政治"
       ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Morgan Stanley's Adam Jonas in new @SpaceX note:\n\n\"The part of the SpaceX story that we believe holds the greatest growth potential, and that is being largely ignored/not contemplated by investors, is the Distributed Inference Cloud. Investors are already witnessing some degree",
-      "likes": 1226,
-      "url": "https://x.com/SawyerMerritt/status/2110118022988058637",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "40% of workers earning over $500,000 are leaving paycheck to paycheck, per Goldman Sachs.",
-      "likes": 1205,
-      "url": "https://x.com/unusual_whales/status/2110359215604896111",
-      "assets": [
-        [
-          "XAU",
-          "黄金"
-        ]
-      ],
-      "themes": [
-        "黄金_贵金属"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "Robots can already do about 3/4 of physical job tasks in the US, per  Anthropic.\n\nBut they're cheaper than a human for just 0.3% of them.\n\nAt the historical rate robots get cheaper, it would take about 40 years for that to reach 10%.\n\nEven in the fastest scenario, robots don't",
-      "likes": 1161,
-      "url": "https://x.com/unusual_whales/status/2110344116361937370",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "The ultrawealthy are pulling away from everyone, including other rich Americans.\n\nThe top 0.1% have more than doubled their wealth since 2019, per WSJ\n\nThey've gained $14.5 trillion, $10 trillion of it from stocks.\n\nThe top 0.1% now control $28 trillion, 15% of all US wealth.",
-      "likes": 1152,
-      "url": "https://x.com/unusual_whales/status/2110354434026881309",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "bullish",
-      "sentiment_score": 1.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Bank of America stock, $BAC, falls over -8% after the bank was fined $1.2 billion over money laundering violations and US CPI inflation pushes rate hike expectations higher.\n\nThe stock has now erased -$30 billion of market cap today. https://t.co/Lq6TtQ3V88",
-      "likes": 961,
-      "url": "https://x.com/KobeissiLetter/status/2110367801068101996",
-      "assets": [
-        [
-          "BAC",
-          "BAC"
-        ]
-      ],
-      "themes": [
-        "宏观_利率政策"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "DeItAone",
-      "author_name": "DeItAone",
-      "content": "BITCOIN WHALES RESUME ACCUMULATION AS MARKET ENTERS EARLY BULL PHASE\n\nLarge Bitcoin holders are buying again after more than a year of selling, according to CryptoQuant.\n\nWhales now hold 3.03 million BTC, their highest holdings since November 2025.\n\nCryptoQuant says the shift",
-      "likes": 823,
-      "url": "https://x.com/DeItAone/status/2110073468024685004",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
     }
   ],
   "source": "hybrid",
