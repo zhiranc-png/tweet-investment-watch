@@ -1,56 +1,68 @@
 {
-  "generated_at": "2026-11-12T12:32:57.237858",
+  "generated_at": "2026-11-12T15:34:57.522327",
   "stats": {
-    "total_tweets": 165,
-    "kol_tweets": 165,
-    "unique_authors": 38,
-    "kol_count": 38,
-    "total_likes": 102996,
-    "total_reposts": 13789,
-    "total_replies": 7658,
-    "total_views": 14872155,
-    "unique_assets": 35,
-    "unique_themes": 11
+    "total_tweets": 528,
+    "kol_tweets": 370,
+    "unique_authors": 48,
+    "kol_count": 48,
+    "total_likes": 176344,
+    "total_reposts": 26628,
+    "total_replies": 13922,
+    "total_views": 24963052,
+    "unique_assets": 64,
+    "unique_themes": 11,
+    "classified_tweets": 370,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.393,
-    "opinion_density": 0.339,
-    "kol_consensus": 0.393,
-    "bull_ratio": 0.103,
-    "bear_ratio": 0.236,
-    "neutral_ratio": 0.661,
-    "kol_weighted_sentiment": -0.122,
-    "engagement_weighted_sentiment": -0.305,
-    "bull_count": 17,
-    "bear_count": 39,
-    "neutral_count": 109,
-    "total_count": 165
+    "consensus_score": 0.203,
+    "opinion_density": 0.359,
+    "kol_consensus": 0.203,
+    "bull_ratio": 0.143,
+    "bear_ratio": 0.216,
+    "neutral_ratio": 0.641,
+    "kol_weighted_sentiment": -0.069,
+    "engagement_weighted_sentiment": -0.183,
+    "bull_count": 53,
+    "bear_count": 80,
+    "neutral_count": 237,
+    "total_count": 370
   },
   "top_assets": [
     {
       "symbol": "NVDA",
       "name": "英伟达",
-      "mention_count": 68,
-      "engagement": 91373,
-      "kol_mentions": 68,
-      "signal_strength": 88.9,
+      "mention_count": 154,
+      "engagement": 161193,
+      "kol_mentions": 154,
+      "signal_strength": 86.9,
       "consensus": {
-        "consensus_score": 0.556,
-        "opinion_density": 0.265,
-        "kol_consensus": 0.556,
-        "bull_ratio": 0.059,
-        "bear_ratio": 0.206,
-        "neutral_ratio": 0.735,
-        "kol_weighted_sentiment": -0.167,
-        "engagement_weighted_sentiment": -0.292,
-        "bull_count": 4,
-        "bear_count": 14,
-        "neutral_count": 50,
-        "total_count": 68
+        "consensus_score": 0.476,
+        "opinion_density": 0.273,
+        "kol_consensus": 0.476,
+        "bull_ratio": 0.071,
+        "bear_ratio": 0.201,
+        "neutral_ratio": 0.727,
+        "kol_weighted_sentiment": -0.143,
+        "engagement_weighted_sentiment": -0.215,
+        "bull_count": 11,
+        "bear_count": 31,
+        "neutral_count": 112,
+        "total_count": 154
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Nvidia, $NVDA, CEO Jensen Huang has resigned as CEO, President, and member of the Board of Directors, effective immediately. https://t.co/IJE8wWvcrR",
+          "likes": 14853,
+          "url": "https://x.com/KobeissiLetter/status/2120877226459820170",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
@@ -72,56 +84,340 @@
         {
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
-          "content": "BREAKING: Nvidia stock, $NVDA, falls sharply on reports that Jensen Huang had another affair with a senior employee at the company. https://t.co/mPK4SjdOB3",
-          "likes": 8454,
-          "url": "https://x.com/KobeissiLetter/status/2120639391077151225",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Nvidia, $NVDA, is now working with an \"outside firm\" to find a new CEO to replace Jensen Huang, per Bloomberg.\n\nThe company is also reportedly weighing naming a temporary CEO while searching",
-          "likes": 7016,
-          "url": "https://x.com/KobeissiLetter/status/2120663608065704205",
+          "content": "Jensen Huang and the Nvidia board just made a massive mistake.\n\nHe should not have resigned.\n\nThe board should have taken the time to conduct a thorough investigation, consult with shareholders, and c",
+          "likes": 9144,
+          "url": "https://x.com/KobeissiLetter/status/2120888131314717128",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
-          "content": "BREAKING: Nvidia, $NVDA, CEO Jensen Huang reportedly had another affair with a senior Nvidia employee, per NYT.\n\nThe relationship was reportedly with Kimberly Powell, Nvidia's VP of Health Care who re",
-          "likes": 5046,
-          "url": "https://x.com/KobeissiLetter/status/2120638848086733130",
+          "content": "BREAKING: Nvidia stock, $NVDA, falls sharply on reports that Jensen Huang had another affair with a senior employee at the company. https://t.co/mPK4SjdOB3",
+          "likes": 8454,
+          "url": "https://x.com/KobeissiLetter/status/2120639391077151225",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "XAU",
+      "name": "黄金",
+      "mention_count": 16,
+      "engagement": 668,
+      "kol_mentions": 16,
+      "signal_strength": 67.3,
+      "consensus": {
+        "consensus_score": 0.2,
+        "opinion_density": 0.625,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.375,
+        "neutral_ratio": 0.375,
+        "kol_weighted_sentiment": -0.113,
+        "engagement_weighted_sentiment": -0.146,
+        "bull_count": 4,
+        "bear_count": 6,
+        "neutral_count": 6,
+        "total_count": 16
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "BREAKING: Gold falls -2.5% to below $3,900/oz https://t.co/k8o7ypI3cJ",
+          "likes": 190,
+          "url": "https://x.com/Hedgeye/status/2120877800940830752",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "SPOT GOLD EXTENDS LOSSES, DOWN 3% TO $3,866.08/OZ",
+          "likes": 92,
+          "url": "https://x.com/DeItAone/status/2120894164967862607",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Gold back to the lower support. \n\nTo reverse or not to reverse? That is the question here. … https://t.co/eaM6mYOtdb",
+          "likes": 71,
+          "url": "https://x.com/goldseek/status/2120808812789797372",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Shorting at a 46+ year breakout… now support area with the gold to silver ratio at a screaming buy near 80 = cannon fodder confirmed for the next silver price rally.",
+          "likes": 61,
+          "url": "https://x.com/goldseek/status/2120797216227066333",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "BREAKING: Gold plunges to a 1-year low https://t.co/TIHiNAV65o",
+          "likes": 49,
+          "url": "https://x.com/Hedgeye/status/2120896572611531127",
           "is_kol": true,
           "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "SPY",
-      "name": "标普500ETF",
-      "mention_count": 7,
-      "engagement": 366,
-      "kol_mentions": 7,
-      "signal_strength": 62.0,
+      "symbol": "IEF",
+      "name": "美债7-10年ETF",
+      "mention_count": 13,
+      "engagement": 3819,
+      "kol_mentions": 13,
+      "signal_strength": 67.4,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.286,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.143,
-        "bear_ratio": 0.143,
-        "neutral_ratio": 0.714,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.068,
+        "consensus_score": 0.333,
+        "opinion_density": 0.231,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.077,
+        "bear_ratio": 0.154,
+        "neutral_ratio": 0.769,
+        "kol_weighted_sentiment": -0.128,
+        "engagement_weighted_sentiment": 0.014,
         "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 5,
-        "total_count": 7
+        "bear_count": 2,
+        "neutral_count": 10,
+        "total_count": 13
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "JUST IN: Nvidia’s $NVDA board is preparing to oust CEO Jensen Huang, its founder and chief executive, per the WSJ",
+          "likes": 2310,
+          "url": "https://x.com/unusual_whales/status/2120667560136040617",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "JUST IN:\n\nNvidia $NVDA just relesed this statement about Jensen Huang stepping down\n\n\"NVIDIA Announces CEO Transition\n\n- Jensen Huang Resigns\n- Colette Kress, Executive Vice President and Chief Financ",
+          "likes": 709,
+          "url": "https://x.com/StockMKTNewz/status/2120877154497913076",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "NVIDIA CEO SUCCESSION RACE HEATS UP\n\nWith Colette Kress serving as interim CEO, the search for Jensen Huang's permanent successor is underway.\n\nPrediction markets favor Ian Buck at 34%, ahead of Kress",
+          "likes": 182,
+          "url": "https://x.com/DeItAone/status/2120889004732059951",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "TRUMP BACKS COMMERCE CHIEF LUTNICK DESPITE RISING SCRUTINY OVER NVIDIA - CNN CITING WHITE HOUSE OFFICIAL",
+          "likes": 131,
+          "url": "https://x.com/DeItAone/status/2120889518975070711",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "convertbond",
+          "author_name": "convertbond",
+          "content": "Rotation: $1T wiped from NVDA since Oct. 29. Anthropic’s $1.4T IPO lands the same week. Rubio warned Trump about Huang’s MSS-linked affair back in spring — briefed him on AF1 in May. Ignored for month",
+          "likes": 32,
+          "url": "https://x.com/convertbond/status/2120836384508232105",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "ETH",
+      "name": "以太坊",
+      "mention_count": 11,
+      "engagement": 6419,
+      "kol_mentions": 11,
+      "signal_strength": 63.1,
+      "consensus": {
+        "consensus_score": 0.25,
+        "opinion_density": 0.727,
+        "kol_consensus": 0.25,
+        "bull_ratio": 0.455,
+        "bear_ratio": 0.273,
+        "neutral_ratio": 0.273,
+        "kol_weighted_sentiment": 0.13,
+        "engagement_weighted_sentiment": 0.035,
+        "bull_count": 5,
+        "bear_count": 3,
+        "neutral_count": 3,
+        "total_count": 11
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Jensen Huang just resigned from Nvidia. What if Elon ends up hiring him to help with Terafab (as well as other things) and together they make America the greatest producer of advanced chips in the wor",
+          "likes": 4791,
+          "url": "https://x.com/SawyerMerritt/status/2120887225227612356",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "$NVDA  - NVIDIA BOARD MEETING WEDNESDAY TO DECIDE WHETHER TO OUST CEO JENSEN HUANG - SOURCE",
+          "likes": 634,
+          "url": "https://x.com/DeItAone/status/2120658539546882079",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "RaoulGMI",
+          "author_name": "RaoulGMI",
+          "content": "Everyones asking the same questions this week... Is AI a bubble, is the money just going round in circles, is this correction the start of the end...\n\nAll of it misses something crucial.. which is the",
+          "likes": 229,
+          "url": "https://x.com/RaoulGMI/status/2120684022745473459",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: This Wall Street veteran says the next big energy play is something almost no one is watching.  \n\nAI power stocks have been getting crushed. \n\nHe’s looking at a corner of the energy market m",
+          "likes": 120,
+          "url": "https://x.com/unusual_whales/status/2120692303069053147",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Florida ranks as the 4th-worst state for job seekers, per WalletHub’s 2026 study.\n\nThe state came in 47th out of 50, and dead last for employment growth.\n\nJob opportunities: 38th\nJob security: 42nd\nCo",
+          "likes": 77,
+          "url": "https://x.com/unusual_whales/status/2120883563273113720",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "mention_count": 9,
+      "engagement": 727,
+      "kol_mentions": 9,
+      "signal_strength": 54.7,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.444,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.222,
+        "bear_ratio": 0.222,
+        "neutral_ratio": 0.556,
+        "kol_weighted_sentiment": 0.074,
+        "engagement_weighted_sentiment": 0.081,
+        "bull_count": 2,
+        "bear_count": 2,
+        "neutral_count": 5,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "*WARREN: HUANG'S RESIGNATION DOES NOT ABSOLVE HIM",
+          "likes": 401,
+          "url": "https://x.com/DeItAone/status/2120888190277939307",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "TheStalwart",
+          "author_name": "TheStalwart",
+          "content": "If you have the patience to sit through the first five minutes of the song, the guitar solo in Freebird really slaps. But that 5 minute wait uggghh",
+          "likes": 200,
+          "url": "https://x.com/TheStalwart/status/2120683701218467951",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "I GAVE AI $10K AND TOLD IT TO BEAT THE NASDAQ 100\n\nMy AI Agent just sold half of my Nvidia $NVDA shares to buy $QQQM \n\nI started this portfolio on October 5th\n\nSince October 5th the NASDAQ 100 is down",
+          "likes": 28,
+          "url": "https://x.com/StockMKTNewz/status/2120895373203910760",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "bespokeinvest",
+          "author_name": "bespokeinvest",
+          "content": "Energy stocks rallied this afternoon while pretty much everything else sold off a bit in the last hour of trading.",
+          "likes": 20,
+          "url": "https://x.com/bespokeinvest/status/2120621617009012892",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "btc：周线boll中轨前天跌穿后，昨天也没能站稳在它之上，跌穿后74250就是最近的一个阻力点。eth、sol走得快一步，前几天周线、10日boll中轨就已相继跌穿。btc短线上支撑是10日boll中轨72600。72500跌穿72000就失守。 https://t.co/597VqFlHK8",
+          "likes": 16,
+          "url": "https://x.com/jackli727/status/2120787669680791749",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "name": "标普500ETF",
+      "mention_count": 9,
+      "engagement": 1357,
+      "kol_mentions": 9,
+      "signal_strength": 54.7,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.222,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.111,
+        "bear_ratio": 0.111,
+        "neutral_ratio": 0.778,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.018,
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 7,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "\"Chinese AI firms rush to secure $NVDA chip capacity as spy scandal stirs fear of US curbs\"\n\nWow, Jensen really took one for the team just to generate more GPU and Neocloud demand https://t.co/Y1rDNXx",
+          "likes": 884,
+          "url": "https://x.com/aleabitoreddit/status/2120792625477468583",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "muddywatersre",
           "author_name": "muddywatersre",
@@ -157,174 +453,174 @@
           "url": "https://x.com/MikeZaccardi/status/2120654960727630085",
           "is_kol": true,
           "sentiment": "bullish"
-        },
-        {
-          "author": "LiveSquawk",
-          "author_name": "LiveSquawk",
-          "content": "Alleged Chinese Spy At Centre Of Nvidia Firestorm Is In Beijing - BBG\n\nhttps://t.co/Iq5BliVLET",
-          "likes": 18,
-          "url": "https://x.com/LiveSquawk/status/2120690056851767669",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "SOL",
-      "name": "Solana",
-      "mention_count": 5,
-      "engagement": 247,
-      "kol_mentions": 5,
-      "signal_strength": 57.1,
+      "symbol": "AMD",
+      "name": "AMD",
+      "mention_count": 7,
+      "engagement": 756,
+      "kol_mentions": 7,
+      "signal_strength": 57.6,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.4,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.2,
-        "bear_ratio": 0.2,
-        "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.01,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 3,
-        "total_count": 5
+        "consensus_score": 0.2,
+        "opinion_density": 0.714,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.429,
+        "bear_ratio": 0.286,
+        "neutral_ratio": 0.286,
+        "kol_weighted_sentiment": 0.238,
+        "engagement_weighted_sentiment": 0.163,
+        "bull_count": 3,
+        "bear_count": 2,
+        "neutral_count": 2,
+        "total_count": 7
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
         {
-          "author": "TheStalwart",
-          "author_name": "TheStalwart",
-          "content": "If you have the patience to sit through the first five minutes of the song, the guitar solo in Freebird really slaps. But that 5 minute wait uggghh",
-          "likes": 200,
-          "url": "https://x.com/TheStalwart/status/2120683701218467951",
+          "author": "tj_research",
+          "author_name": "tj_research",
+          "content": "Amd avgo涨还能理解，但arm intc跌真的不理解，这些溢价和折扣价都是短期情绪面的体现。\n没想到构成整个AI最大风险的雷竟然是英伟达，没有老黄，最受伤的可能是新云的融资和整条供应链可能会放缓和保守。\n不得不说，这时间点真的太诡异了",
+          "likes": 283,
+          "url": "https://x.com/tj_research/status/2120650073327517937",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "NVIDIA CEO SUCCESSION RACE HEATS UP\n\nWith Colette Kress serving as interim CEO, the search for Jensen Huang's permanent successor is underway.\n\nPrediction markets favor Ian Buck at 34%, ahead of Kress",
+          "likes": 182,
+          "url": "https://x.com/DeItAone/status/2120889004732059951",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "tj_research",
+          "author_name": "tj_research",
+          "content": "24年年中150买的AMD，后来一直下跌，直到25年关税之后开始反弹，213卖了，其中很大一部分原因也是我持有英特尔，几乎整个25年是英特尔AMD双持的。但24年下半年的时候我视频里铺天盖地的声音，有老大，为何要买老二？！谁能想到2年多后，市场现在疯狂从英伟达转移到AMD，这就是投资个股的魅力和乐趣，公",
+          "likes": 151,
+          "url": "https://x.com/tj_research/status/2120725624784310411",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "William Blair today upgraded $AMD stock to Outperform from Market Perform",
+          "likes": 67,
+          "url": "https://x.com/StockMKTNewz/status/2120863109048856826",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$NVDA -8.4% AH... $AVGO $AMD higher\n$SPY -0.4%\n$QQQ -1.0%\n$SMH -2.6% @finviz_com https://t.co/va4ot3N1pg",
+          "likes": 20,
+          "url": "https://x.com/MikeZaccardi/status/2120654960727630085",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "name": "苹果",
+      "mention_count": 7,
+      "engagement": 457,
+      "kol_mentions": 7,
+      "signal_strength": 77.6,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.143,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.143,
+        "neutral_ratio": 0.857,
+        "kol_weighted_sentiment": -0.143,
+        "engagement_weighted_sentiment": -0.069,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 6,
+        "total_count": 7
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Revenue per employee, past 12 months, per YF:\n\nNvidia: $7.2M\nAnthropic: $6.6M+\nMeta: $3.6M\nApple: $3.1M\nAlphabet: $2.2M\nSpaceX: $1.5M\nMicrosoft: $1.5M\nTesla: $0.8M\nAmazon: $0.5M",
+          "likes": 185,
+          "url": "https://x.com/unusual_whales/status/2120858398149234980",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Dan Ives just said he thinks Tim Cook could be a dark horse name to take over as CEO of Nvidia $NVDA \n\n\"There is also a good chance Nvidia's Board looks to the outside for a CEO and this could include",
+          "likes": 111,
+          "url": "https://x.com/StockMKTNewz/status/2120886705938993650",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "convertbond",
+          "author_name": "convertbond",
+          "content": "Apple - is the beloved \"AI safe haven\" at 11x sales. \n\n*From 2009-2019, $AAPL traded at 2x to 5x sales; Buffett just dumped 773 million shares of the iPhone maker. \n\n**Nvidia 33% off sale - Apple at a",
+          "likes": 63,
+          "url": "https://x.com/convertbond/status/2120847864884502613",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "convertbond",
+          "author_name": "convertbond",
+          "content": "Passive Investing is Broken\n\nTop 2 Stocks S&amp;P 500 composition:\n\n2026: 15.3%*\n2016: 5.2%**\n\n*Nvidia + Apple \n**Apple + Microsoft https://t.co/TJq9SmM8Z1",
+          "likes": 34,
+          "url": "https://x.com/convertbond/status/2120653784674099230",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
           "author": "bespokeinvest",
           "author_name": "bespokeinvest",
-          "content": "Energy stocks rallied this afternoon while pretty much everything else sold off a bit in the last hour of trading.",
-          "likes": 20,
-          "url": "https://x.com/bespokeinvest/status/2120621617009012892",
+          "content": "Here's a look at mega-cap market caps based on pre-market trading.  Apple $AAPL is now more than $1.3 trillion bigger than the next biggest ($MSFT).  \n\nNVIDIA $NVDA now ranks third and is $177 billion",
+          "likes": 14,
+          "url": "https://x.com/bespokeinvest/status/2120884795953889332",
           "is_kol": true,
           "sentiment": "neutral"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Gasoline futures $2.60.. pump prices should fall another 35 cents in time for Thanksgiving https://t.co/xR4Ct6JjVv",
-          "likes": 12,
-          "url": "https://x.com/MikeZaccardi/status/2120663876542857242",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "sol走得比btc快一拍，所以84以下我不会发空单，避免有人入戏太深日后套在底部不可自拔。第四季度的格局观是放眼2027。所以等80以下的两个抄底点即可。 https://t.co/pxRZq3t65M",
-          "likes": 7,
-          "url": "https://x.com/jackli727/status/2120683526584713519",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "caixin",
-          "author_name": "caixin",
-          "content": "Analysis: China is updating its Insurance Law. One of the top priorities is piercing the opaque ownership structures that let rogue controllers of insurers like Anbang and Evergrande siphon off premiu",
-          "likes": 1,
-          "url": "https://x.com/caixin/status/2120751024952787181",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "ETH",
-      "name": "以太坊",
-      "mention_count": 4,
-      "engagement": 1084,
-      "kol_mentions": 4,
-      "signal_strength": 47.8,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.5,
-        "engagement_weighted_sentiment": -0.141,
-        "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 2,
-        "total_count": 4
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "$NVDA  - NVIDIA BOARD MEETING WEDNESDAY TO DECIDE WHETHER TO OUST CEO JENSEN HUANG - SOURCE",
-          "likes": 634,
-          "url": "https://x.com/DeItAone/status/2120658539546882079",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "RaoulGMI",
-          "author_name": "RaoulGMI",
-          "content": "Everyones asking the same questions this week... Is AI a bubble, is the money just going round in circles, is this correction the start of the end...\n\nAll of it misses something crucial.. which is the",
-          "likes": 229,
-          "url": "https://x.com/RaoulGMI/status/2120684022745473459",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: This Wall Street veteran says the next big energy play is something almost no one is watching.  \n\nAI power stocks have been getting crushed. \n\nHe’s looking at a corner of the energy market m",
-          "likes": 120,
-          "url": "https://x.com/unusual_whales/status/2120692303069053147",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "caixin",
-          "author_name": "caixin",
-          "content": "Analysis: Governments face growing pressure to rethink how they raise revenue as AI threatens to erode the tax base built around human labor, prompting debate over whether to tax the technology direct",
-          "likes": 1,
-          "url": "https://x.com/caixin/status/2120730058063302666",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
     {
       "symbol": "QQQ",
       "name": "纳指100ETF",
-      "mention_count": 4,
-      "engagement": 221,
-      "kol_mentions": 4,
-      "signal_strength": 32.8,
+      "mention_count": 6,
+      "engagement": 262,
+      "kol_mentions": 6,
+      "signal_strength": 64.0,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.25,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.114,
-        "bull_count": 1,
+        "consensus_score": 0.5,
+        "opinion_density": 0.667,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.5,
+        "bear_ratio": 0.167,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": 0.333,
+        "engagement_weighted_sentiment": 0.384,
+        "bull_count": 3,
         "bear_count": 1,
         "neutral_count": 2,
-        "total_count": 4
+        "total_count": 6
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "sample_tweets": [
         {
           "author": "tj_research",
@@ -334,6 +630,15 @@
           "url": "https://x.com/tj_research/status/2120685958035046831",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "I GAVE AI $10K AND TOLD IT TO BEAT THE NASDAQ 100\n\nMy AI Agent just sold half of my Nvidia $NVDA shares to buy $QQQM \n\nI started this portfolio on October 5th\n\nSince October 5th the NASDAQ 100 is down",
+          "likes": 28,
+          "url": "https://x.com/StockMKTNewz/status/2120895373203910760",
+          "is_kol": true,
+          "sentiment": "bullish"
         },
         {
           "author": "MikeZaccardi",
@@ -354,92 +659,110 @@
           "sentiment": "neutral"
         },
         {
-          "author": "ripster47",
-          "author_name": "ripster47",
-          "content": "RT @ripster47: $SPY $QQQ \nDid you exit with clouds? \nYou see when label turns bearish ?\n\nBtw You can also use cloud system at @TrendSpider…",
-          "likes": 0,
-          "url": "https://x.com/ripster47/status/2120657971189260670",
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$QQQ down less than 1%.. imagine if $NVDA finishes positive $NDX https://t.co/UpGRnoC9GS",
+          "likes": 11,
+          "url": "https://x.com/MikeZaccardi/status/2120888177283973522",
+          "is_kol": true,
+          "sentiment": "bullish"
+        }
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "name": "比特币",
+      "mention_count": 6,
+      "engagement": 322,
+      "kol_mentions": 6,
+      "signal_strength": 59.8,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 1.0,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.333,
+        "bear_ratio": 0.667,
+        "neutral_ratio": 0.0,
+        "kol_weighted_sentiment": -0.111,
+        "engagement_weighted_sentiment": -0.809,
+        "bull_count": 2,
+        "bear_count": 4,
+        "neutral_count": 0,
+        "total_count": 6
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "BITCOIN FALLS TO 12-WEEK LOW OF $72,103 - LSEG",
+          "likes": 235,
+          "url": "https://x.com/DeItAone/status/2120883418158284947",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "btc：周线boll中轨前天跌穿后，昨天也没能站稳在它之上，跌穿后74250就是最近的一个阻力点。eth、sol走得快一步，前几天周线、10日boll中轨就已相继跌穿。btc短线上支撑是10日boll中轨72600。72500跌穿72000就失守。 https://t.co/597VqFlHK8",
+          "likes": 16,
+          "url": "https://x.com/jackli727/status/2120787669680791749",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "KitcoNewsNOW",
+          "author_name": "KitcoNewsNOW",
+          "content": "Bitcoin tests support as reversal signals build\n\n(Kitco Commentary by Aaron Dishner) - #Bitcoin respected historical support, but crypto's dollar market caps still look fragile. Reversal signals are b",
+          "likes": 13,
+          "url": "https://x.com/KitcoNewsNOW/status/2120837281049104599",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "昨晚预判btc 3日线macd即将归零会出下跌动能减弱信号。果然今早就出了。加上周三收盘低点抬高到了73185，所以高点也会往上同步上移，做空点上移到75500-75750。所以它这里反抽的极限就在7.6w附近。 https://t.co/cQPZFwaEcb",
+          "likes": 13,
+          "url": "https://x.com/jackli727/status/2120677715967959116",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "btc 10日boll中轨72600这个支撑马上要跌破。 https://t.co/DeoGNB7viX",
+          "likes": 11,
+          "url": "https://x.com/jackli727/status/2120848324022706552",
           "is_kol": true,
           "sentiment": "bearish"
         }
       ]
     },
     {
-      "symbol": "IEF",
-      "name": "美债7-10年ETF",
-      "mention_count": 3,
-      "engagement": 2468,
-      "kol_mentions": 3,
-      "signal_strength": 28.4,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "JUST IN: Nvidia’s $NVDA board is preparing to oust CEO Jensen Huang, its founder and chief executive, per the WSJ",
-          "likes": 2310,
-          "url": "https://x.com/unusual_whales/status/2120667560136040617",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "BoJ board member Asada: former BoJ chief Kuroda’s stimulus approach was suitable at the time",
-          "likes": 3,
-          "url": "https://x.com/financialjuice/status/2120760719347974439",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "dariusdale42",
-          "author_name": "dariusdale42",
-          "content": "RT @42Macro: Mid-Week Briefing: Anthropic and CoreWeave Signal Renewed Enthusiasm for AI \nhttps://t.co/eLU0eI7w4N\n\nExplore the emerging ris…",
-          "likes": 0,
-          "url": "https://x.com/dariusdale42/status/2120622129305825370",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "symbol": "TSLA",
       "name": "特斯拉",
-      "mention_count": 3,
-      "engagement": 8853,
-      "kol_mentions": 3,
-      "signal_strength": 43.4,
+      "mention_count": 5,
+      "engagement": 12507,
+      "kol_mentions": 5,
+      "signal_strength": 75.4,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.333,
+        "opinion_density": 0.4,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.515,
+        "bear_ratio": 0.4,
+        "neutral_ratio": 0.6,
+        "kol_weighted_sentiment": -0.4,
+        "engagement_weighted_sentiment": -0.643,
         "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 3
+        "bear_count": 2,
+        "neutral_count": 3,
+        "total_count": 5
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "sample_tweets": [
         {
           "author": "aleabitoreddit",
@@ -447,6 +770,15 @@
           "content": "All I’m going to say is that I hope board of $NVDA stands by Jensen, despite media and political pressures.\n\nThe same way $TSLA and SpaceX stood up for Elon Musk around similar allegations.\n\nThe AI tr",
           "likes": 3735,
           "url": "https://x.com/aleabitoreddit/status/2120658071274013137",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "I disagree, Jensen Huang is practically irreplaceable from $NVDA.\n\nAnd it's like if you took out Elon from $TSLA, the valuation and confidence in the company would collapse. \n\nThe foresight to bet on ",
+          "likes": 3194,
+          "url": "https://x.com/aleabitoreddit/status/2120798356205093139",
           "is_kol": true,
           "sentiment": "bearish"
         },
@@ -467,50 +799,59 @@
           "url": "https://x.com/SawyerMerritt/status/2120630128753455333",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Revenue per employee, past 12 months, per YF:\n\nNvidia: $7.2M\nAnthropic: $6.6M+\nMeta: $3.6M\nApple: $3.1M\nAlphabet: $2.2M\nSpaceX: $1.5M\nMicrosoft: $1.5M\nTesla: $0.8M\nAmazon: $0.5M",
+          "likes": 185,
+          "url": "https://x.com/unusual_whales/status/2120858398149234980",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "XAU",
-      "name": "黄金",
-      "mention_count": 3,
-      "engagement": 52,
-      "kol_mentions": 3,
-      "signal_strength": 28.4,
+      "symbol": "XAG",
+      "name": "白银",
+      "mention_count": 4,
+      "engagement": 104,
+      "kol_mentions": 4,
+      "signal_strength": 29.6,
       "consensus": {
         "consensus_score": 0.0,
-        "opinion_density": 0.667,
+        "opinion_density": 0.5,
         "kol_consensus": 0.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.333,
-        "kol_weighted_sentiment": 0.067,
-        "engagement_weighted_sentiment": 0.182,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.117,
+        "engagement_weighted_sentiment": 0.109,
         "bull_count": 1,
         "bear_count": 1,
-        "neutral_count": 1,
-        "total_count": 3
+        "neutral_count": 2,
+        "total_count": 4
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Gold prices fall below $4,000 as analysts warn of further losses toward $3,900\n\n#Gold prices have fallen below the critical $4,000-an-ounce level, and analysts warn that the precious metal could face ",
-          "likes": 26,
-          "url": "https://x.com/KitcoNewsNOW/status/2120685778623746279",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "Colombia's inflation comes in at 6.3%/yr in October.\n\nColombia's money supply (M3) is growing at 11.2%/yr. That's ABOVE Hanke's Golden Growth rate of 9.3%/yr, a rate consistent with Colombia's 3%/yr i",
-          "likes": 9,
-          "url": "https://x.com/steve_hanke/status/2120732316591091731",
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Shorting at a 46+ year breakout… now support area with the gold to silver ratio at a screaming buy near 80 = cannon fodder confirmed for the next silver price rally.",
+          "likes": 61,
+          "url": "https://x.com/goldseek/status/2120797216227066333",
           "is_kol": true,
           "sentiment": "bullish"
+        },
+        {
+          "author": "KitcoNewsNOW",
+          "author_name": "KitcoNewsNOW",
+          "content": "Gold and silver alert: A pullback, inflation, and the next move\n\n(Kitco Commentary) - In this presentation, Jeffrey Christian of @CPMGroupLLC puts the latest #gold and #silver pullback in context afte",
+          "likes": 22,
+          "url": "https://x.com/KitcoNewsNOW/status/2120848032166019231",
+          "is_kol": true,
+          "sentiment": "neutral"
         },
         {
           "author": "KitcoNewsNOW",
@@ -520,86 +861,122 @@
           "url": "https://x.com/KitcoNewsNOW/status/2120683689197617642",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "KitcoNewsNOW",
+          "author_name": "KitcoNewsNOW",
+          "content": "Gold, silver extend losses as Fed hike bets lift dollar, Treasury yields\n\nSpot #gold and #silver prices were sharply lower in early U.S. trading Thursday, extending their decline as persistent U.S. in",
+          "likes": 7,
+          "url": "https://x.com/KitcoNewsNOW/status/2120889691134185510",
+          "is_kol": true,
+          "sentiment": "bearish"
         }
       ]
     },
     {
-      "symbol": "AMD",
-      "name": "AMD",
-      "mention_count": 3,
-      "engagement": 463,
-      "kol_mentions": 3,
-      "signal_strength": 33.4,
+      "symbol": "NBIS",
+      "name": "NBIS",
+      "mention_count": 4,
+      "engagement": 4165,
+      "kol_mentions": 4,
+      "signal_strength": 34.6,
       "consensus": {
         "consensus_score": 0.333,
-        "opinion_density": 1.0,
+        "opinion_density": 0.75,
         "kol_consensus": 0.333,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.667,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 0.111,
-        "engagement_weighted_sentiment": -0.245,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.25,
+        "kol_weighted_sentiment": -0.25,
+        "engagement_weighted_sentiment": -0.644,
         "bull_count": 1,
         "bear_count": 2,
-        "neutral_count": 0,
-        "total_count": 3
+        "neutral_count": 1,
+        "total_count": 4
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "tj_research",
-          "author_name": "tj_research",
-          "content": "Amd avgo涨还能理解，但arm intc跌真的不理解，这些溢价和折扣价都是短期情绪面的体现。\n没想到构成整个AI最大风险的雷竟然是英伟达，没有老黄，最受伤的可能是新云的融资和整条供应链可能会放缓和保守。\n不得不说，这时间点真的太诡异了",
-          "likes": 283,
-          "url": "https://x.com/tj_research/status/2120650073327517937",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: US neocloud stocks collapse after Jensen Huang resigns as CEO of Nvidia:\n\n1. Nebius, $NBIS: -21%\n2. CoreWeave, $CRWV: -14%\n3. Roundhill Neocloud ETF, $NEO: -13%\n4. IREN, $IREN: -9%\n5. Cipher",
+          "likes": 2185,
+          "url": "https://x.com/KobeissiLetter/status/2120886129813553412",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "tj_research",
-          "author_name": "tj_research",
-          "content": "24年年中150买的AMD，后来一直下跌，直到25年关税之后开始反弹，213卖了，其中很大一部分原因也是我持有英特尔，几乎整个25年是英特尔AMD双持的。但24年下半年的时候我视频里铺天盖地的声音，有老大，为何要买老二？！谁能想到2年多后，市场现在疯狂从英伟达转移到AMD，这就是投资个股的魅力和乐趣，公",
-          "likes": 151,
-          "url": "https://x.com/tj_research/status/2120725624784310411",
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "Regarding $NBIS earnings results:\n\nTo show you how fast they're growing... from Q2 to Q3: \n\nRevenue: $582.3M -&gt; $980.8M (+68% QoQ)\nAdjusted EBITDA: $236.2M -&gt; $465.8M (+97% QoQ)\nAI cloud adj. EB",
+          "likes": 1223,
+          "url": "https://x.com/aleabitoreddit/status/2120866647930187882",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "AI NEOCLOUD STOCKS PLUNGE FURTHER AFTER NVIDIA CEO RESIGNATION\n\nUS neocloud stocks extend their premarket selloff following Jensen Huang's immediate resignation as Nvidia ($NVDA) CEO.\n\n🔸 Nebius ($NBIS",
+          "likes": 291,
+          "url": "https://x.com/DeItAone/status/2120880061985243640",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$NVDA -8.4% AH... $AVGO $AMD higher\n$SPY -0.4%\n$QQQ -1.0%\n$SMH -2.6% @finviz_com https://t.co/va4ot3N1pg",
-          "likes": 20,
-          "url": "https://x.com/MikeZaccardi/status/2120654960727630085",
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "RT @WOLF_Financial: NEBIUS $NBIS JUST REPORTED Q3 EARNINGS\n\n- Revenue: $980.8M, beating expectations of $908M 🟢\n- Adj EBITDA: $465.8M https…",
+          "likes": 0,
+          "url": "https://x.com/StockMKTNewz/status/2120858657508429879",
           "is_kol": true,
           "sentiment": "bullish"
         }
       ]
     },
     {
-      "symbol": "AAPL",
-      "name": "苹果",
-      "mention_count": 3,
-      "engagement": 46,
-      "kol_mentions": 3,
-      "signal_strength": 28.4,
+      "symbol": "MSFT",
+      "name": "微软",
+      "mention_count": 4,
+      "engagement": 572,
+      "kol_mentions": 4,
+      "signal_strength": 44.6,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
+        "consensus_score": 1.0,
+        "opinion_density": 0.25,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.25,
         "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
+        "neutral_ratio": 0.75,
+        "kol_weighted_sentiment": 0.25,
+        "engagement_weighted_sentiment": 0.501,
+        "bull_count": 1,
         "bear_count": 0,
         "neutral_count": 3,
-        "total_count": 3
+        "total_count": 4
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Microsoft , $MSFT, says it will “pay our own way” to power its data centers, without government subsidies or pushing up electricity costs for other customers, per Bloomberg.\n\n“We don’t want other cust",
+          "likes": 294,
+          "url": "https://x.com/unusual_whales/status/2120843297975406943",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Revenue per employee, past 12 months, per YF:\n\nNvidia: $7.2M\nAnthropic: $6.6M+\nMeta: $3.6M\nApple: $3.1M\nAlphabet: $2.2M\nSpaceX: $1.5M\nMicrosoft: $1.5M\nTesla: $0.8M\nAmazon: $0.5M",
+          "likes": 185,
+          "url": "https://x.com/unusual_whales/status/2120858398149234980",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "convertbond",
           "author_name": "convertbond",
@@ -610,206 +987,66 @@
           "sentiment": "neutral"
         },
         {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$AAPL among today's 52wk highs\n$KO Berkshire too https://t.co/t5BKFAjgXx",
-          "likes": 7,
-          "url": "https://x.com/MikeZaccardi/status/2120682947468489027",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
           "author": "bespokeinvest",
           "author_name": "bespokeinvest",
-          "content": "Apple (AAPL) Back on Top https://t.co/FExr8kMVHI",
-          "likes": 1,
-          "url": "https://x.com/bespokeinvest/status/2120629510613717173",
+          "content": "Here's a look at mega-cap market caps based on pre-market trading.  Apple $AAPL is now more than $1.3 trillion bigger than the next biggest ($MSFT).  \n\nNVIDIA $NVDA now ranks third and is $177 billion",
+          "likes": 14,
+          "url": "https://x.com/bespokeinvest/status/2120884795953889332",
           "is_kol": true,
           "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "BTC",
-      "name": "比特币",
-      "mention_count": 2,
-      "engagement": 20,
-      "kol_mentions": 2,
-      "signal_strength": 23.9,
+      "symbol": "CRWV",
+      "name": "CRWV",
+      "mention_count": 3,
+      "engagement": 2850,
+      "kol_mentions": 3,
+      "signal_strength": 40.9,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.5,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.11,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 0,
-        "total_count": 2
+        "consensus_score": 1.0,
+        "opinion_density": 0.667,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.667,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": -0.667,
+        "engagement_weighted_sentiment": -0.983,
+        "bull_count": 0,
+        "bear_count": 2,
+        "neutral_count": 1,
+        "total_count": 3
       },
       "reliability": "数据不足",
       "sample_reliable": false,
       "sample_tweets": [
         {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "昨晚预判btc 3日线macd即将归零会出下跌动能减弱信号。果然今早就出了。加上周三收盘低点抬高到了73185，所以高点也会往上同步上移，做空点上移到75500-75750。所以它这里反抽的极限就在7.6w附近。 https://t.co/cQPZFwaEcb",
-          "likes": 13,
-          "url": "https://x.com/jackli727/status/2120677715967959116",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: US neocloud stocks collapse after Jensen Huang resigns as CEO of Nvidia:\n\n1. Nebius, $NBIS: -21%\n2. CoreWeave, $CRWV: -14%\n3. Roundhill Neocloud ETF, $NEO: -13%\n4. IREN, $IREN: -9%\n5. Cipher",
+          "likes": 2185,
+          "url": "https://x.com/KobeissiLetter/status/2120886129813553412",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "sol走得比btc快一拍，所以84以下我不会发空单，避免有人入戏太深日后套在底部不可自拔。第四季度的格局观是放眼2027。所以等80以下的两个抄底点即可。 https://t.co/pxRZq3t65M",
-          "likes": 7,
-          "url": "https://x.com/jackli727/status/2120683526584713519",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "VIX",
-      "name": "恐慌指数",
-      "mention_count": 1,
-      "engagement": 0,
-      "kol_mentions": 1,
-      "signal_strength": 19.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 1.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 1.0,
-        "engagement_weighted_sentiment": 1.0,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "168X_Fortune",
-          "author_name": "168X_Fortune",
-          "content": "“为什么涨起来也不稳？\n 卖期权、提供波动率的参与者被打伤，还没回来，所以即使反弹，VIX 也未必马上大降\n 近期反弹成交量不大，在我的理解里，部分来自 Put 平仓、波动率下降和对冲调整的被动买盘，不等于主动资金重新看多\n Vol Control",
-          "likes": 0,
-          "url": "https://x.com/168X_Fortune/status/2120749277484048653",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "600519.SH",
-      "name": "贵州茅台",
-      "mention_count": 1,
-      "engagement": 75,
-      "kol_mentions": 1,
-      "signal_strength": 19.5,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "xiaomustock",
-          "author_name": "xiaomustock",
-          "content": "唯一的大问题就是没有老黄的英伟达还是不是英伟达，\n就像没有乔布斯的苹果没任何创新，\n而老黄的英伟达极度需要持续创新。\n半导体公司不是可口可乐和茅台这种消费品公司，不能持续创新真会被干死。",
-          "likes": 73,
-          "url": "https://x.com/xiaomustock/status/2120715999888785904",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "SPX",
-      "name": "SPX",
-      "mention_count": 1,
-      "engagement": 6,
-      "kol_mentions": 1,
-      "signal_strength": 29.2,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 1.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 0.333,
-        "engagement_weighted_sentiment": 0.333,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$NVDA vs $SPX relative chart points to more downside... \"a classic post-midterm market rally, with $NVDA relegated to the bench\"\n\nMore from me on @stockcharts today: https://t.co/oZ7g2Hy4pa https://t.",
-          "likes": 5,
-          "url": "https://x.com/MikeZaccardi/status/2120685826015199443",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "META",
-      "name": "Meta",
-      "mention_count": 1,
-      "engagement": 32,
-      "kol_mentions": 1,
-      "signal_strength": 34.5,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 1.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": -1.0,
-        "engagement_weighted_sentiment": -1.0,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Gold prices fall below $4,000 as analysts warn of further losses toward $3,900\n\n#Gold prices have fallen below the critical $4,000-an-ounce level, and analysts warn that the precious metal could face ",
-          "likes": 26,
-          "url": "https://x.com/KitcoNewsNOW/status/2120685778623746279",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "AI NEOCLOUD STOCKS PLUNGE FURTHER AFTER NVIDIA CEO RESIGNATION\n\nUS neocloud stocks extend their premarket selloff following Jensen Huang's immediate resignation as Nvidia ($NVDA) CEO.\n\n🔸 Nebius ($NBIS",
+          "likes": 291,
+          "url": "https://x.com/DeItAone/status/2120880061985243640",
           "is_kol": true,
           "sentiment": "bearish"
+        },
+        {
+          "author": "ripster47",
+          "author_name": "ripster47",
+          "content": "RT @tenet_research: Tenet Pre-Market Movers  November.12.26\n\n$LUNR $FIGR $ITEK $FRMI $LGN $MBGL $LLY $AMD $CDNL $EYE $TE $CRWV $CTVA $TWST…",
+          "likes": 0,
+          "url": "https://x.com/ripster47/status/2120871702506676620",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     }
@@ -817,27 +1054,36 @@
   "top_themes": [
     {
       "theme": "AI_科技",
-      "tweet_count": 78,
-      "engagement": 92260,
-      "kol_mentions": 78,
-      "signal_strength": 90.9,
+      "tweet_count": 184,
+      "engagement": 165372,
+      "kol_mentions": 184,
+      "signal_strength": 83.7,
       "consensus": {
-        "consensus_score": 0.636,
-        "opinion_density": 0.282,
-        "kol_consensus": 0.636,
-        "bull_ratio": 0.051,
-        "bear_ratio": 0.231,
-        "neutral_ratio": 0.718,
-        "kol_weighted_sentiment": -0.174,
-        "engagement_weighted_sentiment": -0.29,
-        "bull_count": 4,
-        "bear_count": 18,
-        "neutral_count": 56,
-        "total_count": 78
+        "consensus_score": 0.346,
+        "opinion_density": 0.283,
+        "kol_consensus": 0.346,
+        "bull_ratio": 0.092,
+        "bear_ratio": 0.19,
+        "neutral_ratio": 0.717,
+        "kol_weighted_sentiment": -0.1,
+        "engagement_weighted_sentiment": -0.188,
+        "bull_count": 17,
+        "bear_count": 35,
+        "neutral_count": 132,
+        "total_count": 184
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Nvidia, $NVDA, CEO Jensen Huang has resigned as CEO, President, and member of the Board of Directors, effective immediately. https://t.co/IJ",
+          "likes": 14853,
+          "url": "https://x.com/KobeissiLetter/status/2120877226459820170",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "KobeissiLetter",
           "author_name": "KobeissiLetter",
@@ -855,37 +1101,28 @@
           "url": "https://x.com/KobeissiLetter/status/2120696537458114929",
           "is_kol": true,
           "sentiment": "bearish"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Nvidia stock, $NVDA, falls sharply on reports that Jensen Huang had another affair with a senior employee at the company. https://t.co/mPK4S",
-          "likes": 8454,
-          "url": "https://x.com/KobeissiLetter/status/2120639391077151225",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "原油_能源",
-      "tweet_count": 36,
-      "engagement": 31246,
-      "kol_mentions": 36,
-      "signal_strength": 100.0,
+      "tweet_count": 74,
+      "engagement": 49214,
+      "kol_mentions": 74,
+      "signal_strength": 92.6,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.361,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.361,
-        "neutral_ratio": 0.639,
-        "kol_weighted_sentiment": -0.343,
-        "engagement_weighted_sentiment": -0.51,
-        "bull_count": 0,
-        "bear_count": 13,
-        "neutral_count": 23,
-        "total_count": 36
+        "consensus_score": 0.704,
+        "opinion_density": 0.365,
+        "kol_consensus": 0.704,
+        "bull_ratio": 0.054,
+        "bear_ratio": 0.311,
+        "neutral_ratio": 0.635,
+        "kol_weighted_sentiment": -0.23,
+        "engagement_weighted_sentiment": -0.46,
+        "bull_count": 4,
+        "bear_count": 23,
+        "neutral_count": 47,
+        "total_count": 74
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -900,6 +1137,15 @@
           "sentiment": "bearish"
         },
         {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "Jensen Huang and the Nvidia board just made a massive mistake.\n\nHe should not have resigned.\n\nThe board should have taken the time to conduct a thorou",
+          "likes": 9144,
+          "url": "https://x.com/KobeissiLetter/status/2120888131314717128",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "aleabitoreddit",
           "author_name": "aleabitoreddit",
           "content": "All I’m going to say is that I hope board of $NVDA stands by Jensen, despite media and political pressures.\n\nThe same way $TSLA and SpaceX stood up fo",
@@ -907,37 +1153,28 @@
           "url": "https://x.com/aleabitoreddit/status/2120658071274013137",
           "is_kol": true,
           "sentiment": "bearish"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "Jensen Huang has now had the most expensive affair in history.\n\nBetween the revelation of both affairs, Nvidia stock, $NVDA, has erased -$700 billion ",
-          "likes": 3598,
-          "url": "https://x.com/KobeissiLetter/status/2120662526320890187",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "宏观_利率政策",
-      "tweet_count": 34,
-      "engagement": 11983,
-      "kol_mentions": 34,
-      "signal_strength": 75.0,
+      "tweet_count": 66,
+      "engagement": 16564,
+      "kol_mentions": 66,
+      "signal_strength": 78.6,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.353,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.176,
-        "bear_ratio": 0.176,
-        "neutral_ratio": 0.647,
-        "kol_weighted_sentiment": 0.006,
-        "engagement_weighted_sentiment": -0.0,
-        "bull_count": 6,
-        "bear_count": 6,
-        "neutral_count": 22,
-        "total_count": 34
+        "consensus_score": 0.143,
+        "opinion_density": 0.424,
+        "kol_consensus": 0.143,
+        "bull_ratio": 0.182,
+        "bear_ratio": 0.242,
+        "neutral_ratio": 0.576,
+        "kol_weighted_sentiment": -0.063,
+        "engagement_weighted_sentiment": 0.053,
+        "bull_count": 12,
+        "bear_count": 16,
+        "neutral_count": 38,
+        "total_count": 66
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -961,11 +1198,11 @@
           "sentiment": "neutral"
         },
         {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "NVIDIA CEO JENSEN HUANG HAD SECOND ALLEGED AFFAIR WITH COMPANY EXECUTIVE\n\nNvidia ($NVDA ) CEO Jensen Huang reportedly had an extramarital relationship",
-          "likes": 1338,
-          "url": "https://x.com/DeItAone/status/2120638733674324442",
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "70% of Americans have cut back on extras like dining out and streaming, due to inflation, per PEW",
+          "likes": 1458,
+          "url": "https://x.com/unusual_whales/status/2120868463845507248",
           "is_kol": true,
           "sentiment": "neutral"
         }
@@ -973,23 +1210,23 @@
     },
     {
       "theme": "加密货币",
-      "tweet_count": 33,
-      "engagement": 14576,
-      "kol_mentions": 33,
-      "signal_strength": 84.6,
+      "tweet_count": 51,
+      "engagement": 20725,
+      "kol_mentions": 51,
+      "signal_strength": 77.1,
       "consensus": {
-        "consensus_score": 0.385,
-        "opinion_density": 0.394,
-        "kol_consensus": 0.385,
-        "bull_ratio": 0.121,
-        "bear_ratio": 0.273,
-        "neutral_ratio": 0.606,
-        "kol_weighted_sentiment": -0.131,
-        "engagement_weighted_sentiment": -0.663,
-        "bull_count": 4,
-        "bear_count": 9,
-        "neutral_count": 20,
-        "total_count": 33
+        "consensus_score": 0.083,
+        "opinion_density": 0.471,
+        "kol_consensus": 0.083,
+        "bull_ratio": 0.216,
+        "bear_ratio": 0.255,
+        "neutral_ratio": 0.529,
+        "kol_weighted_sentiment": -0.024,
+        "engagement_weighted_sentiment": -0.453,
+        "bull_count": 11,
+        "bear_count": 13,
+        "neutral_count": 27,
+        "total_count": 51
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1004,6 +1241,15 @@
           "sentiment": "bearish"
         },
         {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Jensen Huang just resigned from Nvidia. What if Elon ends up hiring him to help with Terafab (as well as other things) and together they make America ",
+          "likes": 4791,
+          "url": "https://x.com/SawyerMerritt/status/2120887225227612356",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "DeItAone",
           "author_name": "DeItAone",
           "content": "$NVDA  - NVIDIA BOARD MEETING WEDNESDAY TO DECIDE WHETHER TO OUST CEO JENSEN HUANG - SOURCE",
@@ -1011,89 +1257,28 @@
           "url": "https://x.com/DeItAone/status/2120658539546882079",
           "is_kol": true,
           "sentiment": "neutral"
-        },
-        {
-          "author": "RaoulGMI",
-          "author_name": "RaoulGMI",
-          "content": "Everyones asking the same questions this week... Is AI a bubble, is the money just going round in circles, is this correction the start of the end...\n",
-          "likes": 229,
-          "url": "https://x.com/RaoulGMI/status/2120684022745473459",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
-      "theme": "地缘政治",
-      "tweet_count": 16,
-      "engagement": 3415,
-      "kol_mentions": 16,
-      "signal_strength": 83.3,
-      "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.375,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.125,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.625,
-        "kol_weighted_sentiment": -0.125,
-        "engagement_weighted_sentiment": -0.42,
-        "bull_count": 2,
-        "bear_count": 4,
-        "neutral_count": 10,
-        "total_count": 16
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "BREAKING: Trump administration officials for years have been scrutinizing Jensen Huang, the CEO of Nvidia, with warnings over his business operations ",
-          "likes": 1069,
-          "url": "https://x.com/unusual_whales/status/2120702064976384250",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "$NVDA  - TRUMP ADMINISTRATION IS AWARE THAT NVIDIA'S BOARD OF DIRECTORS IS PREPARING TO OUST CEO JENSEN HUANG VERY SOON -CBS NEWS REPORTER ON X",
-          "likes": 662,
-          "url": "https://x.com/DeItAone/status/2120660828001124769",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "PRESIDENT TRUMP'S ENVOYS JARED KUSHNER AND STEVE WITKOFF WILL MEET WITH RUSSIAN PRESIDENT VLADIMIR PUTIN IN MOSCOW ON THURSDAY- AXIOS",
-          "likes": 287,
-          "url": "https://x.com/DeItAone/status/2120626926994006409",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "公司_财报",
-      "tweet_count": 16,
-      "engagement": 4313,
-      "kol_mentions": 16,
-      "signal_strength": 78.6,
+      "tweet_count": 36,
+      "engagement": 7301,
+      "kol_mentions": 36,
+      "signal_strength": 83.3,
       "consensus": {
-        "consensus_score": 0.143,
-        "opinion_density": 0.438,
-        "kol_consensus": 0.143,
-        "bull_ratio": 0.188,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.562,
-        "kol_weighted_sentiment": 0.021,
-        "engagement_weighted_sentiment": 0.064,
-        "bull_count": 3,
+        "consensus_score": 0.333,
+        "opinion_density": 0.333,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.222,
+        "bear_ratio": 0.111,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": 0.148,
+        "engagement_weighted_sentiment": 0.081,
+        "bull_count": 8,
         "bear_count": 4,
-        "neutral_count": 9,
-        "total_count": 16
+        "neutral_count": 24,
+        "total_count": 36
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1108,6 +1293,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "Regarding $NBIS earnings results:\n\nTo show you how fast they're growing... from Q2 to Q3: \n\nRevenue: $582.3M -&gt; $980.8M (+68% QoQ)\nAdjusted EBITDA:",
+          "likes": 1223,
+          "url": "https://x.com/aleabitoreddit/status/2120866647930187882",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
           "author": "unusual_whales",
           "author_name": "unusual_whales",
           "content": "Scott Colom has won the Mississippi Senate race, per CNN",
@@ -1115,41 +1309,145 @@
           "url": "https://x.com/unusual_whales/status/2120685256361533948",
           "is_kol": true,
           "sentiment": "neutral"
-        },
+        }
+      ]
+    },
+    {
+      "theme": "地缘政治",
+      "tweet_count": 27,
+      "engagement": 9556,
+      "kol_mentions": 27,
+      "signal_strength": 78.4,
+      "consensus": {
+        "consensus_score": 0.167,
+        "opinion_density": 0.444,
+        "kol_consensus": 0.167,
+        "bull_ratio": 0.185,
+        "bear_ratio": 0.259,
+        "neutral_ratio": 0.556,
+        "kol_weighted_sentiment": -0.074,
+        "engagement_weighted_sentiment": 0.07,
+        "bull_count": 5,
+        "bear_count": 7,
+        "neutral_count": 15,
+        "total_count": 27
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
         {
-          "author": "TheStalwart",
-          "author_name": "TheStalwart",
-          "content": "Democrat Colom Wins Mississippi Senate Race, CNN Projects",
-          "likes": 561,
-          "url": "https://x.com/TheStalwart/status/2120640523614453910",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: President Trump threatens to double tariffs on Mexico if they do not stop “caravans” heading to the US. https://t.co/LNRL77BvIi",
+          "likes": 2578,
+          "url": "https://x.com/KobeissiLetter/status/2120851159879762064",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Sam Altman told Samsung executives that AI demand has been “double counted,” according to Korea’s Financial News.\n\nIn a closed-door session with about",
+          "likes": 1469,
+          "url": "https://x.com/unusual_whales/status/2120834239377854806",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Trump administration officials for years have been scrutinizing Jensen Huang, the CEO of Nvidia, with warnings over his business operations ",
+          "likes": 1069,
+          "url": "https://x.com/unusual_whales/status/2120702064976384250",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "外汇_汇率",
+      "tweet_count": 24,
+      "engagement": 904,
+      "kol_mentions": 24,
+      "signal_strength": 85.9,
+      "consensus": {
+        "consensus_score": 0.6,
+        "opinion_density": 0.417,
+        "kol_consensus": 0.6,
+        "bull_ratio": 0.083,
+        "bear_ratio": 0.333,
+        "neutral_ratio": 0.583,
+        "kol_weighted_sentiment": -0.238,
+        "engagement_weighted_sentiment": -0.136,
+        "bull_count": 2,
+        "bear_count": 8,
+        "neutral_count": 14,
+        "total_count": 24
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "xiaomustock",
+          "author_name": "xiaomustock",
+          "content": "这走的太干脆了，裸辞啊，这么大个公司，ceo不当就算了，董事也不当了。这是自己的公司彻底不要了啊卧槽这么狠。 https://t.co/62HusFXdwa",
+          "likes": 162,
+          "url": "https://x.com/xiaomustock/status/2120889801704611877",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "英伟达的董事会能保住老黄么？再聊聊老黄的这次桃色事件。1、看下图英伟达董事会里包括老黄在内11名董事，有6位任职超过十三年，即使2019年加入英伟达董事会的Stephen也是1993年起就给英伟达提供法律服务。这意味着有7位董事很老黄共事很久，经历过英伟达过去的高峰低谷、能深刻认识老黄对于英伟达的不",
+          "likes": 142,
+          "url": "https://x.com/qinbafrank/status/2120848753653670172",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "PeterLBrandt",
+          "author_name": "PeterLBrandt",
+          "content": "Factor does not have much on right now. We are very light. Long the Dollar Index, long GBP.AUD in spot, short Cocoa in NY, still short Soy bean oil. T",
+          "likes": 142,
+          "url": "https://x.com/PeterLBrandt/status/2120714689131012225",
+          "is_kol": true,
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "美股_大盘",
-      "tweet_count": 13,
-      "engagement": 758,
-      "kol_mentions": 13,
-      "signal_strength": 80.0,
+      "tweet_count": 23,
+      "engagement": 1938,
+      "kol_mentions": 23,
+      "signal_strength": 74.9,
       "consensus": {
         "consensus_score": 0.2,
-        "opinion_density": 0.385,
+        "opinion_density": 0.435,
         "kol_consensus": 0.2,
-        "bull_ratio": 0.231,
-        "bear_ratio": 0.154,
-        "neutral_ratio": 0.615,
-        "kol_weighted_sentiment": 0.077,
-        "engagement_weighted_sentiment": 0.343,
-        "bull_count": 3,
-        "bear_count": 2,
-        "neutral_count": 8,
-        "total_count": 13
+        "bull_ratio": 0.261,
+        "bear_ratio": 0.174,
+        "neutral_ratio": 0.565,
+        "kol_weighted_sentiment": 0.087,
+        "engagement_weighted_sentiment": 0.17,
+        "bull_count": 6,
+        "bear_count": 4,
+        "neutral_count": 13,
+        "total_count": 23
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "\"Chinese AI firms rush to secure $NVDA chip capacity as spy scandal stirs fear of US curbs\"\n\nWow, Jensen really took one for the team just to generate",
+          "likes": 884,
+          "url": "https://x.com/aleabitoreddit/status/2120792625477468583",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "qinbafrank",
           "author_name": "qinbafrank",
@@ -1167,89 +1465,28 @@
           "url": "https://x.com/tj_research/status/2120685958035046831",
           "is_kol": true,
           "sentiment": "neutral"
-        },
-        {
-          "author": "muddywatersre",
-          "author_name": "muddywatersre",
-          "content": "Because why stop at a Chinese spy? $NVDA https://t.co/nMGD5R32dG",
-          "likes": 117,
-          "url": "https://x.com/muddywatersre/status/2120639859463242233",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "外汇_汇率",
-      "tweet_count": 8,
-      "engagement": 334,
-      "kol_mentions": 8,
-      "signal_strength": 89.4,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.25,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": -0.25,
-        "engagement_weighted_sentiment": -0.193,
-        "bull_count": 0,
-        "bear_count": 2,
-        "neutral_count": 6,
-        "total_count": 8
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "PeterLBrandt",
-          "author_name": "PeterLBrandt",
-          "content": "Factor does not have much on right now. We are very light. Long the Dollar Index, long GBP.AUD in spot, short Cocoa in NY, still short Soy bean oil. T",
-          "likes": 142,
-          "url": "https://x.com/PeterLBrandt/status/2120714689131012225",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Anthropic is expected to go public next week, at $70 to $78 per share.\n\nThere is a 46% chance that the valuation hits $1.5 trillion to $1.75 trillion,",
-          "likes": 87,
-          "url": "https://x.com/unusual_whales/status/2120681775479615552",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "PeterLBrandt",
-          "author_name": "PeterLBrandt",
-          "content": "This is a spot FX trade that's been written up internally as pending. $AUDJPY https://t.co/hbJ7lGbUwS",
-          "likes": 62,
-          "url": "https://x.com/PeterLBrandt/status/2120711672251994583",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "美债_固定收益",
-      "tweet_count": 6,
-      "engagement": 3400,
-      "kol_mentions": 6,
-      "signal_strength": 84.5,
+      "tweet_count": 21,
+      "engagement": 5212,
+      "kol_mentions": 21,
+      "signal_strength": 74.0,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.167,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.167,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.833,
-        "kol_weighted_sentiment": 0.056,
-        "engagement_weighted_sentiment": 0.068,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 5,
-        "total_count": 6
+        "consensus_score": 0.25,
+        "opinion_density": 0.381,
+        "kol_consensus": 0.25,
+        "bull_ratio": 0.238,
+        "bear_ratio": 0.143,
+        "neutral_ratio": 0.619,
+        "kol_weighted_sentiment": 0.063,
+        "engagement_weighted_sentiment": 0.156,
+        "bull_count": 5,
+        "bear_count": 3,
+        "neutral_count": 13,
+        "total_count": 21
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1264,74 +1501,74 @@
           "sentiment": "neutral"
         },
         {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "US TREASURY SECRETARY MOVED TO MILITARY HOUSING AFTER IRANIAN THREATS\n\nTreasury Secretary Scott Bessent has been relocated to temporary military housi",
-          "likes": 184,
-          "url": "https://x.com/DeItAone/status/2120626302424145987",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Big day for the dollar $UUP $DXY\n\n$TLT was flat though afer early losses https://t.co/mrMqZ4KPoC",
-          "likes": 7,
-          "url": "https://x.com/MikeZaccardi/status/2120663112407716245",
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "JUST IN:\n\nNvidia $NVDA just relesed this statement about Jensen Huang stepping down\n\n\"NVIDIA Announces CEO Transition\n\n- Jensen Huang Resigns\n- Colett",
+          "likes": 709,
+          "url": "https://x.com/StockMKTNewz/status/2120877154497913076",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Treasury Secretary Scott Bessent was reportedly moved from his Washington, D.C., home to a military base due to Iranian threats on his life, per CNBC\n",
+          "likes": 283,
+          "url": "https://x.com/unusual_whales/status/2120838264743674050",
+          "is_kol": true,
+          "sentiment": "bullish"
         }
       ]
     },
     {
       "theme": "黄金_贵金属",
-      "tweet_count": 3,
-      "engagement": 52,
-      "kol_mentions": 3,
-      "signal_strength": 28.4,
+      "tweet_count": 16,
+      "engagement": 729,
+      "kol_mentions": 16,
+      "signal_strength": 67.3,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.667,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.333,
-        "kol_weighted_sentiment": 0.067,
-        "engagement_weighted_sentiment": 0.182,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 1,
-        "total_count": 3
+        "consensus_score": 0.2,
+        "opinion_density": 0.625,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.25,
+        "bear_ratio": 0.375,
+        "neutral_ratio": 0.375,
+        "kol_weighted_sentiment": -0.113,
+        "engagement_weighted_sentiment": -0.204,
+        "bull_count": 4,
+        "bear_count": 6,
+        "neutral_count": 6,
+        "total_count": 16
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "top_tweets": [
         {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Gold prices fall below $4,000 as analysts warn of further losses toward $3,900\n\n#Gold prices have fallen below the critical $4,000-an-ounce level, and",
-          "likes": 26,
-          "url": "https://x.com/KitcoNewsNOW/status/2120685778623746279",
+          "author": "Hedgeye",
+          "author_name": "Hedgeye",
+          "content": "BREAKING: Gold falls -2.5% to below $3,900/oz https://t.co/k8o7ypI3cJ",
+          "likes": 190,
+          "url": "https://x.com/Hedgeye/status/2120877800940830752",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "Colombia's inflation comes in at 6.3%/yr in October.\n\nColombia's money supply (M3) is growing at 11.2%/yr. That's ABOVE Hanke's Golden Growth rate of ",
-          "likes": 9,
-          "url": "https://x.com/steve_hanke/status/2120732316591091731",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "KitcoNewsNOW",
-          "author_name": "KitcoNewsNOW",
-          "content": "Gold falls below $4,000 as dollar surges, Fed hike bets rise\n\nSpot #gold prices were lower and spot silver prices were modestly higher in late U.S. tr",
-          "likes": 8,
-          "url": "https://x.com/KitcoNewsNOW/status/2120683689197617642",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "SPOT GOLD EXTENDS LOSSES, DOWN 3% TO $3,866.08/OZ",
+          "likes": 92,
+          "url": "https://x.com/DeItAone/status/2120894164967862607",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "Gold back to the lower support. \n\nTo reverse or not to reverse? That is the question here. … https://t.co/eaM6mYOtdb",
+          "likes": 71,
+          "url": "https://x.com/goldseek/status/2120808812789797372",
+          "is_kol": true,
+          "sentiment": "bearish"
         }
       ]
     }
@@ -1340,191 +1577,71 @@
     {
       "author": "financialjuice",
       "author_name": "financialjuice",
-      "content": "BoJ board member Asada: former BoJ chief Kuroda’s stimulus approach was suitable at the time",
+      "content": "China Panel Chair Meeks floats subpanel on Nvidia fallout - Politico. $NVDA",
       "likes": 3,
-      "reposts": 0,
+      "reposts": 1,
       "replies": 0,
-      "views": 18661,
-      "created_at": "2026-11-12T06:08:51+00:00",
-      "url": "https://x.com/financialjuice/status/2120760719347974439",
+      "views": 16716,
+      "created_at": "2026-11-12T15:21:44+00:00",
+      "url": "https://x.com/financialjuice/status/2120899853966573732",
       "assets": [
         [
-          "IEF",
-          "美债7-10年ETF"
+          "NVDA",
+          "英伟达"
         ]
       ],
       "themes": [
-        "美债_固定收益",
-        "加密货币",
-        "宏观_利率政策"
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.333
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ board member Asada: Japan now in inflation, not deflation, entering new phase",
-      "likes": 5,
-      "reposts": 2,
-      "replies": 2,
-      "views": 15587,
-      "created_at": "2026-11-12T06:08:08+00:00",
-      "url": "https://x.com/financialjuice/status/2120760536841495029",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "加密货币"
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: Nvidia stock, $NVDA, pares losses, rising back above $163/share, as investors buy the dip after Jensen Huang resigns.\n\nThe stock has now erased half of its loss on the day.\n\nNvidia’s future remains highly uncertain. https://t.co/fewcoGJqC9",
+      "likes": 244,
+      "reposts": 25,
+      "replies": 22,
+      "views": 39026,
+      "created_at": "2026-11-12T15:21:00+00:00",
+      "url": "https://x.com/KobeissiLetter/status/2120899669341446242",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
       ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ board member Asada: Japan has already reached about 2% inflation, so pushing prices higher is not very meaningful",
-      "likes": 1,
-      "reposts": 1,
-      "replies": 0,
-      "views": 16856,
-      "created_at": "2026-11-12T06:06:50+00:00",
-      "url": "https://x.com/financialjuice/status/2120760209874575514",
-      "assets": [],
       "themes": [
-        "宏观_利率政策",
-        "加密货币"
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "bullish",
       "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
+      "sentiment_intensity": 0.5
     },
     {
       "author": "financialjuice",
       "author_name": "financialjuice",
-      "content": "BOJ's Asada: if rates rise, must be cautious about speed",
-      "likes": 3,
-      "reposts": 1,
+      "content": "Jenson Huang won't serve in any capacity at Nvidia after being fired $NVDA",
+      "likes": 29,
+      "reposts": 10,
       "replies": 0,
-      "views": 16351,
-      "created_at": "2026-11-12T06:01:45+00:00",
-      "url": "https://x.com/financialjuice/status/2120758931182301680",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "宏观_利率政策"
+      "views": 17347,
+      "created_at": "2026-11-12T15:18:11+00:00",
+      "url": "https://x.com/financialjuice/status/2120898962341109812",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
       ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoJ's Asada: may need to increase rates gradually at some point in future",
-      "likes": 4,
-      "reposts": 0,
-      "replies": 0,
-      "views": 16227,
-      "created_at": "2026-11-12T06:01:32+00:00",
-      "url": "https://x.com/financialjuice/status/2120758875401945295",
-      "assets": [],
       "themes": [
-        "加密货币",
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ's Asada: I am not opposed to increasing rates entirely",
-      "likes": 2,
-      "reposts": 1,
-      "replies": 0,
-      "views": 16623,
-      "created_at": "2026-11-12T06:01:24+00:00",
-      "url": "https://x.com/financialjuice/status/2120758840979325082",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ's Asada: Chance neutral rate somewhat exceeds BOJ policy rate",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 0,
-      "views": 15943,
-      "created_at": "2026-11-12T06:01:10+00:00",
-      "url": "https://x.com/financialjuice/status/2120758785740513534",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Finnish September current account deficit 0.5 billion euros: Statistics Finland",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 0,
-      "views": 16745,
-      "created_at": "2026-11-12T06:00:42+00:00",
-      "url": "https://x.com/financialjuice/status/2120758665959645464",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Boj's Asada: no plans to suggest rate reduction now",
-      "likes": 3,
-      "reposts": 0,
-      "replies": 0,
-      "views": 16711,
-      "created_at": "2026-11-12T05:59:58+00:00",
-      "url": "https://x.com/financialjuice/status/2120758480659452217",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "宏观_利率政策"
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1533,41 +1650,62 @@
       "sentiment_intensity": 0.167
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoJ's Asada: Want to decide policy at each meeting reviewing upside, downside risks and financial conditions",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 0,
-      "views": 19297,
-      "created_at": "2026-11-12T05:57:27+00:00",
-      "url": "https://x.com/financialjuice/status/2120757847357067300",
-      "assets": [],
+      "author": "Hedgeye",
+      "author_name": "Hedgeye",
+      "content": "BREAKING: The U.S. Dollar extends gains +0.3% to new Cycle Highs \n\nWe remain long in $UUP terms. https://t.co/6Lp8wjlz6T",
+      "likes": 12,
+      "reposts": 4,
+      "replies": 2,
+      "views": 2766,
+      "created_at": "2026-11-12T15:18:01+00:00",
+      "url": "https://x.com/Hedgeye/status/2120898918674530665",
+      "assets": [
+        [
+          "UUP",
+          "UUP"
+        ]
+      ],
       "themes": [
-        "加密货币",
-        "原油_能源",
-        "宏观_利率政策"
+        "外汇_汇率"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -0.333,
-      "sentiment_intensity": 0.5
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
     },
     {
       "author": "financialjuice",
       "author_name": "financialjuice",
-      "content": "Boj's Asada: Even if policy rate hits target level, central bank could still adjust rates up or down",
-      "likes": 2,
-      "reposts": 0,
+      "content": "Crypto Fear &amp; Greed Index: 28/100 - Fear https://t.co/GwTNlnNUph",
+      "likes": 9,
+      "reposts": 2,
       "replies": 0,
-      "views": 17840,
-      "created_at": "2026-11-12T05:56:58+00:00",
-      "url": "https://x.com/financialjuice/status/2120757727819407791",
+      "views": 17805,
+      "created_at": "2026-11-12T15:17:43+00:00",
+      "url": "https://x.com/financialjuice/status/2120898842573115627",
       "assets": [],
       "themes": [
-        "宏观_利率政策",
-        "加密货币",
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LizAnnSonders",
+      "author_name": "LizAnnSonders",
+      "content": "October existing home sales -5.5% m/m vs. -3.5% est. &amp; +1.0% prior (rev. down from +1.5%) … median home price +0.4% y/y to $416,700 https://t.co/WdkEFbAP7g",
+      "likes": 10,
+      "reposts": 4,
+      "replies": 2,
+      "views": 4261,
+      "created_at": "2026-11-12T15:11:05+00:00",
+      "url": "https://x.com/LizAnnSonders/status/2120897176150933527",
+      "assets": [],
+      "themes": [
         "原油_能源"
       ],
       "quality_score": 0.0,
@@ -1577,64 +1715,23 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Boj's Asada: Boj does not directly govern fx so will not comment on ideal dollar/yen level",
-      "likes": 5,
-      "reposts": 0,
-      "replies": 0,
-      "views": 18115,
-      "created_at": "2026-11-12T05:55:44+00:00",
-      "url": "https://x.com/financialjuice/status/2120757415239201050",
-      "assets": [],
-      "themes": [
-        "外汇_汇率",
-        "加密货币",
-        "原油_能源",
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoJ's Asada: terminal rate and neutral rate closely linked",
-      "likes": 3,
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "$NVDA Nvidia's fair value could fall 25% without Huang as CEO, Yorkville Ives says \n@divestech @seekingalpha https://t.co/dEjkJ01Oib https://t.co/wjxojkJ2wm",
+      "likes": 2,
       "reposts": 1,
-      "replies": 0,
-      "views": 19189,
-      "created_at": "2026-11-12T05:54:04+00:00",
-      "url": "https://x.com/financialjuice/status/2120756995817169217",
-      "assets": [],
-      "themes": [
-        "加密货币",
-        "宏观_利率政策"
+      "replies": 1,
+      "views": 1422,
+      "created_at": "2026-11-12T15:11:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2120897154386440194",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
       ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ's Asada: Japan's nominal neutral rate likely toward lower end of staff range",
-      "likes": 7,
-      "reposts": 1,
-      "replies": 0,
-      "views": 19441,
-      "created_at": "2026-11-12T05:52:08+00:00",
-      "url": "https://x.com/financialjuice/status/2120756511978738150",
-      "assets": [],
       "themes": [
-        "加密货币",
-        "宏观_利率政策",
-        "地缘政治"
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1643,18 +1740,134 @@
       "sentiment_intensity": 0.333
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ's Asada: no clear plan on terminal rate",
-      "likes": 4,
+      "author": "KitcoNewsNOW",
+      "author_name": "KitcoNewsNOW",
+      "content": "Gold Just Broke $4,000, Here’s What the Charts Say Comes Next | Gary Wagner\n\nSpot #gold fell below $4,000 an ounce on Nov. 11, a day after a hotter-than-expected U.S. inflation report, and is now lower than it was a year ago. Gary Wagner @garyswagner of TheGoldForecast was https://t.co/3bXesiHhTo",
+      "likes": 3,
       "reposts": 0,
       "replies": 0,
-      "views": 19044,
-      "created_at": "2026-11-12T05:51:50+00:00",
-      "url": "https://x.com/financialjuice/status/2120756434426290686",
+      "views": 943,
+      "created_at": "2026-11-12T15:09:22+00:00",
+      "url": "https://x.com/KitcoNewsNOW/status/2120896742828724280",
+      "assets": [
+        [
+          "XAU",
+          "黄金"
+        ]
+      ],
+      "themes": [
+        "黄金_贵金属",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "Hedgeye",
+      "author_name": "Hedgeye",
+      "content": "BREAKING: Gold plunges to a 1-year low https://t.co/TIHiNAV65o",
+      "likes": 49,
+      "reposts": 9,
+      "replies": 7,
+      "views": 4307,
+      "created_at": "2026-11-12T15:08:41+00:00",
+      "url": "https://x.com/Hedgeye/status/2120896572611531127",
+      "assets": [
+        [
+          "XAU",
+          "黄金"
+        ]
+      ],
+      "themes": [
+        "黄金_贵金属"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "elerianm",
+      "author_name": "elerianm",
+      "content": "Sobering US housing data: October sales of existing US homes fell 5.5% to their lowest level in 16 years.\nThink of this as another data point consistent with my view that, with nothing making room in the bond market for the significant uptick in AI-related borrowing, higher",
+      "likes": 47,
+      "reposts": 8,
+      "replies": 10,
+      "views": 9069,
+      "created_at": "2026-11-12T15:07:18+00:00",
+      "url": "https://x.com/elerianm/status/2120896220885303489",
       "assets": [],
       "themes": [
-        "加密货币",
+        "美债_固定收益",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "Hedgeye",
+      "author_name": "Hedgeye",
+      "content": "JUST IN: U.S. existing-home sales fell in October to their lowest level since 2010.",
+      "likes": 12,
+      "reposts": 3,
+      "replies": 0,
+      "views": 3550,
+      "created_at": "2026-11-12T15:06:09+00:00",
+      "url": "https://x.com/Hedgeye/status/2120895935068987873",
+      "assets": [],
+      "themes": [
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "DeItAone",
+      "author_name": "DeItAone",
+      "content": "SPACEX SHARES RISE 4% AS MUSK-HUANG PARTNERSHIP SPECULATION GROWS\n\nSpaceX shares climbed around 4% Thursday as investors speculated that former Nvidia ($NVDA) CEO Jensen Huang could join forces with Elon Musk.\n\nAsked about hiring Huang, Musk replied on X: “That would be an",
+      "likes": 213,
+      "reposts": 27,
+      "replies": 32,
+      "views": 61467,
+      "created_at": "2026-11-12T15:05:26+00:00",
+      "url": "https://x.com/DeItAone/status/2120895754109628842",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "at least he didn't say due to 'Fed policy'",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 1662,
+      "created_at": "2026-11-12T15:04:44+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2120895576703369721",
+      "assets": [],
+      "themes": [
         "宏观_利率政策"
       ],
       "quality_score": 0.0,
@@ -1664,66 +1877,58 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ's Asada: Central bank independence crucial for price stability amid questions on rate hikes' impact on government policy",
-      "likes": 7,
-      "reposts": 3,
-      "replies": 0,
-      "views": 22087,
-      "created_at": "2026-11-12T05:45:30+00:00",
-      "url": "https://x.com/financialjuice/status/2120754840900874571",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BOJ board member Asada: must be mindful of risk rate hikes could lower underlying inflation as consumption slows, when asked about possible December increase",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 0,
-      "views": 20895,
-      "created_at": "2026-11-12T05:44:51+00:00",
-      "url": "https://x.com/financialjuice/status/2120754677839024442",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "caixin",
-      "author_name": "caixin",
-      "content": "Analysis: China is updating its Insurance Law. One of the top priorities is piercing the opaque ownership structures that let rogue controllers of insurers like Anbang and Evergrande siphon off premiums and undermine solvency. https://t.co/LsjO4LKqWy",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 0,
-      "views": 320,
-      "created_at": "2026-11-12T05:30:20+00:00",
-      "url": "https://x.com/caixin/status/2120751024952787181",
+      "author": "StockMKTNewz",
+      "author_name": "StockMKTNewz",
+      "content": "I GAVE AI $10K AND TOLD IT TO BEAT THE NASDAQ 100\n\nMy AI Agent just sold half of my Nvidia $NVDA shares to buy $QQQM \n\nI started this portfolio on October 5th\n\nSince October 5th the NASDAQ 100 is down by 8.7% while my AI run portfolio is down by 4.5%\n\nSo beating my goal (so far) https://t.co/zjLav1kaNT",
+      "likes": 28,
+      "reposts": 1,
+      "replies": 6,
+      "views": 21093,
+      "created_at": "2026-11-12T15:03:55+00:00",
+      "url": "https://x.com/StockMKTNewz/status/2120895373203910760",
       "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ],
+        [
+          "QQQM",
+          "QQQM"
+        ],
+        [
+          "QQQ",
+          "纳指100ETF"
+        ],
         [
           "SOL",
           "Solana"
         ]
       ],
       "themes": [
+        "AI_科技",
         "加密货币",
-        "原油_能源"
+        "美股_大盘",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "federalreserve",
+      "author_name": "federalreserve",
+      "content": "Speech by Governor Barr on artificial intelligence and inequality: https://t.co/5u3jAyYhfy\n\nWatch live: https://t.co/nvx59dtVXn\n\nLearn more about Governor Barr: https://t.co/AZsNWhl2ze",
+      "likes": 1,
+      "reposts": 1,
+      "replies": 1,
+      "views": 5768,
+      "created_at": "2026-11-12T15:03:44+00:00",
+      "url": "https://x.com/federalreserve/status/2120895324986417400",
+      "assets": [],
+      "themes": [
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1732,52 +1937,132 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "168X_Fortune",
-      "author_name": "168X_Fortune",
-      "content": "“为什么涨起来也不稳？\n 卖期权、提供波动率的参与者被打伤，还没回来，所以即使反弹，VIX 也未必马上大降\n 近期反弹成交量不大，在我的理解里，部分来自 Put 平仓、波动率下降和对冲调整的被动买盘，不等于主动资金重新看多\n Vol Control",
-      "likes": 0,
-      "reposts": 0,
-      "replies": 0,
-      "views": 1007,
-      "created_at": "2026-11-12T05:23:24+00:00",
-      "url": "https://x.com/168X_Fortune/status/2120749277484048653",
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Alice Huang’s Companies promised DeepSeek Nvidia chips - The Information $NVDA",
+      "likes": 28,
+      "reposts": 8,
+      "replies": 1,
+      "views": 25073,
+      "created_at": "2026-11-12T15:03:42+00:00",
+      "url": "https://x.com/financialjuice/status/2120895316685918242",
       "assets": [
         [
-          "VIX",
-          "恐慌指数"
+          "NVDA",
+          "英伟达"
         ]
       ],
       "themes": [
-        "美股_大盘"
+        "AI_科技",
+        "公司_财报"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.667
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "LiveSquawk",
-      "author_name": "LiveSquawk",
-      "content": "France Signals Support For Spain’s ECB Presidential Candidate – FT\n\nhttps://t.co/IXNFIhNriD",
-      "likes": 2,
-      "reposts": 2,
+      "author": "Hedgeye",
+      "author_name": "Hedgeye",
+      "content": "🚨 LIVE TODAY @ 11AM ET \n\nHedgeye CEO @KeithMcCullough presents: \n\n1. Slowing growth and cooling inflation into 1H27\n2. A framework for measuring AI bubble risk\n3. A firm dollar as long-term yields fall\n\nExclusive to Macro Pro &amp; Pro Risk Manager subscribers.\n\nGet access:",
+      "likes": 3,
+      "reposts": 0,
       "replies": 0,
-      "views": 7476,
-      "created_at": "2026-11-12T05:06:12+00:00",
-      "url": "https://x.com/LiveSquawk/status/2120744952737276305",
+      "views": 4084,
+      "created_at": "2026-11-12T15:03:32+00:00",
+      "url": "https://x.com/Hedgeye/status/2120895275594072447",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -0.714,
+      "sentiment_intensity": 1.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Fed rate out to Q4 next year climbs further.. 4.71% https://t.co/kW5hZQ9fkZ",
+      "likes": 5,
+      "reposts": 0,
+      "replies": 2,
+      "views": 1507,
+      "created_at": "2026-11-12T15:03:27+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2120895253200732229",
       "assets": [],
       "themes": [
         "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.167
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Fed's Barr Speaks - WATCH LIVE https://t.co/0rz2s1f7Ya",
+      "likes": 7,
+      "reposts": 1,
+      "replies": 0,
+      "views": 22827,
+      "created_at": "2026-11-12T15:03:18+00:00",
+      "url": "https://x.com/financialjuice/status/2120895217570402773",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LiveSquawk",
+      "author_name": "LiveSquawk",
+      "content": "Fed's Barr: US Should Be Prepared For Risk Of 'Serious Short-Term Disruptions' In Job Market Due To AI\nhttps://t.co/jZt6agl4Fs",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 0,
+      "created_at": "2026-11-12T15:03:16+00:00",
+      "url": "https://x.com/LiveSquawk/status/2120895208539754722",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.833
     }
   ],
   "kol_summary": [
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: Nvidia, $NVDA, CEO Jensen Huang has resigned as CEO, President, and member of the Board of Directors, effective immediately. https://t.co/IJE8wWvcrR",
+      "likes": 14853,
+      "url": "https://x.com/KobeissiLetter/status/2120877226459820170",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
     {
       "author": "KobeissiLetter",
       "author_name": "KobeissiLetter",
@@ -1831,6 +2116,25 @@
     {
       "author": "KobeissiLetter",
       "author_name": "KobeissiLetter",
+      "content": "Jensen Huang and the Nvidia board just made a massive mistake.\n\nHe should not have resigned.\n\nThe board should have taken the time to conduct a thorough investigation, consult with shareholders, and carefully evaluate the long-term implications of this decision.\n\nThere is no",
+      "likes": 9144,
+      "url": "https://x.com/KobeissiLetter/status/2120888131314717128",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
       "content": "BREAKING: Nvidia stock, $NVDA, falls sharply on reports that Jensen Huang had another affair with a senior employee at the company. https://t.co/mPK4SjdOB3",
       "likes": 8454,
       "url": "https://x.com/KobeissiLetter/status/2120639391077151225",
@@ -1879,6 +2183,47 @@
       "themes": [
         "AI_科技",
         "宏观_利率政策"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "Jensen Huang just resigned from Nvidia. What if Elon ends up hiring him to help with Terafab (as well as other things) and together they make America the greatest producer of advanced chips in the world?\n\nThe most entertaining outcome is the mostly likely, right? https://t.co/IKwBkX376e",
+      "likes": 4791,
+      "url": "https://x.com/SawyerMerritt/status/2120887225227612356",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ],
+        [
+          "ETH",
+          "以太坊"
+        ]
+      ],
+      "themes": [
+        "AI_科技",
+        "加密货币"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: Nvidia, $NVDA, has appointed Colette Kress, the company’s current CFO, as Interim CEO.\n\nJensen Huang’s 33-year career at Nvidia has officially come to an end.",
+      "likes": 4133,
+      "url": "https://x.com/KobeissiLetter/status/2120878535497916576",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
@@ -1944,70 +2289,35 @@
       "sentiment_score": 0.0
     },
     {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "NYT says Jensen Huang had a relationship Nvidia's vice president of health care. https://t.co/restNfM7wJ",
-      "likes": 2729,
-      "url": "https://x.com/TheStalwart/status/2120637473252364379",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla has just officially announced that their Robotaxi service now operates 24-hours a day in every city that rides are available!\n\n• Austin\n• San Antonio\n• Houston\n• Fort Worth\n• Dallas\n• Miami \n• Orlando\n• Tampa\n\nBig milestone! https://t.co/5BUVTSeBjQ",
-      "likes": 2640,
-      "url": "https://x.com/SawyerMerritt/status/2120736829443870785",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "JUST IN: Nvidia’s $NVDA board is preparing to oust CEO Jensen Huang, its founder and chief executive, per the WSJ",
-      "likes": 2310,
-      "url": "https://x.com/unusual_whales/status/2120667560136040617",
+      "author": "aleabitoreddit",
+      "author_name": "aleabitoreddit",
+      "content": "I disagree, Jensen Huang is practically irreplaceable from $NVDA.\n\nAnd it's like if you took out Elon from $TSLA, the valuation and confidence in the company would collapse. \n\nThe foresight to bet on CUDA before AI took off, build the Neocloud ecosystem... \n\nThe move to secure",
+      "likes": 3194,
+      "url": "https://x.com/aleabitoreddit/status/2120798356205093139",
       "assets": [
         [
           "NVDA",
           "英伟达"
         ],
         [
-          "IEF",
-          "美债7-10年ETF"
+          "TSLA",
+          "特斯拉"
         ]
       ],
       "themes": [
         "AI_科技",
-        "美债_固定收益"
+        "原油_能源",
+        "公司_财报"
       ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
     },
     {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: Alice Huang, the founder of Megaspeed International and a suspected Chinese intelligence asset, has returned to China and is living in Beijing, per Bloomberg.\n\nJensen Huang has admitted to an affair, and Nvidia’s board has launched an independent investigation. Trump",
-      "likes": 1965,
-      "url": "https://x.com/unusual_whales/status/2120707150968156259",
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: Nvidia stock, $NVDA, plunges over -10% after Jensen Huang officially resigns as CEO.\n\nThe stock has now erased -$750 billion in market cap since the scandal began. https://t.co/OrXFS3GQE3",
+      "likes": 2953,
+      "url": "https://x.com/KobeissiLetter/status/2120877770247221444",
       "assets": [
         [
           "NVDA",
@@ -2019,44 +2329,8 @@
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Here’s Tesla’s new $350 Cybertruck RC racer.\n\n• Quick-release polycarbonate body\n• 11.1V 3S 3400mAh LiPo battery\n• Top speed: up to 37mph (60km/h)\n• Run time: up to 20 minutes https://t.co/oXaU3C0Ee0",
-      "likes": 1938,
-      "url": "https://x.com/SawyerMerritt/status/2120630128753455333",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源",
-        "公司_财报"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "BREAKING: Jensen Huang of Nvidia, $NVDA, is suspected of having another extramarital affair, with a direct report of his at the company,  Kimberly Powell, Nvidia’s vice president of healthcare. \n\nPowell, like Huang, is married, the outlet says.",
-      "likes": 1744,
-      "url": "https://x.com/unusual_whales/status/2120682079323390086",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
-      "themes": [
-        "AI_科技",
-        "宏观_利率政策"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
