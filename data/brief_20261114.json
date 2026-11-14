@@ -1,52 +1,55 @@
 {
-  "generated_at": "2026-11-14T12:34:00.913366",
+  "generated_at": "2026-11-14T13:36:51.479477",
   "stats": {
-    "total_tweets": 115,
-    "kol_tweets": 115,
-    "unique_authors": 33,
-    "kol_count": 33,
-    "total_likes": 65073,
-    "total_reposts": 7944,
-    "total_replies": 4367,
-    "total_views": 6860867,
-    "unique_assets": 51,
-    "unique_themes": 10
+    "total_tweets": 302,
+    "kol_tweets": 159,
+    "unique_authors": 35,
+    "kol_count": 35,
+    "total_likes": 89092,
+    "total_reposts": 10156,
+    "total_replies": 5857,
+    "total_views": 8694010,
+    "unique_assets": 58,
+    "unique_themes": 10,
+    "classified_tweets": 159,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.026,
-    "opinion_density": 0.339,
-    "kol_consensus": 0.026,
-    "bull_ratio": 0.165,
-    "bear_ratio": 0.174,
-    "neutral_ratio": 0.661,
-    "kol_weighted_sentiment": -0.009,
-    "engagement_weighted_sentiment": 0.157,
-    "bull_count": 19,
-    "bear_count": 20,
-    "neutral_count": 76,
-    "total_count": 115
+    "consensus_score": 0.207,
+    "opinion_density": 0.365,
+    "kol_consensus": 0.207,
+    "bull_ratio": 0.145,
+    "bear_ratio": 0.22,
+    "neutral_ratio": 0.635,
+    "kol_weighted_sentiment": -0.071,
+    "engagement_weighted_sentiment": 0.051,
+    "bull_count": 23,
+    "bear_count": 35,
+    "neutral_count": 101,
+    "total_count": 159
   },
   "top_assets": [
     {
       "symbol": "NVDA",
       "name": "英伟达",
-      "mention_count": 20,
-      "engagement": 34837,
-      "kol_mentions": 20,
-      "signal_strength": 80.0,
+      "mention_count": 26,
+      "engagement": 55454,
+      "kol_mentions": 26,
+      "signal_strength": 81.2,
       "consensus": {
-        "consensus_score": 0.2,
-        "opinion_density": 0.25,
-        "kol_consensus": 0.2,
-        "bull_ratio": 0.15,
-        "bear_ratio": 0.1,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": 0.037,
-        "engagement_weighted_sentiment": 0.331,
+        "consensus_score": 0.25,
+        "opinion_density": 0.308,
+        "kol_consensus": 0.25,
+        "bull_ratio": 0.115,
+        "bear_ratio": 0.192,
+        "neutral_ratio": 0.692,
+        "kol_weighted_sentiment": -0.087,
+        "engagement_weighted_sentiment": 0.113,
         "bull_count": 3,
-        "bear_count": 2,
-        "neutral_count": 15,
-        "total_count": 20
+        "bear_count": 5,
+        "neutral_count": 18,
+        "total_count": 26
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -59,6 +62,24 @@
           "url": "https://x.com/KobeissiLetter/status/2121348797276320087",
           "is_kol": true,
           "sentiment": "bullish"
+        },
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: An open letter to reinstate Jensen Huang as CEO of Nvidia, $NVDA, now has over 65,000 signatures, alleging that Huang was removed \"without meaningful due process.\"\n\nThe letter has been signe",
+          "likes": 12609,
+          "url": "https://x.com/KobeissiLetter/status/2121514973809799294",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Elon Musk publicly questions the credibility of Nvidia's, $NVDA, board of directors amid the controversy surrounding Jensen Huang's departure as CEO.\n\n\"This is the board making decisions abo",
+          "likes": 4598,
+          "url": "https://x.com/KobeissiLetter/status/2121500939680891215",
+          "is_kol": true,
+          "sentiment": "bearish"
         },
         {
           "author": "balajis",
@@ -77,118 +98,171 @@
           "url": "https://x.com/aleabitoreddit/status/2121349155457261991",
           "is_kol": true,
           "sentiment": "neutral"
-        },
-        {
-          "author": "aleabitoreddit",
-          "author_name": "aleabitoreddit",
-          "content": "Altimeter and Atreides' letter to the board of $NVDA. https://t.co/vC4lgj6OxC",
-          "likes": 2028,
-          "url": "https://x.com/aleabitoreddit/status/2121396827484524803",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Elon Musk of Tesla $TSLA and SpaceX $SPCX has announced that there is a petition to reinstate Jensen Huang as CEO of Nvidia, $NVDA and Elon himself will sign it.\n\nWould you sign this petition?",
-          "likes": 1891,
-          "url": "https://x.com/unusual_whales/status/2121407661170405836",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "TSLA",
-      "name": "特斯拉",
-      "mention_count": 8,
-      "engagement": 16951,
-      "kol_mentions": 8,
-      "signal_strength": 97.8,
+      "symbol": "BTC",
+      "name": "比特币",
+      "mention_count": 17,
+      "engagement": 585,
+      "kol_mentions": 17,
+      "signal_strength": 78.6,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.125,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.125,
-        "neutral_ratio": 0.875,
-        "kol_weighted_sentiment": -0.125,
-        "engagement_weighted_sentiment": -0.157,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 7,
-        "total_count": 8
+        "consensus_score": 0.143,
+        "opinion_density": 0.412,
+        "kol_consensus": 0.143,
+        "bull_ratio": 0.176,
+        "bear_ratio": 0.235,
+        "neutral_ratio": 0.588,
+        "kol_weighted_sentiment": -0.001,
+        "engagement_weighted_sentiment": -0.171,
+        "bull_count": 3,
+        "bear_count": 4,
+        "neutral_count": 10,
+        "total_count": 17
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
         {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "BREAKING: Tesla has officially started inviting select customers in Austin to order Cybercabs for personal use! This is real.\n\n• Price for Cybercab: $29,990\n• $299/month Autonomy Subscription. One mon",
-          "likes": 5083,
-          "url": "https://x.com/SawyerMerritt/status/2121383214413451561",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "Bitcoin has dipped below $69,000 for the first time since August. \n\nBITCOIN = A HIGHLY SPECULATIVE ASSET WITH ZERO FUNDAMENTAL VALUE. https://t.co/xLH0ad9ZOp",
+          "likes": 172,
+          "url": "https://x.com/steve_hanke/status/2121495847615803584",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Here are the maintenance related things included in @Tesla's $299/month Cybercab Autonomy Subscription for personal use:\n\n• Front and rear tire replacements\n• Tire rotations, tire pressure, wear, dama",
-          "likes": 2737,
-          "url": "https://x.com/SawyerMerritt/status/2121402297238364257",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "BITCOIN = A HIGHLY SPECULATIVE ASSET WITH ZERO FUNDAMENTAL VALUE.\nhttps://t.co/bLrBKAWqqh",
+          "likes": 100,
+          "url": "https://x.com/steve_hanke/status/2121350892477874203",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "今天我已经精准锁定了btc这波回调的终极最低点。到时我把这个指标发出来，一看你们就很清楚了。现在不能发，一公开就没什么意义了。这个东西需要之后回头复盘再看。6月份的57758就是刚好精准摸到这个指标的这条线上止跌。\n\n既然btc的最低点锁定了，eth和sol就很明确了。不必盲人摸象瞎猜。",
+          "likes": 52,
+          "url": "https://x.com/jackli727/status/2121553975745147362",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Here are the some of the most interesting things from Tesla's personal use Cybercab autonomy subscription agreement:\n\n• You can only use the Cybercab for personal use (for now). You can't use it for c",
-          "likes": 2150,
-          "url": "https://x.com/SawyerMerritt/status/2121397812948611152",
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "11-12月划一条红线：\n\nbtc 64000以下不追空。\neth 1742以下不追空。\nsol 72以下不追空（会最先结束回调进入横盘）\n\n这些位置下方的下跌空间已经很有限，只能低多，抄底。最后一手追空非常容易被反包。\n\n回调结束后的四步曲：触底-修复-震荡上行-加速拉升",
+          "likes": 26,
+          "url": "https://x.com/jackli727/status/2121564011003318701",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Elon Musk of Tesla $TSLA and SpaceX $SPCX has announced that there is a petition to reinstate Jensen Huang as CEO of Nvidia, $NVDA and Elon himself will sign it.\n\nWould you sign this petition?",
-          "likes": 1891,
-          "url": "https://x.com/unusual_whales/status/2121407661170405836",
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "eth 5日布林下轨1870这里今天有支撑。下一步跌破这里，就走周线调整。最快下周内就下杀到1616-1576附近。同步对应btc 最快下周下探6w。 https://t.co/jcUyHYqiyp",
+          "likes": 19,
+          "url": "https://x.com/jackli727/status/2121487356922618083",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "symbol": "SOL",
+      "name": "Solana",
+      "mention_count": 11,
+      "engagement": 1655,
+      "kol_mentions": 11,
+      "signal_strength": 72.7,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.545,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.273,
+        "bear_ratio": 0.273,
+        "neutral_ratio": 0.455,
+        "kol_weighted_sentiment": -0.008,
+        "engagement_weighted_sentiment": -0.051,
+        "bull_count": 3,
+        "bear_count": 3,
+        "neutral_count": 5,
+        "total_count": 11
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "TheStalwart",
+          "author_name": "TheStalwart",
+          "content": "It’s weird to talk about Jensen being “absolved” when there’s not even a specific claim being publicly being made by anyone in government.",
+          "likes": 989,
+          "url": "https://x.com/TheStalwart/status/2121425551084679376",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "Tesla has invited Marques to order a Cybercab for personal use.",
-          "likes": 1581,
-          "url": "https://x.com/SawyerMerritt/status/2121427932425990359",
+          "author": "DeItAone",
+          "author_name": "DeItAone",
+          "content": "*MULLIN SAYS IT WILL TAKE 'SOME TIME' TO RESOLVE FAA ISSUE\n\n*MULLIN ON POTENTIAL LINK TO AI: CAN'T RULE ANYTHING OUT\n\n*MULLIN: EVERYBODY IS SAFE, FLIGHTS ARE ALL ACCOUNTED FOR",
+          "likes": 321,
+          "url": "https://x.com/DeItAone/status/2121366568324264359",
           "is_kol": true,
           "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "People on financial tv today: \"We sold NVIDIA 'a while ago'\"",
+          "likes": 58,
+          "url": "https://x.com/MikeZaccardi/status/2121381410309058648",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "今天我已经精准锁定了btc这波回调的终极最低点。到时我把这个指标发出来，一看你们就很清楚了。现在不能发，一公开就没什么意义了。这个东西需要之后回头复盘再看。6月份的57758就是刚好精准摸到这个指标的这条线上止跌。\n\n既然btc的最低点锁定了，eth和sol就很明确了。不必盲人摸象瞎猜。",
+          "likes": 52,
+          "url": "https://x.com/jackli727/status/2121553975745147362",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "traderstewie",
+          "author_name": "traderstewie",
+          "content": "Haven't taken a position in this $GDYN yet, still watching how this post-PEG consolidation pattern continues to take shape\n\nhttps://t.co/LR6NDu1r39\n\nAnother 1 or 2 days of mini range bound action in t",
+          "likes": 47,
+          "url": "https://x.com/traderstewie/status/2121352367115534581",
+          "is_kol": true,
+          "sentiment": "bullish"
         }
       ]
     },
     {
       "symbol": "ETH",
       "name": "以太坊",
-      "mention_count": 7,
-      "engagement": 5804,
-      "kol_mentions": 7,
-      "signal_strength": 94.3,
+      "mention_count": 11,
+      "engagement": 5915,
+      "kol_mentions": 11,
+      "signal_strength": 85.2,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.143,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.143,
-        "neutral_ratio": 0.857,
-        "kol_weighted_sentiment": -0.143,
-        "engagement_weighted_sentiment": -0.003,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 6,
-        "total_count": 7
+        "consensus_score": 0.5,
+        "opinion_density": 0.364,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.091,
+        "bear_ratio": 0.273,
+        "neutral_ratio": 0.636,
+        "kol_weighted_sentiment": -0.129,
+        "engagement_weighted_sentiment": -0.01,
+        "bull_count": 1,
+        "bear_count": 3,
+        "neutral_count": 7,
+        "total_count": 11
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -223,114 +297,114 @@
         {
           "author": "jackli727",
           "author_name": "jackli727",
-          "content": "btc 70000附近的空单成本具有优势，往下走，不管怎么止盈，25%底仓可以拿住，最多就是保本走、但一旦跌破67000，瞬间浮盈就扩大到4-5k点+。这时反弹一点补仓你就可以随心所欲。，赚多赚少全凭你主宰。\n\n同样，昨晚eth",
-          "likes": 12,
-          "url": "https://x.com/jackli727/status/2121429689483006396",
+          "content": "今天我已经精准锁定了btc这波回调的终极最低点。到时我把这个指标发出来，一看你们就很清楚了。现在不能发，一公开就没什么意义了。这个东西需要之后回头复盘再看。6月份的57758就是刚好精准摸到这个指标的这条线上止跌。\n\n既然btc的最低点锁定了，eth和sol就很明确了。不必盲人摸象瞎猜。",
+          "likes": 52,
+          "url": "https://x.com/jackli727/status/2121553975745147362",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bearish"
         },
         {
           "author": "jackli727",
           "author_name": "jackli727",
-          "content": "eth现在1912-1919都有阻力。这是1900上方的屏障，1900下方的屏障是1892-1880，刚才已经初步跌破了，所以1900马上要正儿八经的失守。 https://t.co/oJhCJxXXZK",
-          "likes": 3,
-          "url": "https://x.com/jackli727/status/2121443738946089168",
+          "content": "11-12月划一条红线：\n\nbtc 64000以下不追空。\neth 1742以下不追空。\nsol 72以下不追空（会最先结束回调进入横盘）\n\n这些位置下方的下跌空间已经很有限，只能低多，抄底。最后一手追空非常容易被反包。\n\n回调结束后的四步曲：触底-修复-震荡上行-加速拉升",
+          "likes": 26,
+          "url": "https://x.com/jackli727/status/2121564011003318701",
           "is_kol": true,
-          "sentiment": "bearish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
-      "symbol": "BTC",
-      "name": "比特币",
-      "mention_count": 6,
-      "engagement": 164,
-      "kol_mentions": 6,
-      "signal_strength": 90.9,
+      "symbol": "TSLA",
+      "name": "特斯拉",
+      "mention_count": 9,
+      "engagement": 20376,
+      "kol_mentions": 9,
+      "signal_strength": 92.6,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.333,
+        "opinion_density": 0.222,
         "kol_consensus": 1.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": 0.367,
-        "engagement_weighted_sentiment": 0.219,
-        "bull_count": 2,
-        "bear_count": 0,
-        "neutral_count": 4,
-        "total_count": 6
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.222,
+        "neutral_ratio": 0.778,
+        "kol_weighted_sentiment": -0.222,
+        "engagement_weighted_sentiment": -0.205,
+        "bull_count": 0,
+        "bear_count": 2,
+        "neutral_count": 7,
+        "total_count": 9
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "sample_tweets": [
         {
-          "author": "steve_hanke",
-          "author_name": "steve_hanke",
-          "content": "BITCOIN = A HIGHLY SPECULATIVE ASSET WITH ZERO FUNDAMENTAL VALUE.\nhttps://t.co/bLrBKAWqqh",
-          "likes": 100,
-          "url": "https://x.com/steve_hanke/status/2121350892477874203",
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "BREAKING: Tesla has officially started inviting select customers in Austin to order Cybercabs for personal use! This is real.\n\n• Price for Cybercab: $29,990\n• $299/month Autonomy Subscription. One mon",
+          "likes": 5083,
+          "url": "https://x.com/SawyerMerritt/status/2121383214413451561",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "昨晚btc反弹70125附近接空，现在7w成了天花板。现在反弹67750-67880就可以再空、补仓。66455-66200有支撑。再下去这里止盈一部分。然后再下去64450是一道重要的支撑，也有反弹。64450跌破就明确二探58000。6.4w以下不能追空。容易被反包。 https://t.co/NG7eRxOcDw",
-          "likes": 15,
-          "url": "https://x.com/jackli727/status/2121436753529815523",
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Here are the maintenance related things included in @Tesla's $299/month Cybercab Autonomy Subscription for personal use:\n\n• Front and rear tire replacements\n• Tire rotations, tire pressure, wear, dama",
+          "likes": 2737,
+          "url": "https://x.com/SawyerMerritt/status/2121402297238364257",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "What do you think of Tesla's $299/month Cybercab Autonomy Subscription, which includes all of the following:\n\n• FSD Unsupervised within Tesla's Robotaxi geofences\n• Tire replacements &amp; flat tire r",
+          "likes": 2191,
+          "url": "https://x.com/SawyerMerritt/status/2121461020069593382",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "btc 70000附近的空单成本具有优势，往下走，不管怎么止盈，25%底仓可以拿住，最多就是保本走、但一旦跌破67000，瞬间浮盈就扩大到4-5k点+。这时反弹一点补仓你就可以随心所欲。，赚多赚少全凭你主宰。\n\n同样，昨晚eth",
-          "likes": 12,
-          "url": "https://x.com/jackli727/status/2121429689483006396",
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Here are the some of the most interesting things from Tesla's personal use Cybercab autonomy subscription agreement:\n\n• You can only use the Cybercab for personal use (for now). You can't use it for c",
+          "likes": 2150,
+          "url": "https://x.com/SawyerMerritt/status/2121397812948611152",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "二次下探就比较墨迹一点，每个支撑点都会抵挡反弹一下。昨晚盘中btc回踩到68073反弹到69110，后半夜回踩到67850，现在这里又会反弹下。所以昨晚盘前反弹接的空单68200、67850、67450分批止盈最完美，已经卡点走了两个止盈点。扯住它的睾丸，踩准节奏。 https://t.co/cPw2rrqlMa",
-          "likes": 12,
-          "url": "https://x.com/jackli727/status/2121393529117413600",
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Elon Musk of Tesla $TSLA and SpaceX $SPCX has announced that there is a petition to reinstate Jensen Huang as CEO of Nvidia, $NVDA and Elon himself will sign it.\n\nWould you sign this petition?",
+          "likes": 1891,
+          "url": "https://x.com/unusual_whales/status/2121407661170405836",
           "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "btc高点又下移了。昨晚4小时反抽的阻力是69700。现在是68950。高点下移，那就不能做多，相当于你在跑步机上跑步，跑步机速度调快了，而你若跑慢了，就容易摔倒。",
-          "likes": 8,
-          "url": "https://x.com/jackli727/status/2121416417828585516",
-          "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "symbol": "MSFT",
       "name": "微软",
-      "mention_count": 5,
-      "engagement": 667,
-      "kol_mentions": 5,
-      "signal_strength": 87.4,
+      "mention_count": 6,
+      "engagement": 704,
+      "kol_mentions": 6,
+      "signal_strength": 85.1,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.6,
+        "opinion_density": 0.667,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.6,
-        "neutral_ratio": 0.4,
-        "kol_weighted_sentiment": -0.6,
-        "engagement_weighted_sentiment": -0.703,
+        "bear_ratio": 0.667,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": -0.667,
+        "engagement_weighted_sentiment": -0.74,
         "bull_count": 0,
-        "bear_count": 3,
+        "bear_count": 4,
         "neutral_count": 2,
-        "total_count": 5
+        "total_count": 6
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -365,91 +439,20 @@
         {
           "author": "financialjuice",
           "author_name": "financialjuice",
-          "content": "Microsoft on outage: services across previously impacted environments have been restored",
-          "likes": 14,
-          "url": "https://x.com/financialjuice/status/2121453056370094287",
+          "content": "Microsoft on outage: completed work to resolve root issue, restored service to affected customers and regions",
+          "likes": 35,
+          "url": "https://x.com/financialjuice/status/2121492877263974646",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
           "author": "financialjuice",
           "author_name": "financialjuice",
-          "content": "Microsoft on outage: consumer product services partially restored",
-          "likes": 2,
-          "url": "https://x.com/financialjuice/status/2121470954400358456",
+          "content": "Microsoft on outage: services across previously impacted environments have been restored",
+          "likes": 14,
+          "url": "https://x.com/financialjuice/status/2121453056370094287",
           "is_kol": true,
           "sentiment": "bearish"
-        }
-      ]
-    },
-    {
-      "symbol": "SOL",
-      "name": "Solana",
-      "mention_count": 5,
-      "engagement": 1500,
-      "kol_mentions": 5,
-      "signal_strength": 87.4,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.4,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.4,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.6,
-        "kol_weighted_sentiment": 0.4,
-        "engagement_weighted_sentiment": 0.079,
-        "bull_count": 2,
-        "bear_count": 0,
-        "neutral_count": 3,
-        "total_count": 5
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "sample_tweets": [
-        {
-          "author": "TheStalwart",
-          "author_name": "TheStalwart",
-          "content": "It’s weird to talk about Jensen being “absolved” when there’s not even a specific claim being publicly being made by anyone in government.",
-          "likes": 989,
-          "url": "https://x.com/TheStalwart/status/2121425551084679376",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "DeItAone",
-          "author_name": "DeItAone",
-          "content": "*MULLIN SAYS IT WILL TAKE 'SOME TIME' TO RESOLVE FAA ISSUE\n\n*MULLIN ON POTENTIAL LINK TO AI: CAN'T RULE ANYTHING OUT\n\n*MULLIN: EVERYBODY IS SAFE, FLIGHTS ARE ALL ACCOUNTED FOR",
-          "likes": 321,
-          "url": "https://x.com/DeItAone/status/2121366568324264359",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "People on financial tv today: \"We sold NVIDIA 'a while ago'\"",
-          "likes": 58,
-          "url": "https://x.com/MikeZaccardi/status/2121381410309058648",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "traderstewie",
-          "author_name": "traderstewie",
-          "content": "Haven't taken a position in this $GDYN yet, still watching how this post-PEG consolidation pattern continues to take shape\n\nhttps://t.co/LR6NDu1r39\n\nAnother 1 or 2 days of mini range bound action in t",
-          "likes": 47,
-          "url": "https://x.com/traderstewie/status/2121352367115534581",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "jackli727",
-          "author_name": "jackli727",
-          "content": "2023我就是这么每天开着20倍的币本位，在2023.10-2024.3五个多月里从30多一口气做多到206搞到7k多个sol的，每天赚几十个sol就收。当时我比较保守，每天固定就是只开25-30个sol小仓位，强平远离成本40点，无一磨损，无一开空。就是开的仓位小，所以那5个多月才赚了7k多个sol。如果按有些大哥说的，开100 https://t.co/0iMRRlXxOJ",
-          "likes": 6,
-          "url": "https://x.com/jackli727/status/2121468900072435849",
-          "is_kol": true,
-          "sentiment": "bullish"
         }
       ]
     },
@@ -459,7 +462,7 @@
       "mention_count": 5,
       "engagement": 1742,
       "kol_mentions": 5,
-      "signal_strength": 87.4,
+      "signal_strength": 82.6,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.2,
@@ -525,12 +528,65 @@
       ]
     },
     {
+      "symbol": "XAU",
+      "name": "黄金",
+      "mention_count": 3,
+      "engagement": 229,
+      "kol_mentions": 3,
+      "signal_strength": 43.5,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.667,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.667,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": -0.667,
+        "engagement_weighted_sentiment": -0.445,
+        "bull_count": 0,
+        "bear_count": 2,
+        "neutral_count": 1,
+        "total_count": 3
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "dariusdale42",
+          "author_name": "dariusdale42",
+          "content": "Everyone should pray this is not the start of what happens to societies that worship golden calves. I’m not joking. 💜",
+          "likes": 104,
+          "url": "https://x.com/dariusdale42/status/2121424480685998534",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Gold $GLD just about its worst week since March... bearish engulfing.. lowest weekly settle in 14 months https://t.co/1HfUaCniLh",
+          "likes": 11,
+          "url": "https://x.com/MikeZaccardi/status/2121339404727824418",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "RT @BNNBloomberg: Gold ‘could hit’ US$18,000 in a debt crisis: Gromen https://t.co/3S9IC4NiNA",
+          "likes": 0,
+          "url": "https://x.com/goldseek/status/2121528738215346612",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
       "symbol": "SPCX",
       "name": "SPCX",
       "mention_count": 3,
       "engagement": 2220,
       "kol_mentions": 3,
-      "signal_strength": 45.3,
+      "signal_strength": 43.5,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.333,
@@ -583,7 +639,7 @@
       "mention_count": 3,
       "engagement": 1374,
       "kol_mentions": 3,
-      "signal_strength": 35.3,
+      "signal_strength": 33.5,
       "consensus": {
         "consensus_score": 0.333,
         "opinion_density": 1.0,
@@ -631,12 +687,56 @@
       ]
     },
     {
-      "symbol": "IEF",
-      "name": "美债7-10年ETF",
+      "symbol": "VIX",
+      "name": "恐慌指数",
       "mention_count": 2,
-      "engagement": 10,
+      "engagement": 28,
       "kol_mentions": 2,
-      "signal_strength": 37.2,
+      "signal_strength": 39.0,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.5,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": 0.5,
+        "engagement_weighted_sentiment": 0.75,
+        "bull_count": 1,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "$VIX was near 21 this morning.. back under 19 amid a small afternoon recovery in stocks https://t.co/x1nCoTWR5x",
+          "likes": 17,
+          "url": "https://x.com/MikeZaccardi/status/2121338371154780262",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Wei Li BlackRock... lots of sigmas... \n\n5-standard-deviation $SPX move on Thurs, Nov 5\n7-sigma event on the $VIX \n\nNormal distributions break down in the tails. In a #polyfurcated world, wildly differ",
+          "likes": 5,
+          "url": "https://x.com/MikeZaccardi/status/2121587201624399985",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "META",
+      "name": "Meta",
+      "mention_count": 2,
+      "engagement": 143,
+      "kol_mentions": 2,
+      "signal_strength": 39.0,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -645,7 +745,51 @@
         "bear_ratio": 0.5,
         "neutral_ratio": 0.5,
         "kol_weighted_sentiment": -0.5,
-        "engagement_weighted_sentiment": -0.488,
+        "engagement_weighted_sentiment": -0.569,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 1,
+        "total_count": 2
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Meta Platforms $META employees have reportedly started testing a prediction-market app under development - WSJ https://t.co/4x29ctCCiP",
+          "likes": 113,
+          "url": "https://x.com/StockMKTNewz/status/2121338414389932239",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Italy’s data protection authority fines Meta Platforms €805 million over alleged use of videos and photos of Android users without consent",
+          "likes": 20,
+          "url": "https://x.com/financialjuice/status/2121578546577522865",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "IEF",
+      "name": "美债7-10年ETF",
+      "mention_count": 2,
+      "engagement": 18,
+      "kol_mentions": 2,
+      "signal_strength": 38.7,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.5,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.317,
         "bull_count": 0,
         "bear_count": 1,
         "neutral_count": 1,
@@ -658,7 +802,7 @@
           "author": "financialjuice",
           "author_name": "financialjuice",
           "content": "BoE’s Pill signals no third term as bank chief economist when current stint ends in September 2027 - FT",
-          "likes": 4,
+          "likes": 12,
           "url": "https://x.com/financialjuice/status/2121471506089751036",
           "is_kol": true,
           "sentiment": "neutral"
@@ -675,56 +819,12 @@
       ]
     },
     {
-      "symbol": "XAU",
-      "name": "黄金",
-      "mention_count": 2,
-      "engagement": 120,
-      "kol_mentions": 2,
-      "signal_strength": 40.2,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.5,
-        "engagement_weighted_sentiment": -0.201,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 1,
-        "total_count": 2
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "dariusdale42",
-          "author_name": "dariusdale42",
-          "content": "Everyone should pray this is not the start of what happens to societies that worship golden calves. I’m not joking. 💜",
-          "likes": 104,
-          "url": "https://x.com/dariusdale42/status/2121424480685998534",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Gold $GLD just about its worst week since March... bearish engulfing.. lowest weekly settle in 14 months https://t.co/1HfUaCniLh",
-          "likes": 11,
-          "url": "https://x.com/MikeZaccardi/status/2121339404727824418",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
       "symbol": "USO",
       "name": "原油ETF",
       "mention_count": 2,
       "engagement": 199,
       "kol_mentions": 2,
-      "signal_strength": 40.2,
+      "signal_strength": 39.0,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -768,7 +868,7 @@
       "mention_count": 2,
       "engagement": 476,
       "kol_mentions": 2,
-      "signal_strength": 40.2,
+      "signal_strength": 39.0,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -805,116 +905,28 @@
           "sentiment": "neutral"
         }
       ]
-    },
-    {
-      "symbol": "QQQ",
-      "name": "纳指100ETF",
-      "mention_count": 2,
-      "engagement": 23,
-      "kol_mentions": 2,
-      "signal_strength": 40.2,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 1.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": 1.0,
-        "engagement_weighted_sentiment": 1.0,
-        "bull_count": 2,
-        "bear_count": 0,
-        "neutral_count": 0,
-        "total_count": 2
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "This week: $NVDA's loss... $AVGO and $AMD's gain \n\n$SPY +2.5%\n$RSP +2.3%\n$QQQ +3.6%\n$SMH +4.9%\n$IBIT -9%\n$GLD -5%\n$TLT -3% https://t.co/DjothYhol4",
-          "likes": 14,
-          "url": "https://x.com/MikeZaccardi/status/2121347406402892222",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Rotational year.. but broad equity gains $SPY $QQQ $IWM $EFA $EEM @Koyfincharts https://t.co/xa7Pet3SHv",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121338146172383678",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "IBIT",
-      "name": "IBIT",
-      "mention_count": 2,
-      "engagement": 23,
-      "kol_mentions": 2,
-      "signal_strength": 40.2,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.5,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.5,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": 0.5,
-        "engagement_weighted_sentiment": 0.609,
-        "bull_count": 1,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 2
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "This week: $NVDA's loss... $AVGO and $AMD's gain \n\n$SPY +2.5%\n$RSP +2.3%\n$QQQ +3.6%\n$SMH +4.9%\n$IBIT -9%\n$GLD -5%\n$TLT -3% https://t.co/DjothYhol4",
-          "likes": 14,
-          "url": "https://x.com/MikeZaccardi/status/2121347406402892222",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Bitcoin $IBIT -18% last 6 weeks https://t.co/cyDSzVG099",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121338893928735072",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_themes": [
     {
       "theme": "原油_能源",
-      "tweet_count": 43,
-      "engagement": 34884,
-      "kol_mentions": 43,
-      "signal_strength": 80.8,
+      "tweet_count": 55,
+      "engagement": 38832,
+      "kol_mentions": 55,
+      "signal_strength": 85.3,
       "consensus": {
-        "consensus_score": 0.231,
-        "opinion_density": 0.302,
-        "kol_consensus": 0.231,
-        "bull_ratio": 0.116,
-        "bear_ratio": 0.186,
-        "neutral_ratio": 0.698,
-        "kol_weighted_sentiment": -0.076,
-        "engagement_weighted_sentiment": 0.092,
+        "consensus_score": 0.412,
+        "opinion_density": 0.309,
+        "kol_consensus": 0.412,
+        "bull_ratio": 0.091,
+        "bear_ratio": 0.218,
+        "neutral_ratio": 0.691,
+        "kol_weighted_sentiment": -0.132,
+        "engagement_weighted_sentiment": 0.047,
         "bull_count": 5,
-        "bear_count": 8,
-        "neutral_count": 30,
-        "total_count": 43
+        "bear_count": 12,
+        "neutral_count": 38,
+        "total_count": 55
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -950,23 +962,23 @@
     },
     {
       "theme": "AI_科技",
-      "tweet_count": 38,
-      "engagement": 36948,
-      "kol_mentions": 38,
-      "signal_strength": 77.3,
+      "tweet_count": 49,
+      "engagement": 57676,
+      "kol_mentions": 49,
+      "signal_strength": 82.3,
       "consensus": {
-        "consensus_score": 0.091,
-        "opinion_density": 0.289,
-        "kol_consensus": 0.091,
-        "bull_ratio": 0.132,
-        "bear_ratio": 0.158,
-        "neutral_ratio": 0.711,
-        "kol_weighted_sentiment": -0.033,
-        "engagement_weighted_sentiment": 0.255,
-        "bull_count": 5,
-        "bear_count": 6,
-        "neutral_count": 27,
-        "total_count": 38
+        "consensus_score": 0.294,
+        "opinion_density": 0.347,
+        "kol_consensus": 0.294,
+        "bull_ratio": 0.122,
+        "bear_ratio": 0.224,
+        "neutral_ratio": 0.653,
+        "kol_weighted_sentiment": -0.107,
+        "engagement_weighted_sentiment": 0.07,
+        "bull_count": 6,
+        "bear_count": 11,
+        "neutral_count": 32,
+        "total_count": 49
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -981,44 +993,44 @@
           "sentiment": "bullish"
         },
         {
-          "author": "balajis",
-          "author_name": "balajis",
-          "content": "Altimeter and Atreides together hold more than $25B in assets.\n\nElon and the founders of Uber, Shopify, Replit, and Vercel have all posted in support ",
-          "likes": 3801,
-          "url": "https://x.com/balajis/status/2121412678409478247",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: An open letter to reinstate Jensen Huang as CEO of Nvidia, $NVDA, now has over 65,000 signatures, alleging that Huang was removed \"without m",
+          "likes": 12609,
+          "url": "https://x.com/KobeissiLetter/status/2121514973809799294",
           "is_kol": true,
           "sentiment": "neutral"
         },
         {
-          "author": "aleabitoreddit",
-          "author_name": "aleabitoreddit",
-          "content": "With Elon’s involvement, the odds of Jensen rejoining as $NVDA CEO just shot up.",
-          "likes": 3097,
-          "url": "https://x.com/aleabitoreddit/status/2121349155457261991",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Elon Musk publicly questions the credibility of Nvidia's, $NVDA, board of directors amid the controversy surrounding Jensen Huang's departur",
+          "likes": 4598,
+          "url": "https://x.com/KobeissiLetter/status/2121500939680891215",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "加密货币",
-      "tweet_count": 20,
-      "engagement": 7742,
-      "kol_mentions": 20,
-      "signal_strength": 92.8,
+      "tweet_count": 34,
+      "engagement": 8396,
+      "kol_mentions": 34,
+      "signal_strength": 76.7,
       "consensus": {
-        "consensus_score": 0.714,
-        "opinion_density": 0.35,
-        "kol_consensus": 0.714,
-        "bull_ratio": 0.3,
-        "bear_ratio": 0.05,
-        "neutral_ratio": 0.65,
-        "kol_weighted_sentiment": 0.26,
-        "engagement_weighted_sentiment": 0.074,
-        "bull_count": 6,
-        "bear_count": 1,
-        "neutral_count": 13,
-        "total_count": 20
+        "consensus_score": 0.067,
+        "opinion_density": 0.441,
+        "kol_consensus": 0.067,
+        "bull_ratio": 0.235,
+        "bear_ratio": 0.206,
+        "neutral_ratio": 0.559,
+        "kol_weighted_sentiment": 0.058,
+        "engagement_weighted_sentiment": 0.027,
+        "bull_count": 8,
+        "bear_count": 7,
+        "neutral_count": 19,
+        "total_count": 34
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1054,23 +1066,23 @@
     },
     {
       "theme": "地缘政治",
-      "tweet_count": 17,
-      "engagement": 7231,
-      "kol_mentions": 17,
-      "signal_strength": 91.7,
+      "tweet_count": 25,
+      "engagement": 8144,
+      "kol_mentions": 25,
+      "signal_strength": 87.5,
       "consensus": {
-        "consensus_score": 0.667,
-        "opinion_density": 0.353,
-        "kol_consensus": 0.667,
-        "bull_ratio": 0.294,
-        "bear_ratio": 0.059,
-        "neutral_ratio": 0.647,
-        "kol_weighted_sentiment": 0.235,
-        "engagement_weighted_sentiment": 0.654,
-        "bull_count": 5,
-        "bear_count": 1,
-        "neutral_count": 11,
-        "total_count": 17
+        "consensus_score": 0.5,
+        "opinion_density": 0.32,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.24,
+        "bear_ratio": 0.08,
+        "neutral_ratio": 0.68,
+        "kol_weighted_sentiment": 0.16,
+        "engagement_weighted_sentiment": 0.568,
+        "bull_count": 6,
+        "bear_count": 2,
+        "neutral_count": 17,
+        "total_count": 25
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1094,35 +1106,35 @@
           "sentiment": "neutral"
         },
         {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Trump on midterm election results: \"I was a little bit surprised that Republicans didn't do better...I think my level of popularity maybe is higher no",
-          "likes": 483,
-          "url": "https://x.com/unusual_whales/status/2121385369711132930",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#TurkeyWatch🇹🇷: Turkey and Qatar signed a mutual defense agreement in Istanbul today. Turkey already has up to 3,000 troops stationed in Qatar.\n\nPRES.",
+          "likes": 658,
+          "url": "https://x.com/steve_hanke/status/2121476973432295658",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "宏观_利率政策",
-      "tweet_count": 13,
-      "engagement": 3291,
-      "kol_mentions": 13,
-      "signal_strength": 83.3,
+      "tweet_count": 19,
+      "engagement": 5065,
+      "kol_mentions": 19,
+      "signal_strength": 86.4,
       "consensus": {
-        "consensus_score": 0.333,
-        "opinion_density": 0.462,
-        "kol_consensus": 0.333,
-        "bull_ratio": 0.154,
-        "bear_ratio": 0.308,
-        "neutral_ratio": 0.538,
-        "kol_weighted_sentiment": -0.154,
-        "engagement_weighted_sentiment": -0.078,
-        "bull_count": 2,
-        "bear_count": 4,
-        "neutral_count": 7,
-        "total_count": 13
+        "consensus_score": 0.455,
+        "opinion_density": 0.579,
+        "kol_consensus": 0.455,
+        "bull_ratio": 0.158,
+        "bear_ratio": 0.421,
+        "neutral_ratio": 0.421,
+        "kol_weighted_sentiment": -0.263,
+        "engagement_weighted_sentiment": -0.276,
+        "bull_count": 3,
+        "bear_count": 8,
+        "neutral_count": 8,
+        "total_count": 19
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1137,6 +1149,15 @@
           "sentiment": "neutral"
         },
         {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "Elon says Tesla will gradually expand sales of the $29,990 Cybercab to the general public across the U.S. for personal use, with the $299/month autono",
+          "likes": 1624,
+          "url": "https://x.com/SawyerMerritt/status/2121496557652480009",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
           "author": "StockMKTNewz",
           "author_name": "StockMKTNewz",
           "content": "The 🇺🇸 Federal Aviation Administration issued a nationwide ground stop on Friday afternoon, “due to extraordinary circumstances.” - CNBC https://t.co/",
@@ -1144,37 +1165,28 @@
           "url": "https://x.com/StockMKTNewz/status/2121349012179820762",
           "is_kol": true,
           "sentiment": "neutral"
-        },
-        {
-          "author": "biancoresearch",
-          "author_name": "biancoresearch",
-          "content": "*US FAA LIFTS NATIONWIDE GROUND STOP, PERSON FAMILIAR SAYS\n\n*US GROUND STOP RESULTED FROM DATA OVERLOAD: TRANSPORTATION SEC.\n\n*SOFTWARE PATCH LED TO O",
-          "likes": 145,
-          "url": "https://x.com/biancoresearch/status/2121422234849832999",
-          "is_kol": true,
-          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "公司_财报",
-      "tweet_count": 7,
-      "engagement": 2512,
-      "kol_mentions": 7,
-      "signal_strength": 69.3,
+      "tweet_count": 12,
+      "engagement": 2725,
+      "kol_mentions": 12,
+      "signal_strength": 80.0,
       "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.286,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.143,
-        "bear_ratio": 0.143,
-        "neutral_ratio": 0.714,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.092,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 5,
-        "total_count": 7
+        "consensus_score": 0.2,
+        "opinion_density": 0.417,
+        "kol_consensus": 0.2,
+        "bull_ratio": 0.167,
+        "bear_ratio": 0.25,
+        "neutral_ratio": 0.583,
+        "kol_weighted_sentiment": -0.083,
+        "engagement_weighted_sentiment": -0.115,
+        "bull_count": 2,
+        "bear_count": 3,
+        "neutral_count": 7,
+        "total_count": 12
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1198,35 +1210,87 @@
           "sentiment": "bearish"
         },
         {
-          "author": "traderstewie",
-          "author_name": "traderstewie",
-          "content": "$ZETA \n\nOnly new addition to the PEG watchlist this week! One of the stronger tech(software) sector stocks out there right now! Beat earnings estimate",
-          "likes": 77,
-          "url": "https://x.com/traderstewie/status/2121356775517827194",
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "Former US Ambassador Chas Freeman on Trump privately calling Netanyahu toxic:\n\n“[Trump], like every previous president, has come to despise [Netanyahu",
+          "likes": 114,
+          "url": "https://x.com/steve_hanke/status/2121553729123954926",
           "is_kol": true,
-          "sentiment": "bullish"
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "美股_大盘",
+      "tweet_count": 9,
+      "engagement": 1514,
+      "kol_mentions": 9,
+      "signal_strength": 76.0,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.667,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.444,
+        "bear_ratio": 0.222,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": 0.212,
+        "engagement_weighted_sentiment": -0.788,
+        "bull_count": 4,
+        "bear_count": 2,
+        "neutral_count": 3,
+        "total_count": 9
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "TheStalwart",
+          "author_name": "TheStalwart",
+          "content": "When Alice Huang is referred to as an “alleged” spy, who is making the allegation?",
+          "likes": 1276,
+          "url": "https://x.com/TheStalwart/status/2121384903682003213",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "今天我已经精准锁定了btc这波回调的终极最低点。到时我把这个指标发出来，一看你们就很清楚了。现在不能发，一公开就没什么意义了。这个东西需要之后回头复盘再看。6月份的57758就是刚好精准摸到这个指标的这条线上止跌。\n\n既然btc的最低点锁定了，eth和sol就很明确了。不必盲人摸象瞎猜。",
+          "likes": 52,
+          "url": "https://x.com/jackli727/status/2121553975745147362",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "11-12月划一条红线：\n\nbtc 64000以下不追空。\neth 1742以下不追空。\nsol 72以下不追空（会最先结束回调进入横盘）\n\n这些位置下方的下跌空间已经很有限，只能低多，抄底。最后一手追空非常容易被反包。\n\n回调结束后的四步曲：触底-修复-震荡上行-加速拉升",
+          "likes": 26,
+          "url": "https://x.com/jackli727/status/2121564011003318701",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "外汇_汇率",
-      "tweet_count": 5,
-      "engagement": 573,
-      "kol_mentions": 5,
-      "signal_strength": 87.4,
+      "tweet_count": 8,
+      "engagement": 666,
+      "kol_mentions": 8,
+      "signal_strength": 90.1,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.6,
+        "opinion_density": 0.5,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.6,
-        "neutral_ratio": 0.4,
-        "kol_weighted_sentiment": -0.6,
-        "engagement_weighted_sentiment": -0.958,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.757,
         "bull_count": 0,
-        "bear_count": 3,
-        "neutral_count": 2,
-        "total_count": 5
+        "bear_count": 4,
+        "neutral_count": 4,
+        "total_count": 8
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -1250,115 +1314,11 @@
           "sentiment": "bearish"
         },
         {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Europe record high weekly close https://t.co/10waRFOLty",
-          "likes": 11,
-          "url": "https://x.com/MikeZaccardi/status/2121339680423596390",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "美股_大盘",
-      "tweet_count": 5,
-      "engagement": 1415,
-      "kol_mentions": 5,
-      "signal_strength": 74.9,
-      "consensus": {
-        "consensus_score": 0.5,
-        "opinion_density": 0.8,
-        "kol_consensus": 0.5,
-        "bull_ratio": 0.6,
-        "bear_ratio": 0.2,
-        "neutral_ratio": 0.2,
-        "kol_weighted_sentiment": 0.4,
-        "engagement_weighted_sentiment": -0.832,
-        "bull_count": 3,
-        "bear_count": 1,
-        "neutral_count": 1,
-        "total_count": 5
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "TheStalwart",
-          "author_name": "TheStalwart",
-          "content": "When Alice Huang is referred to as an “alleged” spy, who is making the allegation?",
-          "likes": 1276,
-          "url": "https://x.com/TheStalwart/status/2121384903682003213",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "ArtofSpecuycky",
-          "author_name": "ArtofSpecuycky",
-          "content": "好消息：知道今天amd要跌，昨天加到watchlist，给的最低不会低于520（最低到了520）。\n\n坏消息：最后选择买的标普的put，只是小赚）\n\n下周如果只要amd跌破ema 20和520，还能继续空，连涨6天怎么涨上去的就会怎么下来。\n\n最近行情还是适合轻仓做做日内，不能上大仓位做。 http",
-          "likes": 18,
-          "url": "https://x.com/ArtofSpecuycky/status/2121405313815630307",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "$VIX was near 21 this morning.. back under 19 amid a small afternoon recovery in stocks https://t.co/x1nCoTWR5x",
-          "likes": 17,
-          "url": "https://x.com/MikeZaccardi/status/2121338371154780262",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "theme": "美债_固定收益",
-      "tweet_count": 3,
-      "engagement": 52,
-      "kol_mentions": 3,
-      "signal_strength": 45.3,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.365,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "My view with @Wealthion on Treasury Secretary Scott Bessent's WARMONGER TENDENCIES:\n\n“He's a warmonger of the highest order. People don't understand s",
+          "content": "My take in an interview with @JanetOnTheMoney on @SiriusXM 132 on DOLLARIZATION IN VNZ:\n\n\"After having electricity blackouts for at least 8 hours a da",
           "likes": 33,
-          "url": "https://x.com/steve_hanke/status/2121378827167277304",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "BoE’s Pill signals no third term as bank chief economist when current stint ends in September 2027 - FT",
-          "likes": 4,
-          "url": "https://x.com/financialjuice/status/2121471506089751036",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "BoE chief economist: more rate hikes required to tackle inflation - FT",
-          "likes": 4,
-          "url": "https://x.com/financialjuice/status/2121468857634246688",
+          "url": "https://x.com/steve_hanke/status/2121536115123405183",
           "is_kol": true,
           "sentiment": "bearish"
         }
@@ -1366,23 +1326,23 @@
     },
     {
       "theme": "黄金_贵金属",
-      "tweet_count": 2,
-      "engagement": 120,
-      "kol_mentions": 2,
-      "signal_strength": 40.2,
+      "tweet_count": 3,
+      "engagement": 229,
+      "kol_mentions": 3,
+      "signal_strength": 43.5,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 0.5,
+        "opinion_density": 0.667,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.5,
-        "kol_weighted_sentiment": -0.5,
-        "engagement_weighted_sentiment": -0.201,
+        "bear_ratio": 0.667,
+        "neutral_ratio": 0.333,
+        "kol_weighted_sentiment": -0.667,
+        "engagement_weighted_sentiment": -0.445,
         "bull_count": 0,
-        "bear_count": 1,
+        "bear_count": 2,
         "neutral_count": 1,
-        "total_count": 2
+        "total_count": 3
       },
       "reliability": "数据不足",
       "sample_reliable": false,
@@ -1404,132 +1364,82 @@
           "url": "https://x.com/MikeZaccardi/status/2121339404727824418",
           "is_kol": true,
           "sentiment": "bearish"
+        },
+        {
+          "author": "goldseek",
+          "author_name": "goldseek",
+          "content": "RT @BNNBloomberg: Gold ‘could hit’ US$18,000 in a debt crisis: Gromen https://t.co/3S9IC4NiNA",
+          "likes": 0,
+          "url": "https://x.com/goldseek/status/2121528738215346612",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "美债_固定收益",
+      "tweet_count": 3,
+      "engagement": 60,
+      "kol_mentions": 3,
+      "signal_strength": 43.5,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.333,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.333,
+        "neutral_ratio": 0.667,
+        "kol_weighted_sentiment": -0.333,
+        "engagement_weighted_sentiment": -0.26,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 2,
+        "total_count": 3
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "top_tweets": [
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "My view with @Wealthion on Treasury Secretary Scott Bessent's WARMONGER TENDENCIES:\n\n“He's a warmonger of the highest order. People don't understand s",
+          "likes": 33,
+          "url": "https://x.com/steve_hanke/status/2121378827167277304",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "BoE’s Pill signals no third term as bank chief economist when current stint ends in September 2027 - FT",
+          "likes": 12,
+          "url": "https://x.com/financialjuice/status/2121471506089751036",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "BoE chief economist: more rate hikes required to tackle inflation - FT",
+          "likes": 4,
+          "url": "https://x.com/financialjuice/status/2121468857634246688",
+          "is_kol": true,
+          "sentiment": "bearish"
         }
       ]
     }
   ],
   "top_tweets": [
     {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoE’s Pill signals no third term as bank chief economist when current stint ends in September 2027 - FT",
-      "likes": 4,
-      "reposts": 2,
-      "replies": 1,
-      "views": 19809,
-      "created_at": "2026-11-14T05:13:16+00:00",
-      "url": "https://x.com/financialjuice/status/2121471506089751036",
-      "assets": [
-        [
-          "IEF",
-          "美债7-10年ETF"
-        ]
-      ],
-      "themes": [
-        "美债_固定收益"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Microsoft on outage: consumer product services partially restored",
-      "likes": 2,
-      "reposts": 0,
-      "replies": 1,
-      "views": 16843,
-      "created_at": "2026-11-14T05:11:05+00:00",
-      "url": "https://x.com/financialjuice/status/2121470954400358456",
-      "assets": [
-        [
-          "MSFT",
-          "微软"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoE’s Pill: concern over inflationary impact amplified by second-round effects – FT interview",
+      "author": "RyanDetrick",
+      "author_name": "RyanDetrick",
+      "content": "RT @RyanDetrick: Our proprietary @CarsonResearch LEI continues to see a solid economy and minimal risks of a recession. \n\nRemember, this LE…",
       "likes": 0,
-      "reposts": 1,
+      "reposts": 14,
       "replies": 0,
-      "views": 17410,
-      "created_at": "2026-11-14T05:09:25+00:00",
-      "url": "https://x.com/financialjuice/status/2121470534856630377",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoE's Pill: will take necessary steps to bring inflation back to 2% over time - FT interview",
-      "likes": 3,
-      "reposts": 1,
-      "replies": 0,
-      "views": 17772,
-      "created_at": "2026-11-14T05:07:10+00:00",
-      "url": "https://x.com/financialjuice/status/2121469967988400487",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoE’s Pill: my view is we will see proof that prompts additional rate hikes - FT interview",
-      "likes": 1,
-      "reposts": 1,
-      "replies": 0,
-      "views": 17729,
-      "created_at": "2026-11-14T05:06:41+00:00",
-      "url": "https://x.com/financialjuice/status/2121469847926079948",
-      "assets": [],
-      "themes": [
-        "宏观_利率政策"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "2023我就是这么每天开着20倍的币本位，在2023.10-2024.3五个多月里从30多一口气做多到206搞到7k多个sol的，每天赚几十个sol就收。当时我比较保守，每天固定就是只开25-30个sol小仓位，强平远离成本40点，无一磨损，无一开空。就是开的仓位小，所以那5个多月才赚了7k多个sol。如果按有些大哥说的，开100 https://t.co/0iMRRlXxOJ",
-      "likes": 6,
-      "reposts": 0,
-      "replies": 1,
-      "views": 980,
-      "created_at": "2026-11-14T05:02:55+00:00",
-      "url": "https://x.com/jackli727/status/2121468900072435849",
+      "views": 0,
+      "created_at": "2026-11-14T13:18:57+00:00",
+      "url": "https://x.com/RyanDetrick/status/2121593729710424355",
       "assets": [
         [
           "SOL",
@@ -1537,255 +1447,53 @@
         ]
       ],
       "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "BoE chief economist: more rate hikes required to tackle inflation - FT",
-      "likes": 4,
-      "reposts": 0,
-      "replies": 5,
-      "views": 19040,
-      "created_at": "2026-11-14T05:02:45+00:00",
-      "url": "https://x.com/financialjuice/status/2121468857634246688",
-      "assets": [
-        [
-          "IEF",
-          "美债7-10年ETF"
-        ]
-      ],
-      "themes": [
-        "宏观_利率政策",
-        "美债_固定收益"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "Pax Silica means peace. In the Philippines, it’s a fight https://t.co/MnILyGi2xT",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 0,
-      "views": 1202,
-      "created_at": "2026-11-14T05:02:38+00:00",
-      "url": "https://x.com/SCMPNews/status/2121468831000326228",
-      "assets": [],
-      "themes": [
+        "加密货币",
         "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "WallStreet0Name",
-      "author_name": "WallStreet0Name",
-      "content": "比特币大周期更新\n\n我暂时认为是图一，不破57800，底部是一个区间\n从现在到明年年初都是建仓现货的时间窗口。\n（前提是没有金融危机）\n\n另一个就是空军眼里的大周期了，图二。 https://t.co/8sHbaljtmx",
-      "likes": 84,
-      "reposts": 7,
-      "replies": 20,
-      "views": 10370,
-      "created_at": "2026-11-14T04:56:11+00:00",
-      "url": "https://x.com/WallStreet0Name/status/2121467204453707833",
-      "assets": [],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "My view with @Wealthion on why local communities don't embrace AI data centers:\n\n“You have a spurt in economic activity when you're building data centers, but then when they're built, they only employ a few people. Data centers are capital intensive. They're not labor intensive.” https://t.co/5cE2xLrvII",
-      "likes": 4,
-      "reposts": 3,
-      "replies": 2,
-      "views": 5174,
-      "created_at": "2026-11-14T04:45:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2121464390390034500",
-      "assets": [],
-      "themes": [
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "What do you think of Tesla's $299/month Cybercab Autonomy Subscription, which includes all of the following:\n\n• FSD Unsupervised within Tesla's Robotaxi geofences\n• Tire replacements &amp; flat tire replacements, inspections &amp; rotations\n• Premium Connectivity\n• Windshield",
-      "likes": 589,
-      "reposts": 39,
-      "replies": 221,
-      "views": 41935,
-      "created_at": "2026-11-14T04:31:36+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2121461020069593382",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Microsoft on outage: services across previously impacted environments have been restored",
-      "likes": 14,
-      "reposts": 2,
-      "replies": 1,
-      "views": 27530,
-      "created_at": "2026-11-14T03:59:57+00:00",
-      "url": "https://x.com/financialjuice/status/2121453056370094287",
-      "assets": [
-        [
-          "MSFT",
-          "微软"
-        ]
-      ],
-      "themes": [
-        "原油_能源",
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
       "sentiment": "bearish",
       "sentiment_score": -1.0,
       "sentiment_intensity": 0.167
     },
     {
-      "author": "WallStreet0Name",
-      "author_name": "WallStreet0Name",
-      "content": "关于比特币的最新思路，本来不想更新了，奈何这两个视频的浏览量20万\n还是进行一个完载吧。\n\n建议：\n1）尽量不要在支撑太过于明显的6.7万的区间进行开多，如果你想开，请带好止损。 https://t.co/mLItwPZ8bm",
-      "likes": 239,
-      "reposts": 24,
-      "replies": 28,
-      "views": 23564,
-      "created_at": "2026-11-14T03:48:27+00:00",
-      "url": "https://x.com/WallStreet0Name/status/2121450162124103977",
+      "author": "RyanDetrick",
+      "author_name": "RyanDetrick",
+      "content": "I joined @KellyCNBC on @CNBCTheExchange to discuss a rare and potentially quite bullish move out of chip stocks this week. Thanks for having me back!\n\nhttps://t.co/y21iyZFyae https://t.co/emVh14lO8U",
+      "likes": 1,
+      "reposts": 0,
+      "replies": 1,
+      "views": 1334,
+      "created_at": "2026-11-14T13:18:07+00:00",
+      "url": "https://x.com/RyanDetrick/status/2121593521710751889",
       "assets": [],
       "themes": [
-        "加密货币"
+        "AI_科技"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "bullish",
       "sentiment_score": 1.0,
-      "sentiment_intensity": 0.167
+      "sentiment_intensity": 0.667
     },
     {
-      "author": "donnelly_brent",
-      "author_name": "donnelly_brent",
-      "content": "RT @SecDuffy: For years, severe weather could mean hours of delays for your flights. We’re changing that.\n\n@FAANews is expanding its SMART…",
-      "likes": 0,
-      "reposts": 1028,
-      "replies": 0,
-      "views": 806,
-      "created_at": "2026-11-14T03:26:56+00:00",
-      "url": "https://x.com/donnelly_brent/status/2121444747109917047",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Last year, 52 tankers crossed the Strait of Hormuz on November 12.\n\nThis year, 1 tanker crossed on November 12.\n\nCONTRARY TO PRES. TRUMP'S MUSINGS, THE STRAIT IS, FOR ALL PRACTICAL PURPOSES, CLOSED. https://t.co/jB60G8gj5I",
-      "likes": 33,
-      "reposts": 5,
-      "replies": 4,
-      "views": 6583,
-      "created_at": "2026-11-14T03:26:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2121444509502304360",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "eth现在1912-1919都有阻力。这是1900上方的屏障，1900下方的屏障是1892-1880，刚才已经初步跌破了，所以1900马上要正儿八经的失守。 https://t.co/oJhCJxXXZK",
-      "likes": 3,
+      "author": "bespokeinvest",
+      "author_name": "bespokeinvest",
+      "content": "After a huge late-summer rally, Bitcoin $BTC peaked on 9/21 and has trended lower ever since.  It’s now deep into oversold territory as the drawdown approaches 20%.  Here’s a look at technicals: https://t.co/0hcxF8tDCH",
+      "likes": 2,
       "reposts": 0,
       "replies": 0,
-      "views": 2624,
-      "created_at": "2026-11-14T03:22:56+00:00",
-      "url": "https://x.com/jackli727/status/2121443738946089168",
+      "views": 1291,
+      "created_at": "2026-11-14T13:06:41+00:00",
+      "url": "https://x.com/bespokeinvest/status/2121590643889983717",
       "assets": [
         [
-          "ETH",
-          "以太坊"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla will deliver a fully unsupervised self-driving vehicle for $29,990 (plus sub) with no steering wheel or pedals next month, yet some claim it’s not real because it’s “invite only” right now.\n\nShoutout to the Tesla team for delivering on something many people said wouldn't https://t.co/z1lKtzHsKq",
-      "likes": 1308,
-      "reposts": 79,
-      "replies": 114,
-      "views": 47767,
-      "created_at": "2026-11-14T03:17:39+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2121442411121426694",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
+          "BTC",
+          "比特币"
         ],
         [
-          "ETH",
-          "以太坊"
+          "SOL",
+          "Solana"
         ]
       ],
       "themes": [
@@ -1796,18 +1504,68 @@
       "is_kol": true,
       "sentiment": "neutral",
       "sentiment_score": 0.0,
+      "sentiment_intensity": 0.667
+    },
+    {
+      "author": "WallStreet0Name",
+      "author_name": "WallStreet0Name",
+      "content": "Gemini: BlG赢，BLG 3:2 GEN\n\nGrok: GEN赢，GEN 3:1BLG\n\nChatgpt: GEN赢，GEN 3:1BLG\n\nClaude被封了，不让他上桌了。",
+      "likes": 10,
+      "reposts": 0,
+      "replies": 9,
+      "views": 3008,
+      "created_at": "2026-11-14T13:06:16+00:00",
+      "url": "https://x.com/WallStreet0Name/status/2121590541439906021",
+      "assets": [],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
       "sentiment_intensity": 0.0
     },
     {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "RT @JosephTorigian: After many years of research, and on the eve of a historic Putin-Xi-Trump meeting, my 80-page treatment of the 1969 fig…",
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Wei Li BlackRock... lots of sigmas... \n\n5-standard-deviation $SPX move on Thurs, Nov 5\n7-sigma event on the $VIX \n\nNormal distributions break down in the tails. In a #polyfurcated world, wildly different scenarios carry equal odds. https://t.co/slbMjlgtk9",
+      "likes": 5,
+      "reposts": 2,
+      "replies": 1,
+      "views": 1199,
+      "created_at": "2026-11-14T12:53:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2121587201624399985",
+      "assets": [
+        [
+          "SPX",
+          "SPX"
+        ],
+        [
+          "VIX",
+          "恐慌指数"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "bespokeinvest",
+      "author_name": "bespokeinvest",
+      "content": "RT @bespokeinvest: The Magazine Cover Indicator seems to never fail.  Is the low in? https://t.co/Wtw1QlZt5v",
       "likes": 0,
-      "reposts": 105,
+      "reposts": 16,
       "replies": 0,
-      "views": 1137,
-      "created_at": "2026-11-14T03:11:21+00:00",
-      "url": "https://x.com/TheStalwart/status/2121440823824748883",
+      "views": 0,
+      "created_at": "2026-11-14T12:45:40+00:00",
+      "url": "https://x.com/bespokeinvest/status/2121585354176086229",
       "assets": [],
       "themes": [
         "原油_能源"
@@ -1819,48 +1577,64 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "昨晚btc反弹70125附近接空，现在7w成了天花板。现在反弹67750-67880就可以再空、补仓。66455-66200有支撑。再下去这里止盈一部分。然后再下去64450是一道重要的支撑，也有反弹。64450跌破就明确二探58000。6.4w以下不能追空。容易被反包。 https://t.co/NG7eRxOcDw",
-      "likes": 15,
-      "reposts": 0,
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "GS Robin Brooks: The Fed should not hike 50bps on Dec 9th @seekingalpha https://t.co/EcclRtlc1i",
+      "likes": 4,
+      "reposts": 1,
       "replies": 1,
-      "views": 3992,
-      "created_at": "2026-11-14T02:55:11+00:00",
-      "url": "https://x.com/jackli727/status/2121436753529815523",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
+      "views": 1624,
+      "created_at": "2026-11-14T12:38:30+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2121583551967625529",
+      "assets": [],
       "themes": [
-        "加密货币"
+        "宏观_利率政策"
       ],
       "quality_score": 0.0,
       "is_kol": true,
       "sentiment": "neutral",
-      "sentiment_score": 0.2,
-      "sentiment_intensity": 0.833
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "jackli727",
-      "author_name": "jackli727",
-      "content": "btc 70000附近的空单成本具有优势，往下走，不管怎么止盈，25%底仓可以拿住，最多就是保本走、但一旦跌破67000，瞬间浮盈就扩大到4-5k点+。这时反弹一点补仓你就可以随心所欲。，赚多赚少全凭你主宰。\n\n同样，昨晚eth",
-      "likes": 12,
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "On the Nvidia situation:\n\nNvidia's board can still make things right.\n\nIt has now been 48 hours since Jensen Huang resigned from his role as CEO, President, and board member of Nvidia.\n\nMeanwhile, a thorough investigation has not been completed, countless critical questions are",
+      "likes": 1798,
+      "reposts": 157,
+      "replies": 215,
+      "views": 132368,
+      "created_at": "2026-11-14T12:32:25+00:00",
+      "url": "https://x.com/KobeissiLetter/status/2121582019138171310",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Bitcoin $67k... -33% YoY https://t.co/oUORtsEYbM",
+      "likes": 11,
       "reposts": 0,
-      "replies": 1,
-      "views": 3831,
-      "created_at": "2026-11-14T02:27:06+00:00",
-      "url": "https://x.com/jackli727/status/2121429689483006396",
+      "replies": 4,
+      "views": 1849,
+      "created_at": "2026-11-14T12:31:00+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2121581665294184486",
       "assets": [
         [
           "BTC",
           "比特币"
-        ],
-        [
-          "ETH",
-          "以太坊"
         ]
       ],
       "themes": [
@@ -1870,7 +1644,311 @@
       "is_kol": true,
       "sentiment": "neutral",
       "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "Massive week ahead for markets 📈\n\n• Earnings: $NVDA $WMT $HD $DIS $TGT $BABA\n• Retail Sales &amp; 13F filings\n• FOMC Minutes + heavy Fedspeak\n• APEC Trump/Xi/Putin Weds-Thurs\n• Anthropic's $1T+ IPO debuts Thu\n• $TTWO drops GTA 6; Las Vegas F1 begins",
+      "likes": 5,
+      "reposts": 1,
+      "replies": 2,
+      "views": 1960,
+      "created_at": "2026-11-14T12:23:30+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2121579775265305003",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ],
+        [
+          "WMT",
+          "WMT"
+        ],
+        [
+          "HD",
+          "HD"
+        ],
+        [
+          "DIS",
+          "DIS"
+        ],
+        [
+          "TGT",
+          "TGT"
+        ],
+        [
+          "BABA",
+          "BABA"
+        ],
+        [
+          "TTWO",
+          "TTWO"
+        ]
+      ],
+      "themes": [
+        "宏观_利率政策",
+        "AI_科技",
+        "公司_财报",
+        "A股_港股",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Italy’s data protection authority fines Meta Platforms €805 million over alleged use of videos and photos of Android users without consent",
+      "likes": 20,
+      "reposts": 0,
+      "replies": 4,
+      "views": 30773,
+      "created_at": "2026-11-14T12:18:37+00:00",
+      "url": "https://x.com/financialjuice/status/2121578546577522865",
+      "assets": [
+        [
+          "META",
+          "Meta"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "convertbond",
+      "author_name": "convertbond",
+      "content": "Similar to Lehman - a board of directors at Nvidia grossly under-qualified to oversee $1T of on and off balance sheet counterparty risk, stacked across equity and leveraged debt commitments. We are staring down the barrel at the expensive corporate governance failure all time.",
+      "likes": 42,
+      "reposts": 5,
+      "replies": 2,
+      "views": 4108,
+      "created_at": "2026-11-14T12:06:23+00:00",
+      "url": "https://x.com/convertbond/status/2121575469082390645",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "原油_能源",
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "S&amp;P 500 forward non-GAAP EPS estimate reaches a new high of $417 @dualityresearch https://t.co/1iv4TJ8hfA",
+      "likes": 7,
+      "reposts": 0,
+      "replies": 1,
+      "views": 2347,
+      "created_at": "2026-11-14T12:01:01+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2121574117333696660",
+      "assets": [],
+      "themes": [
+        "公司_财报",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "BobEUnlimited",
+      "author_name": "BobEUnlimited",
+      "content": "Great MacroTalk this week with @AahanPrometheus as we worked through the big shift from inflation uncertainty to growth uncertainty ahead.  Plus, a new way to enjoy cinnamon toast crunch.  Check it out!\n\nhttps://t.co/Q6TdLs9S2C",
+      "likes": 7,
+      "reposts": 0,
+      "replies": 3,
+      "views": 6649,
+      "created_at": "2026-11-14T11:58:25+00:00",
+      "url": "https://x.com/BobEUnlimited/status/2121573465262260517",
+      "assets": [
+        [
+          "ETH",
+          "以太坊"
+        ]
+      ],
+      "themes": [
+        "加密货币",
+        "宏观_利率政策"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.167
+    },
+    {
+      "author": "MikeZaccardi",
+      "author_name": "MikeZaccardi",
+      "content": "T at Apollo: With Q4 GDP tracking at 3.5%, an AI boom, and leading indicators pointing toward 6% PCE inflation, the Fed is falling behind the curve. \n\nExpect far more rate hikes than markets price in. https://t.co/9ch8X0OcoY",
+      "likes": 5,
+      "reposts": 0,
+      "replies": 3,
+      "views": 2643,
+      "created_at": "2026-11-14T11:52:33+00:00",
+      "url": "https://x.com/MikeZaccardi/status/2121571986337841544",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.333
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "NYU Prof. Aswath Damodaran, the world's leading valuation expert, estimates that all AI products generate only ~$250 BILLION in revenue a year.\n\nThis year, the four biggest hyperscalers are spending ~$725 BILLION on AI data centers.\n\nWELCOME TO THE AI BUBBLE. https://t.co/GBIVe4evWD",
+      "likes": 31,
+      "reposts": 6,
+      "replies": 7,
+      "views": 7601,
+      "created_at": "2026-11-14T11:25:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2121565053761814888",
+      "assets": [],
+      "themes": [
+        "公司_财报",
+        "原油_能源",
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "11-12月划一条红线：\n\nbtc 64000以下不追空。\neth 1742以下不追空。\nsol 72以下不追空（会最先结束回调进入横盘）\n\n这些位置下方的下跌空间已经很有限，只能低多，抄底。最后一手追空非常容易被反包。\n\n回调结束后的四步曲：触底-修复-震荡上行-加速拉升",
+      "likes": 26,
+      "reposts": 2,
+      "replies": 6,
+      "views": 3345,
+      "created_at": "2026-11-14T11:20:51+00:00",
+      "url": "https://x.com/jackli727/status/2121564011003318701",
+      "assets": [
+        [
+          "BTC",
+          "比特币"
+        ],
+        [
+          "ETH",
+          "以太坊"
+        ],
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "加密货币",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": -0.091,
+      "sentiment_intensity": 1.0
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "今天我已经精准锁定了btc这波回调的终极最低点。到时我把这个指标发出来，一看你们就很清楚了。现在不能发，一公开就没什么意义了。这个东西需要之后回头复盘再看。6月份的57758就是刚好精准摸到这个指标的这条线上止跌。\n\n既然btc的最低点锁定了，eth和sol就很明确了。不必盲人摸象瞎猜。",
+      "likes": 52,
+      "reposts": 3,
+      "replies": 14,
+      "views": 7033,
+      "created_at": "2026-11-14T10:40:59+00:00",
+      "url": "https://x.com/jackli727/status/2121553975745147362",
+      "assets": [
+        [
+          "BTC",
+          "比特币"
+        ],
+        [
+          "ETH",
+          "以太坊"
+        ],
+        [
+          "SOL",
+          "Solana"
+        ]
+      ],
+      "themes": [
+        "加密货币",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bearish",
+      "sentiment_score": -1.0,
       "sentiment_intensity": 0.667
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "Former US Ambassador Chas Freeman on Trump privately calling Netanyahu toxic:\n\n“[Trump], like every previous president, has come to despise [Netanyahu], but [Netanyahu] has some sort of hold on Donald Trump. We don't know what it is. Maybe it's the Epstein files.” https://t.co/UnTlns2u33",
+      "likes": 114,
+      "reposts": 30,
+      "replies": 11,
+      "views": 9827,
+      "created_at": "2026-11-14T10:40:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2121553729123954926",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "168X_Fortune",
+      "author_name": "168X_Fortune",
+      "content": "“Intel 为什么被我从抄底名单移出？\n 当时吸引我的，是先进制程和先进封装可能有突破，未来有机会不只靠政策支持\n 但后面的财报让我很失望，选举后市场对政策支持路径的预期也变了\n EMIB 封装良率的讨论增加了不确定性，我不会把听来的良率数字当成已核实的事实",
+      "likes": 3,
+      "reposts": 0,
+      "replies": 0,
+      "views": 1861,
+      "created_at": "2026-11-14T10:23:34+00:00",
+      "url": "https://x.com/168X_Fortune/status/2121549594026975678",
+      "assets": [],
+      "themes": [
+        "公司_财报",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 1.0
     }
   ],
   "kol_summary": [
@@ -1893,6 +1971,24 @@
       "sentiment_score": 1.0
     },
     {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: An open letter to reinstate Jensen Huang as CEO of Nvidia, $NVDA, now has over 65,000 signatures, alleging that Huang was removed \"without meaningful due process.\"\n\nThe letter has been signed by more than 35,000 shareholders and 4,700 current and former Nvidia",
+      "likes": 12609,
+      "url": "https://x.com/KobeissiLetter/status/2121514973809799294",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "SawyerMerritt",
       "author_name": "SawyerMerritt",
       "content": "BREAKING: Tesla has officially started inviting select customers in Austin to order Cybercabs for personal use! This is real.\n\n• Price for Cybercab: $29,990\n• $299/month Autonomy Subscription. One month included with purchase. Subscription and regular vehicle maintenance https://t.co/2NOTOdq9r5",
@@ -1909,6 +2005,24 @@
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "BREAKING: Elon Musk publicly questions the credibility of Nvidia's, $NVDA, board of directors amid the controversy surrounding Jensen Huang's departure as CEO.\n\n\"This is the board making decisions about what used to be the most valuable company on Earth!?\" Musk said.\n\nNvidia's",
+      "likes": 4598,
+      "url": "https://x.com/KobeissiLetter/status/2121500939680891215",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
     },
     {
       "author": "unusual_whales",
@@ -1982,6 +2096,24 @@
       ],
       "sentiment": "bearish",
       "sentiment_score": -1.0
+    },
+    {
+      "author": "SawyerMerritt",
+      "author_name": "SawyerMerritt",
+      "content": "What do you think of Tesla's $299/month Cybercab Autonomy Subscription, which includes all of the following:\n\n• FSD Unsupervised within Tesla's Robotaxi geofences\n• Tire replacements &amp; flat tire replacements, inspections &amp; rotations\n• Premium Connectivity\n• Windshield",
+      "likes": 2191,
+      "url": "https://x.com/SawyerMerritt/status/2121461020069593382",
+      "assets": [
+        [
+          "TSLA",
+          "特斯拉"
+        ]
+      ],
+      "themes": [
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
     },
     {
       "author": "SawyerMerritt",
@@ -2074,29 +2206,11 @@
       "sentiment_score": 0.0
     },
     {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla has invited Marques to order a Cybercab for personal use.",
-      "likes": 1581,
-      "url": "https://x.com/SawyerMerritt/status/2121427932425990359",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ]
-      ],
-      "themes": [
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "StockMKTNewz",
-      "author_name": "StockMKTNewz",
-      "content": "BRAD GERSTNER AND GAVIN BAKER JUST SAID THIS LETTER TO NVIDIA'S $NVDA BOARD OF DIRECTORS\n\n\"To the Distinguished Nvidia Board,\n\nWe write as shareholders to share a view that we believe is widely agreed to among shareholders and to make a simple request.\n\nGiven the extraordinary https://t.co/MY0iPgXP7d",
-      "likes": 1490,
-      "url": "https://x.com/StockMKTNewz/status/2121390884293836841",
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "On the Nvidia situation:\n\nNvidia's board can still make things right.\n\nIt has now been 48 hours since Jensen Huang resigned from his role as CEO, President, and board member of Nvidia.\n\nMeanwhile, a thorough investigation has not been completed, countless critical questions are",
+      "likes": 1798,
+      "url": "https://x.com/KobeissiLetter/status/2121582019138171310",
       "assets": [
         [
           "NVDA",
@@ -2104,52 +2218,12 @@
         ]
       ],
       "themes": [
-        "AI_科技",
-        "原油_能源"
+        "AI_科技"
       ],
       "sentiment": "neutral",
       "sentiment_score": 0.0
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "Tesla will deliver a fully unsupervised self-driving vehicle for $29,990 (plus sub) with no steering wheel or pedals next month, yet some claim it’s not real because it’s “invite only” right now.\n\nShoutout to the Tesla team for delivering on something many people said wouldn't https://t.co/z1lKtzHsKq",
-      "likes": 1308,
-      "url": "https://x.com/SawyerMerritt/status/2121442411121426694",
-      "assets": [
-        [
-          "TSLA",
-          "特斯拉"
-        ],
-        [
-          "ETH",
-          "以太坊"
-        ]
-      ],
-      "themes": [
-        "加密货币",
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
-      "author": "TheStalwart",
-      "author_name": "TheStalwart",
-      "content": "When Alice Huang is referred to as an “alleged” spy, who is making the allegation?",
-      "likes": 1276,
-      "url": "https://x.com/TheStalwart/status/2121384903682003213",
-      "assets": [
-        [
-          "SPY",
-          "标普500ETF"
-        ]
-      ],
-      "themes": [
-        "美股_大盘"
-      ],
-      "sentiment": "bearish",
-      "sentiment_score": -1.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
