@@ -1,39 +1,255 @@
 {
-  "generated_at": "2026-11-15T06:51:08.096068",
+  "generated_at": "2026-11-15T11:00:28.330869",
   "stats": {
-    "total_tweets": 35,
-    "kol_tweets": 35,
-    "unique_authors": 16,
-    "kol_count": 16,
-    "total_likes": 72131,
-    "total_reposts": 7970,
-    "total_replies": 2670,
-    "total_views": 4073671,
-    "unique_assets": 13,
-    "unique_themes": 9
+    "total_tweets": 168,
+    "kol_tweets": 87,
+    "unique_authors": 30,
+    "kol_count": 30,
+    "total_likes": 83620,
+    "total_reposts": 15555,
+    "total_replies": 3693,
+    "total_views": 6074773,
+    "unique_assets": 16,
+    "unique_themes": 11,
+    "classified_tweets": 87,
+    "kols_total": 92,
+    "kols_ok": 92
   },
   "overall_market_sentiment": {
-    "consensus_score": 0.6,
-    "opinion_density": 0.429,
-    "kol_consensus": 0.6,
-    "bull_ratio": 0.086,
-    "bear_ratio": 0.343,
-    "neutral_ratio": 0.571,
-    "kol_weighted_sentiment": -0.257,
-    "engagement_weighted_sentiment": 0.144,
-    "bull_count": 3,
-    "bear_count": 12,
-    "neutral_count": 20,
-    "total_count": 35
+    "consensus_score": 0.125,
+    "opinion_density": 0.368,
+    "kol_consensus": 0.125,
+    "bull_ratio": 0.161,
+    "bear_ratio": 0.207,
+    "neutral_ratio": 0.632,
+    "kol_weighted_sentiment": -0.065,
+    "engagement_weighted_sentiment": 0.09,
+    "bull_count": 14,
+    "bear_count": 18,
+    "neutral_count": 55,
+    "total_count": 87
   },
   "top_assets": [
+    {
+      "symbol": "ETH",
+      "name": "以太坊",
+      "mention_count": 11,
+      "engagement": 10022,
+      "kol_mentions": 11,
+      "signal_strength": 90.0,
+      "consensus": {
+        "consensus_score": 0.6,
+        "opinion_density": 0.455,
+        "kol_consensus": 0.6,
+        "bull_ratio": 0.364,
+        "bear_ratio": 0.091,
+        "neutral_ratio": 0.545,
+        "kol_weighted_sentiment": 0.27,
+        "engagement_weighted_sentiment": -0.365,
+        "bull_count": 4,
+        "bear_count": 1,
+        "neutral_count": 6,
+        "total_count": 11
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "BillAckman",
+          "author_name": "BillAckman",
+          "content": "It brings tears. \n\nSomething we can all be happy about.",
+          "likes": 6390,
+          "url": "https://x.com/BillAckman/status/2121738680134238657",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Bitcoin falls below $65,000 and ETH falls below $1,750 as total liquidations hit $1.8 billion over the last 24 hours.\n\nCrypto markets have now erased -$330 billion in market cap this week. h",
+          "likes": 2932,
+          "url": "https://x.com/KobeissiLetter/status/2121716781534314731",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "eth",
+          "likes": 29,
+          "url": "https://x.com/jackli727/status/2121827654789742947",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#EthiopiaWatch🇪🇹: Ethiopia accuses ERITREA of launching a military offensive in Tigray, with EGYPT providing logistical support.\n\nOLD RIVALRIES + NEW OFFENSIVES = A RECIPE FOR REGIONAL WAR. https://t.",
+          "likes": 29,
+          "url": "https://x.com/steve_hanke/status/2121812182019240021",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "这次的终极底部，你光看周线这个指标远远不够，你还得看它的上一级领导-10日线。如果你逢低做多，你就要针对最后一次加速下跌时做最坏的打算，要考虑“针”的部分。比如你eth",
+          "likes": 23,
+          "url": "https://x.com/jackli727/status/2121829710934257919",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "BTC",
+      "name": "比特币",
+      "mention_count": 8,
+      "engagement": 6112,
+      "kol_mentions": 8,
+      "signal_strength": 100.0,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 0.625,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.625,
+        "neutral_ratio": 0.375,
+        "kol_weighted_sentiment": -0.6,
+        "engagement_weighted_sentiment": -0.965,
+        "bull_count": 0,
+        "bear_count": 5,
+        "neutral_count": 3,
+        "total_count": 8
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Bitcoin falls below $65,000 and ETH falls below $1,750 as total liquidations hit $1.8 billion over the last 24 hours.\n\nCrypto markets have now erased -$330 billion in market cap this week. h",
+          "likes": 2932,
+          "url": "https://x.com/KobeissiLetter/status/2121716781534314731",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "Crypto is having an absolutely brutal weekend.\n\nBitcoin is now down -$5,000 today and -$11,000 over the last 3 days, marking one of its steepest drawdowns in months.\n\nSelling pressure is accelerating ",
+          "likes": 2108,
+          "url": "https://x.com/KobeissiLetter/status/2121729777891496181",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "StockMKTNewz",
+          "author_name": "StockMKTNewz",
+          "content": "Bitcoin $BTC just dropped back under $63K \n\n🔴 https://t.co/2ARYhyeMWO",
+          "likes": 349,
+          "url": "https://x.com/StockMKTNewz/status/2121772800776253830",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "Bitcoin falls 5.3% to $64,733.68",
+          "likes": 113,
+          "url": "https://x.com/financialjuice/status/2121709041756041726",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Bitcoin &lt; $63k\n\n-34% YoY\n-28% YTD https://t.co/ZqTgvoLizl",
+          "likes": 73,
+          "url": "https://x.com/MikeZaccardi/status/2121772659654422975",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "name": "英伟达",
+      "mention_count": 6,
+      "engagement": 5058,
+      "kol_mentions": 6,
+      "signal_strength": 72.6,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 6,
+        "total_count": 6
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "sample_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Jensen Huang’s two children both work at Nvidia, per The Information.\n\nMadison Huang, a senior director in Nvidia’s Omniverse simulation group, earned more than $1 million in 2024. She trained at the ",
+          "likes": 3085,
+          "url": "https://x.com/unusual_whales/status/2121770407221166239",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "Western media coverage of $NVDA and Jensen Huang have reached a point\n\nWhere it even gives Chinese people more pride in CCP state media.\n\nVery dark times for Western journalism. https://t.co/oJ8eEgOID",
+          "likes": 1602,
+          "url": "https://x.com/aleabitoreddit/status/2121852636261724398",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Options now trade 2 hrs before the open, 15 min after the close. \n\nFrom Oct 19, trade options with more flexibility on moomoo for 30 major names like NVDA, GOOG, SPY, QQQ. \n\nNew users get up",
+          "likes": 78,
+          "url": "https://x.com/unusual_whales/status/2121879513336631330",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "The most interesting lesson Jensen Huang taught me\n\nAnd gave PTSD to Google executives over from his leadership at $NVDA:\n\nWas that if a critical material can be bought out for spare change eg. ~$400m",
+          "likes": 46,
+          "url": "https://x.com/aleabitoreddit/status/2121918080293196209",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "bespokeinvest",
+          "author_name": "bespokeinvest",
+          "content": "No one was happier to see this week end than Nvidia $NVDA shareholders. Heading into Friday afternoon trading, the stock was down 14% this week and trading at its lowest levels since last summer. News",
+          "likes": 10,
+          "url": "https://x.com/bespokeinvest/status/2121716161079292200",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
     {
       "symbol": "SOL",
       "name": "Solana",
       "mention_count": 4,
-      "engagement": 3086,
+      "engagement": 3755,
       "kol_mentions": 4,
-      "signal_strength": 60.0,
+      "signal_strength": 53.0,
       "consensus": {
         "consensus_score": 1.0,
         "opinion_density": 0.5,
@@ -42,7 +258,7 @@
         "bear_ratio": 0.5,
         "neutral_ratio": 0.5,
         "kol_weighted_sentiment": -0.5,
-        "engagement_weighted_sentiment": -0.915,
+        "engagement_weighted_sentiment": -0.932,
         "bull_count": 0,
         "bear_count": 2,
         "neutral_count": 2,
@@ -64,7 +280,7 @@
           "author": "unusual_whales",
           "author_name": "unusual_whales",
           "content": "UK households face a “painful” few years, as forecasts show living standards barely growing, per the BBC.\n\nTypical working-age households will see disposable income fall by £1,050, or 3%, by 2029, per",
-          "likes": 324,
+          "likes": 940,
           "url": "https://x.com/unusual_whales/status/2121755307793850808",
           "is_kol": true,
           "sentiment": "bearish"
@@ -90,315 +306,25 @@
       ]
     },
     {
-      "symbol": "ETH",
-      "name": "以太坊",
-      "mention_count": 3,
-      "engagement": 9884,
-      "kol_mentions": 3,
-      "signal_strength": 42.0,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.667,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.333,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.333,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": -0.401,
-        "bull_count": 1,
-        "bear_count": 1,
-        "neutral_count": 1,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "BillAckman",
-          "author_name": "BillAckman",
-          "content": "It brings tears. \n\nSomething we can all be happy about.",
-          "likes": 6390,
-          "url": "https://x.com/BillAckman/status/2121738680134238657",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Bitcoin falls below $65,000 and ETH falls below $1,750 as total liquidations hit $1.8 billion over the last 24 hours.\n\nCrypto markets have now erased -$330 billion in market cap this week. h",
-          "likes": 2932,
-          "url": "https://x.com/KobeissiLetter/status/2121716781534314731",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "bespokeinvest",
-          "author_name": "bespokeinvest",
-          "content": "Contrarians like to keep an eye on what major media outlets are saying. The reason isn't that they're ahead of the curve; it's usually the opposite. The basic assumption is that by the time something ",
-          "likes": 12,
-          "url": "https://x.com/bespokeinvest/status/2121714552681509069",
-          "is_kol": true,
-          "sentiment": "bullish"
-        }
-      ]
-    },
-    {
-      "symbol": "BTC",
-      "name": "比特币",
-      "mention_count": 3,
-      "engagement": 5552,
-      "kol_mentions": 3,
-      "signal_strength": 57.0,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 1.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": -1.0,
-        "engagement_weighted_sentiment": -1.0,
-        "bull_count": 0,
-        "bear_count": 3,
-        "neutral_count": 0,
-        "total_count": 3
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Bitcoin falls below $65,000 and ETH falls below $1,750 as total liquidations hit $1.8 billion over the last 24 hours.\n\nCrypto markets have now erased -$330 billion in market cap this week. h",
-          "likes": 2932,
-          "url": "https://x.com/KobeissiLetter/status/2121716781534314731",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "Crypto is having an absolutely brutal weekend.\n\nBitcoin is now down -$5,000 today and -$11,000 over the last 3 days, marking one of its steepest drawdowns in months.\n\nSelling pressure is accelerating ",
-          "likes": 2108,
-          "url": "https://x.com/KobeissiLetter/status/2121729777891496181",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Bitcoin falls 5.3% to $64,733.68",
-          "likes": 113,
-          "url": "https://x.com/financialjuice/status/2121709041756041726",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
-      "symbol": "NVDA",
-      "name": "英伟达",
-      "mention_count": 2,
-      "engagement": 18,
-      "kol_mentions": 2,
-      "signal_strength": 34.4,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 2,
-        "total_count": 2
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "bespokeinvest",
-          "author_name": "bespokeinvest",
-          "content": "No one was happier to see this week end than Nvidia $NVDA shareholders. Heading into Friday afternoon trading, the stock was down 14% this week and trading at its lowest levels since last summer. News",
-          "likes": 10,
-          "url": "https://x.com/bespokeinvest/status/2121716161079292200",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "Hedgeye",
-          "author_name": "Hedgeye",
-          "content": "RT @Mike_Taylor1972: $NVDA: an inventory problem soon to be a rev recognition problem. \nI understand people are mad at me because $PCT has…",
-          "likes": 0,
-          "url": "https://x.com/Hedgeye/status/2121726283881054705",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "WMT",
-      "name": "WMT",
-      "mention_count": 1,
-      "engagement": 7,
-      "kol_mentions": 1,
-      "signal_strength": 20.3,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "COST",
-      "name": "COST",
-      "mention_count": 1,
-      "engagement": 7,
-      "kol_mentions": 1,
-      "signal_strength": 20.3,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "KO",
-      "name": "KO",
-      "mention_count": 1,
-      "engagement": 7,
-      "kol_mentions": 1,
-      "signal_strength": 20.3,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "symbol": "PG",
-      "name": "PG",
-      "mention_count": 1,
-      "engagement": 7,
-      "kol_mentions": 1,
-      "signal_strength": 20.3,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
       "symbol": "GOOGL",
       "name": "谷歌",
-      "mention_count": 1,
-      "engagement": 1859,
-      "kol_mentions": 1,
-      "signal_strength": 39.9,
+      "mention_count": 2,
+      "engagement": 1910,
+      "kol_mentions": 2,
+      "signal_strength": 41.5,
       "consensus": {
         "consensus_score": 1.0,
-        "opinion_density": 1.0,
+        "opinion_density": 0.5,
         "kol_consensus": 1.0,
         "bull_ratio": 0.0,
-        "bear_ratio": 1.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": -1.0,
-        "engagement_weighted_sentiment": -1.0,
+        "bear_ratio": 0.5,
+        "neutral_ratio": 0.5,
+        "kol_weighted_sentiment": -0.5,
+        "engagement_weighted_sentiment": -0.947,
         "bull_count": 0,
         "bear_count": 1,
-        "neutral_count": 0,
-        "total_count": 1
+        "neutral_count": 1,
+        "total_count": 2
       },
       "reliability": "数据不足",
       "sample_reliable": false,
@@ -411,6 +337,260 @@
           "url": "https://x.com/unusual_whales/status/2121740208131686571",
           "is_kol": true,
           "sentiment": "bearish"
+        },
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "The most interesting lesson Jensen Huang taught me\n\nAnd gave PTSD to Google executives over from his leadership at $NVDA:\n\nWas that if a critical material can be bought out for spare change eg. ~$400m",
+          "likes": 46,
+          "url": "https://x.com/aleabitoreddit/status/2121918080293196209",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "SOI",
+      "name": "SOI",
+      "mention_count": 1,
+      "engagement": 51,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "aleabitoreddit",
+          "author_name": "aleabitoreddit",
+          "content": "The most interesting lesson Jensen Huang taught me\n\nAnd gave PTSD to Google executives over from his leadership at $NVDA:\n\nWas that if a critical material can be bought out for spare change eg. ~$400m",
+          "likes": 46,
+          "url": "https://x.com/aleabitoreddit/status/2121918080293196209",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "name": "标普500ETF",
+      "mention_count": 1,
+      "engagement": 88,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Options now trade 2 hrs before the open, 15 min after the close. \n\nFrom Oct 19, trade options with more flexibility on moomoo for 30 major names like NVDA, GOOG, SPY, QQQ. \n\nNew users get up",
+          "likes": 78,
+          "url": "https://x.com/unusual_whales/status/2121879513336631330",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "name": "纳指100ETF",
+      "mention_count": 1,
+      "engagement": 88,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Options now trade 2 hrs before the open, 15 min after the close. \n\nFrom Oct 19, trade options with more flexibility on moomoo for 30 major names like NVDA, GOOG, SPY, QQQ. \n\nNew users get up",
+          "likes": 78,
+          "url": "https://x.com/unusual_whales/status/2121879513336631330",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "WMT",
+      "name": "WMT",
+      "mention_count": 1,
+      "engagement": 45,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
+          "likes": 41,
+          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "COST",
+      "name": "COST",
+      "mention_count": 1,
+      "engagement": 45,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
+          "likes": 41,
+          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "KO",
+      "name": "KO",
+      "mention_count": 1,
+      "engagement": 45,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
+          "likes": 41,
+          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "symbol": "PG",
+      "name": "PG",
+      "mention_count": 1,
+      "engagement": 45,
+      "kol_mentions": 1,
+      "signal_strength": 20.8,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.0,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 0.0,
+        "neutral_ratio": 1.0,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": 0.0,
+        "bull_count": 0,
+        "bear_count": 0,
+        "neutral_count": 1,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "sample_tweets": [
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
+          "likes": 41,
+          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
+          "is_kol": true,
+          "sentiment": "neutral"
         }
       ]
     },
@@ -420,7 +600,7 @@
       "mention_count": 1,
       "engagement": 8,
       "kol_mentions": 1,
-      "signal_strength": 20.8,
+      "signal_strength": 16.7,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -455,7 +635,7 @@
       "mention_count": 1,
       "engagement": 14,
       "kol_mentions": 1,
-      "signal_strength": 23.4,
+      "signal_strength": 19.3,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -490,7 +670,7 @@
       "mention_count": 1,
       "engagement": 3,
       "kol_mentions": 1,
-      "signal_strength": 16.8,
+      "signal_strength": 12.7,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -518,115 +698,28 @@
           "sentiment": "neutral"
         }
       ]
-    },
-    {
-      "symbol": "IEF",
-      "name": "美债7-10年ETF",
-      "mention_count": 1,
-      "engagement": 2,
-      "kol_mentions": 1,
-      "signal_strength": 15.4,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "sample_tweets": [
-        {
-          "author": "SCMPNews",
-          "author_name": "SCMPNews",
-          "content": "Transport chief blames US-wide flight disruptions on upgrade of old wiring https://t.co/1nMXwqdwZe",
-          "likes": 2,
-          "url": "https://x.com/SCMPNews/status/2121691699516760362",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_themes": [
     {
-      "theme": "原油_能源",
-      "tweet_count": 13,
-      "engagement": 61813,
-      "kol_mentions": 13,
-      "signal_strength": 80.0,
-      "consensus": {
-        "consensus_score": 0.2,
-        "opinion_density": 0.385,
-        "kol_consensus": 0.2,
-        "bull_ratio": 0.154,
-        "bear_ratio": 0.231,
-        "neutral_ratio": 0.615,
-        "kol_weighted_sentiment": -0.077,
-        "engagement_weighted_sentiment": 0.419,
-        "bull_count": 2,
-        "bear_count": 3,
-        "neutral_count": 8,
-        "total_count": 13
-      },
-      "reliability": "可靠",
-      "sample_reliable": true,
-      "top_tweets": [
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "They did it! SpaceX has just caught their Starship rocket for the first time ever, marking the first recovery of a conventional orbital rocket upper s",
-          "likes": 30994,
-          "url": "https://x.com/SawyerMerritt/status/2121715055901155519",
-          "is_kol": true,
-          "sentiment": "bullish"
-        },
-        {
-          "author": "SawyerMerritt",
-          "author_name": "SawyerMerritt",
-          "content": "You're not gonna believe this, but @SpaceX caught their Starship rocket at 4:20 PM ET 😂 https://t.co/3VzaSZq9ck",
-          "likes": 19742,
-          "url": "https://x.com/SawyerMerritt/status/2121717407890964796",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "BREAKING: Last week's series of events which ultimately led to Jensen Huang's resignation were \"set in motion\" by US Secretary of State Marco Rubio, p",
-          "likes": 3064,
-          "url": "https://x.com/KobeissiLetter/status/2121739849388425605",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
       "theme": "加密货币",
-      "tweet_count": 10,
-      "engagement": 13241,
-      "kol_mentions": 10,
-      "signal_strength": 91.7,
+      "tweet_count": 26,
+      "engagement": 14759,
+      "kol_mentions": 26,
+      "signal_strength": 81.8,
       "consensus": {
-        "consensus_score": 0.667,
-        "opinion_density": 0.6,
-        "kol_consensus": 0.667,
-        "bull_ratio": 0.1,
-        "bear_ratio": 0.5,
-        "neutral_ratio": 0.4,
-        "kol_weighted_sentiment": -0.4,
-        "engagement_weighted_sentiment": -0.573,
-        "bull_count": 1,
-        "bear_count": 5,
-        "neutral_count": 4,
-        "total_count": 10
+        "consensus_score": 0.273,
+        "opinion_density": 0.423,
+        "kol_consensus": 0.273,
+        "bull_ratio": 0.154,
+        "bear_ratio": 0.269,
+        "neutral_ratio": 0.577,
+        "kol_weighted_sentiment": -0.109,
+        "engagement_weighted_sentiment": -0.561,
+        "bull_count": 4,
+        "bear_count": 7,
+        "neutral_count": 15,
+        "total_count": 26
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -661,24 +754,76 @@
       ]
     },
     {
-      "theme": "地缘政治",
-      "tweet_count": 7,
-      "engagement": 4517,
-      "kol_mentions": 7,
-      "signal_strength": 100.0,
+      "theme": "原油_能源",
+      "tweet_count": 25,
+      "engagement": 68543,
+      "kol_mentions": 25,
+      "signal_strength": 81.2,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.429,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.429,
-        "neutral_ratio": 0.571,
-        "kol_weighted_sentiment": -0.429,
-        "engagement_weighted_sentiment": -0.692,
-        "bull_count": 0,
+        "consensus_score": 0.25,
+        "opinion_density": 0.32,
+        "kol_consensus": 0.25,
+        "bull_ratio": 0.2,
+        "bear_ratio": 0.12,
+        "neutral_ratio": 0.68,
+        "kol_weighted_sentiment": 0.053,
+        "engagement_weighted_sentiment": 0.394,
+        "bull_count": 5,
         "bear_count": 3,
-        "neutral_count": 4,
-        "total_count": 7
+        "neutral_count": 17,
+        "total_count": 25
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "They did it! SpaceX has just caught their Starship rocket for the first time ever, marking the first recovery of a conventional orbital rocket upper s",
+          "likes": 30994,
+          "url": "https://x.com/SawyerMerritt/status/2121715055901155519",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "SawyerMerritt",
+          "author_name": "SawyerMerritt",
+          "content": "You're not gonna believe this, but @SpaceX caught their Starship rocket at 4:20 PM ET 😂 https://t.co/3VzaSZq9ck",
+          "likes": 19742,
+          "url": "https://x.com/SawyerMerritt/status/2121717407890964796",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "BREAKING: Last week's series of events which ultimately led to Jensen Huang's resignation were \"set in motion\" by US Secretary of State Marco Rubio, p",
+          "likes": 3064,
+          "url": "https://x.com/KobeissiLetter/status/2121739849388425605",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "地缘政治",
+      "tweet_count": 17,
+      "engagement": 5480,
+      "kol_mentions": 17,
+      "signal_strength": 87.5,
+      "consensus": {
+        "consensus_score": 0.5,
+        "opinion_density": 0.235,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.059,
+        "bear_ratio": 0.176,
+        "neutral_ratio": 0.765,
+        "kol_weighted_sentiment": -0.118,
+        "engagement_weighted_sentiment": -0.598,
+        "bull_count": 1,
+        "bear_count": 3,
+        "neutral_count": 13,
+        "total_count": 17
       },
       "reliability": "可靠",
       "sample_reliable": true,
@@ -704,37 +849,55 @@
         {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "Ukrainian forces struck an oil pumping station in Samara, Russia.\n\nTRUMP’S REQUEST FOR UKRAINE TO STOP HITTING RUSSIAN REFINERS = IN THE TRASH. https:",
-          "likes": 74,
-          "url": "https://x.com/steve_hanke/status/2121680061665321141",
+          "content": "Trump said: “There is very little happening right now in Gaza.”\n\nREALLY?\n\nGaza’s Health Ministry reports that SIXTEEN Palestinians have been killed wi",
+          "likes": 281,
+          "url": "https://x.com/steve_hanke/status/2121755060749164726",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bearish"
         }
       ]
     },
     {
       "theme": "AI_科技",
-      "tweet_count": 6,
-      "engagement": 2990,
-      "kol_mentions": 6,
-      "signal_strength": 100.0,
+      "tweet_count": 15,
+      "engagement": 10925,
+      "kol_mentions": 15,
+      "signal_strength": 75.0,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.978,
-        "bull_count": 0,
+        "consensus_score": 0.0,
+        "opinion_density": 0.267,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.133,
+        "bear_ratio": 0.133,
+        "neutral_ratio": 0.733,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": -0.225,
+        "bull_count": 2,
         "bear_count": 2,
-        "neutral_count": 4,
-        "total_count": 6
+        "neutral_count": 11,
+        "total_count": 15
       },
       "reliability": "可靠",
       "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Jensen Huang’s two children both work at Nvidia, per The Information.\n\nMadison Huang, a senior director in Nvidia’s Omniverse simulation group, earned",
+          "likes": 3085,
+          "url": "https://x.com/unusual_whales/status/2121770407221166239",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Massive data centers in Southeast Asia provided crucial computing power for Chinese companies and a cover for alleged chip smuggling, per WS",
+          "likes": 1947,
+          "url": "https://x.com/unusual_whales/status/2121837121858306062",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
         {
           "author": "unusual_whales",
           "author_name": "unusual_whales",
@@ -743,102 +906,41 @@
           "url": "https://x.com/unusual_whales/status/2121740208131686571",
           "is_kol": true,
           "sentiment": "bearish"
-        },
-        {
-          "author": "KobeissiLetter",
-          "author_name": "KobeissiLetter",
-          "content": "The AI revolution is leaving younger tech workers behind:\n\nUS software developer employment among workers aged 22-25 has fallen -20% since November 20",
-          "likes": 995,
-          "url": "https://x.com/KobeissiLetter/status/2121689817301819425",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "bespokeinvest",
-          "author_name": "bespokeinvest",
-          "content": "No one was happier to see this week end than Nvidia $NVDA shareholders. Heading into Friday afternoon trading, the stock was down 14% this week and tr",
-          "likes": 10,
-          "url": "https://x.com/bespokeinvest/status/2121716161079292200",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
-    },
-    {
-      "theme": "外汇_汇率",
-      "tweet_count": 4,
-      "engagement": 65,
-      "kol_mentions": 4,
-      "signal_strength": 60.0,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.25,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.25,
-        "neutral_ratio": 0.75,
-        "kol_weighted_sentiment": -0.25,
-        "engagement_weighted_sentiment": -0.477,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 3,
-        "total_count": 4
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "US envoy Jared Kushner: Witkoff and | in close contact with Russia, Ukraine and European allies on next steps",
-          "likes": 32,
-          "url": "https://x.com/financialjuice/status/2121699399063748818",
-          "is_kol": true,
-          "sentiment": "bearish"
-        },
-        {
-          "author": "financialjuice",
-          "author_name": "financialjuice",
-          "content": "Kushner: focus now is on enabling direct talks between Moscow and European partners",
-          "likes": 19,
-          "url": "https://x.com/financialjuice/status/2121699521654603965",
-          "is_kol": true,
-          "sentiment": "neutral"
-        },
-        {
-          "author": "MikeZaccardi",
-          "author_name": "MikeZaccardi",
-          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
-          "likes": 6,
-          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
-          "is_kol": true,
-          "sentiment": "neutral"
         }
       ]
     },
     {
       "theme": "公司_财报",
-      "tweet_count": 3,
-      "engagement": 1254,
-      "kol_mentions": 3,
-      "signal_strength": 57.0,
+      "tweet_count": 9,
+      "engagement": 4736,
+      "kol_mentions": 9,
+      "signal_strength": 87.5,
       "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 0.333,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
+        "consensus_score": 0.5,
+        "opinion_density": 0.444,
+        "kol_consensus": 0.5,
+        "bull_ratio": 0.111,
         "bear_ratio": 0.333,
-        "neutral_ratio": 0.667,
-        "kol_weighted_sentiment": -0.333,
-        "engagement_weighted_sentiment": -0.052,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 2,
-        "total_count": 3
+        "neutral_ratio": 0.556,
+        "kol_weighted_sentiment": -0.222,
+        "engagement_weighted_sentiment": -0.433,
+        "bull_count": 1,
+        "bear_count": 3,
+        "neutral_count": 5,
+        "total_count": 9
       },
-      "reliability": "数据不足",
-      "sample_reliable": false,
+      "reliability": "可靠",
+      "sample_reliable": true,
       "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "China's automotive industry is facing a historic slowdown:\n\nChina’s automotive industry profit margin fell to 3.6% in the first 8 months of 2026, its ",
+          "likes": 1291,
+          "url": "https://x.com/KobeissiLetter/status/2121766357540704565",
+          "is_kol": true,
+          "sentiment": "bearish"
+        },
         {
           "author": "SawyerMerritt",
           "author_name": "SawyerMerritt",
@@ -849,22 +951,203 @@
           "sentiment": "neutral"
         },
         {
+          "author": "qinbafrank",
+          "author_name": "qinbafrank",
+          "content": "11号这篇梳理完未来三个月的流动性发现：下旬前财政部现金重建流动性再度收紧，月底之前流动性还是在低位。当时认为知道大饼要跌，但三天跌了一万2千点也是超预期。而中期选举之后稳定币发行量持续减少、ETF持续大额净流出。深层次原因可能就这几个：\n1）市场对与民主党掌控国会后加密政策收紧的担忧； https",
+          "likes": 52,
+          "url": "https://x.com/qinbafrank/status/2121807840071610593",
+          "is_kol": true,
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    {
+      "theme": "外汇_汇率",
+      "tweet_count": 7,
+      "engagement": 279,
+      "kol_mentions": 7,
+      "signal_strength": 75.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.286,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.143,
+        "bear_ratio": 0.143,
+        "neutral_ratio": 0.714,
+        "kol_weighted_sentiment": -0.095,
+        "engagement_weighted_sentiment": -0.254,
+        "bull_count": 1,
+        "bear_count": 1,
+        "neutral_count": 5,
+        "total_count": 7
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
           "author": "steve_hanke",
           "author_name": "steve_hanke",
-          "content": "I spoke with @wealthion on unsustainable AI capital expenditure:\n\n\"There's a projected 58% AI revenue shortfall: revenue is insufficient to fund inves",
-          "likes": 24,
-          "url": "https://x.com/steve_hanke/status/2121709762089808337",
+          "content": "#BulgariaWatch🇧🇬: S&amp;P cut Bulgaria's credit outlook. No surprise. When Bulgaria swapped its currency board for the euro in Jan, banks' reserve req",
+          "likes": 134,
+          "url": "https://x.com/steve_hanke/status/2121868050089779693",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "MikeZaccardi",
+          "author_name": "MikeZaccardi",
+          "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
+          "likes": 41,
+          "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "financialjuice",
+          "author_name": "financialjuice",
+          "content": "US envoy Jared Kushner: Witkoff and | in close contact with Russia, Ukraine and European allies on next steps",
+          "likes": 32,
+          "url": "https://x.com/financialjuice/status/2121699399063748818",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "美股_大盘",
+      "tweet_count": 7,
+      "engagement": 2049,
+      "kol_mentions": 7,
+      "signal_strength": 83.3,
+      "consensus": {
+        "consensus_score": 0.333,
+        "opinion_density": 0.429,
+        "kol_consensus": 0.333,
+        "bull_ratio": 0.143,
+        "bear_ratio": 0.286,
+        "neutral_ratio": 0.571,
+        "kol_weighted_sentiment": -0.214,
+        "engagement_weighted_sentiment": -0.036,
+        "bull_count": 1,
+        "bear_count": 2,
+        "neutral_count": 4,
+        "total_count": 7
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "BREAKING: Options now trade 2 hrs before the open, 15 min after the close. \n\nFrom Oct 19, trade options with more flexibility on moomoo for 30 major n",
+          "likes": 78,
+          "url": "https://x.com/unusual_whales/status/2121879513336631330",
+          "is_kol": true,
+          "sentiment": "neutral"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "7-9月三个月的上涨，是标准的反弹到了月线、45日线级别的压力（7月我就锁定了这个多头趋势，很早就预判会这次会涨破83300，依据就在这两个大级别指标）。9月底没有突破上去，一直到10.21晚上最后一次反弹84850依然突破失败，就开始慢慢往下掉。这轮回调结束后，未来反弹到那个位置依然是最大压力，突",
+          "likes": 27,
+          "url": "https://x.com/jackli727/status/2121859963924390165",
+          "is_kol": true,
+          "sentiment": "bullish"
+        },
+        {
+          "author": "jackli727",
+          "author_name": "jackli727",
+          "content": "昨天分析下周btc将升级周线级别调整，这是由1-5日、10日线趋势综合决定。\n\n昨晚上半夜btc回踩5日线boll下轨65050附近，后半夜立马周线级别下跌动能增强。这来得比想象中还快。还好睡前短多走了。不然一觉起来就被埋了。这大概率是交易所、机构联合砸盘。😂",
+          "likes": 16,
+          "url": "https://x.com/jackli727/status/2121776125777220002",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "宏观_利率政策",
+      "tweet_count": 7,
+      "engagement": 2143,
+      "kol_mentions": 7,
+      "signal_strength": 75.0,
+      "consensus": {
+        "consensus_score": 0.0,
+        "opinion_density": 0.571,
+        "kol_consensus": 0.0,
+        "bull_ratio": 0.286,
+        "bear_ratio": 0.286,
+        "neutral_ratio": 0.429,
+        "kol_weighted_sentiment": 0.0,
+        "engagement_weighted_sentiment": -0.218,
+        "bull_count": 2,
+        "bear_count": 2,
+        "neutral_count": 3,
+        "total_count": 7
+      },
+      "reliability": "可靠",
+      "sample_reliable": true,
+      "top_tweets": [
+        {
+          "author": "unusual_whales",
+          "author_name": "unusual_whales",
+          "content": "Trump has overseen the departure of nearly 1 in 5 federal workers since the start of his second term, per a Washington Post analysis.\n\nAbout 426,000 f",
+          "likes": 1247,
+          "url": "https://x.com/unusual_whales/status/2121694909543453180",
           "is_kol": true,
           "sentiment": "bearish"
         },
         {
-          "author": "168X_Fortune",
-          "author_name": "168X_Fortune",
-          "content": "“地面数据中心受限之后，太空算力会不会成为另一条路？\n 这听起来很远，也不是已经证明的唯一答案\n 但不只美国，其他地区对数据中心建设也有阻力，让我开始重新思考\n 吸引我的还有通信基础设施和其他业务，想象空间很大\n 估值贵我理解，这更多是个人偏好和产业想象，不是严密的估值模型",
-          "likes": 1,
-          "url": "https://x.com/168X_Fortune/status/2121738200674885691",
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "Businesses using AI are far more optimistic about their growth:\n\nAmong US firms using AI, the share expecting revenue to increase over the next 12 mon",
+          "likes": 594,
+          "url": "https://x.com/KobeissiLetter/status/2121796579644555475",
           "is_kol": true,
-          "sentiment": "neutral"
+          "sentiment": "bullish"
+        },
+        {
+          "author": "steve_hanke",
+          "author_name": "steve_hanke",
+          "content": "#IndiaWatch🇮🇳: India’s youth unemployment crisis is STAGGERING. \n\nRoughly 40% of college graduates under 25 are unemployed. \n\nWith NO JOBS, India's bi",
+          "likes": 69,
+          "url": "https://x.com/steve_hanke/status/2121823758365208638",
+          "is_kol": true,
+          "sentiment": "bearish"
+        }
+      ]
+    },
+    {
+      "theme": "A股_港股",
+      "tweet_count": 1,
+      "engagement": 1433,
+      "kol_mentions": 1,
+      "signal_strength": 35.8,
+      "consensus": {
+        "consensus_score": 1.0,
+        "opinion_density": 1.0,
+        "kol_consensus": 1.0,
+        "bull_ratio": 0.0,
+        "bear_ratio": 1.0,
+        "neutral_ratio": 0.0,
+        "kol_weighted_sentiment": -1.0,
+        "engagement_weighted_sentiment": -1.0,
+        "bull_count": 0,
+        "bear_count": 1,
+        "neutral_count": 0,
+        "total_count": 1
+      },
+      "reliability": "数据不足",
+      "sample_reliable": false,
+      "top_tweets": [
+        {
+          "author": "KobeissiLetter",
+          "author_name": "KobeissiLetter",
+          "content": "China's automotive industry is facing a historic slowdown:\n\nChina’s automotive industry profit margin fell to 3.6% in the first 8 months of 2026, its ",
+          "likes": 1291,
+          "url": "https://x.com/KobeissiLetter/status/2121766357540704565",
+          "is_kol": true,
+          "sentiment": "bearish"
         }
       ]
     },
@@ -873,7 +1156,7 @@
       "tweet_count": 1,
       "engagement": 14,
       "kol_mentions": 1,
-      "signal_strength": 23.4,
+      "signal_strength": 19.3,
       "consensus": {
         "consensus_score": 0.0,
         "opinion_density": 0.0,
@@ -901,363 +1184,59 @@
           "sentiment": "neutral"
         }
       ]
-    },
-    {
-      "theme": "宏观_利率政策",
-      "tweet_count": 1,
-      "engagement": 1343,
-      "kol_mentions": 1,
-      "signal_strength": 39.9,
-      "consensus": {
-        "consensus_score": 1.0,
-        "opinion_density": 1.0,
-        "kol_consensus": 1.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 1.0,
-        "neutral_ratio": 0.0,
-        "kol_weighted_sentiment": -1.0,
-        "engagement_weighted_sentiment": -1.0,
-        "bull_count": 0,
-        "bear_count": 1,
-        "neutral_count": 0,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "unusual_whales",
-          "author_name": "unusual_whales",
-          "content": "Trump has overseen the departure of nearly 1 in 5 federal workers since the start of his second term, per a Washington Post analysis.\n\nAbout 426,000 f",
-          "likes": 1247,
-          "url": "https://x.com/unusual_whales/status/2121694909543453180",
-          "is_kol": true,
-          "sentiment": "bearish"
-        }
-      ]
-    },
-    {
-      "theme": "美债_固定收益",
-      "tweet_count": 1,
-      "engagement": 2,
-      "kol_mentions": 1,
-      "signal_strength": 15.4,
-      "consensus": {
-        "consensus_score": 0.0,
-        "opinion_density": 0.0,
-        "kol_consensus": 0.0,
-        "bull_ratio": 0.0,
-        "bear_ratio": 0.0,
-        "neutral_ratio": 1.0,
-        "kol_weighted_sentiment": 0.0,
-        "engagement_weighted_sentiment": 0.0,
-        "bull_count": 0,
-        "bear_count": 0,
-        "neutral_count": 1,
-        "total_count": 1
-      },
-      "reliability": "数据不足",
-      "sample_reliable": false,
-      "top_tweets": [
-        {
-          "author": "SCMPNews",
-          "author_name": "SCMPNews",
-          "content": "Transport chief blames US-wide flight disruptions on upgrade of old wiring https://t.co/1nMXwqdwZe",
-          "likes": 2,
-          "url": "https://x.com/SCMPNews/status/2121691699516760362",
-          "is_kol": true,
-          "sentiment": "neutral"
-        }
-      ]
     }
   ],
   "top_tweets": [
     {
-      "author": "MikeZaccardi",
-      "author_name": "MikeZaccardi",
-      "content": "Consumer Staples P/E highest in 27 years... why? $WMT $COST \n$KO at 28x is a pretty penny too\n$PG 22.9x @finviz_com https://t.co/pKW3GBpwUa",
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Ukraine: missile hits petrochemical plant and oil refinery in Russia’s Tatarstan, defense facility in Bryansk",
       "likes": 6,
       "reposts": 1,
-      "replies": 2,
-      "views": 1275,
-      "created_at": "2026-11-15T00:46:53+00:00",
-      "url": "https://x.com/MikeZaccardi/status/2121766856516141520",
-      "assets": [
-        [
-          "WMT",
-          "WMT"
-        ],
-        [
-          "COST",
-          "COST"
-        ],
-        [
-          "KO",
-          "KO"
-        ],
-        [
-          "PG",
-          "PG"
-        ]
-      ],
-      "themes": [
-        "外汇_汇率"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "UK households face a “painful” few years, as forecasts show living standards barely growing, per the BBC.\n\nTypical working-age households will see disposable income fall by £1,050, or 3%, by 2029, per the Resolution Foundation\n\nThis decade is on track to be the worst for",
-      "likes": 324,
-      "reposts": 29,
-      "replies": 52,
-      "views": 80968,
-      "created_at": "2026-11-15T00:01:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2121755307793850808",
-      "assets": [
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Trump said: “There is very little happening right now in Gaza.”\n\nREALLY?\n\nGaza’s Health Ministry reports that SIXTEEN Palestinians have been killed with another 68 injured in the past 48 hours by Israeli forces. https://t.co/hT56r7IJhi",
-      "likes": 42,
-      "reposts": 16,
-      "replies": 3,
-      "views": 4673,
-      "created_at": "2026-11-15T00:00:01+00:00",
-      "url": "https://x.com/steve_hanke/status/2121755060749164726",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "For the FIRST TIME EVER, SpaceX caught its Starship rocket with the launch tower arms in South Texas.\n\nFREE ENTERPRISE DELIVERS. https://t.co/Rr5hszIRQA",
-      "likes": 52,
-      "reposts": 7,
-      "replies": 5,
-      "views": 6981,
-      "created_at": "2026-11-14T23:30:00+00:00",
-      "url": "https://x.com/steve_hanke/status/2121747507982045187",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "unusual_whales",
-      "author_name": "unusual_whales",
-      "content": "Alphabet, $GOOGL, is now burning cash.\n\nIts quarterly free cash flow has turned negative for the first time in the 20 years shown on this WSJ chart, falling to about -$6 billion and then about -$9 billion in the last two quarters. As recently as early 2026, it was generating",
-      "likes": 1734,
-      "reposts": 125,
-      "replies": 132,
-      "views": 214937,
-      "created_at": "2026-11-14T23:01:00+00:00",
-      "url": "https://x.com/unusual_whales/status/2121740208131686571",
-      "assets": [
-        [
-          "GOOGL",
-          "谷歌"
-        ]
-      ],
-      "themes": [
-        "AI_科技"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.5
-    },
-    {
-      "author": "Hedgeye",
-      "author_name": "Hedgeye",
-      "content": "Crypto in free fall: https://t.co/3ojTlXu4VO",
-      "likes": 121,
-      "reposts": 17,
-      "replies": 11,
-      "views": 7944,
-      "created_at": "2026-11-14T22:59:39+00:00",
-      "url": "https://x.com/Hedgeye/status/2121739868812275913",
-      "assets": [],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.333
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Last week's series of events which ultimately led to Jensen Huang's resignation were \"set in motion\" by US Secretary of State Marco Rubio, per The Washington Post.\n\nDetails include:\n\n1. Rubio initially issued a memo warning President Trump about the relationship between",
-      "likes": 3064,
-      "reposts": 257,
-      "replies": 189,
-      "views": 327037,
-      "created_at": "2026-11-14T22:59:34+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2121739849388425605",
-      "assets": [],
-      "themes": [
-        "原油_能源",
-        "地缘政治"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.167
-    },
-    {
-      "author": "BillAckman",
-      "author_name": "BillAckman",
-      "content": "It brings tears. \n\nSomething we can all be happy about.",
-      "likes": 6390,
-      "reposts": 301,
-      "replies": 141,
-      "views": 136473,
-      "created_at": "2026-11-14T22:54:55+00:00",
-      "url": "https://x.com/BillAckman/status/2121738680134238657",
-      "assets": [
-        [
-          "ETH",
-          "以太坊"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "168X_Fortune",
-      "author_name": "168X_Fortune",
-      "content": "“地面数据中心受限之后，太空算力会不会成为另一条路？\n 这听起来很远，也不是已经证明的唯一答案\n 但不只美国，其他地区对数据中心建设也有阻力，让我开始重新思考\n 吸引我的还有通信基础设施和其他业务，想象空间很大\n 估值贵我理解，这更多是个人偏好和产业想象，不是严密的估值模型",
-      "likes": 1,
-      "reposts": 0,
-      "replies": 1,
-      "views": 908,
-      "created_at": "2026-11-14T22:53:01+00:00",
-      "url": "https://x.com/168X_Fortune/status/2121738200674885691",
-      "assets": [],
-      "themes": [
-        "AI_科技",
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "Crypto is having an absolutely brutal weekend.\n\nBitcoin is now down -$5,000 today and -$11,000 over the last 3 days, marking one of its steepest drawdowns in months.\n\nSelling pressure is accelerating as crypto liquidations officially crossed $2 billion over the last 24 hours.",
-      "likes": 2108,
-      "reposts": 148,
-      "replies": 172,
-      "views": 205181,
-      "created_at": "2026-11-14T22:19:33+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2121729777891496181",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ],
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.667
-    },
-    {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "SpaceX has released two new items on its shop to celebrate catching Starship today:\n\n• Starship milestone ship catch T-Shirt: $35\n• Starship milestone ship catch mission patch: $15\n\nShop: https://t.co/zgkVyW393r https://t.co/5o13yel8pI",
-      "likes": 1163,
-      "reposts": 63,
-      "replies": 58,
-      "views": 64922,
-      "created_at": "2026-11-14T22:12:11+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2121727921945522362",
-      "assets": [],
-      "themes": [
-        "公司_财报"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "Hedgeye",
-      "author_name": "Hedgeye",
-      "content": "RT @Mike_Taylor1972: $NVDA: an inventory problem soon to be a rev recognition problem. \nI understand people are mad at me because $PCT has…",
-      "likes": 0,
-      "reposts": 8,
       "replies": 0,
-      "views": 2017,
-      "created_at": "2026-11-14T22:05:40+00:00",
-      "url": "https://x.com/Hedgeye/status/2121726283881054705",
+      "views": 15604,
+      "created_at": "2026-11-15T10:51:30+00:00",
+      "url": "https://x.com/financialjuice/status/2121919013609746516",
+      "assets": [],
+      "themes": [
+        "地缘政治",
+        "原油_能源",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "aleabitoreddit",
+      "author_name": "aleabitoreddit",
+      "content": "The most interesting lesson Jensen Huang taught me\n\nAnd gave PTSD to Google executives over from his leadership at $NVDA:\n\nWas that if a critical material can be bought out for spare change eg. ~$400m (FY2028 Photonics-SOI revenue forecast for $SOI)\n\nAnd trigger tens of billions",
+      "likes": 46,
+      "reposts": 5,
+      "replies": 9,
+      "views": 17318,
+      "created_at": "2026-11-15T10:47:48+00:00",
+      "url": "https://x.com/aleabitoreddit/status/2121918080293196209",
       "assets": [
         [
           "NVDA",
           "英伟达"
         ],
         [
-          "PCT",
-          "PCT"
+          "SOI",
+          "SOI"
+        ],
+        [
+          "GOOGL",
+          "谷歌"
         ]
       ],
       "themes": [
         "AI_科技",
-        "原油_能源"
+        "原油_能源",
+        "公司_财报"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1268,63 +1247,38 @@
     {
       "author": "financialjuice",
       "author_name": "financialjuice",
-      "content": "Iran's IRGC navy: two tankers ignite after hitting naval mines in Strait of Hormuz - state media",
-      "likes": 54,
+      "content": "Bahrain: several Iranian aerial assaults intercepted on Sunday",
+      "likes": 11,
+      "reposts": 0,
+      "replies": 1,
+      "views": 24193,
+      "created_at": "2026-11-15T10:23:51+00:00",
+      "url": "https://x.com/financialjuice/status/2121912053216493868",
+      "assets": [],
+      "themes": [
+        "原油_能源",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "financialjuice",
+      "author_name": "financialjuice",
+      "content": "Iran’s IRGC: six drones struck US air defense radar at Bahrain’s al-Rifaa helicopter base - Press TV",
+      "likes": 15,
       "reposts": 2,
-      "replies": 6,
-      "views": 39491,
-      "created_at": "2026-11-14T21:47:07+00:00",
-      "url": "https://x.com/financialjuice/status/2121721613716500658",
-      "assets": [],
-      "themes": [
-        "地缘政治",
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "SCMPNews",
-      "author_name": "SCMPNews",
-      "content": "SpaceX successfully carries out first-ever spaceship catch https://t.co/FTU5YwZXiY",
-      "likes": 3,
-      "reposts": 3,
       "replies": 0,
-      "views": 2525,
-      "created_at": "2026-11-14T21:37:45+00:00",
-      "url": "https://x.com/SCMPNews/status/2121719259038470252",
+      "views": 20622,
+      "created_at": "2026-11-15T10:23:38+00:00",
+      "url": "https://x.com/financialjuice/status/2121911997390635182",
       "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "BillAckman",
-      "author_name": "BillAckman",
-      "content": "RT @EllieCohanim: An absolute master class from US Secretary of State @SecRubio on the Islamic Republic Regime. Listen to every word! https…",
-      "likes": 0,
-      "reposts": 475,
-      "replies": 0,
-      "views": 0,
-      "created_at": "2026-11-14T21:35:07+00:00",
-      "url": "https://x.com/BillAckman/status/2121718595977691462",
-      "assets": [
-        [
-          "SOL",
-          "Solana"
-        ]
-      ],
       "themes": [
         "加密货币",
-        "原油_能源"
+        "地缘政治"
       ],
       "quality_score": 0.0,
       "is_kol": true,
@@ -1333,40 +1287,16 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "You're not gonna believe this, but @SpaceX caught their Starship rocket at 4:20 PM ET 😂 https://t.co/3VzaSZq9ck",
-      "likes": 19742,
-      "reposts": 2215,
-      "replies": 842,
-      "views": 892403,
-      "created_at": "2026-11-14T21:30:24+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2121717407890964796",
-      "assets": [],
-      "themes": [
-        "原油_能源"
-      ],
-      "quality_score": 0.0,
-      "is_kol": true,
-      "sentiment": "neutral",
-      "sentiment_score": 0.0,
-      "sentiment_intensity": 0.0
-    },
-    {
-      "author": "KobeissiLetter",
-      "author_name": "KobeissiLetter",
-      "content": "BREAKING: Bitcoin falls below $65,000 and ETH falls below $1,750 as total liquidations hit $1.8 billion over the last 24 hours.\n\nCrypto markets have now erased -$330 billion in market cap this week. https://t.co/2H3wZxnmgy",
-      "likes": 2932,
-      "reposts": 246,
-      "replies": 174,
-      "views": 240386,
-      "created_at": "2026-11-14T21:27:54+00:00",
-      "url": "https://x.com/KobeissiLetter/status/2121716781534314731",
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "eth 中午的这个空单，下午2点多已平。 https://t.co/p6Jo2aTKEp",
+      "likes": 5,
+      "reposts": 0,
+      "replies": 4,
+      "views": 2148,
+      "created_at": "2026-11-15T09:58:03+00:00",
+      "url": "https://x.com/jackli727/status/2121905562485244035",
       "assets": [
-        [
-          "BTC",
-          "比特币"
-        ],
         [
           "ETH",
           "以太坊"
@@ -1377,28 +1307,23 @@
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bearish",
-      "sentiment_score": -1.0,
-      "sentiment_intensity": 0.333
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "bespokeinvest",
-      "author_name": "bespokeinvest",
-      "content": "No one was happier to see this week end than Nvidia $NVDA shareholders. Heading into Friday afternoon trading, the stock was down 14% this week and trading at its lowest levels since last summer. News of former CEO Jensen Huang’s multiple affairs hasn’t been kind to the stock,",
-      "likes": 10,
-      "reposts": 0,
-      "replies": 11,
-      "views": 6824,
-      "created_at": "2026-11-14T21:25:27+00:00",
-      "url": "https://x.com/bespokeinvest/status/2121716161079292200",
-      "assets": [
-        [
-          "NVDA",
-          "英伟达"
-        ]
-      ],
+      "author": "Ole_S_Hansen",
+      "author_name": "Ole_S_Hansen",
+      "content": "The US CFTC’s Commitment of Traders (COT) reports, covering positioning across US futures markets through 10 November, will be released on Monday at 3:30 PM ET, delayed by last week’s federal holiday.\n\nMeanwhile, ICE Futures Europe released its report on Friday, revealing a 26% https://t.co/T8SIA1j01m",
+      "likes": 13,
+      "reposts": 2,
+      "replies": 3,
+      "views": 3105,
+      "created_at": "2026-11-15T09:26:45+00:00",
+      "url": "https://x.com/Ole_S_Hansen/status/2121897683249930395",
+      "assets": [],
       "themes": [
-        "AI_科技",
+        "外汇_汇率",
         "原油_能源",
         "宏观_利率政策"
       ],
@@ -1409,35 +1334,247 @@
       "sentiment_intensity": 0.0
     },
     {
-      "author": "SawyerMerritt",
-      "author_name": "SawyerMerritt",
-      "content": "They did it! SpaceX has just caught their Starship rocket for the first time ever, marking the first recovery of a conventional orbital rocket upper stage in history!\n\nThis is one of the greatest engineering achievements in history. Congrats to the entire @SpaceX team! 🚀 https://t.co/9KAzAcd3e8",
-      "likes": 30994,
-      "reposts": 3684,
-      "replies": 601,
-      "views": 1159722,
-      "created_at": "2026-11-14T21:21:03+00:00",
-      "url": "https://x.com/SawyerMerritt/status/2121715055901155519",
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "BITCOIN = A HIGHLY SPECULATIVE ASSET WITH ZERO FUNDAMENTAL VALUE.\nhttps://t.co/0J0tcSYmLI",
+      "likes": 60,
+      "reposts": 4,
+      "replies": 7,
+      "views": 7848,
+      "created_at": "2026-11-15T09:20:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2121895984233914516",
+      "assets": [
+        [
+          "BTC",
+          "比特币"
+        ]
+      ],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "LiYuan6",
+      "author_name": "LiYuan6",
+      "content": "RT @bumingbaipod: 东京大学教授阿古智子在东京建立了一个名为 “Asian Commons”的共享生活空间，与一群中国年轻人共同生活。从“维权世代”到“后白纸世代”，从年轻人的性别意识到日本日益收紧的移民政策，阿古老师在第三届不明白节分享了她站在中日与不同世代之…",
+      "likes": 0,
+      "reposts": 11,
+      "replies": 0,
+      "views": 92,
+      "created_at": "2026-11-15T09:02:31+00:00",
+      "url": "https://x.com/LiYuan6/status/2121891584237085100",
+      "assets": [],
+      "themes": [
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "BREAKING: Options now trade 2 hrs before the open, 15 min after the close. \n\nFrom Oct 19, trade options with more flexibility on moomoo for 30 major names like NVDA, GOOG, SPY, QQQ. \n\nNew users get up to $1,000 in NVDA stock + 8.1% APY on idle cash (limited time).  \n\nClick here:",
+      "likes": 78,
+      "reposts": 10,
+      "replies": 28,
+      "views": 67274,
+      "created_at": "2026-11-15T08:14:33+00:00",
+      "url": "https://x.com/unusual_whales/status/2121879513336631330",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ],
+        [
+          "SPY",
+          "标普500ETF"
+        ],
+        [
+          "QQQ",
+          "纳指100ETF"
+        ]
+      ],
+      "themes": [
+        "AI_科技",
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "steve_hanke",
+      "author_name": "steve_hanke",
+      "content": "#BulgariaWatch🇧🇬: S&amp;P cut Bulgaria's credit outlook. No surprise. When Bulgaria swapped its currency board for the euro in Jan, banks' reserve requirements fell from 12% to 1%, unleashing a CREDIT BOOM.\n\nAS A FATHER OF BULGARIA'S CURRENCY BOARD, I SAID THIS WOULD HAPPEN. https://t.co/YIsXF83gh6",
+      "likes": 134,
+      "reposts": 27,
+      "replies": 11,
+      "views": 10794,
+      "created_at": "2026-11-15T07:29:00+00:00",
+      "url": "https://x.com/steve_hanke/status/2121868050089779693",
+      "assets": [],
+      "themes": [
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 0.333,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "7-9月三个月的上涨，是标准的反弹到了月线、45日线级别的压力（7月我就锁定了这个多头趋势，很早就预判会这次会涨破83300，依据就在这两个大级别指标）。9月底没有突破上去，一直到10.21晚上最后一次反弹84850依然突破失败，就开始慢慢往下掉。这轮回调结束后，未来反弹到那个位置依然是最大压力，突破",
+      "likes": 27,
+      "reposts": 0,
+      "replies": 4,
+      "views": 5721,
+      "created_at": "2026-11-15T06:56:52+00:00",
+      "url": "https://x.com/jackli727/status/2121859963924390165",
+      "assets": [],
+      "themes": [
+        "美股_大盘"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 0.5,
+      "sentiment_intensity": 1.0
+    },
+    {
+      "author": "dimartinobooth",
+      "author_name": "dimartinobooth",
+      "content": "RT @andrewhorowitz: Is the Fed fighting the WRONG war.. A taste of what is coming up this week on The Disciplined Investor Podcast.\n\nGrab i…",
+      "likes": 0,
+      "reposts": 2,
+      "replies": 0,
+      "views": 1376,
+      "created_at": "2026-11-15T06:31:55+00:00",
+      "url": "https://x.com/dimartinobooth/status/2121853685848281351",
+      "assets": [],
+      "themes": [
+        "宏观_利率政策",
+        "地缘政治"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "ArtofSpecuycky",
+      "author_name": "ArtofSpecuycky",
+      "content": "刚看完All-In Podcast最新一期，黄仁勋六天内闪电辞职、Anthropic下周四就要上市了，\n\n黄仁勋辞职事件的完整时间线\n这起事件的发展速度太快，六天之内彻底反转了英伟达33年的权力结构。",
+      "likes": 43,
+      "reposts": 7,
+      "replies": 10,
+      "views": 7596,
+      "created_at": "2026-11-15T06:28:31+00:00",
+      "url": "https://x.com/ArtofSpecuycky/status/2121852830084702349",
+      "assets": [],
+      "themes": [
+        "AI_科技",
+        "公司_财报"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.667
+    },
+    {
+      "author": "aleabitoreddit",
+      "author_name": "aleabitoreddit",
+      "content": "Western media coverage of $NVDA and Jensen Huang have reached a point\n\nWhere it even gives Chinese people more pride in CCP state media.\n\nVery dark times for Western journalism. https://t.co/oJ8eEgOIDS",
+      "likes": 1602,
+      "reposts": 80,
+      "replies": 131,
+      "views": 201729,
+      "created_at": "2026-11-15T06:27:45+00:00",
+      "url": "https://x.com/aleabitoreddit/status/2121852636261724398",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技",
+        "原油_能源"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "btc 2日线级别macd才刚跌穿零轴一点，这里还将往零下延伸，3日线级别同理。5日线也还得延续往下。所以破6的概率极高。那么上午你合约“抄底”的那部分仓位在反抽6.5w以上可以先走一部分或全部平仓都没问题。 https://t.co/lsFsqdF6Nh",
+      "likes": 20,
+      "reposts": 0,
+      "replies": 6,
+      "views": 5942,
+      "created_at": "2026-11-15T06:26:43+00:00",
+      "url": "https://x.com/jackli727/status/2121852378785976790",
+      "assets": [
+        [
+          "BTC",
+          "比特币"
+        ]
+      ],
+      "themes": [
+        "加密货币"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.2,
+      "sentiment_intensity": 0.833
+    },
+    {
+      "author": "SCMPNews",
+      "author_name": "SCMPNews",
+      "content": "What a Beijing cafe dispute reveals about China’s struggling bookshops https://t.co/LhOXCuz1E3",
+      "likes": 2,
+      "reposts": 2,
+      "replies": 1,
+      "views": 3789,
+      "created_at": "2026-11-15T06:14:47+00:00",
+      "url": "https://x.com/SCMPNews/status/2121849373722067321",
       "assets": [],
       "themes": [
         "原油_能源"
       ],
       "quality_score": 0.0,
       "is_kol": true,
-      "sentiment": "bullish",
-      "sentiment_score": 1.0,
-      "sentiment_intensity": 0.167
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
     },
     {
-      "author": "bespokeinvest",
-      "author_name": "bespokeinvest",
-      "content": "Contrarians like to keep an eye on what major media outlets are saying. The reason isn't that they're ahead of the curve; it's usually the opposite. The basic assumption is that by the time something is major news and picked up on the cover of higher-latency weekly publications, https://t.co/Gid8qSZHjd",
+      "author": "jackli727",
+      "author_name": "jackli727",
+      "content": "刚才eth的反弹空单基本又是空在最高点。 https://t.co/7HCCw8pbzW",
       "likes": 12,
-      "reposts": 3,
+      "reposts": 0,
       "replies": 3,
-      "views": 6212,
-      "created_at": "2026-11-14T21:19:03+00:00",
-      "url": "https://x.com/bespokeinvest/status/2121714552681509069",
+      "views": 4497,
+      "created_at": "2026-11-15T06:11:26+00:00",
+      "url": "https://x.com/jackli727/status/2121848532227461317",
       "assets": [
         [
           "ETH",
@@ -1452,6 +1589,67 @@
       "sentiment": "bullish",
       "sentiment_score": 1.0,
       "sentiment_intensity": 0.333
+    },
+    {
+      "author": "qinbafrank",
+      "author_name": "qinbafrank",
+      "content": "1、鲁比奥最早给川普递交备忘录应该没有要让老黄下去，但是要让老黄闭嘴和听话，是要他严格遵守芯片出口管制。但是看着老黄貌根本不听，芯片还在开给跟中国有关的实体，自然是按耐不住了，再加上老黄是能直接跟川普对话的，到最后就不得不想把老黄给撸下去。中选失败、也给了突破口；",
+      "likes": 169,
+      "reposts": 14,
+      "replies": 20,
+      "views": 43824,
+      "created_at": "2026-11-15T05:48:04+00:00",
+      "url": "https://x.com/qinbafrank/status/2121842651830100255",
+      "assets": [],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "bullish",
+      "sentiment_score": 1.0,
+      "sentiment_intensity": 0.5
+    },
+    {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "BREAKING: Massive data centers in Southeast Asia provided crucial computing power for Chinese companies and a cover for alleged chip smuggling, per WSJ",
+      "likes": 1947,
+      "reposts": 277,
+      "replies": 124,
+      "views": 253195,
+      "created_at": "2026-11-15T05:26:06+00:00",
+      "url": "https://x.com/unusual_whales/status/2121837121858306062",
+      "assets": [],
+      "themes": [
+        "AI_科技"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.0
+    },
+    {
+      "author": "JIEDUJUN",
+      "author_name": "JIEDUJUN",
+      "content": "【谷歌云盘下载 2026.11.15】解读君文稿《付鹏：别问牛市还是熊市，会躲才是老玩家》\n\nhttps://t.co/TMfzJTHLzn\n\n【美股】优质合规美股券商，SEC严格监管：美国盈透证券。特优汇率换美金，费率很划算，持仓股票可获取收入现金流，详情见：\nhttps://t.co/8RgC0Tk4bz",
+      "likes": 0,
+      "reposts": 0,
+      "replies": 0,
+      "views": 424,
+      "created_at": "2026-11-15T05:07:57+00:00",
+      "url": "https://x.com/JIEDUJUN/status/2121832556177809507",
+      "assets": [],
+      "themes": [
+        "美股_大盘",
+        "外汇_汇率"
+      ],
+      "quality_score": 0.0,
+      "is_kol": true,
+      "sentiment": "neutral",
+      "sentiment_score": 0.0,
+      "sentiment_intensity": 0.667
     }
   ],
   "kol_summary": [
@@ -1500,6 +1698,24 @@
       "sentiment_score": 0.0
     },
     {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
+      "content": "Jensen Huang’s two children both work at Nvidia, per The Information.\n\nMadison Huang, a senior director in Nvidia’s Omniverse simulation group, earned more than $1 million in 2024. She trained at the Culinary Institute of America and Le Cordon Bleu and worked at LVMH before",
+      "likes": 3085,
+      "url": "https://x.com/unusual_whales/status/2121770407221166239",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
       "author": "KobeissiLetter",
       "author_name": "KobeissiLetter",
       "content": "BREAKING: Last week's series of events which ultimately led to Jensen Huang's resignation were \"set in motion\" by US Secretary of State Marco Rubio, per The Washington Post.\n\nDetails include:\n\n1. Rubio initially issued a memo warning President Trump about the relationship between",
@@ -1560,6 +1776,19 @@
     {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
+      "content": "BREAKING: Massive data centers in Southeast Asia provided crucial computing power for Chinese companies and a cover for alleged chip smuggling, per WSJ",
+      "likes": 1947,
+      "url": "https://x.com/unusual_whales/status/2121837121858306062",
+      "assets": [],
+      "themes": [
+        "AI_科技"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "unusual_whales",
+      "author_name": "unusual_whales",
       "content": "Alphabet, $GOOGL, is now burning cash.\n\nIts quarterly free cash flow has turned negative for the first time in the 20 years shown on this WSJ chart, falling to about -$6 billion and then about -$9 billion in the last two quarters. As recently as early 2026, it was generating",
       "likes": 1734,
       "url": "https://x.com/unusual_whales/status/2121740208131686571",
@@ -1571,6 +1800,39 @@
       ],
       "themes": [
         "AI_科技"
+      ],
+      "sentiment": "bearish",
+      "sentiment_score": -1.0
+    },
+    {
+      "author": "aleabitoreddit",
+      "author_name": "aleabitoreddit",
+      "content": "Western media coverage of $NVDA and Jensen Huang have reached a point\n\nWhere it even gives Chinese people more pride in CCP state media.\n\nVery dark times for Western journalism. https://t.co/oJ8eEgOIDS",
+      "likes": 1602,
+      "url": "https://x.com/aleabitoreddit/status/2121852636261724398",
+      "assets": [
+        [
+          "NVDA",
+          "英伟达"
+        ]
+      ],
+      "themes": [
+        "AI_科技",
+        "原油_能源"
+      ],
+      "sentiment": "neutral",
+      "sentiment_score": 0.0
+    },
+    {
+      "author": "KobeissiLetter",
+      "author_name": "KobeissiLetter",
+      "content": "China's automotive industry is facing a historic slowdown:\n\nChina’s automotive industry profit margin fell to 3.6% in the first 8 months of 2026, its lowest in at least 12 years.\n\nThis is now on track for its 12th consecutive annual decline.\n\nYears of heavy investment have https://t.co/boWurXVm0t",
+      "likes": 1291,
+      "url": "https://x.com/KobeissiLetter/status/2121766357540704565",
+      "assets": [],
+      "themes": [
+        "A股_港股",
+        "公司_财报"
       ],
       "sentiment": "bearish",
       "sentiment_score": -1.0
@@ -1617,23 +1879,10 @@
       "sentiment_score": -1.0
     },
     {
-      "author": "DeItAone",
-      "author_name": "DeItAone",
-      "content": "MORE THAN 10,000 FLIGHTS DELAYED OR CANCELED SATURDAY AS AIRLINES WORK TO RESTORE NORMAL SCHEDULES -- FLIGHTAWARE",
-      "likes": 794,
-      "url": "https://x.com/DeItAone/status/2121697468954153329",
-      "assets": [],
-      "themes": [
-        "地缘政治"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
-    },
-    {
       "author": "unusual_whales",
       "author_name": "unusual_whales",
       "content": "UK households face a “painful” few years, as forecasts show living standards barely growing, per the BBC.\n\nTypical working-age households will see disposable income fall by £1,050, or 3%, by 2029, per the Resolution Foundation\n\nThis decade is on track to be the worst for",
-      "likes": 324,
+      "likes": 940,
       "url": "https://x.com/unusual_whales/status/2121755307793850808",
       "assets": [
         [
@@ -1646,51 +1895,8 @@
       ],
       "sentiment": "bearish",
       "sentiment_score": -1.0
-    },
-    {
-      "author": "Hedgeye",
-      "author_name": "Hedgeye",
-      "content": "Crypto in free fall: https://t.co/3ojTlXu4VO",
-      "likes": 121,
-      "url": "https://x.com/Hedgeye/status/2121739868812275913",
-      "assets": [],
-      "themes": [
-        "加密货币"
-      ],
-      "sentiment": "bearish",
-      "sentiment_score": -1.0
-    },
-    {
-      "author": "financialjuice",
-      "author_name": "financialjuice",
-      "content": "Bitcoin falls 5.3% to $64,733.68",
-      "likes": 113,
-      "url": "https://x.com/financialjuice/status/2121709041756041726",
-      "assets": [
-        [
-          "BTC",
-          "比特币"
-        ]
-      ],
-      "themes": [
-        "加密货币"
-      ],
-      "sentiment": "bearish",
-      "sentiment_score": -1.0
-    },
-    {
-      "author": "steve_hanke",
-      "author_name": "steve_hanke",
-      "content": "Ukrainian forces struck an oil pumping station in Samara, Russia.\n\nTRUMP’S REQUEST FOR UKRAINE TO STOP HITTING RUSSIAN REFINERS = IN THE TRASH. https://t.co/fpBqwgr15r",
-      "likes": 74,
-      "url": "https://x.com/steve_hanke/status/2121680061665321141",
-      "assets": [],
-      "themes": [
-        "地缘政治",
-        "原油_能源"
-      ],
-      "sentiment": "neutral",
-      "sentiment_score": 0.0
     }
-  ]
+  ],
+  "source": "hybrid",
+  "version": "2.0-hybrid"
 }
